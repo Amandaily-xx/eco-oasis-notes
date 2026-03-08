@@ -3,16 +3,27 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import MacroUnit2Content from "../content/MacroUnit2";
 import MacroUnit3Content from "../content/MacroUnit3";
+import MacroUnit4Content from "../content/MacroUnit4";
+import MacroUnit5Content from "../content/MacroUnit5";
+import MacroUnit6Content from "../content/MacroUnit6";
 
 const unitInfo: Record<number, { title: string; subtitle: string }> = {
   2: { title: "Economic Indicators & Business Cycles", subtitle: "Circular Flow, GDP, Unemployment, Inflation & Business Cycles" },
   3: { title: "National Income & Price Determination", subtitle: "Aggregate Demand, Aggregate Supply, AD-AS Model & Fiscal Policy" },
+  4: { title: "Financial Sector", subtitle: "Financial Assets, Money & Banking, Money Market, Monetary Policy & Loanable Funds" },
+  5: { title: "Long-Run Consequences & Stabilization", subtitle: "Phillips Curve, Money Neutrality, Quantity Theory, Economic Growth & National Debt" },
+  6: { title: "International Trade & Finance", subtitle: "Balance of Payments, Exchange Rates, Foreign Exchange Market & Trade Policy" },
 };
 
 const contentMap: Record<number, React.FC> = {
   2: MacroUnit2Content,
   3: MacroUnit3Content,
+  4: MacroUnit4Content,
+  5: MacroUnit5Content,
+  6: MacroUnit6Content,
 };
+
+const maxUnit = 6;
 
 const MacroUnit = () => {
   const { unitId } = useParams();
@@ -51,7 +62,7 @@ const MacroUnit = () => {
               <ArrowLeft className="w-4 h-4" /> Unit 1 (Shared)
             </Link>
           )}
-          {id < 3 ? (
+          {id < maxUnit ? (
             <Link to={`/macro/${id + 1}`} className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
               Unit {id + 1} <ArrowRight className="w-4 h-4" />
             </Link>
