@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { BookOpen, TrendingUp, ArrowRight, Sparkles } from "lucide-react";
+import { BookOpen, TrendingUp, ArrowRight, Sparkles, Lightbulb } from "lucide-react";
 
 const microUnits = [
   { id: 1, title: "Basic Economic Concepts", desc: "Scarcity, Opportunity Cost, PPC, Economic Systems, Comparative Advantage" },
@@ -15,6 +15,9 @@ const macroUnits = [
   { id: 1, title: "Basic Economic Concepts", desc: "Same foundational concepts as Micro Unit 1!", isShared: true },
   { id: 2, title: "Economic Indicators", desc: "Circular Flow, GDP, Unemployment, Inflation, Business Cycles" },
   { id: 3, title: "National Income & Price Determination", desc: "AD-AS Model, Multipliers, Fiscal Policy, Output Gaps" },
+  { id: 4, title: "Financial Sector", desc: "Financial Assets, Money & Banking, Money Market, Monetary Policy, Loanable Funds" },
+  { id: 5, title: "Long-Run Consequences & Stabilization", desc: "Phillips Curve, Money Neutrality, Economic Growth, National Debt" },
+  { id: 6, title: "International Trade & Finance", desc: "Balance of Payments, Exchange Rates, Foreign Exchange Market, Trade Policy" },
 ];
 
 const Index = () => {
@@ -28,9 +31,12 @@ const Index = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight mb-6">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight mb-4">
             AP Econ, simplified.
           </h1>
+          <p className="font-body text-lg md:text-xl text-accent font-semibold mb-6">
+            by Amanda ✨
+          </p>
           <div className="max-w-2xl mx-auto space-y-4 font-body text-base md:text-lg text-muted-foreground leading-relaxed">
             <p>
               Wanna ace your exam without the 2:00 AM existential crisis? 😴
@@ -42,6 +48,16 @@ const Index = () => {
               Get the strategic tips that make the difference—grab your copy now while supply is high and the opportunity cost is low! 📈
             </p>
           </div>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+            className="mt-8 inline-flex items-center gap-2 px-5 py-3 rounded-xl font-body text-sm"
+            style={{ background: "hsl(var(--tip-bg))", color: "hsl(var(--tip-text))" }}
+          >
+            <Lightbulb className="w-4 h-4 text-accent flex-shrink-0" />
+            <span>Look for <strong>Amanda's Tips</strong> throughout the notes — strategic insights to help you nail the exam!</span>
+          </motion.div>
         </motion.div>
       </section>
 

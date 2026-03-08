@@ -40,9 +40,9 @@ const Navbar = () => {
               <Link to="/micro/1" className="block px-3 py-2 rounded-md text-sm hover:bg-secondary transition-colors">
                 Unit 1: Basic Concepts → <span className="text-accent text-xs">(Same as Micro!)</span>
               </Link>
-              {[2,3].map(i => (
+              {[2,3,4,5,6].map(i => (
                 <Link key={i} to={`/macro/${i}`} className="block px-3 py-2 rounded-md text-sm hover:bg-secondary transition-colors">
-                  Unit {i}: {["", "Economic Indicators", "National Income & AD-AS"][i]}
+                  Unit {i}: {["", "Economic Indicators", "National Income & AD-AS", "Financial Sector", "Long-Run Consequences", "International Trade"][i]}
                 </Link>
               ))}
             </div>
@@ -67,7 +67,7 @@ const Navbar = () => {
           ))}
           <div className="font-semibold text-muted-foreground mt-3">Macroeconomics</div>
           <Link to="/micro/1" onClick={() => setMobileOpen(false)} className="block py-1 pl-3">Unit 1 (→ Micro)</Link>
-          {[2,3].map(i => (
+          {[2,3,4,5,6].map(i => (
             <Link key={i} to={`/macro/${i}`} onClick={() => setMobileOpen(false)} className="block py-1 pl-3">Unit {i}</Link>
           ))}
         </div>
