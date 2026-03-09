@@ -227,30 +227,30 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
 
       case "perfect-competition":
         return (
-          <svg viewBox="0 0 300 250" className="w-full max-w-xs mx-auto">
+          <svg viewBox="0 0 320 260" className="w-full max-w-sm mx-auto">
             <defs><marker id="ah-pcm" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="hsl(var(--primary))" /></marker></defs>
-            <line x1="50" y1="200" x2="270" y2="200" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-pcm)" />
-            <line x1="50" y1="200" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-pcm)" />
-            {/* D = MR = P (horizontal) */}
-            <line x1="50" y1="100" x2="260" y2="100" stroke="hsl(var(--destructive))" strokeWidth="2" />
-            <text x="262" y="104" fontSize="10" fill="hsl(var(--destructive))" fontWeight="600" fontFamily="var(--font-body)">D=MR=P</text>
-            {/* MC curve */}
-            <path d="M 80 185 C 105 205, 130 195, 150 180 C 170 160, 190 130, 210 95 C 230 60, 245 38, 255 25" fill="none" stroke="hsl(var(--accent))" strokeWidth="2.5" />
-            <text x="250" y="23" fontSize="11" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">MC</text>
-            {/* ATC curve (U-shape) */}
-            <path d="M 80 75 Q 130 205, 165 155 Q 210 125, 245 95" fill="none" stroke="hsl(var(--primary))" strokeWidth="2" />
-            <text x="247" y="99" fontSize="11" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">ATC</text>
-            {/* AVC curve (U-shape, below ATC) */}
-            <path d="M 80 105 Q 130 230, 160 180 Q 205 155, 245 130" fill="none" stroke="hsl(var(--muted-foreground))" strokeWidth="1.5" strokeDasharray="4 3" />
-            <text x="247" y="134" fontSize="10" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">AVC</text>
-            {/* Profit-max point */}
-            <circle cx="157" cy="100" r="4" fill="hsl(var(--primary))" />
-            <line x1="157" y1="100" x2="157" y2="200" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
-            <text x="148" y="215" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q*</text>
-            <rect x="80" y="76" width="77" height="24" fill="hsl(var(--accent))" opacity="0.15" rx="2" />
-            <text x="95" y="92" fontSize="9" fill="hsl(var(--accent))" fontFamily="var(--font-body)">Econ. Profit</text>
-            <text x="255" y="218" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Q</text>
-            <text x="24" y="22" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">P, C</text>
+            <line x1="50" y1="220" x2="290" y2="220" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-pcm)" />
+            <line x1="50" y1="220" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-pcm)" />
+
+            {/* MC curve - U-shaped, starts high-left, dips, rises steeply */}
+            <path d="M 75 60 Q 95 120, 120 155 Q 140 175, 155 175 Q 170 175, 185 155 Q 205 120, 225 70 Q 240 35, 255 20" fill="none" stroke="hsl(210 80% 65%)" strokeWidth="2.5" />
+            <text x="248" y="18" fontSize="11" fill="hsl(210 80% 65%)" fontWeight="600" fontFamily="var(--font-body)">MC</text>
+
+            {/* AC curve - U-shaped, wider and shallower than MC */}
+            <path d="M 75 80 Q 95 120, 120 145 Q 145 160, 165 160 Q 185 160, 205 148 Q 230 125, 260 85" fill="none" stroke="hsl(0 70% 65%)" strokeWidth="2.5" />
+            <text x="262" y="89" fontSize="11" fill="hsl(0 70% 65%)" fontWeight="600" fontFamily="var(--font-body)">AC</text>
+
+            {/* P = MR = AR horizontal line (yellow) */}
+            <line x1="50" y1="130" x2="275" y2="130" stroke="hsl(50 90% 50%)" strokeWidth="3" />
+            <text x="245" y="125" fontSize="11" fill="hsl(50 90% 50%)" fontWeight="700" fontFamily="var(--font-body)">P = MR = AR</text>
+
+            {/* Q1 dashed line at intersection */}
+            <line x1="160" y1="130" x2="160" y2="220" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <circle cx="160" cy="130" r="4" fill="hsl(var(--primary))" />
+            <text x="153" y="238" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q1</text>
+
+            <text x="255" y="238" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Q</text>
+            <text x="4" y="22" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Cost/Revenue</text>
           </svg>
         );
 
