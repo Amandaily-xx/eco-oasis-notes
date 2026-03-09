@@ -1,5 +1,6 @@
 import AmandaTip from "../components/AmandaTip";
 import SectionAccordion from "../components/SectionAccordion";
+import EconGraph from "../components/EconGraph";
 
 const MacroUnit2Content = () => (
   <div className="space-y-4">
@@ -108,6 +109,7 @@ const MacroUnit2Content = () => (
     </SectionAccordion>
 
     <SectionAccordion title="6. Business Cycles">
+      <EconGraph type="business-cycle" caption="Business Cycle — expansion, peak, recession, trough around potential GDP trend" />
       <h4 className="font-semibold text-primary mb-2">Four Stages</h4>
       <ul className="list-disc pl-5 space-y-1 mb-3">
         <li><strong>Expansion:</strong> Output ↑, employment ↑, income ↑</li>

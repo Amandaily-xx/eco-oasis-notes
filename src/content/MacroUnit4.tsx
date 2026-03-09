@@ -1,5 +1,6 @@
 import AmandaTip from "../components/AmandaTip";
 import SectionAccordion from "../components/SectionAccordion";
+import EconGraph from "../components/EconGraph";
 
 const MacroUnit4Content = () => (
   <div className="space-y-4">
@@ -110,6 +111,7 @@ const MacroUnit4Content = () => (
     </SectionAccordion>
 
     <SectionAccordion title="6. Monetary Policy">
+      <EconGraph type="money-market" caption="Money Market — MS shifts right (expansionary), nominal interest rate falls from r₀ to r₁" />
       <p>The <strong>Federal Reserve</strong> has a dual mandate: <strong>maximum employment</strong> and <strong>price stability</strong> (targeting ~2% inflation).</p>
 
       <h4 className="font-semibold text-primary my-2">Monetary Policy Tools</h4>
@@ -137,6 +139,7 @@ const MacroUnit4Content = () => (
     </SectionAccordion>
 
     <SectionAccordion title="7. The Loanable Funds Market">
+      <EconGraph type="loanable-funds" caption="Loanable Funds Market — gov't borrowing shifts D right/S left, crowding out raises real interest rate" />
       <p>The loanable funds market brings together savers (lenders) and borrowers. The price is the <strong>real interest rate</strong>.</p>
       <ul className="list-disc pl-5 space-y-1 my-3">
         <li><strong>Demand for loanable funds:</strong> Inversely related to real interest rate (borrowers want cheap loans)</li>
