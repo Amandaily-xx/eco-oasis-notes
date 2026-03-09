@@ -226,8 +226,8 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <line x1="50" y1="220" x2="290" y2="220" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-pcm)" />
             <line x1="50" y1="220" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-pcm)" />
 
-            {/* MC curve - U-shaped, starts high-left, dips, rises steeply */}
-            <path d="M 75 60 Q 95 120, 120 155 Q 140 175, 155 175 Q 170 175, 185 155 Q 205 120, 225 70 Q 240 35, 255 20" fill="none" stroke="hsl(210 80% 65%)" strokeWidth="2.5" />
+            {/* MC curve - U-shaped, dips then rises, crosses P line on rising side at x=198 */}
+            <path d="M 75 60 Q 95 120, 120 155 Q 140 175, 155 175 Q 170 175, 185 155 Q 198 130, 215 90 Q 235 45, 255 20" fill="none" stroke="hsl(210 80% 65%)" strokeWidth="2.5" />
             <text x="248" y="18" fontSize="11" fill="hsl(210 80% 65%)" fontWeight="600" fontFamily="var(--font-body)">MC</text>
 
             {/* AC curve - U-shaped, wider and shallower than MC */}
@@ -238,10 +238,10 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <line x1="50" y1="130" x2="275" y2="130" stroke="hsl(50 90% 50%)" strokeWidth="3" />
             <text x="245" y="125" fontSize="11" fill="hsl(50 90% 50%)" fontWeight="700" fontFamily="var(--font-body)">P = MR = AR</text>
 
-            {/* Q1 dashed line at intersection */}
-            <line x1="160" y1="130" x2="160" y2="220" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
-            <circle cx="160" cy="130" r="4" fill="hsl(var(--primary))" />
-            <text x="153" y="238" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q1</text>
+            {/* Intersection dot where MC crosses P line on the rising side */}
+            <circle cx="198" cy="130" r="4" fill="hsl(var(--primary))" />
+            <line x1="198" y1="130" x2="198" y2="220" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <text x="191" y="238" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q1</text>
 
             <text x="255" y="238" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Q</text>
             <text x="4" y="22" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Cost/Revenue</text>
