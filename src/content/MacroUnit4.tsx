@@ -111,6 +111,7 @@ const MacroUnit4Content = () => (
     </SectionAccordion>
 
     <SectionAccordion title="6. Monetary Policy">
+      <EconGraph type="money-market" caption="Money Market — MS shifts right (expansionary), nominal interest rate falls from r₀ to r₁" />
       <p>The <strong>Federal Reserve</strong> has a dual mandate: <strong>maximum employment</strong> and <strong>price stability</strong> (targeting ~2% inflation).</p>
 
       <h4 className="font-semibold text-primary my-2">Monetary Policy Tools</h4>
