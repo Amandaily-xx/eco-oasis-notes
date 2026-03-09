@@ -31,7 +31,7 @@ const Index = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 bg-gradient-to-r from-title-start via-title-mid to-title-end bg-clip-text text-transparent">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
             AP Econ, simplified.
           </h1>
           <p className="font-body text-lg md:text-xl text-accent font-semibold mb-6">
