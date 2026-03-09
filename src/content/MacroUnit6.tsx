@@ -50,6 +50,7 @@ const MacroUnit6Content = () => (
     </SectionAccordion>
 
     <SectionAccordion title="3. The Foreign Exchange Market">
+      <EconGraph type="forex" caption="Foreign Exchange Market — exchange rate determined by supply and demand for currency" />
       <p>Currency is traded in the foreign exchange (forex) market. The exchange rate is determined by <strong>supply and demand</strong>.</p>
       <ul className="list-disc pl-5 space-y-1 my-3">
         <li><strong>Demand for USD:</strong> Foreigners wanting to buy U.S. goods, services, or assets</li>

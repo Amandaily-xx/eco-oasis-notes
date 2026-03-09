@@ -108,12 +108,14 @@ const MacroUnit3Content = () => (
 
     <SectionAccordion title="6. Output Gaps & Solutions">
       <h4 className="font-semibold text-primary mb-2">Recessionary Gap (Actual &lt; Potential)</h4>
+      <EconGraph type="ad-as-recessionary" caption="Recessionary gap — AD is left of LRAS; expansionary policy shifts AD right" />
       <ul className="list-disc pl-5 space-y-1 mb-3">
         <li><strong>Expansionary fiscal policy:</strong> ↑G or ↓Taxes → AD shifts right</li>
         <li><strong>Automatic stabilizers:</strong> Unemployment benefits kick in → disposable income ↑ → AD right</li>
         <li><strong>Long-run self-adjustment:</strong> Workers accept lower wages → SRAS shifts right</li>
       </ul>
       <h4 className="font-semibold text-primary mb-2">Inflationary Gap (Actual &gt; Potential)</h4>
+      <EconGraph type="ad-as-inflationary" caption="Inflationary gap — AD is right of LRAS; contractionary policy shifts AD left" />
       <ul className="list-disc pl-5 space-y-1 mb-3">
         <li><strong>Contractionary fiscal policy:</strong> ↓G or ↑Taxes → AD shifts left</li>
         <li><strong>Automatic stabilizers:</strong> Higher income taxes collected → disposable income ↓ → AD left</li>
