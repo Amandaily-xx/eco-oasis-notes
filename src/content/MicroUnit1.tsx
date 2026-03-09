@@ -102,10 +102,6 @@ const MicroUnit1Content = () => (
         A point that produces more capital goods leads to greater economic growth in the future (bigger outward shift of PPC). This is a classic FRQ trap — always explain WHY more capital = future growth!
       </AmandaTip>
     </SectionAccordion>
-  </div>
-);
-
-export default MicroUnit1Content;
 
     <SectionAccordion title="7. Comparative & Absolute Advantage">
       <p><strong>Absolute Advantage:</strong> The ability to produce more of a good using the same resources (or the same amount with fewer resources).</p>
