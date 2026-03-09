@@ -40,6 +40,7 @@ const MicroUnit2Content = () => (
     </SectionAccordion>
 
     <SectionAccordion title="3. Market Equilibrium">
+      <EconGraph type="supply-demand" caption="Supply & Demand — equilibrium where S meets D" />
       <p>Equilibrium occurs where supply meets demand: <strong>Qs = Qd</strong>.</p>
       <ul className="list-disc pl-5 space-y-1 my-3">
         <li><strong>Surplus (excess supply):</strong> Price is above equilibrium → Qs &gt; Qd → price falls</li>
