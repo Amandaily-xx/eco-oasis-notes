@@ -90,6 +90,7 @@ const MacroUnit3Content = () => (
     </SectionAccordion>
 
     <SectionAccordion title="5. The AD-AS Model">
+      <EconGraph type="ad-as" caption="Long-run equilibrium — AD, SRAS, and LRAS intersect at full employment (Yf)" />
       <h4 className="font-semibold text-primary mb-2">AD Shocks</h4>
       <ul className="list-disc pl-5 space-y-1 mb-3">
         <li><strong>Negative AD shock:</strong> AD shifts left → output ↓, price level ↓, unemployment ↑</li>
