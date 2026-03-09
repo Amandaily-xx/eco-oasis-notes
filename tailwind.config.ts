@@ -61,6 +61,11 @@ export default {
           border: "hsl(var(--info-border))",
           text: "hsl(var(--info-text))",
         },
+        title: {
+          start: "hsl(var(--title-start))",
+          mid: "hsl(var(--title-mid))",
+          end: "hsl(var(--title-end))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
