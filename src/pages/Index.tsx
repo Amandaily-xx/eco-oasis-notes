@@ -139,7 +139,7 @@ const Index = () => {
         <p>Made with ❤️ by Amanda · AP Economics Study Guide</p>
         <p className="flex items-center justify-center gap-1.5">
           <Shield className="w-3.5 h-3.5" />
-          © {new Date().getFullYear()} Amanda. All rights reserved.
+          © {new Date().getFullYear()} Amanda X.L. All rights reserved.
           {" · "}
           <Link to="/terms" className="underline hover:text-accent transition-colors">Terms of Use</Link>
         </p>

@@ -22,7 +22,7 @@ const Terms = () => {
 
           <section className="concept-block space-y-3">
             <h2 className="font-display text-xl font-bold text-primary">1. Copyright & Ownership</h2>
-            <p>All content on this website — including but not limited to text, study guides, notes, graphics, tips, and design — is the original work of <strong>Amanda</strong> and is protected under copyright law. © {new Date().getFullYear()} Amanda. All rights reserved.</p>
+            <p>All content on this website — including but not limited to text, study guides, notes, graphics, tips, and design — is the original work of <strong>Amanda X.L.</strong> and is protected under copyright law. © {new Date().getFullYear()} Amanda X.L. All rights reserved.</p>
           </section>
 
           <section className="concept-block space-y-3">
