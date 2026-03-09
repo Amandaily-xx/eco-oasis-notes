@@ -193,35 +193,29 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
         return (
           <svg viewBox="0 0 320 260" className="w-full max-w-sm mx-auto">
             <defs><marker id="ah-pmpc" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="hsl(var(--primary))" /></marker></defs>
-            <line x1="50" y1="210" x2="290" y2="210" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-pmpc)" />
-            <line x1="50" y1="210" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-pmpc)" />
-            {/* SMC curve */}
-            <path d="M 80 195 C 105 215, 130 205, 150 190 C 170 170, 190 140, 210 105 C 230 70, 245 45, 265 30" fill="none" stroke="hsl(var(--destructive))" strokeWidth="2.5" />
-            <text x="267" y="31" fontSize="11" fill="hsl(var(--destructive))" fontWeight="600" fontFamily="var(--font-body)">SMC</text>
-            {/* SAC curve (U-shape) */}
-            <path d="M 80 85 Q 130 235, 170 165 Q 215 135, 255 115" fill="none" stroke="hsl(var(--accent))" strokeWidth="2.5" />
-            <text x="257" y="119" fontSize="11" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">SAC</text>
-            {/* AVC curve (U-shape, below SAC) */}
-            <path d="M 80 115 Q 130 250, 165 185 Q 210 160, 255 145" fill="none" stroke="hsl(var(--primary))" strokeWidth="2" />
-            <text x="257" y="149" fontSize="11" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">AVC</text>
-            {/* P = MR = D horizontal line */}
-            <line x1="50" y1="85" x2="270" y2="85" stroke="hsl(var(--foreground))" strokeWidth="2" />
-            <text x="30" y="82" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">P</text>
-            {/* Profit-max output at MC=P */}
-            <line x1="170" y1="85" x2="170" y2="210" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
-            <circle cx="170" cy="85" r="4" fill="hsl(var(--primary))" />
-            <text x="168" y="82" fontSize="9" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">A</text>
-            {/* ATC at q0 (illustrative) */}
-            <line x1="50" y1="130" x2="170" y2="130" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
-            <text x="30" y="134" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">E</text>
-            <circle cx="170" cy="130" r="3" fill="hsl(var(--accent))" />
-            <text x="168" y="142" fontSize="9" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">B</text>
-            {/* Profit rectangle */}
-            <rect x="50" y="85" width="120" height="45" fill="hsl(var(--accent))" opacity="0.15" rx="2" />
-            <text x="85" y="112" fontSize="9" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">Profit = EpAB</text>
-            <text x="163" y="226" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">q₀</text>
-            <text x="270" y="228" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Output</text>
-            <text x="14" y="22" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Price</text>
+            <line x1="50" y1="220" x2="290" y2="220" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-pmpc)" />
+            <line x1="50" y1="220" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-pmpc)" />
+
+            {/* MC curve - U-shaped */}
+            <path d="M 80 60 Q 100 120, 125 160 Q 145 185, 160 185 Q 175 185, 190 165 Q 210 130, 230 80 Q 245 45, 260 25" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2.5" />
+            <text x="262" y="28" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">MC</text>
+
+            {/* AR = MR = D horizontal line */}
+            <line x1="50" y1="110" x2="275" y2="110" stroke="hsl(var(--foreground))" strokeWidth="2" />
+            <text x="230" y="105" fontSize="10" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">AR = MR = D</text>
+
+            {/* Intersection point E */}
+            <circle cx="192" cy="110" r="4" fill="hsl(var(--primary))" />
+            <text x="195" y="105" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">E</text>
+
+            {/* Dashed line down to Q axis */}
+            <line x1="192" y1="110" x2="192" y2="220" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+
+            {/* Maximum Profit label */}
+            <text x="100" y="90" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">Maximum Profit</text>
+
+            <text x="255" y="238" fontSize="11" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Output (Q)</text>
+            <text x="4" y="22" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Cost/Revenue</text>
           </svg>
         );
 
