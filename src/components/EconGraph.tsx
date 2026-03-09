@@ -116,53 +116,39 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
         return (
           <svg viewBox="0 0 320 260" className="w-full max-w-sm mx-auto">
             <defs><marker id="ah-src" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="hsl(var(--primary))" /></marker></defs>
-            <line x1="50" y1="210" x2="290" y2="210" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-src)" />
-            <line x1="50" y1="210" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-src)" />
+            <line x1="50" y1="220" x2="290" y2="220" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-src)" />
+            <line x1="50" y1="220" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-src)" />
 
-            {/* MC curve (rises with output) */}
-            <path
-              d="M 80 200 C 110 215, 135 205, 150 190 C 165 170, 185 140, 205 105 C 225 70, 245 45, 270 30"
-              fill="none"
-              stroke="hsl(var(--destructive))"
-              strokeWidth="2.5"
-            />
-            <text x="272" y="32" fontSize="11" fill="hsl(var(--destructive))" fontWeight="600" fontFamily="var(--font-body)">MC</text>
+            {/* MC curve - starts from bottom-left, dips slightly, then rises steeply */}
+            <path d="M 70 180 Q 90 200, 110 195 Q 130 190, 145 175 Q 165 145, 185 105 Q 205 65, 230 35" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2.5" />
+            <text x="232" y="32" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">MC</text>
 
-            {/* ATC curve (U-shape: down then up) */}
-            <path
-              d="M 80 80 Q 135 210, 180 160 Q 230 120, 270 95"
-              fill="none"
-              stroke="hsl(var(--accent))"
-              strokeWidth="2.5"
-            />
-            <text x="272" y="99" fontSize="11" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">ATC</text>
+            {/* ATC curve - U-shaped, starts high, dips to minimum, rises */}
+            <path d="M 70 70 Q 85 100, 110 130 Q 135 155, 155 155 Q 175 155, 195 145 Q 215 130, 240 105 Q 260 80, 275 60" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2.5" />
+            <text x="277" y="64" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">ATC</text>
 
-            {/* AVC curve (U-shape, below ATC) */}
-            <path
-              d="M 80 115 Q 135 230, 160 185 Q 215 160, 270 140"
-              fill="none"
-              stroke="hsl(var(--primary))"
-              strokeWidth="2"
-            />
-            <text x="272" y="144" fontSize="11" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">AVC</text>
+            {/* AVC curve - U-shaped, below ATC, starts lower, dips to minimum, rises */}
+            <path d="M 70 140 Q 90 165, 115 180 Q 135 188, 150 188 Q 170 188, 190 178 Q 210 165, 235 140 Q 255 115, 275 90" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2" />
+            <text x="277" y="94" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">AVC</text>
 
-            {/* AFC curve (falls as output increases) */}
-            <path
-              d="M 80 55 Q 120 120, 165 155 Q 210 178, 270 195"
-              fill="none"
-              stroke="hsl(var(--muted-foreground))"
-              strokeWidth="1.5"
-              strokeDasharray="5 3"
-            />
-            <text x="272" y="199" fontSize="10" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">AFC</text>
+            {/* MC intersects AVC at AVC minimum */}
+            <circle cx="148" cy="188" r="3.5" fill="hsl(var(--primary))" />
+            {/* MC intersects ATC at ATC minimum */}
+            <circle cx="170" cy="155" r="3.5" fill="hsl(var(--primary))" />
 
-            {/* MC intersects AVC at AVC(min) */}
-            <circle cx="160" cy="185" r="3.5" fill="hsl(var(--primary))" />
-            {/* MC intersects ATC at ATC(min) */}
-            <circle cx="180" cy="160" r="3.5" fill="hsl(var(--accent))" />
+            {/* Dashed lines to P1/Q1 (AVC min) and P2/Q2 (ATC min) */}
+            <line x1="148" y1="188" x2="148" y2="220" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <line x1="50" y1="188" x2="148" y2="188" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <text x="30" y="192" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P1</text>
+            <text x="142" y="235" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q1</text>
 
-            <text x="270" y="228" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Output</text>
-            <text x="14" y="22" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Cost</text>
+            <line x1="170" y1="155" x2="170" y2="220" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <line x1="50" y1="155" x2="170" y2="155" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <text x="30" y="159" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P2</text>
+            <text x="164" y="235" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q2</text>
+
+            <text x="270" y="238" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Q</text>
+            <text x="14" y="22" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">£</text>
           </svg>
         );
 
