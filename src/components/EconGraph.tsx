@@ -250,39 +250,46 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
 
       case "monopoly":
         return (
-          <svg viewBox="0 0 320 270" className="w-full max-w-sm mx-auto">
+          <svg viewBox="0 0 320 280" className="w-full max-w-sm mx-auto">
             <defs><marker id="ah-mon" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="hsl(var(--primary))" /></marker></defs>
-            <line x1="50" y1="220" x2="290" y2="220" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-mon)" />
-            <line x1="50" y1="220" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-mon)" />
-            {/* Demand (downward) */}
-            <line x1="60" y1="40" x2="270" y2="210" stroke="hsl(var(--destructive))" strokeWidth="2.5" />
-            <text x="265" y="205" fontSize="11" fill="hsl(var(--destructive))" fontWeight="600" fontFamily="var(--font-body)">D=AR=P</text>
-            {/* MR (steeper downward) */}
-            <line x1="60" y1="40" x2="170" y2="210" stroke="hsl(var(--destructive))" strokeWidth="2" strokeDasharray="5 3" />
-            <text x="165" y="208" fontSize="11" fill="hsl(var(--destructive))" fontFamily="var(--font-body)">MR</text>
-            {/* MC curve */}
-            <path d="M 80 195 Q 100 205, 115 180 Q 140 120, 170 80 Q 195 50, 220 35" fill="none" stroke="hsl(var(--accent))" strokeWidth="2.5" />
-            <text x="222" y="34" fontSize="11" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">MC</text>
-            {/* ATC (U-shape) */}
-            <path d="M 80 90 Q 130 240, 165 170 Q 210 135, 255 120" fill="none" stroke="hsl(var(--primary))" strokeWidth="2" />
-            <text x="257" y="124" fontSize="11" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">ATC</text>
-            {/* MR=MC point */}
-            <circle cx="125" cy="135" r="4" fill="hsl(var(--primary))" />
-            {/* Up to demand for price */}
-            <line x1="125" y1="135" x2="125" y2="78" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
-            <circle cx="125" cy="78" r="4" fill="hsl(var(--destructive))" />
-            <line x1="50" y1="78" x2="125" y2="78" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
-            <line x1="125" y1="135" x2="125" y2="220" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
-            <text x="28" y="82" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Pf</text>
-            <text x="118" y="237" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Qf</text>
-            {/* Economic profit area */}
-            <rect x="50" y="78" width="75" height="25" fill="hsl(var(--accent))" opacity="0.2" rx="2" />
-            <text x="58" y="95" fontSize="8" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">Econ. Profit</text>
-            {/* DWL area */}
-            <polygon points="125,78 125,135 175,110" fill="hsl(var(--destructive))" opacity="0.12" />
-            <text x="135" y="115" fontSize="8" fill="hsl(var(--destructive))" fontFamily="var(--font-body)">DWL</text>
-            <text x="270" y="238" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Q</text>
-            <text x="24" y="22" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">P, C</text>
+            <line x1="50" y1="230" x2="290" y2="230" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-mon)" />
+            <line x1="50" y1="230" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-mon)" />
+
+            {/* MC curve - U-shaped, green/teal */}
+            <path d="M 70 180 Q 90 210, 110 210 Q 130 210, 145 195 Q 165 165, 185 120 Q 200 85, 220 55 Q 235 35, 250 25" fill="none" stroke="hsl(160 60% 45%)" strokeWidth="2.5" />
+            <text x="252" y="28" fontSize="11" fill="hsl(160 60% 45%)" fontWeight="600" fontFamily="var(--font-body)">MC</text>
+
+            {/* ATC curve - U-shaped, orange/yellow */}
+            <path d="M 70 70 Q 90 110, 115 140 Q 140 165, 160 168 Q 180 168, 200 158 Q 225 138, 250 105 Q 265 80, 275 60" fill="none" stroke="hsl(40 85% 55%)" strokeWidth="2.5" />
+            <text x="272" y="55" fontSize="11" fill="hsl(40 85% 55%)" fontWeight="600" fontFamily="var(--font-body)">ATC</text>
+
+            {/* Demand curve D=AR=P - downward sloping, yellow */}
+            <line x1="60" y1="35" x2="275" y2="215" stroke="hsl(50 90% 50%)" strokeWidth="2.5" />
+            <text x="260" y="210" fontSize="10" fill="hsl(50 90% 50%)" fontWeight="600" fontFamily="var(--font-body)">D=AR=P</text>
+
+            {/* MR curve - steeper downward, blue */}
+            <line x1="60" y1="35" x2="175" y2="225" stroke="hsl(220 75% 55%)" strokeWidth="2.5" />
+            <text x="170" y="222" fontSize="10" fill="hsl(220 75% 55%)" fontWeight="600" fontFamily="var(--font-body)">MR</text>
+
+            {/* MR=MC intersection point */}
+            <circle cx="140" cy="170" r="4" fill="hsl(var(--primary))" />
+            {/* Go up to demand curve for Pf */}
+            <line x1="140" y1="170" x2="140" y2="90" stroke="hsl(var(--destructive))" strokeWidth="2" strokeDasharray="5 3" />
+            <circle cx="140" cy="90" r="4" fill="hsl(var(--destructive))" />
+            {/* Horizontal to price axis */}
+            <line x1="50" y1="90" x2="140" y2="90" stroke="hsl(var(--destructive))" strokeWidth="2" strokeDasharray="5 3" />
+            {/* Vertical down to Q axis */}
+            <line x1="140" y1="170" x2="140" y2="230" stroke="hsl(var(--destructive))" strokeWidth="2" strokeDasharray="5 3" />
+
+            <text x="28" y="94" fontSize="11" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Pf</text>
+            <text x="133" y="248" fontSize="11" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Qf</text>
+
+            {/* Economic profit shaded area */}
+            <rect x="50" y="90" width="90" height="40" fill="hsl(80 60% 50%)" opacity="0.25" rx="2" />
+            <text x="62" y="115" fontSize="9" fill="hsl(80 60% 40%)" fontWeight="600" fontFamily="var(--font-body)">Economic Profit</text>
+
+            <text x="270" y="250" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Q</text>
+            <text x="24" y="22" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">P</text>
           </svg>
         );
 
