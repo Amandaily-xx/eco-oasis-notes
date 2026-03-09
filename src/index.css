@@ -44,6 +44,10 @@
     --info-border: 210 60% 70%;
     --info-text: 210 50% 25%;
 
+    --title-start: 270 40% 30%;
+    --title-mid: 280 35% 40%;
+    --title-end: 20 30% 35%;
+
     --font-display: 'Playfair Display', Georgia, serif;
     --font-body: 'Source Sans 3', system-ui, sans-serif;
 
