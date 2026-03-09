@@ -38,7 +38,7 @@ const Terms = () => {
 
           <section className="concept-block space-y-3">
             <h2 className="font-display text-xl font-bold text-primary">3. Attribution</h2>
-            <p>If you reference or quote any content from this site (with permission), you must provide clear attribution to <strong>Amanda's AP Economics Study Guide</strong> with a link back to this website.</p>
+            <p>If you reference or quote any content from this site (with permission), you must provide clear attribution to <strong>Amanda X.L.'s AP Economics Study Guide</strong> with a link back to this website.</p>
           </section>
 
           <section className="concept-block space-y-3">

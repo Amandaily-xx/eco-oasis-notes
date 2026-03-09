@@ -136,7 +136,7 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="border-t py-8 text-center font-body text-sm text-muted-foreground space-y-2">
-        <p>Made with ❤️ by Amanda · AP Economics Study Guide</p>
+        <p>Made with ❤️ by Amanda X.L. · AP Economics Study Guide</p>
         <p className="flex items-center justify-center gap-1.5">
           <Shield className="w-3.5 h-3.5" />
           © {new Date().getFullYear()} Amanda X.L. All rights reserved.
