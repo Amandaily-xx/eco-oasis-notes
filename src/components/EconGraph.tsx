@@ -196,20 +196,20 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <line x1="50" y1="220" x2="290" y2="220" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-pmpc)" />
             <line x1="50" y1="220" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-pmpc)" />
 
-            {/* MC curve - U-shaped */}
-            <path d="M 80 60 Q 100 120, 125 160 Q 145 185, 160 185 Q 175 185, 190 165 Q 210 130, 230 80 Q 245 45, 260 25" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2.5" />
-            <text x="262" y="28" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">MC</text>
+            {/* MC curve - U-shaped, crosses AR=MR=D on rising side at x=205 */}
+            <path d="M 80 60 Q 100 120, 125 160 Q 145 185, 160 185 Q 175 185, 190 165 Q 205 140, 218 110 Q 235 70, 255 30" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2.5" />
+            <text x="257" y="33" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">MC</text>
 
             {/* AR = MR = D horizontal line */}
             <line x1="50" y1="110" x2="275" y2="110" stroke="hsl(var(--foreground))" strokeWidth="2" />
             <text x="230" y="105" fontSize="10" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">AR = MR = D</text>
 
-            {/* Intersection point E */}
-            <circle cx="192" cy="110" r="4" fill="hsl(var(--primary))" />
-            <text x="195" y="105" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">E</text>
+            {/* Intersection point E — where MC crosses the horizontal line on the rising side */}
+            <circle cx="218" cy="110" r="4" fill="hsl(var(--primary))" />
+            <text x="222" y="105" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">E</text>
 
             {/* Dashed line down to Q axis */}
-            <line x1="192" y1="110" x2="192" y2="220" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <line x1="218" y1="110" x2="218" y2="220" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
 
             {/* Maximum Profit label */}
             <text x="100" y="90" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">Maximum Profit</text>
@@ -226,8 +226,8 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <line x1="50" y1="220" x2="290" y2="220" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-pcm)" />
             <line x1="50" y1="220" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-pcm)" />
 
-            {/* MC curve - U-shaped, starts high-left, dips, rises steeply */}
-            <path d="M 75 60 Q 95 120, 120 155 Q 140 175, 155 175 Q 170 175, 185 155 Q 205 120, 225 70 Q 240 35, 255 20" fill="none" stroke="hsl(210 80% 65%)" strokeWidth="2.5" />
+            {/* MC curve - U-shaped, dips then rises, crosses P line on rising side at x=198 */}
+            <path d="M 75 60 Q 95 120, 120 155 Q 140 175, 155 175 Q 170 175, 185 155 Q 198 130, 215 90 Q 235 45, 255 20" fill="none" stroke="hsl(210 80% 65%)" strokeWidth="2.5" />
             <text x="248" y="18" fontSize="11" fill="hsl(210 80% 65%)" fontWeight="600" fontFamily="var(--font-body)">MC</text>
 
             {/* AC curve - U-shaped, wider and shallower than MC */}
@@ -238,10 +238,10 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <line x1="50" y1="130" x2="275" y2="130" stroke="hsl(50 90% 50%)" strokeWidth="3" />
             <text x="245" y="125" fontSize="11" fill="hsl(50 90% 50%)" fontWeight="700" fontFamily="var(--font-body)">P = MR = AR</text>
 
-            {/* Q1 dashed line at intersection */}
-            <line x1="160" y1="130" x2="160" y2="220" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
-            <circle cx="160" cy="130" r="4" fill="hsl(var(--primary))" />
-            <text x="153" y="238" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q1</text>
+            {/* Intersection dot where MC crosses P line on the rising side */}
+            <circle cx="198" cy="130" r="4" fill="hsl(var(--primary))" />
+            <line x1="198" y1="130" x2="198" y2="220" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <text x="191" y="238" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q1</text>
 
             <text x="255" y="238" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Q</text>
             <text x="4" y="22" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Cost/Revenue</text>
@@ -259,11 +259,11 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <path d="M 70 180 Q 90 210, 110 210 Q 130 210, 145 195 Q 165 165, 185 120 Q 200 85, 220 55 Q 235 35, 250 25" fill="none" stroke="hsl(160 60% 45%)" strokeWidth="2.5" />
             <text x="252" y="28" fontSize="11" fill="hsl(160 60% 45%)" fontWeight="600" fontFamily="var(--font-body)">MC</text>
 
-            {/* ATC curve - U-shaped, orange/yellow */}
-            <path d="M 70 70 Q 90 110, 115 140 Q 140 165, 160 168 Q 180 168, 200 158 Q 225 138, 250 105 Q 265 80, 275 60" fill="none" stroke="hsl(40 85% 55%)" strokeWidth="2.5" />
-            <text x="272" y="55" fontSize="11" fill="hsl(40 85% 55%)" fontWeight="600" fontFamily="var(--font-body)">ATC</text>
+            {/* ATC curve - U-shaped, shifted up so ATC at Qf (x=140) ≈ y=130 */}
+            <path d="M 70 50 Q 90 80, 110 105 Q 130 122, 145 130 Q 165 135, 185 130 Q 210 115, 235 85 Q 255 60, 275 35" fill="none" stroke="hsl(40 85% 55%)" strokeWidth="2.5" />
+            <text x="272" y="32" fontSize="11" fill="hsl(40 85% 55%)" fontWeight="600" fontFamily="var(--font-body)">ATC</text>
 
-            {/* Demand curve D=AR=P - downward sloping, yellow */}
+            {/* Demand curve D=AR=P - downward sloping */}
             <line x1="60" y1="35" x2="275" y2="215" stroke="hsl(50 90% 50%)" strokeWidth="2.5" />
             <text x="260" y="210" fontSize="10" fill="hsl(50 90% 50%)" fontWeight="600" fontFamily="var(--font-body)">D=AR=P</text>
 
@@ -271,22 +271,25 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <line x1="60" y1="35" x2="175" y2="225" stroke="hsl(220 75% 55%)" strokeWidth="2.5" />
             <text x="170" y="222" fontSize="10" fill="hsl(220 75% 55%)" fontWeight="600" fontFamily="var(--font-body)">MR</text>
 
-            {/* MR=MC intersection point */}
-            <circle cx="140" cy="170" r="4" fill="hsl(var(--primary))" />
+            {/* MR=MC intersection point — BLACK dot */}
+            <circle cx="140" cy="170" r="4" fill="hsl(var(--foreground))" />
             {/* Go up to demand curve for Pf */}
-            <line x1="140" y1="170" x2="140" y2="90" stroke="hsl(var(--destructive))" strokeWidth="2" strokeDasharray="5 3" />
-            <circle cx="140" cy="90" r="4" fill="hsl(var(--destructive))" />
+            <line x1="140" y1="170" x2="140" y2="100" stroke="hsl(var(--muted-foreground))" strokeWidth="1.5" strokeDasharray="5 3" />
+            <circle cx="140" cy="100" r="4" fill="hsl(var(--destructive))" />
             {/* Horizontal to price axis */}
-            <line x1="50" y1="90" x2="140" y2="90" stroke="hsl(var(--destructive))" strokeWidth="2" strokeDasharray="5 3" />
+            <line x1="50" y1="100" x2="140" y2="100" stroke="hsl(var(--muted-foreground))" strokeWidth="1.5" strokeDasharray="5 3" />
             {/* Vertical down to Q axis */}
-            <line x1="140" y1="170" x2="140" y2="230" stroke="hsl(var(--destructive))" strokeWidth="2" strokeDasharray="5 3" />
+            <line x1="140" y1="170" x2="140" y2="230" stroke="hsl(var(--muted-foreground))" strokeWidth="1.5" strokeDasharray="5 3" />
+            {/* Horizontal dashed from ATC at Qf to price axis */}
+            <line x1="50" y1="130" x2="140" y2="130" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
 
-            <text x="28" y="94" fontSize="11" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Pf</text>
+            <text x="28" y="104" fontSize="11" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Pf</text>
+            <text x="28" y="134" fontSize="10" fill="hsl(40 85% 55%)" fontFamily="var(--font-body)">ATC</text>
             <text x="133" y="248" fontSize="11" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Qf</text>
 
-            {/* Economic profit shaded area */}
-            <rect x="50" y="90" width="90" height="40" fill="hsl(80 60% 50%)" opacity="0.25" rx="2" />
-            <text x="62" y="115" fontSize="9" fill="hsl(80 60% 40%)" fontWeight="600" fontFamily="var(--font-body)">Economic Profit</text>
+            {/* Economic profit shaded area: from Pf (y=100) to ATC (y=130), width = Qf-axis (50 to 140) */}
+            <rect x="50" y="100" width="90" height="30" fill="hsl(80 60% 50%)" opacity="0.25" rx="2" />
+            <text x="62" y="120" fontSize="9" fill="hsl(80 60% 40%)" fontWeight="600" fontFamily="var(--font-body)">Economic Profit</text>
 
             <text x="270" y="250" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Q</text>
             <text x="24" y="22" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">P</text>
@@ -304,24 +307,24 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <path d="M 70 180 Q 90 210, 110 210 Q 130 210, 145 195 Q 165 165, 185 120 Q 200 85, 220 55 Q 235 35, 250 25" fill="none" stroke="hsl(160 60% 45%)" strokeWidth="2.5" />
             <text x="252" y="28" fontSize="11" fill="hsl(160 60% 45%)" fontWeight="600" fontFamily="var(--font-body)">MC</text>
 
-            {/* ATC curve - U-shaped, tangent to D at equilibrium */}
-            <path d="M 70 70 Q 90 110, 115 140 Q 140 165, 160 168 Q 180 168, 200 158 Q 225 138, 250 105 Q 265 80, 275 60" fill="none" stroke="hsl(40 85% 55%)" strokeWidth="2.5" />
-            <text x="272" y="55" fontSize="11" fill="hsl(40 85% 55%)" fontWeight="600" fontFamily="var(--font-body)">ATC</text>
+            {/* ATC curve - U-shaped, tangent to D at (150, 117) */}
+            <path d="M 80 40 Q 100 70, 120 95 Q 135 110, 150 117 Q 170 124, 185 122 Q 210 108, 235 75 Q 250 50, 265 30" fill="none" stroke="hsl(40 85% 55%)" strokeWidth="2.5" />
+            <text x="267" y="33" fontSize="11" fill="hsl(40 85% 55%)" fontWeight="600" fontFamily="var(--font-body)">ATC</text>
 
-            {/* D curve - downward sloping, tangent to ATC */}
+            {/* D curve - downward sloping, tangent to ATC at equilibrium */}
             <line x1="70" y1="50" x2="260" y2="220" stroke="hsl(var(--destructive))" strokeWidth="2.5" />
-            <text x="255" y="215" fontSize="10" fill="hsl(var(--destructive))" fontWeight="600" fontFamily="var(--font-body)">D</text>
+            <text x="255" y="215" fontSize="10" fill="hsl(var(--destructive))" fontWeight="600" fontFamily="var(--font-body)">D=AR=P</text>
 
             {/* MR curve */}
             <line x1="70" y1="50" x2="170" y2="220" stroke="hsl(var(--destructive))" strokeWidth="2" strokeDasharray="5 3" />
             <text x="165" y="218" fontSize="10" fill="hsl(var(--destructive))" fontFamily="var(--font-body)">MR</text>
 
-            {/* LR equilibrium: D tangent to ATC, P = ATC → zero profit */}
-            <circle cx="145" cy="120" r="4" fill="hsl(var(--primary))" />
-            <line x1="145" y1="120" x2="145" y2="230" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
-            <line x1="50" y1="120" x2="145" y2="120" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
-            <text x="28" y="124" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P*</text>
-            <text x="138" y="248" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q*</text>
+            {/* LR equilibrium: D tangent to ATC — RED dot at tangent point */}
+            <circle cx="150" cy="117" r="5" fill="hsl(var(--destructive))" />
+            <line x1="150" y1="117" x2="150" y2="230" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <line x1="50" y1="117" x2="150" y2="117" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <text x="28" y="121" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">P*</text>
+            <text x="143" y="248" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q*</text>
             <text x="75" y="80" fontSize="9" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">P = ATC → zero econ. profit</text>
 
             <text x="270" y="250" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Q</text>
