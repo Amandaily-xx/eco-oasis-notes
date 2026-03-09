@@ -154,27 +154,37 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
 
       case "economies-of-scale":
         return (
-          <svg viewBox="0 0 320 250" className="w-full max-w-sm mx-auto">
+          <svg viewBox="0 0 320 260" className="w-full max-w-sm mx-auto">
             <defs><marker id="ah-eos" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="hsl(var(--primary))" /></marker></defs>
-            <line x1="50" y1="200" x2="290" y2="200" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-eos)" />
-            <line x1="50" y1="200" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-eos)" />
-            {/* LRAC curve (down then up) */}
-            <path d="M 70 70 Q 120 215, 170 155 Q 220 105, 270 90" fill="none" stroke="hsl(var(--destructive))" strokeWidth="2.5" />
-            <text x="272" y="94" fontSize="11" fill="hsl(var(--destructive))" fontWeight="600" fontFamily="var(--font-body)">LRAC</text>
-            {/* Vertical dashed lines for regions */}
-            <line x1="140" y1="40" x2="140" y2="200" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
-            <line x1="210" y1="40" x2="210" y2="200" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <line x1="50" y1="220" x2="290" y2="220" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-eos)" />
+            <line x1="50" y1="220" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-eos)" />
+            {/* LRAC curve - deep U-shape: high left, flat bottom, high right */}
+            <path d="M 65 45 Q 80 100, 100 145 Q 120 180, 140 190 Q 160 195, 180 195 Q 200 195, 210 190 Q 230 175, 250 140 Q 265 105, 280 55" fill="none" stroke="hsl(var(--accent))" strokeWidth="3" />
+            <text x="275" y="50" fontSize="12" fill="hsl(var(--accent))" fontWeight="700" fontFamily="var(--font-body)">LRAC</text>
+
+            {/* MES vertical dashed line */}
+            <line x1="140" y1="190" x2="140" y2="220" stroke="hsl(var(--muted-foreground))" strokeWidth="1.5" strokeDasharray="4 3" />
+            <text x="128" y="238" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">MES</text>
+
+            {/* Second vertical dashed line for end of constant returns */}
+            <line x1="210" y1="190" x2="210" y2="220" stroke="hsl(var(--muted-foreground))" strokeWidth="1.5" strokeDasharray="4 3" />
+
+            {/* Horizontal arrows along the flat section */}
+            <line x1="140" y1="195" x2="205" y2="195" stroke="hsl(var(--primary))" strokeWidth="1.5" />
+            <polygon points="205,192 210,195 205,198" fill="hsl(var(--primary))" />
+
             {/* Region labels */}
-            <text x="68" y="170" fontSize="9" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">Economies</text>
-            <text x="72" y="182" fontSize="9" fill="hsl(var(--accent))" fontFamily="var(--font-body)">of Scale</text>
-            <text x="148" y="170" fontSize="9" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Constant</text>
-            <text x="152" y="182" fontSize="9" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Returns</text>
-            <text x="218" y="170" fontSize="9" fill="hsl(var(--destructive))" fontWeight="600" fontFamily="var(--font-body)">Diseconomies</text>
-            <text x="225" y="182" fontSize="9" fill="hsl(var(--destructive))" fontFamily="var(--font-body)">of Scale</text>
-            {/* Q labels */}
-            <text x="133" y="215" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q₁</text>
-            <text x="203" y="215" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q₂</text>
-            <text x="270" y="218" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Output</text>
+            <text x="68" y="180" fontSize="9" fill="hsl(var(--destructive))" fontWeight="600" fontFamily="var(--font-body)">Economies</text>
+            <text x="72" y="192" fontSize="9" fill="hsl(var(--destructive))" fontFamily="var(--font-body)">of Scale</text>
+            <text x="148" y="215" fontSize="8" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Constant</text>
+            <text x="223" y="180" fontSize="9" fill="hsl(var(--destructive))" fontWeight="600" fontFamily="var(--font-body)">Diseconomies</text>
+            <text x="228" y="192" fontSize="9" fill="hsl(var(--destructive))" fontFamily="var(--font-body)">of Scale</text>
+
+            {/* Dots at transition points */}
+            <circle cx="140" cy="190" r="4" fill="hsl(var(--destructive))" />
+            <circle cx="210" cy="190" r="4" fill="hsl(var(--destructive))" />
+
+            <text x="265" y="238" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Quantity</text>
             <text x="14" y="22" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Cost</text>
           </svg>
         );
