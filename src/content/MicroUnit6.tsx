@@ -39,7 +39,7 @@ const MicroUnit6Content = () => (
     </SectionAccordion>
 
     <SectionAccordion title="4. Positive Externalities">
-      <h4 className="font-semibold text-primary mb-2">Positive Production Externality</h4>
+      <EconGraph type="positive-externality" caption="Positive Consumption Externality — MSB > MPB, market underconsumes" />
       <p>A firm's production benefits bystanders. MSC &lt; MPC → <strong>Underproduction</strong>.</p>
       <p><strong>Solutions:</strong> Subsidy to producers, direct government provision</p>
 
