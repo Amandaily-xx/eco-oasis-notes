@@ -1,5 +1,6 @@
 import AmandaTip from "../components/AmandaTip";
 import SectionAccordion from "../components/SectionAccordion";
+import EconGraph from "../components/EconGraph";
 
 const MicroUnit4Content = () => (
   <div className="space-y-4">

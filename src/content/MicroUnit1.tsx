@@ -85,6 +85,7 @@ const MicroUnit1Content = () => (
         <li><strong>Outward shift:</strong> Economic growth (more resources, better technology)</li>
         <li><strong>Inward shift:</strong> Loss of resources (natural disaster, war)</li>
       </ul>
+      <EconGraph type="ppc" caption="Production Possibilities Curve — points on the curve are efficient, inside is inefficient, outside is unattainable" />
       <AmandaTip>
         A point that produces more capital goods leads to greater economic growth in the future (bigger outward shift of PPC). This is a classic FRQ trap — always explain WHY more capital = future growth!
       </AmandaTip>

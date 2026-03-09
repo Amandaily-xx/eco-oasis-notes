@@ -68,6 +68,7 @@ const MicroUnit5Content = () => (
 
     <SectionAccordion title="6. Monopsony">
       <p>A <strong>monopsony</strong> is a market with only ONE buyer of labor (single employer in a town).</p>
+      <EconGraph type="monopsony" caption="Monopsony — hires at MRP = MFC but pays lower wage from supply curve" />
       <ul className="list-disc pl-5 space-y-1 my-3">
         <li>The monopsonist faces an upward-sloping labor supply curve</li>
         <li>MFC &gt; Wage (to hire one more worker, must raise wage for ALL workers)</li>

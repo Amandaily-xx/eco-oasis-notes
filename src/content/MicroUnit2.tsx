@@ -71,12 +71,14 @@ const MicroUnit2Content = () => (
 
     <SectionAccordion title="5. Government Intervention: Price Controls">
       <h4 className="font-semibold text-primary mb-2">Price Ceiling (Maximum Price)</h4>
+      <EconGraph type="price-ceiling" caption="Price Ceiling — set below equilibrium, creates a shortage" />
       <ul className="list-disc pl-5 space-y-1 mb-3">
         <li>Set BELOW equilibrium to be effective (binding)</li>
         <li>Creates a <strong>shortage</strong> (Qd &gt; Qs)</li>
         <li>Example: rent control</li>
       </ul>
       <h4 className="font-semibold text-primary mb-2">Price Floor (Minimum Price)</h4>
+      <EconGraph type="price-floor" caption="Price Floor — set above equilibrium, creates a surplus" />
       <ul className="list-disc pl-5 space-y-1 mb-3">
         <li>Set ABOVE equilibrium to be effective (binding)</li>
         <li>Creates a <strong>surplus</strong> (Qs &gt; Qd)</li>
