@@ -31,21 +31,15 @@ const Index = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight mb-4">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
             AP Econ, simplified.
           </h1>
           <p className="font-body text-lg md:text-xl text-accent font-semibold mb-6">
             by Amanda ✨
           </p>
-          <div className="max-w-2xl mx-auto space-y-4 font-body text-base md:text-lg text-muted-foreground leading-relaxed">
+          <div className="max-w-2xl mx-auto font-body text-base md:text-lg text-muted-foreground leading-relaxed">
             <p>
-              Wanna ace your exam without the 2:00 AM existential crisis? 😴
-            </p>
-            <p>
-              I've broken down the most important (and confusing!) concepts into detailed, easy-to-follow guides that actually make sense. From tricky market structures to complex monetary policy, these notes bridge the gap between <em>"just studying"</em> and actually <strong>scoring a 5</strong>.
-            </p>
-            <p>
-              Get the strategic tips that make the difference—grab your copy now while supply is high and the opportunity cost is low! 📈
+              Ace your AP exam without the 2 AM crisis 😴 — clear guides that bridge the gap between <em>"just studying"</em> and actually <strong>scoring a 5</strong>. 📈
             </p>
           </div>
           <motion.div
