@@ -85,6 +85,7 @@ const MicroUnit6Content = () => (
         <li>Discrimination</li>
       </ul>
       <h4 className="font-semibold text-primary mb-2">Measurement</h4>
+      <EconGraph type="lorenz-curve" caption="Lorenz Curve — the further from the line of equality, the greater the inequality (Gini = A/(A+B))" />
       <ul className="list-disc pl-5 space-y-1 mb-3">
         <li><strong>Lorenz Curve:</strong> Shows cumulative % of income vs. cumulative % of population</li>
         <li><strong>Gini Coefficient:</strong> 0 = perfect equality; 1 = perfect inequality</li>

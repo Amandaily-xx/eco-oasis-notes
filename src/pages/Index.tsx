@@ -39,7 +39,7 @@ const Index = () => {
           </p>
           <div className="max-w-2xl mx-auto font-body text-base md:text-lg text-muted-foreground leading-relaxed">
             <p>
-              No more late-night panic sessions — these😴  guides are designed to help you actually understand the material and <strong>score a 5</strong>. Grab your copy now while supply is high and the opportunity cost is low! :)
+              No more late-night panic sessions 😴 — these guides are designed to help you actually understand the material and <strong>score a 5</strong>. Grab your copy now while supply is high and the opportunity cost is low! :)
             </p>
           </div>
           <motion.div

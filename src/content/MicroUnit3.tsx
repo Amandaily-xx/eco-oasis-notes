@@ -22,6 +22,7 @@ const MicroUnit3Content = () => (
     </SectionAccordion>
 
     <SectionAccordion title="2. Short-Run Cost Curves">
+      <EconGraph type="short-run-costs" caption="Short-Run Cost Curves — MC intersects AVC and ATC at their minimum points" />
       <h4 className="font-semibold text-primary mb-2">Key Relationships</h4>
       <ul className="list-disc pl-5 space-y-1 mb-3">
         <li><strong>MC = w / MP</strong> (Marginal Cost = wage ÷ Marginal Product)</li>
@@ -40,6 +41,7 @@ const MicroUnit3Content = () => (
     </SectionAccordion>
 
     <SectionAccordion title="3. Long-Run Costs & Economies of Scale">
+      <EconGraph type="economies-of-scale" caption="Long-Run Average Cost — economies of scale, constant returns, and diseconomies of scale" />
       <ul className="list-disc pl-5 space-y-1">
         <li><strong>Economies of Scale:</strong> LRATC decreases as output increases (specialization, bulk buying)</li>
         <li><strong>Constant Returns to Scale:</strong> LRATC stays flat</li>
@@ -49,6 +51,7 @@ const MicroUnit3Content = () => (
     </SectionAccordion>
 
     <SectionAccordion title="4. Perfect Competition: Structure">
+      <EconGraph type="perfect-competition" caption="Perfect Competition — firm is a price taker, D = MR = P is horizontal" />
       <ul className="list-disc pl-5 space-y-1">
         <li>Many buyers and sellers</li>
         <li>Identical (homogeneous) products</li>
@@ -60,7 +63,7 @@ const MicroUnit3Content = () => (
     </SectionAccordion>
 
     <SectionAccordion title="5. Profit Maximization (MR = MC)">
-      <EconGraph type="perfect-competition" caption="Perfect Competition — firm produces where MR = MC, with P = MR = D" />
+      <EconGraph type="profit-max-pc" caption="Profit Maximization — firm produces at q₀ where P = MC, profit = rectangle EpAB" />
       <ul className="list-disc pl-5 space-y-1 mb-3">
         <li>If MR &gt; MC → Produce more (profit increases)</li>
         <li>If MR = MC → Profit maximized</li>

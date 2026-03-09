@@ -59,6 +59,7 @@ const MacroUnit5Content = () => (
     </SectionAccordion>
 
     <SectionAccordion title="4. Long-Run Economic Growth">
+      <EconGraph type="long-run-growth" caption="Three views of long-run growth: LRAS shifts right, PPC shifts outward, real GDP rises over time" />
       <h4 className="font-semibold text-primary mb-2">Measurement</h4>
       <p>Long-run growth is measured by <strong>real GDP per capita</strong>.</p>
 

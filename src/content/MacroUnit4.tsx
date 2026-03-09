@@ -139,6 +139,7 @@ const MacroUnit4Content = () => (
     </SectionAccordion>
 
     <SectionAccordion title="7. The Loanable Funds Market">
+      <EconGraph type="loanable-funds" caption="Loanable Funds Market — gov't borrowing shifts D right/S left, crowding out raises real interest rate" />
       <p>The loanable funds market brings together savers (lenders) and borrowers. The price is the <strong>real interest rate</strong>.</p>
       <ul className="list-disc pl-5 space-y-1 my-3">
         <li><strong>Demand for loanable funds:</strong> Inversely related to real interest rate (borrowers want cheap loans)</li>
