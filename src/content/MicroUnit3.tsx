@@ -1,5 +1,6 @@
 import AmandaTip from "../components/AmandaTip";
 import SectionAccordion from "../components/SectionAccordion";
+import EconGraph from "../components/EconGraph";
 
 const MicroUnit3Content = () => (
   <div className="space-y-4">
@@ -59,6 +60,7 @@ const MicroUnit3Content = () => (
     </SectionAccordion>
 
     <SectionAccordion title="5. Profit Maximization (MR = MC)">
+      <EconGraph type="perfect-competition" caption="Perfect Competition — firm produces where MR = MC, with P = MR = D" />
       <ul className="list-disc pl-5 space-y-1 mb-3">
         <li>If MR &gt; MC → Produce more (profit increases)</li>
         <li>If MR = MC → Profit maximized</li>

@@ -31,7 +31,7 @@ const Index = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 bg-gradient-to-r from-title-start via-title-mid to-title-end bg-clip-text text-transparent">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 bg-gradient-to-r from-primary via-accent to-primarytext text-transparent">
             AP Econ, simplified.
           </h1>
           <p className="font-body text-lg md:text-xl text-accent font-semibold mb-6">
@@ -39,7 +39,7 @@ const Index = () => {
           </p>
           <div className="max-w-2xl mx-auto font-body text-base md:text-lg text-muted-foreground leading-relaxed">
             <p>
-              No more late-night panic sessions — these guides are designed to help you actually understand the material and <strong>score a 5</strong>. Grab your copy now while supply is high and the opportunity cost is low! :)
+              No more late-night panic sessions — these😴  guides are designed to help you actually understand the material and <strong>score a 5</strong>. Grab your copy now while supply is high and the opportunity cost is low! :)
             </p>
           </div>
           <motion.div

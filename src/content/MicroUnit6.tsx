@@ -1,5 +1,6 @@
 import AmandaTip from "../components/AmandaTip";
 import SectionAccordion from "../components/SectionAccordion";
+import EconGraph from "../components/EconGraph";
 
 const MicroUnit6Content = () => (
   <div className="space-y-4">
@@ -23,6 +24,7 @@ const MicroUnit6Content = () => (
 
     <SectionAccordion title="3. Negative Externalities">
       <h4 className="font-semibold text-primary mb-2">Negative Production Externality</h4>
+      <EconGraph type="negative-externality" caption="Negative Production Externality — MSC > MPC, market overproduces" />
       <p>A firm's production harms bystanders (pollution). MSC &gt; MPC → <strong>Overproduction</strong>.</p>
       <p><strong>Solutions:</strong> Corrective (Pigouvian) tax, cap-and-trade, regulation, Coasian bargaining</p>
       
@@ -37,6 +39,7 @@ const MicroUnit6Content = () => (
     </SectionAccordion>
 
     <SectionAccordion title="4. Positive Externalities">
+      <EconGraph type="positive-externality" caption="Positive Consumption Externality — MSB > MPB, market underconsumes" />
       <h4 className="font-semibold text-primary mb-2">Positive Production Externality</h4>
       <p>A firm's production benefits bystanders. MSC &lt; MPC → <strong>Underproduction</strong>.</p>
       <p><strong>Solutions:</strong> Subsidy to producers, direct government provision</p>

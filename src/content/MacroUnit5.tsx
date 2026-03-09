@@ -1,5 +1,6 @@
 import AmandaTip from "../components/AmandaTip";
 import SectionAccordion from "../components/SectionAccordion";
+import EconGraph from "../components/EconGraph";
 
 const MacroUnit5Content = () => (
   <div className="space-y-4">
@@ -21,6 +22,7 @@ const MacroUnit5Content = () => (
 
     <SectionAccordion title="2. The Phillips Curve">
       <h4 className="font-semibold text-primary mb-2">Short-Run Phillips Curve (SRPC)</h4>
+      <EconGraph type="phillips-curve" caption="Phillips Curve — SRPC shows short-run inflation/unemployment trade-off; LRPC is vertical at NRU" />
       <p>Shows an <strong>inverse relationship</strong> between inflation and unemployment in the short run.</p>
       <ul className="list-disc pl-5 space-y-1 my-3">
         <li>Increase in AD → movement <strong>up along</strong> the SRPC (higher inflation, lower unemployment)</li>
