@@ -1,6 +1,6 @@
 import AmandaTip from "../components/AmandaTip";
 import SectionAccordion from "../components/SectionAccordion";
-import EconGraph from "../components/EconGraph";
+import ppcDiagram from "../assets/ppc-diagram.png";
 
 const MicroUnit1Content = () => (
   <div className="space-y-4">
@@ -85,11 +85,27 @@ const MicroUnit1Content = () => (
         <li><strong>Outward shift:</strong> Economic growth (more resources, better technology)</li>
         <li><strong>Inward shift:</strong> Loss of resources (natural disaster, war)</li>
       </ul>
-      <EconGraph type="ppc" caption="Production Possibilities Curve — points on the curve are efficient, inside is inefficient, outside is unattainable" />
+
+      <figure className="mx-auto my-3 w-full max-w-2xl">
+        <img
+          src={ppcDiagram}
+          alt="Production possibilities curve with PPC1 and outward-shifted PPC2, showing an efficient point, an inefficient point, and an unattainable point"
+          className="h-auto w-full rounded-md border border-border"
+          loading="lazy"
+        />
+        <figcaption className="mt-2 text-center text-sm text-muted-foreground">
+          Production Possibilities Curve — points on the curve are efficient, inside is inefficient, outside is unattainable
+        </figcaption>
+      </figure>
+
       <AmandaTip>
         A point that produces more capital goods leads to greater economic growth in the future (bigger outward shift of PPC). This is a classic FRQ trap — always explain WHY more capital = future growth!
       </AmandaTip>
     </SectionAccordion>
+  </div>
+);
+
+export default MicroUnit1Content;
 
     <SectionAccordion title="7. Comparative & Absolute Advantage">
       <p><strong>Absolute Advantage:</strong> The ability to produce more of a good using the same resources (or the same amount with fewer resources).</p>

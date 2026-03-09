@@ -1,6 +1,7 @@
 import AmandaTip from "../components/AmandaTip";
 import SectionAccordion from "../components/SectionAccordion";
 import EconGraph from "../components/EconGraph";
+import surplusDiagram from "../assets/surplus-diagram.png";
 
 const MicroUnit2Content = () => (
   <div className="space-y-4">
@@ -90,6 +91,18 @@ const MicroUnit2Content = () => (
     </SectionAccordion>
 
     <SectionAccordion title="6. Consumer & Producer Surplus">
+      <figure className="mx-auto my-3 w-full max-w-2xl">
+        <img
+          src={surplusDiagram}
+          alt="Supply and demand graph showing consumer surplus above equilibrium price and producer surplus below equilibrium price"
+          className="h-auto w-full rounded-md border border-border"
+          loading="lazy"
+        />
+        <figcaption className="mt-2 text-center text-sm text-muted-foreground">
+          Consumer surplus (CS) and producer surplus (PS) at equilibrium
+        </figcaption>
+      </figure>
+
       <ul className="list-disc pl-5 space-y-1">
         <li><strong>Consumer Surplus (CS):</strong> Area below the demand curve and above the equilibrium price</li>
         <li><strong>Producer Surplus (PS):</strong> Area above the supply curve and below the equilibrium price</li>
