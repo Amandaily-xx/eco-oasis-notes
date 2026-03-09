@@ -196,20 +196,20 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <line x1="50" y1="220" x2="290" y2="220" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-pmpc)" />
             <line x1="50" y1="220" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-pmpc)" />
 
-            {/* MC curve - U-shaped */}
-            <path d="M 80 60 Q 100 120, 125 160 Q 145 185, 160 185 Q 175 185, 190 165 Q 210 130, 230 80 Q 245 45, 260 25" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2.5" />
-            <text x="262" y="28" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">MC</text>
+            {/* MC curve - U-shaped, crosses AR=MR=D on rising side at x=205 */}
+            <path d="M 80 60 Q 100 120, 125 160 Q 145 185, 160 185 Q 175 185, 190 165 Q 205 140, 218 110 Q 235 70, 255 30" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2.5" />
+            <text x="257" y="33" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">MC</text>
 
             {/* AR = MR = D horizontal line */}
             <line x1="50" y1="110" x2="275" y2="110" stroke="hsl(var(--foreground))" strokeWidth="2" />
             <text x="230" y="105" fontSize="10" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">AR = MR = D</text>
 
-            {/* Intersection point E */}
-            <circle cx="192" cy="110" r="4" fill="hsl(var(--primary))" />
-            <text x="195" y="105" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">E</text>
+            {/* Intersection point E — where MC crosses the horizontal line on the rising side */}
+            <circle cx="218" cy="110" r="4" fill="hsl(var(--primary))" />
+            <text x="222" y="105" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">E</text>
 
             {/* Dashed line down to Q axis */}
-            <line x1="192" y1="110" x2="192" y2="220" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <line x1="218" y1="110" x2="218" y2="220" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
 
             {/* Maximum Profit label */}
             <text x="100" y="90" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">Maximum Profit</text>
