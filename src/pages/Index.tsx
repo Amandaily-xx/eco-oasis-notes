@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { BookOpen, TrendingUp, ArrowRight, Sparkles, Lightbulb } from "lucide-react";
+import { BookOpen, TrendingUp, ArrowRight, Sparkles, Lightbulb, Shield } from "lucide-react";
 
 const microUnits = [
   { id: 1, title: "Basic Economic Concepts", desc: "Scarcity, Opportunity Cost, PPC, Economic Systems, Comparative Advantage" },
