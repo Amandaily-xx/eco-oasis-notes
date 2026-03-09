@@ -26,6 +26,7 @@ const MicroUnit5Content = () => (
         <li>If MRP = Wage → Optimal hiring</li>
         <li>If MRP &lt; Wage → Hire fewer workers</li>
       </ul>
+      <EconGraph type="factor-market" caption="Competitive Factor Market — firm hires where MRP = Wage" />
       <p className="mt-2">The <strong>MRP curve</strong> IS the individual firm's labor demand curve. It slopes downward due to <strong>diminishing marginal returns</strong>.</p>
     </SectionAccordion>
 
