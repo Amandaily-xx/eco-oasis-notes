@@ -119,36 +119,32 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <line x1="50" y1="220" x2="290" y2="220" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-src)" />
             <line x1="50" y1="220" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-src)" />
 
-            {/* MC curve - starts from bottom-left, dips slightly, then rises steeply */}
-            <path d="M 70 180 Q 90 200, 110 195 Q 130 190, 145 175 Q 165 145, 185 105 Q 205 65, 230 35" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2.5" />
-            <text x="232" y="32" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">MC</text>
+            {/* MC curve — passes through AVC min (145,178) and ATC min (180,142) */}
+            <path d="M 75 165 Q 95 185, 115 188 Q 130 185, 145 178 Q 160 163, 180 142 Q 200 100, 220 60 Q 240 30, 260 15" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2.5" />
+            <text x="262" y="18" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">MC</text>
 
-            {/* ATC curve - U-shaped, starts high, dips to minimum, rises */}
-            <path d="M 70 70 Q 85 100, 110 130 Q 135 155, 155 155 Q 175 155, 195 145 Q 215 130, 240 105 Q 260 80, 275 60" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2.5" />
-            <text x="277" y="64" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">ATC</text>
+            {/* ATC curve — U-shaped, min at (180,142) */}
+            <path d="M 75 55 Q 95 85, 120 112 Q 145 132, 165 140 Q 180 142, 195 140 Q 215 130, 240 105 Q 260 78, 280 48" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2.5" />
+            <text x="282" y="52" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">ATC</text>
 
-            {/* AVC curve - U-shaped, below ATC, starts lower, dips to minimum, rises */}
-            <path d="M 70 140 Q 90 165, 115 180 Q 135 188, 150 188 Q 170 188, 190 178 Q 210 165, 235 140 Q 255 115, 275 90" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2" />
-            <text x="277" y="94" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">AVC</text>
+            {/* AVC curve — U-shaped, min at (145,178) */}
+            <path d="M 75 125 Q 95 150, 120 168 Q 135 176, 145 178 Q 160 178, 180 172 Q 205 155, 235 125 Q 260 90, 280 60" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2" />
+            <text x="282" y="64" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">AVC</text>
 
-            {/* MC intersects AVC at AVC minimum */}
-            <circle cx="148" cy="188" r="3.5" fill="hsl(var(--primary))" />
-            {/* MC intersects ATC at ATC minimum */}
-            <circle cx="170" cy="155" r="3.5" fill="hsl(var(--primary))" />
+            {/* MC intersects AVC at AVC minimum — black dot */}
+            <circle cx="145" cy="178" r="4" fill="hsl(var(--foreground))" />
+            {/* MC intersects ATC at ATC minimum — black dot */}
+            <circle cx="180" cy="142" r="4" fill="hsl(var(--foreground))" />
 
-            {/* Dashed lines to P1/Q1 (AVC min) and P2/Q2 (ATC min) */}
-            <line x1="148" y1="188" x2="148" y2="220" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
-            <line x1="50" y1="188" x2="148" y2="188" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
-            <text x="30" y="192" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P1</text>
-            <text x="142" y="235" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q1</text>
+            {/* Dashed lines to axes */}
+            <line x1="145" y1="178" x2="145" y2="220" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <line x1="50" y1="178" x2="145" y2="178" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
 
-            <line x1="170" y1="155" x2="170" y2="220" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
-            <line x1="50" y1="155" x2="170" y2="155" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
-            <text x="30" y="159" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P2</text>
-            <text x="164" y="235" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q2</text>
+            <line x1="180" y1="142" x2="180" y2="220" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <line x1="50" y1="142" x2="180" y2="142" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
 
             <text x="270" y="238" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Q</text>
-            <text x="14" y="22" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">£</text>
+            <text x="14" y="22" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Cost</text>
           </svg>
         );
 
