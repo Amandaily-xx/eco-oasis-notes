@@ -687,6 +687,147 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
           </svg>
         );
 
+      case "natural-monopoly":
+        return (
+          <svg viewBox="0 0 340 280" className="w-full max-w-sm mx-auto">
+            <defs><marker id="ah-nm" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="hsl(var(--primary))" /></marker></defs>
+            <line x1="50" y1="240" x2="310" y2="240" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-nm)" />
+            <line x1="50" y1="240" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-nm)" />
+
+            {/* AR (Demand) — downward sloping */}
+            <line x1="60" y1="50" x2="290" y2="230" stroke="hsl(var(--foreground))" strokeWidth="2" />
+            <text x="280" y="225" fontSize="10" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">AR</text>
+
+            {/* MR — steeper */}
+            <line x1="60" y1="50" x2="175" y2="230" stroke="hsl(220 75% 55%)" strokeWidth="2" />
+            <text x="168" y="228" fontSize="10" fill="hsl(220 75% 55%)" fontWeight="600" fontFamily="var(--font-body)">MR</text>
+
+            {/* Long Run Average Cost — declining curve */}
+            <path d="M 68 35 Q 100 75, 130 115 Q 160 148, 195 168 Q 225 178, 260 183 Q 280 185, 300 186" fill="none" stroke="hsl(0 70% 55%)" strokeWidth="2.5" />
+            <text x="275" y="178" fontSize="10" fill="hsl(0 70% 55%)" fontWeight="600" fontFamily="var(--font-body)">LRAC</text>
+
+            {/* Long Run Marginal Cost — below LRAC, declining */}
+            <path d="M 68 75 Q 100 120, 130 155 Q 160 180, 195 198 Q 225 208, 260 213 Q 280 216, 300 218" fill="none" stroke="hsl(160 60% 45%)" strokeWidth="2.5" />
+            <text x="275" y="212" fontSize="10" fill="hsl(160 60% 45%)" fontWeight="600" fontFamily="var(--font-body)">LRMC</text>
+
+            {/* Monopoly: MC=MR at ~x=120 */}
+            <circle cx="120" cy="144" r="3.5" fill="hsl(var(--foreground))" />
+            <line x1="120" y1="144" x2="120" y2="97" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <line x1="120" y1="240" x2="120" y2="144" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <circle cx="120" cy="97" r="3.5" fill="hsl(220 75% 55%)" />
+            <text x="112" y="92" fontSize="9" fill="hsl(220 75% 55%)" fontWeight="600" fontFamily="var(--font-body)">Z</text>
+            <line x1="50" y1="97" x2="120" y2="97" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <text x="30" y="101" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">P</text>
+            <text x="114" y="254" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
+
+            {/* Fair-return: LRAC=AR at ~x=210 */}
+            <circle cx="210" cy="170" r="3.5" fill="hsl(220 75% 55%)" />
+            <text x="214" y="166" fontSize="9" fill="hsl(220 75% 55%)" fontWeight="600" fontFamily="var(--font-body)">B</text>
+            <line x1="50" y1="170" x2="210" y2="170" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <line x1="210" y1="170" x2="210" y2="240" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <text x="30" y="174" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">C</text>
+
+            {/* Socially optimal: LRMC=AR at ~x=245 */}
+            <circle cx="248" cy="197" r="3.5" fill="hsl(220 75% 55%)" />
+            <text x="252" y="193" fontSize="9" fill="hsl(220 75% 55%)" fontWeight="600" fontFamily="var(--font-body)">A</text>
+            <line x1="50" y1="197" x2="248" y2="197" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <line x1="248" y1="197" x2="248" y2="240" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <text x="26" y="201" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P1</text>
+            <text x="240" y="254" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q1</text>
+
+            {/* Annotation */}
+            <text x="145" y="52" fontSize="9" fill="hsl(var(--muted-foreground))" fontStyle="italic" fontFamily="var(--font-body)">Long Run Average Costs</text>
+            <text x="145" y="64" fontSize="9" fill="hsl(var(--muted-foreground))" fontStyle="italic" fontFamily="var(--font-body)">continue to fall as</text>
+            <text x="145" y="76" fontSize="9" fill="hsl(0 70% 55%)" fontStyle="italic" fontFamily="var(--font-body)">economies of scale</text>
+            <text x="145" y="88" fontSize="9" fill="hsl(var(--muted-foreground))" fontStyle="italic" fontFamily="var(--font-body)">are generated</text>
+
+            <text x="270" y="256" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Output</text>
+            <text x="4" y="28" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Costs &amp; Revenue</text>
+          </svg>
+        );
+
+      case "price-discrimination":
+        return (
+          <svg viewBox="0 0 620 280" className="w-full max-w-2xl mx-auto">
+            <defs><marker id="ah-pd1" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0 0, 7 2.5, 0 5" fill="hsl(var(--primary))" /></marker></defs>
+
+            {/* === Left Panel: Perfect Price Discrimination === */}
+            <text x="80" y="18" fontSize="12" fill="hsl(var(--foreground))" fontWeight="700" fontFamily="var(--font-body)">Perfect Price Discrimination</text>
+            <line x1="50" y1="240" x2="270" y2="240" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pd1)" />
+            <line x1="50" y1="240" x2="50" y2="40" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pd1)" />
+
+            {/* MC — upward sloping */}
+            <line x1="60" y1="220" x2="240" y2="55" stroke="hsl(160 60% 45%)" strokeWidth="2.5" />
+            <text x="235" y="50" fontSize="10" fill="hsl(160 60% 45%)" fontWeight="600" fontFamily="var(--font-body)">MC</text>
+
+            {/* Demand — downward sloping */}
+            <line x1="60" y1="50" x2="250" y2="225" stroke="hsl(220 75% 55%)" strokeWidth="2.5" />
+            <text x="242" y="222" fontSize="10" fill="hsl(220 75% 55%)" fontWeight="600" fontFamily="var(--font-body)">Demand</text>
+
+            {/* Producer Surplus — entire triangle */}
+            <polygon points="60,50 60,220 155,135" fill="hsl(0 70% 55%)" opacity="0.2" />
+            <text x="68" y="152" fontSize="9" fill="hsl(0 70% 55%)" fontWeight="600" fontFamily="var(--font-body)">Producer</text>
+            <text x="68" y="164" fontSize="9" fill="hsl(0 70% 55%)" fontWeight="600" fontFamily="var(--font-body)">Surplus</text>
+
+            {/* No CS, No DWL label */}
+            <text x="85" y="100" fontSize="8" fill="hsl(var(--muted-foreground))" fontStyle="italic" fontFamily="var(--font-body)">No CS, No DWL</text>
+
+            <circle cx="155" cy="135" r="4" fill="hsl(var(--foreground))" />
+            <line x1="155" y1="135" x2="155" y2="240" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <text x="120" y="256" fontSize="9" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q (1st degree)</text>
+            <text x="25" y="50" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">$</text>
+
+            {/* === Right Panel: Standard Monopoly === */}
+            <text x="410" y="18" fontSize="12" fill="hsl(var(--foreground))" fontWeight="700" fontFamily="var(--font-body)">Standard Monopoly</text>
+            <line x1="350" y1="240" x2="580" y2="240" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pd1)" />
+            <line x1="350" y1="240" x2="350" y2="40" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pd1)" />
+
+            {/* MC */}
+            <line x1="360" y1="220" x2="545" y2="55" stroke="hsl(160 60% 45%)" strokeWidth="2.5" />
+            <text x="540" y="50" fontSize="10" fill="hsl(160 60% 45%)" fontWeight="600" fontFamily="var(--font-body)">MC</text>
+
+            {/* Demand */}
+            <line x1="360" y1="50" x2="555" y2="225" stroke="hsl(220 75% 55%)" strokeWidth="2.5" />
+            <text x="547" y="222" fontSize="10" fill="hsl(220 75% 55%)" fontWeight="600" fontFamily="var(--font-body)">Demand</text>
+
+            {/* MR */}
+            <line x1="360" y1="50" x2="458" y2="225" stroke="hsl(var(--destructive))" strokeWidth="2" />
+            <text x="452" y="222" fontSize="10" fill="hsl(var(--destructive))" fontWeight="600" fontFamily="var(--font-body)">MR</text>
+
+            {/* MC=MR at ~(422,162) */}
+            <circle cx="422" cy="162" r="3.5" fill="hsl(var(--foreground))" />
+
+            {/* Pm on D at x=422: y ≈ 50 + 175*(422-360)/195 ≈ 106 */}
+            <line x1="422" y1="162" x2="422" y2="106" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <line x1="350" y1="106" x2="422" y2="106" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <line x1="422" y1="162" x2="422" y2="240" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <text x="328" y="110" fontSize="9" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Pm</text>
+
+            {/* Ppc — competitive price where MC=D, ~(458,133) */}
+            <line x1="350" y1="133" x2="458" y2="133" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <line x1="458" y1="133" x2="458" y2="240" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <text x="326" y="137" fontSize="9" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Ppc</text>
+
+            {/* Consumer Surplus */}
+            <polygon points="360,50 360,106 422,106" fill="hsl(50 90% 50%)" opacity="0.25" />
+            <text x="365" y="82" fontSize="8" fill="hsl(50 80% 40%)" fontFamily="var(--font-body)">Consumer</text>
+            <text x="365" y="92" fontSize="8" fill="hsl(50 80% 40%)" fontFamily="var(--font-body)">Surplus</text>
+
+            {/* Producer Surplus */}
+            <polygon points="360,220 360,106 422,106 422,162" fill="hsl(0 70% 55%)" opacity="0.15" />
+            <text x="370" y="168" fontSize="8" fill="hsl(0 70% 55%)" fontWeight="600" fontFamily="var(--font-body)">Producer</text>
+            <text x="370" y="178" fontSize="8" fill="hsl(0 70% 55%)" fontWeight="600" fontFamily="var(--font-body)">Surplus</text>
+
+            {/* DWL */}
+            <polygon points="422,106 422,162 458,133" fill="hsl(280 60% 55%)" opacity="0.25" />
+            <text x="430" y="140" fontSize="7" fill="hsl(280 60% 55%)" fontWeight="700" fontFamily="var(--font-body)">DWL</text>
+
+            <text x="414" y="254" fontSize="9" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Qm</text>
+            <text x="450" y="254" fontSize="9" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Qpc</text>
+            <text x="335" y="50" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">$</text>
+          </svg>
+        );
+
       default:
         return null;
     }
