@@ -23,9 +23,9 @@ interface EconGraphProps {
     | "business-cycle"
     | "money-market"
     | "loanable-funds"
-    | "long-run-growth";
-  caption?: string;
-}
+    | "long-run-growth"
+    | "natural-monopoly"
+    | "price-discrimination";
 
 const EconGraph = ({ type, caption }: EconGraphProps) => {
   const renderGraph = () => {
