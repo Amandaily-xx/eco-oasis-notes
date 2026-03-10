@@ -26,6 +26,8 @@ interface EconGraphProps {
     | "long-run-growth"
     | "natural-monopoly"
     | "price-discrimination";
+  caption?: string;
+}
 
 const EconGraph = ({ type, caption }: EconGraphProps) => {
   const renderGraph = () => {
