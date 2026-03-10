@@ -590,15 +590,19 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <defs><marker id="ah-adas" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="hsl(var(--primary))" /></marker></defs>
             <line x1="50" y1="210" x2="290" y2="210" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-adas)" />
             <line x1="50" y1="210" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-adas)" />
+            {/* LRAS vertical at x=190 */}
             <line x1="190" y1="30" x2="190" y2="200" stroke="hsl(var(--primary))" strokeWidth="2.5" />
             <text x="183" y="25" fontSize="11" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">LRAS</text>
-            <line x1="70" y1="180" x2="270" y2="50" stroke="hsl(var(--accent))" strokeWidth="2.5" />
-            <text x="265" y="46" fontSize="11" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">SRAS</text>
-            <path d="M 80 50 Q 140 100, 260 195" fill="none" stroke="hsl(var(--destructive))" strokeWidth="2.5" />
-            <text x="255" y="192" fontSize="11" fill="hsl(var(--destructive))" fontWeight="600" fontFamily="var(--font-body)">AD</text>
-            <circle cx="190" cy="112" r="5" fill="hsl(var(--primary))" />
-            <line x1="50" y1="112" x2="190" y2="112" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
-            <text x="28" y="116" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">PLe</text>
+            {/* SRAS — upward sloping, passes through (190,105) */}
+            <line x1="70" y1="185" x2="280" y2="40" stroke="hsl(var(--accent))" strokeWidth="2.5" />
+            <text x="275" y="36" fontSize="11" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">SRAS</text>
+            {/* AD — downward sloping curve, passes through (190,105) */}
+            <path d="M 75 40 Q 130 65, 190 105 Q 235 140, 270 195" fill="none" stroke="hsl(var(--destructive))" strokeWidth="2.5" />
+            <text x="265" y="192" fontSize="11" fill="hsl(var(--destructive))" fontWeight="600" fontFamily="var(--font-body)">AD</text>
+            {/* Equilibrium dot — all three intersect at (190,105) */}
+            <circle cx="190" cy="105" r="5" fill="hsl(var(--primary))" />
+            <line x1="50" y1="105" x2="190" y2="105" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <text x="28" y="109" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">PLe</text>
             <text x="183" y="226" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Yf</text>
             <text x="270" y="228" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Real GDP</text>
             <text x="10" y="22" fontSize="11" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Price Level</text>
