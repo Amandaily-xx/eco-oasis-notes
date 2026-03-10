@@ -36,10 +36,11 @@ const MicroUnit4Content = () => (
 
     <SectionAccordion title="3. Natural Monopoly & Price Regulation">
       <p>A <strong>natural monopoly</strong> exists when one firm can supply the entire market at a lower cost than multiple firms (huge economies of scale).</p>
+      <EconGraph type="natural-monopoly" caption="Natural Monopoly — LRAC continues to decline; P = monopoly price, C = fair-return (P=ATC), P1 = socially optimal (P=MC)" />
       <ul className="list-disc pl-5 space-y-1 my-3">
-        <li><strong>Socially optimal price (P = MC):</strong> Allocatively efficient, but firm loses money (MC &lt; ATC)</li>
-        <li><strong>Fair-return price (P = ATC):</strong> Firm earns zero economic profit, still some DWL</li>
-        <li><strong>Unregulated (P = monopoly price):</strong> Maximum DWL</li>
+        <li><strong>Unregulated (P):</strong> Monopoly price at Z — maximum DWL, lowest output Q</li>
+        <li><strong>Fair-return price (C = ATC):</strong> At point B — firm earns zero economic profit, still some DWL</li>
+        <li><strong>Socially optimal price (P1 = MC):</strong> At point A — allocatively efficient, but firm loses money (MC &lt; ATC)</li>
       </ul>
     </SectionAccordion>
 
@@ -51,13 +52,17 @@ const MicroUnit4Content = () => (
         <li>Ability to identify and separate consumer groups by elasticity</li>
         <li>Ability to prevent resale</li>
       </ol>
+
+      <h4 className="font-semibold text-primary my-2">Standard (Third-Degree) vs. Perfect (First-Degree)</h4>
+      <EconGraph type="price-discrimination" caption="Left: Perfect price discrimination — all surplus goes to producer, no DWL. Right: Standard monopoly — CS, PS, and DWL." />
+
       <h4 className="font-semibold text-primary my-2">Results of Price Discrimination</h4>
       <ul className="list-disc pl-5 space-y-1">
-        <li>Multiple prices charged</li>
-        <li>More output (closer to socially optimal)</li>
+        <li><strong>Standard (3rd degree):</strong> Different prices for different groups (e.g., student vs. adult tickets)</li>
+        <li><strong>Perfect (1st degree):</strong> Every consumer pays their maximum willingness to pay</li>
+        <li>More output produced (closer to socially optimal)</li>
         <li>More profit for the firm</li>
-        <li>Less deadweight loss</li>
-        <li><strong>Perfect price discrimination:</strong> Every consumer pays their maximum willingness to pay → No DWL, but all surplus goes to the producer</li>
+        <li><strong>Perfect discrimination:</strong> No DWL, but ALL surplus goes to the producer — consumer surplus = 0</li>
       </ul>
       <p className="mt-2"><strong>Examples:</strong> Airlines, movie tickets (senior/student), college tuition (financial aid)</p>
     </SectionAccordion>
