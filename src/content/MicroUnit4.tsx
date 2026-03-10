@@ -36,10 +36,11 @@ const MicroUnit4Content = () => (
 
     <SectionAccordion title="3. Natural Monopoly & Price Regulation">
       <p>A <strong>natural monopoly</strong> exists when one firm can supply the entire market at a lower cost than multiple firms (huge economies of scale).</p>
+      <EconGraph type="natural-monopoly" caption="Natural Monopoly — LRAC continues to decline; P = monopoly price, C = fair-return (P=ATC), P1 = socially optimal (P=MC)" />
       <ul className="list-disc pl-5 space-y-1 my-3">
-        <li><strong>Socially optimal price (P = MC):</strong> Allocatively efficient, but firm loses money (MC &lt; ATC)</li>
-        <li><strong>Fair-return price (P = ATC):</strong> Firm earns zero economic profit, still some DWL</li>
-        <li><strong>Unregulated (P = monopoly price):</strong> Maximum DWL</li>
+        <li><strong>Unregulated (P):</strong> Monopoly price at Z — maximum DWL, lowest output Q</li>
+        <li><strong>Fair-return price (C = ATC):</strong> At point B — firm earns zero economic profit, still some DWL</li>
+        <li><strong>Socially optimal price (P1 = MC):</strong> At point A — allocatively efficient, but firm loses money (MC &lt; ATC)</li>
       </ul>
     </SectionAccordion>
 
