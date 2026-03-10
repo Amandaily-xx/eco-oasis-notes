@@ -192,23 +192,36 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <line x1="50" y1="220" x2="290" y2="220" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-pmpc)" />
             <line x1="50" y1="220" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-pmpc)" />
 
-            {/* MC curve - U-shaped, crosses AR=MR=D on rising side at x=205 */}
-            <path d="M 80 60 Q 100 120, 125 160 Q 145 185, 160 185 Q 175 185, 190 165 Q 205 140, 218 110 Q 235 70, 255 30" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2.5" />
-            <text x="257" y="33" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">MC</text>
+            {/* MC curve — U-shaped, crosses P line at (195,105) */}
+            <path d="M 80 180 Q 100 200, 120 198 Q 140 190, 160 170 Q 175 150, 195 105 Q 210 70, 230 40 Q 250 18, 265 8" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2.5" />
+            <text x="260" y="18" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">MC</text>
+
+            {/* ATC curve — U-shaped, min at ~(185,148) */}
+            <path d="M 80 55 Q 105 90, 130 120 Q 155 140, 175 148 Q 195 148, 215 140 Q 240 118, 265 82" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2" />
+            <text x="267" y="86" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">ATC</text>
+
+            {/* AVC curve — U-shaped, min at ~(160,178) */}
+            <path d="M 80 125 Q 105 155, 130 170 Q 150 178, 165 178 Q 185 176, 205 165 Q 230 142, 265 100" fill="none" stroke="hsl(var(--foreground))" strokeWidth="1.5" strokeDasharray="4 3" />
+            <text x="267" y="104" fontSize="10" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">AVC</text>
 
             {/* AR = MR = D horizontal line */}
-            <line x1="50" y1="110" x2="275" y2="110" stroke="hsl(var(--foreground))" strokeWidth="2" />
-            <text x="230" y="105" fontSize="10" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">AR = MR = D</text>
+            <line x1="50" y1="105" x2="275" y2="105" stroke="hsl(50 90% 50%)" strokeWidth="2.5" />
+            <text x="230" y="98" fontSize="10" fill="hsl(50 90% 50%)" fontWeight="600" fontFamily="var(--font-body)">P = MR = AR</text>
 
-            {/* Intersection point E — where MC crosses the horizontal line on the rising side */}
-            <circle cx="218" cy="110" r="4" fill="hsl(var(--primary))" />
-            <text x="222" y="105" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">E</text>
+            {/* Intersection point — where MC crosses P on rising side */}
+            <circle cx="195" cy="105" r="4.5" fill="hsl(var(--foreground))" />
+            <text x="200" y="98" fontSize="10" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">E</text>
 
-            {/* Dashed line down to Q axis */}
-            <line x1="218" y1="110" x2="218" y2="220" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            {/* Profit rectangle: P to ATC at Q* */}
+            <rect x="50" y="105" width="145" height="43" fill="hsl(120 50% 50%)" opacity="0.15" rx="2" />
+            <text x="85" y="132" fontSize="9" fill="hsl(120 50% 40%)" fontWeight="600" fontFamily="var(--font-body)">Economic Profit</text>
 
-            {/* Maximum Profit label */}
-            <text x="100" y="90" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">Maximum Profit</text>
+            {/* Dashed lines */}
+            <line x1="195" y1="105" x2="195" y2="220" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <line x1="50" y1="148" x2="195" y2="148" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <text x="28" y="109" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
+            <text x="22" y="152" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">ATC</text>
+            <text x="188" y="236" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">q₀</text>
 
             <text x="255" y="238" fontSize="11" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Output (Q)</text>
             <text x="4" y="22" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Cost/Revenue</text>
