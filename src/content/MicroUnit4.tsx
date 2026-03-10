@@ -52,13 +52,17 @@ const MicroUnit4Content = () => (
         <li>Ability to identify and separate consumer groups by elasticity</li>
         <li>Ability to prevent resale</li>
       </ol>
+
+      <h4 className="font-semibold text-primary my-2">Standard (Third-Degree) vs. Perfect (First-Degree)</h4>
+      <EconGraph type="price-discrimination" caption="Left: Perfect price discrimination — all surplus goes to producer, no DWL. Right: Standard monopoly — CS, PS, and DWL." />
+
       <h4 className="font-semibold text-primary my-2">Results of Price Discrimination</h4>
       <ul className="list-disc pl-5 space-y-1">
-        <li>Multiple prices charged</li>
-        <li>More output (closer to socially optimal)</li>
+        <li><strong>Standard (3rd degree):</strong> Different prices for different groups (e.g., student vs. adult tickets)</li>
+        <li><strong>Perfect (1st degree):</strong> Every consumer pays their maximum willingness to pay</li>
+        <li>More output produced (closer to socially optimal)</li>
         <li>More profit for the firm</li>
-        <li>Less deadweight loss</li>
-        <li><strong>Perfect price discrimination:</strong> Every consumer pays their maximum willingness to pay → No DWL, but all surplus goes to the producer</li>
+        <li><strong>Perfect discrimination:</strong> No DWL, but ALL surplus goes to the producer — consumer surplus = 0</li>
       </ul>
       <p className="mt-2"><strong>Examples:</strong> Airlines, movie tickets (senior/student), college tuition (financial aid)</p>
     </SectionAccordion>
