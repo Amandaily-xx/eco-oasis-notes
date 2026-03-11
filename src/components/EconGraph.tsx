@@ -73,6 +73,76 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
           </svg>
         );
 
+      case "demand-shift":
+        return (
+          <svg viewBox="0 0 300 250" className="w-full max-w-xs mx-auto">
+            <defs><marker id="ah-ds" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="hsl(var(--primary))" /></marker></defs>
+            <line x1="50" y1="200" x2="270" y2="200" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-ds)" />
+            <line x1="50" y1="200" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-ds)" />
+            {/* Supply */}
+            <line x1="70" y1="190" x2="250" y2="40" stroke="hsl(var(--accent))" strokeWidth="2.5" />
+            <text x="245" y="38" fontSize="12" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">S</text>
+            {/* D1 */}
+            <line x1="60" y1="40" x2="220" y2="190" stroke="hsl(var(--destructive))" strokeWidth="2.5" />
+            <text x="215" y="185" fontSize="11" fill="hsl(var(--destructive))" fontWeight="600" fontFamily="var(--font-body)">D₁</text>
+            {/* D2 shifted right */}
+            <line x1="100" y1="40" x2="260" y2="190" stroke="hsl(var(--destructive))" strokeWidth="2" strokeDasharray="5 3" />
+            <text x="255" y="185" fontSize="11" fill="hsl(var(--destructive))" fontFamily="var(--font-body)">D₂</text>
+            {/* Original equilibrium */}
+            <circle cx="140" cy="120" r="4" fill="hsl(var(--primary))" />
+            <line x1="50" y1="120" x2="140" y2="120" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <line x1="140" y1="120" x2="140" y2="200" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <text x="30" y="124" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P₁</text>
+            <text x="134" y="215" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q₁</text>
+            {/* New equilibrium */}
+            <circle cx="170" cy="100" r="4" fill="hsl(var(--destructive))" />
+            <line x1="50" y1="100" x2="170" y2="100" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <line x1="170" y1="100" x2="170" y2="200" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <text x="30" y="104" fontSize="10" fill="hsl(var(--destructive))" fontFamily="var(--font-body)">P₂</text>
+            <text x="164" y="215" fontSize="10" fill="hsl(var(--destructive))" fontFamily="var(--font-body)">Q₂</text>
+            {/* Shift arrow */}
+            <line x1="145" y1="160" x2="175" y2="160" stroke="hsl(var(--destructive))" strokeWidth="2" />
+            <polygon points="175,157 181,160 175,163" fill="hsl(var(--destructive))" />
+            <text x="255" y="218" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Q</text>
+            <text x="30" y="22" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">P</text>
+          </svg>
+        );
+
+      case "supply-shift":
+        return (
+          <svg viewBox="0 0 300 250" className="w-full max-w-xs mx-auto">
+            <defs><marker id="ah-ss" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="hsl(var(--primary))" /></marker></defs>
+            <line x1="50" y1="200" x2="270" y2="200" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-ss)" />
+            <line x1="50" y1="200" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-ss)" />
+            {/* Demand */}
+            <line x1="70" y1="40" x2="250" y2="190" stroke="hsl(var(--destructive))" strokeWidth="2.5" />
+            <text x="245" y="185" fontSize="12" fill="hsl(var(--destructive))" fontWeight="600" fontFamily="var(--font-body)">D</text>
+            {/* S1 */}
+            <line x1="70" y1="190" x2="250" y2="40" stroke="hsl(var(--accent))" strokeWidth="2.5" />
+            <text x="245" y="38" fontSize="11" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">S₁</text>
+            {/* S2 shifted right */}
+            <line x1="110" y1="190" x2="270" y2="60" stroke="hsl(var(--accent))" strokeWidth="2" strokeDasharray="5 3" />
+            <text x="268" y="58" fontSize="11" fill="hsl(var(--accent))" fontFamily="var(--font-body)">S₂</text>
+            {/* Original equilibrium */}
+            <circle cx="160" cy="115" r="4" fill="hsl(var(--primary))" />
+            <line x1="50" y1="115" x2="160" y2="115" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <line x1="160" y1="115" x2="160" y2="200" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <text x="30" y="119" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P₁</text>
+            <text x="154" y="215" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q₁</text>
+            {/* New equilibrium */}
+            <circle cx="185" cy="132" r="4" fill="hsl(var(--accent))" />
+            <line x1="50" y1="132" x2="185" y2="132" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <line x1="185" y1="132" x2="185" y2="200" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <text x="30" y="136" fontSize="10" fill="hsl(var(--accent))" fontFamily="var(--font-body)">P₂</text>
+            <text x="179" y="215" fontSize="10" fill="hsl(var(--accent))" fontFamily="var(--font-body)">Q₂</text>
+            {/* Shift arrow */}
+            <line x1="160" y1="160" x2="190" y2="160" stroke="hsl(var(--accent))" strokeWidth="2" />
+            <polygon points="190,157 196,160 190,163" fill="hsl(var(--accent))" />
+            <text x="255" y="218" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Q</text>
+            <text x="30" y="22" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">P</text>
+          </svg>
+        );
+
       case "price-ceiling":
         return (
           <svg viewBox="0 0 300 250" className="w-full max-w-xs mx-auto">
