@@ -275,10 +275,6 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <path d="M 80 55 Q 105 90, 130 120 Q 155 140, 175 148 Q 195 148, 215 140 Q 240 118, 265 82" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2" />
             <text x="267" y="86" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">ATC</text>
 
-            {/* AVC curve — U-shaped, min at ~(160,178) */}
-            <path d="M 80 125 Q 105 155, 130 170 Q 150 178, 165 178 Q 185 176, 205 165 Q 230 142, 265 100" fill="none" stroke="hsl(var(--foreground))" strokeWidth="1.5" strokeDasharray="4 3" />
-            <text x="267" y="104" fontSize="10" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">AVC</text>
-
             {/* AR = MR = D horizontal line */}
             <line x1="50" y1="105" x2="275" y2="105" stroke="hsl(50 90% 50%)" strokeWidth="2.5" />
             <text x="230" y="98" fontSize="10" fill="hsl(50 90% 50%)" fontWeight="600" fontFamily="var(--font-body)">P = MR = AR</text>
