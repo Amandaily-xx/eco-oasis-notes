@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { BookOpen, TrendingUp, ArrowRight, Sparkles, Lightbulb, Shield } from "lucide-react";
+import { BookOpen, TrendingUp, ArrowRight, Sparkles, Lightbulb, Shield, Mail } from "lucide-react";
 
 const microUnits = [
   { id: 1, title: "Basic Economic Concepts", desc: "Scarcity, Opportunity Cost, PPC, Economic Systems, Comparative Advantage" },
@@ -142,6 +142,10 @@ const Index = () => {
           © {new Date().getFullYear()} Amanda X.L. All rights reserved.
           {" · "}
           <Link to="/terms" className="underline hover:text-accent transition-colors">Terms of Use</Link>
+          {" · "}
+          <Link to="/contact" className="inline-flex items-center gap-1 underline hover:text-accent transition-colors">
+            <Mail className="w-3.5 h-3.5" /> Contact
+          </Link>
         </p>
       </footer>
     </div>

@@ -3,6 +3,7 @@ import Index from "./pages/Index";
 import MicroUnit from "./pages/MicroUnit";
 import MacroUnit from "./pages/MacroUnit";
 import Terms from "./pages/Terms";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 
@@ -14,6 +15,7 @@ const App = () => (
       <Route path="/micro/:unitId" element={<MicroUnit />} />
       <Route path="/macro/:unitId" element={<MacroUnit />} />
       <Route path="/terms" element={<Terms />} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   </BrowserRouter>
