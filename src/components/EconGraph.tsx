@@ -2,6 +2,8 @@ interface EconGraphProps {
   type:
     | "ppc"
     | "supply-demand"
+    | "demand-shift"
+    | "supply-shift"
     | "price-ceiling"
     | "price-floor"
     | "perfect-competition"
@@ -25,7 +27,8 @@ interface EconGraphProps {
     | "loanable-funds"
     | "long-run-growth"
     | "natural-monopoly"
-    | "price-discrimination";
+    | "price-discrimination"
+    | "tariff";
   caption?: string;
 }
 
