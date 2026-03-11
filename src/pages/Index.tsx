@@ -142,6 +142,10 @@ const Index = () => {
           © {new Date().getFullYear()} Amanda X.L. All rights reserved.
           {" · "}
           <Link to="/terms" className="underline hover:text-accent transition-colors">Terms of Use</Link>
+          {" · "}
+          <Link to="/contact" className="inline-flex items-center gap-1 underline hover:text-accent transition-colors">
+            <Mail className="w-3.5 h-3.5" /> Contact
+          </Link>
         </p>
       </footer>
     </div>
