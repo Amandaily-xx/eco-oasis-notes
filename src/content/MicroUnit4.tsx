@@ -14,7 +14,7 @@ const MicroUnit4Content = () => (
       <h4 className="font-semibold text-primary mb-2">Demand & Revenue</h4>
       <p className="mb-2">The monopolist faces the market demand curve (downward-sloping). Can a monopoly charge any price it wants? <strong>No!</strong> It is constrained by the demand curve.</p>
       <p><strong>Price Effect:</strong> To sell more units, the monopolist must lower the price on ALL units sold. This is why MR &lt; P for a monopolist.</p>
-      <EconGraph type="monopoly" caption="Monopoly — produces at MR = MC (black dot), charges Pf from demand curve (red dot), ATC meets D at Qf" />
+      <EconGraph type="monopoly" caption="Monopoly — produces at MR = MC (black dot), charges Pf from demand curve (red dot). Green area = economic profit (P > ATC)." />
       <div className="formula-block">MR curve lies below the demand curve &nbsp;|&nbsp; MR has twice the slope of D</div>
     </SectionAccordion>
 
@@ -70,7 +70,7 @@ const MicroUnit4Content = () => (
     <SectionAccordion title="5. Monopolistic Competition">
       <h4 className="font-semibold text-primary mb-2">Short Run (same structure as monopoly)</h4>
       <p className="mb-2 text-sm">In the short run, a monopolistically competitive firm behaves like a monopolist — it can earn economic profit (or loss). The graph is the same as the monopoly graph: produce where MR = MC, charge price from the demand curve.</p>
-      <EconGraph type="monopoly" caption="Monopolistic Competition (Short Run) — same as monopoly, firm can earn economic profit" />
+      <EconGraph type="monopoly" caption="Monopolistic Competition (Short Run) — same as monopoly; firm earns positive economic profit (green area)" />
       <h4 className="font-semibold text-primary my-2">Long Run (zero economic profit)</h4>
       <p className="mb-2 text-sm">In the long run, entry/exit drives economic profit to zero. The demand curve shifts until it is tangent to ATC — profit = 0.</p>
       <EconGraph type="monopolistic-competition" caption="Monopolistic Competition (Long Run) — D tangent to ATC, zero economic profit" />

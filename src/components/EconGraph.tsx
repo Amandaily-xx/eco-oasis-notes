@@ -349,25 +349,30 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <path d="M 75 210 Q 95 225, 110 222 Q 120 215, 130 163 Q 140 120, 160 80 Q 180 50, 210 30 Q 235 20, 255 15" fill="none" stroke="hsl(160 60% 45%)" strokeWidth="2.5" />
             <text x="252" y="18" fontSize="11" fill="hsl(160 60% 45%)" fontWeight="600" fontFamily="var(--font-body)">MC</text>
 
-            {/* ATC curve — U-shaped, at Qf (x=130) ATC passes through red dot on D at y≈100 */}
-            <path d="M 75 55 Q 95 72, 110 85 Q 120 93, 130 100 Q 150 108, 170 108 Q 195 100, 220 78 Q 245 50, 265 25" fill="none" stroke="hsl(40 85% 55%)" strokeWidth="2.5" />
-            <text x="262" y="28" fontSize="11" fill="hsl(40 85% 55%)" fontWeight="600" fontFamily="var(--font-body)">ATC</text>
+            {/* ATC curve — U-shaped, at Qf (x=130) ATC is BELOW demand price, showing positive profit */}
+            <path d="M 75 75 Q 95 95, 110 110 Q 120 120, 130 128 Q 150 138, 170 138 Q 195 128, 220 105 Q 245 75, 265 45" fill="none" stroke="hsl(40 85% 55%)" strokeWidth="2.5" />
+            <text x="262" y="48" fontSize="11" fill="hsl(40 85% 55%)" fontWeight="600" fontFamily="var(--font-body)">ATC</text>
 
             {/* MC=MR intersection — BLACK dot */}
             <circle cx="130" cy="163" r="4.5" fill="hsl(var(--foreground))" />
 
-            {/* ATC meets D at Qf — RED dot (ATC ≈ Pf at this point) */}
+            {/* Price point on D curve at Qf — RED dot */}
             <circle cx="130" cy="100" r="4.5" fill="hsl(var(--destructive))" />
+
+            {/* Profit rectangle: from ATC (y=128) to Price (y=100) */}
+            <rect x="50" y="100" width="80" height="28" fill="hsl(120 50% 50%)" opacity="0.18" rx="2" />
+            <text x="65" y="118" fontSize="9" fill="hsl(120 50% 40%)" fontWeight="600" fontFamily="var(--font-body)">Econ. Profit</text>
 
             {/* Vertical dashed from MC=MR up to D, then down to Q axis */}
             <line x1="130" y1="163" x2="130" y2="100" stroke="hsl(var(--muted-foreground))" strokeWidth="1.5" strokeDasharray="5 3" />
             <line x1="130" y1="163" x2="130" y2="240" stroke="hsl(var(--muted-foreground))" strokeWidth="1.5" strokeDasharray="5 3" />
 
-            {/* Horizontal dashed from Pf to price axis */}
+            {/* Horizontal dashed from Pf and ATC to price axis */}
             <line x1="50" y1="100" x2="130" y2="100" stroke="hsl(var(--muted-foreground))" strokeWidth="1.5" strokeDasharray="5 3" />
+            <line x1="50" y1="128" x2="130" y2="128" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
 
             <text x="28" y="104" fontSize="11" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Pf</text>
-            <text x="22" y="95" fontSize="10" fill="hsl(40 85% 55%)" fontFamily="var(--font-body)">ATC</text>
+            <text x="22" y="132" fontSize="10" fill="hsl(40 85% 55%)" fontFamily="var(--font-body)">ATC</text>
             <text x="123" y="256" fontSize="11" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Qf</text>
 
             <text x="270" y="256" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Q</text>
