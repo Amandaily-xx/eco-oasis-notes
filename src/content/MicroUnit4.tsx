@@ -70,7 +70,7 @@ const MicroUnit4Content = () => (
     <SectionAccordion title="5. Monopolistic Competition">
       <h4 className="font-semibold text-primary mb-2">Short Run (same structure as monopoly)</h4>
       <p className="mb-2 text-sm">In the short run, a monopolistically competitive firm behaves like a monopolist — it can earn economic profit (or loss). The graph is the same as the monopoly graph: produce where MR = MC, charge price from the demand curve.</p>
-      <EconGraph type="monopoly" caption="Monopolistic Competition (Short Run) — same as monopoly, firm can earn economic profit" />
+      <EconGraph type="monopoly" caption="Monopolistic Competition (Short Run) — same as monopoly; firm earns positive economic profit (green area)" />
       <h4 className="font-semibold text-primary my-2">Long Run (zero economic profit)</h4>
       <p className="mb-2 text-sm">In the long run, entry/exit drives economic profit to zero. The demand curve shifts until it is tangent to ATC — profit = 0.</p>
       <EconGraph type="monopolistic-competition" caption="Monopolistic Competition (Long Run) — D tangent to ATC, zero economic profit" />
