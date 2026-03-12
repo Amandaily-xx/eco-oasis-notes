@@ -121,7 +121,7 @@ const About = () => {
                 <UtensilsCrossed className="w-5 h-5 text-accent mt-0.5 shrink-0" />
                 <div>
                   <p className="font-semibold text-primary">Food Explorer</p>
-                  <p className="text-sm text-muted-foreground">Big foodie energy — from ramen to burgers, I'm always hunting for the next best bite in Montreal.</p>
+                  <p className="text-sm text-muted-foreground">Big foodie energy — from ramen to matcha to burgers, I'm always hunting for the next best bite in Montreal.</p>
                 </div>
               </div>
             </div>
