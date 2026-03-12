@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, GraduationCap, Award, Users, Music, Dumbbell, UtensilsCrossed } from "lucide-react";
+import { ArrowLeft, GraduationCap, Award, Users, Music, Dumbbell, UtensilsCrossed, Lightbulb } from "lucide-react";
 import amanda1 from "../assets/amanda-1.png";
 import amanda2 from "../assets/amanda-2.png";
 import amanda3 from "../assets/amanda-3.png";
@@ -44,7 +44,7 @@ const About = () => {
               I'm not trying to brag (okay, maybe a little), but I genuinely believe these notes can help you understand economics the way I did — intuitively, clearly, and without the 2:00 AM panic spiral.
             </p>
             <p className="text-lg font-semibold text-primary">
-              So folks, let's get started! 🚀
+              So folks, let's get started! 🚀🔥
             </p>
           </div>
 
@@ -97,6 +97,13 @@ const About = () => {
             />
             <div className="flex flex-col justify-center space-y-4 font-body text-foreground">
               <div className="flex items-start gap-3">
+                <Lightbulb className="w-5 h-5 text-accent mt-0.5 shrink-0" />
+                <div>
+                  <p className="font-semibold text-primary">AI & Data Analysis</p>
+                  <p className="text-sm text-muted-foreground">Passionate about leveraging AI and data to uncover insights — from building models to crunching datasets, it's where stats meets creativity.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
                 <Dumbbell className="w-5 h-5 text-accent mt-0.5 shrink-0" />
                 <div>
                   <p className="font-semibold text-primary">Fitness & Badminton</p>
@@ -114,7 +121,7 @@ const About = () => {
                 <UtensilsCrossed className="w-5 h-5 text-accent mt-0.5 shrink-0" />
                 <div>
                   <p className="font-semibold text-primary">Food Explorer</p>
-                  <p className="text-sm text-muted-foreground">Big foodie energy — from ramen to burgers, I'm always hunting for the next best bite in Montreal.</p>
+                  <p className="text-sm text-muted-foreground">Big foodie energy — from ramen to matcha to burgers, I'm always hunting for the next best bite in Montreal.</p>
                 </div>
               </div>
             </div>
