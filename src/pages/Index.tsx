@@ -146,6 +146,10 @@ const Index = () => {
           <Link to="/contact" className="inline-flex items-center gap-1 underline hover:text-accent transition-colors">
             <Mail className="w-3.5 h-3.5" /> Contact
           </Link>
+          {" · "}
+          <Link to="/about" className="inline-flex items-center gap-1 underline hover:text-accent transition-colors">
+            <User className="w-3.5 h-3.5" /> About Amanda
+          </Link>
         </p>
       </footer>
     </div>
