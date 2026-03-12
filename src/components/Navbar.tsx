@@ -40,11 +40,14 @@ const Navbar = () => {
               <Link to="/micro/1" className="block px-3 py-2 rounded-md text-sm hover:bg-secondary transition-colors">
                 Unit 1: Basic Concepts → <span className="text-accent text-xs">(Same as Micro!)</span>
               </Link>
-              {[2,3,4,5,6].map(i => (
-                <Link key={i} to={`/macro/${i}`} className="block px-3 py-2 rounded-md text-sm hover:bg-secondary transition-colors">
-                  Unit {i}: {["", "Economic Indicators", "National Income & AD-AS", "Financial Sector", "Long-Run Consequences", "International Trade"][i]}
-                </Link>
-              ))}
+              {[2,3,4,5,6].map(i => {
+                const macroNames: Record<number, string> = { 2: "Economic Indicators", 3: "National Income & AD-AS", 4: "Financial Sector", 5: "Long-Run Consequences", 6: "International Trade" };
+                return (
+                  <Link key={i} to={`/macro/${i}`} className="block px-3 py-2 rounded-md text-sm hover:bg-secondary transition-colors">
+                    Unit {i}: {macroNames[i]}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>
