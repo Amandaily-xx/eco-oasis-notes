@@ -97,6 +97,13 @@ const About = () => {
             />
             <div className="flex flex-col justify-center space-y-4 font-body text-foreground">
               <div className="flex items-start gap-3">
+                <Lightbulb className="w-5 h-5 text-accent mt-0.5 shrink-0" />
+                <div>
+                  <p className="font-semibold text-primary">AI & Data Analysis</p>
+                  <p className="text-sm text-muted-foreground">Passionate about leveraging AI and data to uncover insights — from building models to crunching datasets, it's where stats meets creativity.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
                 <Dumbbell className="w-5 h-5 text-accent mt-0.5 shrink-0" />
                 <div>
                   <p className="font-semibold text-primary">Fitness & Badminton</p>
