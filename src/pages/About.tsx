@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, GraduationCap, Award, Users, Music, Dumbbell, UtensilsCrossed } from "lucide-react";
+import { ArrowLeft, GraduationCap, Award, Users, Music, Dumbbell, UtensilsCrossed, Lightbulb } from "lucide-react";
 import amanda1 from "../assets/amanda-1.png";
 import amanda2 from "../assets/amanda-2.png";
 import amanda3 from "../assets/amanda-3.png";
