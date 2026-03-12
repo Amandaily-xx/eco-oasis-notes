@@ -44,7 +44,7 @@ const About = () => {
               I'm not trying to brag (okay, maybe a little), but I genuinely believe these notes can help you understand economics the way I did — intuitively, clearly, and without the 2:00 AM panic spiral.
             </p>
             <p className="text-lg font-semibold text-primary">
-              So folks, let's get started! 🚀
+              So folks, let's get started! 🚀🔥
             </p>
           </div>
 
