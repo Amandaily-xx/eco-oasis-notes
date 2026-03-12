@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, GraduationCap, Award, Users } from "lucide-react";
+import { ArrowLeft, GraduationCap, Award, Users, Music, Dumbbell, UtensilsCrossed } from "lucide-react";
 import amanda1 from "../assets/amanda-1.png";
 import amanda2 from "../assets/amanda-2.png";
 import amanda3 from "../assets/amanda-3.png";
-import amanda4 from "../assets/amanda-4.png";
+import amandaHobbies from "../assets/amanda-hobbies.png";
 
 const About = () => {
   return (
@@ -15,9 +15,9 @@ const About = () => {
         </Link>
 
         <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
-          <h1 className="font-display text-3xl md:text-4xl font-bold text-primary mb-6">Meet the Author ✨</h1>
+          {/* About Amanda — top section */}
+          <h1 className="font-display text-3xl md:text-4xl font-bold text-primary mb-6">About Amanda ✨</h1>
 
-          {/* Hero image */}
           <div className="flex justify-center mb-8">
             <motion.img
               src={amanda3}
@@ -32,7 +32,7 @@ const About = () => {
 
           <div className="prose-like font-body text-foreground space-y-4 mb-10">
             <p className="text-lg leading-relaxed">
-              Hey there! I'm <strong className="text-accent">Amanda</strong> — a Statistics & Computer Science major with an Economics minor at <strong>McGill University</strong>, starting Fall 2025. Currently tackling CS and… let's just say it's been a journey. 😅 But hey, we got this!
+              Hey there! I'm <strong className="text-accent">Amanda</strong> — a Stats & CS major with an Econ minor at <strong>McGill University</strong>, starting Fall 2025. Currently tackling CS and… let's just say it's been a journey. But hey, we got this!
             </p>
             <p className="leading-relaxed">
               These AP Econ notes are pretty close to my heart. Back in my junior year of high school, I created them while preparing for the AP Micro and AP Macro exams. After each unit, I'd put together a set of shared notes and drop them in our class group chat so everyone could study together. My classmates found them super helpful — and honestly, my teacher and friends started calling me the <em>"Economics God"</em> of the class. 😂
@@ -41,7 +41,7 @@ const About = () => {
               And the result? <strong>Scored a 5 on both AP Micro and AP Macro</strong>, no sweat. So yeah, these notes are battle-tested and student-approved.
             </p>
             <p className="leading-relaxed">
-              I'm not trying to brag (okay, maybe a little 😏), but I genuinely believe these notes can help you understand economics the way I did — intuitively, clearly, and without the 2:00 AM panic spiral.
+              I'm not trying to brag (okay, maybe a little), but I genuinely believe these notes can help you understand economics the way I did — intuitively, clearly, and without the 2:00 AM panic spiral.
             </p>
             <p className="text-lg font-semibold text-primary">
               So folks, let's get started! 🚀
@@ -53,7 +53,7 @@ const About = () => {
             {[
               { icon: Award, label: "AP Score", value: "5 / 5" },
               { icon: GraduationCap, label: "University", value: "McGill" },
-              { icon: Users, label: "Students Helped", value: "30+" },
+              { icon: Users, label: "Students Helped", value: "50+" },
             ].map(({ icon: Icon, label, value }) => (
               <div key={label} className="text-center p-4 rounded-xl border" style={{ background: "hsl(var(--card))", borderColor: "hsl(var(--border))" }}>
                 <Icon className="w-5 h-5 mx-auto mb-2 text-accent" />
@@ -63,13 +63,12 @@ const About = () => {
             ))}
           </div>
 
-          {/* Photo gallery */}
+          {/* Photo gallery — 3 photos in a nice layout */}
           <h2 className="font-display text-2xl font-bold text-primary mb-4">Gallery 📸</h2>
-          <div className="grid grid-cols-2 gap-4 mb-8">
+          <div className="grid grid-cols-3 gap-4 mb-10">
             {[
               { src: amanda1, alt: "Amanda at McGill stickers" },
               { src: amanda2, alt: "McGill Arts Building" },
-              { src: amanda4, alt: "Amanda AMD stickers" },
               { src: amanda3, alt: "Amanda in Toronto" },
             ].map(({ src, alt }, i) => (
               <motion.img
@@ -83,6 +82,42 @@ const About = () => {
                 transition={{ delay: i * 0.1 }}
               />
             ))}
+          </div>
+
+          {/* Hobbies & Interests */}
+          <h2 className="font-display text-2xl font-bold text-primary mb-4">Hobbies & Interests 🎯</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <motion.img
+              src={amandaHobbies}
+              alt="Amanda's hobbies and interests"
+              className="w-full rounded-xl shadow-md object-cover"
+              initial={{ opacity: 0, x: -10 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            />
+            <div className="flex flex-col justify-center space-y-4 font-body text-foreground">
+              <div className="flex items-start gap-3">
+                <Dumbbell className="w-5 h-5 text-accent mt-0.5 shrink-0" />
+                <div>
+                  <p className="font-semibold text-primary">Fitness & Badminton</p>
+                  <p className="text-sm text-muted-foreground">Staying active with gym sessions and badminton matches — gotta keep that energy up for late-night study grinds.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Music className="w-5 h-5 text-accent mt-0.5 shrink-0" />
+                <div>
+                  <p className="font-semibold text-primary">Singing & Music</p>
+                  <p className="text-sm text-muted-foreground">When I'm not crunching numbers, you'll find me singing my heart out. It's the best stress reliever!</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <UtensilsCrossed className="w-5 h-5 text-accent mt-0.5 shrink-0" />
+                <div>
+                  <p className="font-semibold text-primary">Food Explorer</p>
+                  <p className="text-sm text-muted-foreground">Big foodie energy — from ramen to burgers, I'm always hunting for the next best bite in Montreal.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>
