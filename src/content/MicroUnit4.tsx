@@ -14,7 +14,7 @@ const MicroUnit4Content = () => (
       <h4 className="font-semibold text-primary mb-2">Demand & Revenue</h4>
       <p className="mb-2">The monopolist faces the market demand curve (downward-sloping). Can a monopoly charge any price it wants? <strong>No!</strong> It is constrained by the demand curve.</p>
       <p><strong>Price Effect:</strong> To sell more units, the monopolist must lower the price on ALL units sold. This is why MR &lt; P for a monopolist.</p>
-      <EconGraph type="monopoly" caption="Monopoly — produces at MR = MC (black dot), charges Pf from demand curve (red dot), ATC meets D at Qf" />
+      <EconGraph type="monopoly" caption="Monopoly — produces at MR = MC (black dot), charges Pf from demand curve (red dot). Green area = economic profit (P > ATC)." />
       <div className="formula-block">MR curve lies below the demand curve &nbsp;|&nbsp; MR has twice the slope of D</div>
     </SectionAccordion>
 
