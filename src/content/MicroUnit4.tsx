@@ -4,7 +4,7 @@ import EconGraph from "../components/EconGraph";
 
 const MicroUnit4Content = () => (
   <div className="space-y-4">
-    <SectionAccordion title="1. Monopoly" defaultOpen>
+    <SectionAccordion title="1. Monopoly" defaultOpen highYield>
       <h4 className="font-semibold text-primary mb-2">Characteristics</h4>
       <ul className="list-disc pl-5 space-y-1 mb-3">
         <li>Single producer (the firm IS the market)</li>
@@ -34,7 +34,7 @@ const MicroUnit4Content = () => (
       </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="3. Natural Monopoly & Price Regulation">
+    <SectionAccordion title="3. Natural Monopoly & Price Regulation" highYield>
       <p>A <strong>natural monopoly</strong> exists when one firm can supply the entire market at a lower cost than multiple firms (huge economies of scale).</p>
       <EconGraph type="natural-monopoly" caption="Natural Monopoly — LRAC continues to decline; P = monopoly price, C = fair-return (P=ATC), P1 = socially optimal (P=MC)" />
       <ul className="list-disc pl-5 space-y-1 my-3">
@@ -44,7 +44,7 @@ const MicroUnit4Content = () => (
       </ul>
     </SectionAccordion>
 
-    <SectionAccordion title="4. Price Discrimination">
+    <SectionAccordion title="4. Price Discrimination" highYield>
       <p>Charging different prices to different consumers for the same product.</p>
       <h4 className="font-semibold text-primary my-2">Three Conditions Required</h4>
       <ol className="list-decimal pl-5 space-y-1 mb-3">
@@ -67,7 +67,7 @@ const MicroUnit4Content = () => (
       <p className="mt-2"><strong>Examples:</strong> Airlines, movie tickets (senior/student), college tuition (financial aid)</p>
     </SectionAccordion>
 
-    <SectionAccordion title="5. Monopolistic Competition">
+    <SectionAccordion title="5. Monopolistic Competition" highYield>
       <h4 className="font-semibold text-primary mb-2">Short Run (same structure as monopoly)</h4>
       <p className="mb-2 text-sm">In the short run, a monopolistically competitive firm behaves like a monopolist — it can earn economic profit (or loss). The graph is the same as the monopoly graph: produce where MR = MC, charge price from the demand curve.</p>
       <EconGraph type="monopoly" caption="Monopolistic Competition (Short Run) — same as monopoly; firm earns positive economic profit (green area)" />
@@ -93,7 +93,7 @@ const MicroUnit4Content = () => (
       <p className="mt-2"><strong>Product differentiation</strong> through advertising and brand names increases market power and sales.</p>
     </SectionAccordion>
 
-    <SectionAccordion title="6. Oligopoly & Game Theory">
+    <SectionAccordion title="6. Oligopoly & Game Theory" highYield>
       <p><strong>Oligopoly:</strong> Few large firms dominate the market. Products may be identical or differentiated. High barriers to entry.</p>
       <p className="my-2"><strong>Examples:</strong> Coca-Cola & Pepsi; Boeing & Airbus; US auto industry</p>
       <h4 className="font-semibold text-primary my-2">The Prisoners' Dilemma</h4>

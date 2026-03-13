@@ -4,7 +4,7 @@ import EconGraph from "../components/EconGraph";
 
 const MicroUnit5Content = () => (
   <div className="space-y-4">
-    <SectionAccordion title="1. The Four Factors of Production" defaultOpen>
+    <SectionAccordion title="1. The Four Factors of Production" defaultOpen highYield>
       <table className="w-full text-sm border-collapse my-3">
         <thead><tr className="border-b font-semibold"><th className="text-left py-2 pr-3">Factor</th><th className="text-left py-2 pr-3">Definition</th><th className="text-left py-2">Payment</th></tr></thead>
         <tbody>
@@ -15,9 +15,12 @@ const MicroUnit5Content = () => (
         </tbody>
       </table>
       <p><strong>Human Capital:</strong> Skills and knowledge gained through education and experience.</p>
+      <AmandaTip>
+        This is so important — memorize it by heart! Know the four factors and their payments cold. The AP exam loves to test: "Which factor of production earns interest?" → Capital.
+      </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="2. Demand for Labor (MRP)">
+    <SectionAccordion title="2. Demand for Labor (MRP)" highYield>
       <p>The demand for labor is a <strong>derived demand</strong> — it depends on the demand for the product the labor produces.</p>
       <div className="formula-block">MRP = MP × MR &nbsp;&nbsp;|&nbsp;&nbsp; In perfect competition: MRP = MP × P = VMP</div>
       <h4 className="font-semibold text-primary my-2">Hiring Decision Rule</h4>
@@ -66,7 +69,7 @@ const MicroUnit5Content = () => (
       </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="6. Monopsony">
+    <SectionAccordion title="6. Monopsony" highYield>
       <p>A <strong>monopsony</strong> is a market with only ONE buyer of labor (single employer in a town).</p>
       <EconGraph type="monopsony" caption="Monopsony — hires at MRP = MFC but pays lower wage from supply curve" />
       <ul className="list-disc pl-5 space-y-1 my-3">

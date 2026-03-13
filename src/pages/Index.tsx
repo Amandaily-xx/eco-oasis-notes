@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { BookOpen, TrendingUp, ArrowRight, Sparkles, Lightbulb, Shield, Mail, User } from "lucide-react";
+import { BookOpen, TrendingUp, ArrowRight, Sparkles, Lightbulb, Shield, Mail, User, Star } from "lucide-react";
+import amanda4 from "../assets/amanda-4.png";
 
 const microUnits = [
   { id: 1, title: "Basic Economic Concepts", desc: "Scarcity, Opportunity Cost, PPC, Economic Systems, Comparative Advantage" },
@@ -23,8 +24,40 @@ const macroUnits = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      {/* About Amanda Banner + Contact */}
+      <section className="container mx-auto px-6 pt-8 max-w-5xl">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="flex flex-col sm:flex-row items-center gap-5 rounded-2xl border p-5 mb-6"
+          style={{ background: "hsl(var(--card))", borderColor: "hsl(var(--border))" }}
+        >
+          <img
+            src={amanda4}
+            alt="Amanda cartoon avatar"
+            className="w-20 h-20 rounded-full object-cover border-2 flex-shrink-0"
+            style={{ borderColor: "hsl(var(--accent))" }}
+          />
+          <div className="flex-1 text-center sm:text-left">
+            <p className="font-display font-bold text-primary text-lg">Meet Amanda ✨</p>
+            <p className="font-body text-sm text-muted-foreground mt-1">
+              Stats & CS major, Econ minor @ McGill · Scored 5 on both AP Micro & Macro · AP Econ TA since 2024 · 50+ students helped
+            </p>
+          </div>
+          <div className="flex gap-2">
+            <Link to="/about" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-body font-semibold bg-primary text-primary-foreground hover:opacity-90 transition-opacity">
+              <User className="w-4 h-4" /> About Me
+            </Link>
+            <Link to="/contact" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-body font-semibold border hover:bg-accent/10 transition-colors" style={{ borderColor: "hsl(var(--border))" }}>
+              <Mail className="w-4 h-4" /> Contact
+            </Link>
+          </div>
+        </motion.div>
+      </section>
+
       {/* Hero */}
-      <section className="container mx-auto px-6 pt-16 pb-20 max-w-4xl">
+      <section className="container mx-auto px-6 pt-8 pb-20 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -42,16 +75,27 @@ const Index = () => {
               No more late-night panic sessions 😴 — these guides are designed to help you actually understand the material and <strong>score a 5</strong>. Grab your copy now while supply is high and the opportunity cost is low! :)
             </p>
           </div>
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.5 }}
-            className="mt-8 inline-flex items-center gap-2 px-5 py-3 rounded-xl font-body text-sm"
-            style={{ background: "hsl(var(--tip-bg))", color: "hsl(var(--tip-text))" }}
-          >
-            <Lightbulb className="w-4 h-4 text-accent flex-shrink-0" />
-            <span>Look for <strong>Amanda's Tips</strong> throughout the notes — strategic insights to help you nail the exam!</span>
-          </motion.div>
+          <div className="flex flex-wrap justify-center gap-3 mt-8">
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-body text-sm"
+              style={{ background: "hsl(var(--tip-bg))", color: "hsl(var(--tip-text))" }}
+            >
+              <Lightbulb className="w-4 h-4 text-accent flex-shrink-0" />
+              <span>Look for <strong>Amanda's Tips</strong> throughout the notes — strategic insights to help you nail the exam!</span>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-body text-sm bg-amber-50 text-amber-800 dark:bg-amber-900/30 dark:text-amber-200 border border-amber-200 dark:border-amber-700"
+            >
+              <Star className="w-4 h-4 fill-amber-500 text-amber-500 flex-shrink-0" />
+              <span>Sections marked <strong>HIGH YIELD</strong> are the ones I think you'll be tested on the most!</span>
+            </motion.div>
+          </div>
         </motion.div>
       </section>
 

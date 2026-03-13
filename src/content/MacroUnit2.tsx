@@ -28,7 +28,7 @@ const MacroUnit2Content = () => (
       </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="2. Gross Domestic Product (GDP)">
+    <SectionAccordion title="2. Gross Domestic Product (GDP)" highYield>
       <p><strong>GDP:</strong> The market value of all <strong>final</strong> goods and services produced <strong>within a country</strong> in a given period.</p>
       <h4 className="font-semibold text-primary my-2">What's NOT included?</h4>
       <ul className="list-disc pl-5 space-y-1 mb-3">
@@ -48,7 +48,7 @@ const MacroUnit2Content = () => (
       <div className="formula-block">GDP Deflator = (Nominal GDP / Real GDP) × 100</div>
     </SectionAccordion>
 
-    <SectionAccordion title="3. Unemployment">
+    <SectionAccordion title="3. Unemployment" highYield>
       <ul className="list-disc pl-5 space-y-1 mb-3">
         <li><strong>Labor force</strong> = Employed + Unemployed (actively looking for work)</li>
         <li><strong>Unemployment rate</strong> = Unemployed / Labor force</li>
@@ -68,7 +68,7 @@ const MacroUnit2Content = () => (
       </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="4. Inflation & Price Indices">
+    <SectionAccordion title="4. Inflation & Price Indices" highYield>
       <ul className="list-disc pl-5 space-y-1 mb-3">
         <li><strong>Inflation:</strong> A sustained increase in the general price level → money loses purchasing power</li>
         <li><strong>Deflation:</strong> A sustained decrease in the general price level → money gains purchasing power</li>
@@ -108,7 +108,7 @@ const MacroUnit2Content = () => (
       </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="6. Business Cycles">
+    <SectionAccordion title="6. Business Cycles" highYield>
       <EconGraph type="business-cycle" caption="Business Cycle — expansion, peak, recession, trough around potential GDP trend" />
       <h4 className="font-semibold text-primary mb-2">Four Stages</h4>
       <ul className="list-disc pl-5 space-y-1 mb-3">

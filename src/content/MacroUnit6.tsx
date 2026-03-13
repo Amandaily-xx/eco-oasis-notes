@@ -4,7 +4,7 @@ import EconGraph from "../components/EconGraph";
 
 const MacroUnit6Content = () => (
   <div className="space-y-4">
-    <SectionAccordion title="1. Balance of Payments (BOP)" defaultOpen>
+    <SectionAccordion title="1. Balance of Payments (BOP)" defaultOpen highYield>
       <p>The Balance of Payments records all international transactions between a country's residents and the rest of the world.</p>
       <p className="my-2"><strong>General rule:</strong> Total credits + total debits = 0. A credit in one country is a debit in another.</p>
 
@@ -49,7 +49,7 @@ const MacroUnit6Content = () => (
       </table>
     </SectionAccordion>
 
-    <SectionAccordion title="3. The Foreign Exchange Market">
+    <SectionAccordion title="3. The Foreign Exchange Market" highYield>
       <EconGraph type="forex" caption="Foreign Exchange Market — exchange rate determined by supply and demand for currency" />
       <p>Currency is traded in the foreign exchange (forex) market. The exchange rate is determined by <strong>supply and demand</strong>.</p>
       <ul className="list-disc pl-5 space-y-1 my-3">
@@ -85,7 +85,7 @@ const MacroUnit6Content = () => (
       </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="5. Exchange Rates & Policy Effects">
+    <SectionAccordion title="5. Exchange Rates & Policy Effects" highYield>
       <h4 className="font-semibold text-primary mb-2">Expansionary Fiscal Policy (under floating exchange rates)</h4>
       <ul className="list-disc pl-5 space-y-1 mb-3">
         <li>Gov't spending ↑ → AD ↑ → price level ↑ → domestic goods become more expensive → exports ↓, imports ↑</li>
@@ -104,7 +104,7 @@ const MacroUnit6Content = () => (
       </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="6. Effects of Exchange Rate Changes">
+    <SectionAccordion title="6. Effects of Exchange Rate Changes" highYield>
       <ul className="list-disc pl-5 space-y-1">
         <li>Currency <strong>appreciates</strong> → domestic purchasing power ↑ → imports ↑, exports ↓ → net exports ↓ → AD ↓</li>
         <li>Currency <strong>depreciates</strong> → domestic purchasing power ↓ → imports ↓, exports ↑ → net exports ↑ → AD ↑</li>

@@ -95,7 +95,7 @@ const MacroUnit4Content = () => (
       </div>
     </SectionAccordion>
 
-    <SectionAccordion title="5. Money Market">
+    <SectionAccordion title="5. Money Market" highYield>
       <p>The money market is where the "good" being traded is money, and the price is the <strong>nominal interest rate (NIR)</strong>.</p>
       <h4 className="font-semibold text-primary my-2">Money Demand Curve</h4>
       <ul className="list-disc pl-5 space-y-1 mb-3">
@@ -110,7 +110,7 @@ const MacroUnit4Content = () => (
       <p><strong>Equilibrium:</strong> Where MS intersects MD, determining the equilibrium NIR.</p>
     </SectionAccordion>
 
-    <SectionAccordion title="6. Monetary Policy">
+    <SectionAccordion title="6. Monetary Policy" highYield>
       <EconGraph type="money-market" caption="Money Market — MS shifts right (expansionary), nominal interest rate falls from r₀ to r₁" />
       <p>The <strong>Federal Reserve</strong> has a dual mandate: <strong>maximum employment</strong> and <strong>price stability</strong> (targeting ~2% inflation).</p>
 
@@ -138,7 +138,7 @@ const MacroUnit4Content = () => (
       </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="7. The Loanable Funds Market">
+    <SectionAccordion title="7. The Loanable Funds Market" highYield>
       <EconGraph type="loanable-funds" caption="Loanable Funds Market — gov't borrowing shifts D right/S left, crowding out raises real interest rate" />
       <p>The loanable funds market brings together savers (lenders) and borrowers. The price is the <strong>real interest rate</strong>.</p>
       <ul className="list-disc pl-5 space-y-1 my-3">
@@ -154,14 +154,26 @@ const MacroUnit4Content = () => (
       </ul>
 
       <h4 className="font-semibold text-primary my-2">Demand Shifters</h4>
-      <ul className="list-disc pl-5 space-y-1">
+      <ul className="list-disc pl-5 space-y-1 mb-3">
         <li>Changes in borrowing by consumers/businesses</li>
         <li>Changes in anticipated rate of return on investment</li>
         <li>Investment tax credits → demand ↑</li>
       </ul>
 
+      <h4 className="font-semibold text-primary my-2">The Crowding-Out Effect</h4>
+      <p>When the government runs a deficit and borrows in the loanable funds market:</p>
+      <div className="formula-block">
+        Gov't deficit ↑ → Demand for loanable funds ↑ → Real interest rate ↑ → Private investment ↓ → AD partially offset
+      </div>
+      <ul className="list-disc pl-5 space-y-1 my-3">
+        <li><strong>Budget deficit:</strong> Government spending &gt; tax revenue in a single year</li>
+        <li><strong>National debt:</strong> The sum of all past budget deficits minus surpluses</li>
+        <li>Deficits increase the debt; surpluses decrease it</li>
+      </ul>
+      <p>This means expansionary fiscal policy is <strong>less effective</strong> than it appears because higher government borrowing "crowds out" private investment.</p>
+
       <AmandaTip>
-        Don't confuse the money market with the loanable funds market! The money market uses the <strong>nominal</strong> interest rate and deals with short-term liquidity. The loanable funds market uses the <strong>real</strong> interest rate and deals with long-term saving and investment.
+        Crowding out is why the actual AD shift from fiscal policy is smaller than the simple multiplier suggests. The government borrows more → interest rates rise → businesses invest less. It's a partial offset, not a complete cancellation! Don't confuse the money market with the loanable funds market! The money market uses the <strong>nominal</strong> interest rate and deals with short-term liquidity. The loanable funds market uses the <strong>real</strong> interest rate and deals with long-term saving and investment.
       </AmandaTip>
     </SectionAccordion>
   </div>

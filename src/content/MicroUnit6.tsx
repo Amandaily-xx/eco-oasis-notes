@@ -1,6 +1,8 @@
 import AmandaTip from "../components/AmandaTip";
 import SectionAccordion from "../components/SectionAccordion";
 import EconGraph from "../components/EconGraph";
+import progressiveTax from "../assets/progressive-tax.png";
+import regressiveTax from "../assets/regressive-tax.png";
 
 const MicroUnit6Content = () => (
   <div className="space-y-4">
@@ -22,7 +24,7 @@ const MicroUnit6Content = () => (
       <p>If there is <strong>no externality</strong>: MSC = MPC and MSB = MPB → market is allocatively efficient.</p>
     </SectionAccordion>
 
-    <SectionAccordion title="3. Negative Externalities">
+    <SectionAccordion title="3. Negative Externalities" highYield>
       <h4 className="font-semibold text-primary mb-2">Negative Production Externality</h4>
       <EconGraph type="negative-externality" caption="Negative Production Externality — MSC > MPC, market overproduces" />
       <p>A firm's production harms bystanders (pollution). MSC &gt; MPC → <strong>Overproduction</strong>.</p>
@@ -38,7 +40,7 @@ const MicroUnit6Content = () => (
       </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="4. Positive Externalities">
+    <SectionAccordion title="4. Positive Externalities" highYield>
       <EconGraph type="positive-externality" caption="Positive Consumption Externality — MSB > MPB, market underconsumes" />
       <h4 className="font-semibold text-primary mb-2">Positive Production Externality</h4>
       <p>A firm's production benefits bystanders. MSC &lt; MPC → <strong>Underproduction</strong>.</p>
@@ -58,7 +60,7 @@ const MicroUnit6Content = () => (
       </ul>
     </SectionAccordion>
 
-    <SectionAccordion title="6. Solutions to Externalities">
+    <SectionAccordion title="6. Solutions to Externalities" highYield>
       <h4 className="font-semibold text-primary mb-2">Private-Sector Solutions</h4>
       <p><strong>Coase Theorem:</strong> With well-defined property rights and low transaction costs, private bargaining can achieve the socially optimal outcome regardless of who holds the property rights.</p>
       
@@ -71,7 +73,33 @@ const MicroUnit6Content = () => (
       </ul>
     </SectionAccordion>
 
-    <SectionAccordion title="7. Income & Wealth Inequality">
+    <SectionAccordion title="7. Types of Taxes" highYield>
+      <p>Understanding the different types of taxes is essential — <strong>progressive tax</strong> is one of the most frequently tested topics in the MCQ section!</p>
+
+      <h4 className="font-semibold text-primary my-2">❗ Progressive Tax (累进税)</h4>
+      <p className="mb-2">A progressive tax collects a <strong>higher percentage</strong> of income from high-income earners and a <strong>lower percentage</strong> from low-income earners. This type of tax promotes <strong>greater income equality</strong>.</p>
+      <figure className="mx-auto my-3 w-full max-w-md">
+        <img src={progressiveTax} alt="Progressive tax table showing higher-income families paying a higher percentage of income in tax" className="h-auto w-full rounded-md border border-border" loading="lazy" />
+        <figcaption className="mt-2 text-center text-sm text-muted-foreground">Progressive Tax — higher income → higher tax rate</figcaption>
+      </figure>
+
+      <h4 className="font-semibold text-primary my-2">❗ Regressive Tax (累退税)</h4>
+      <p className="mb-2">A regressive tax is the opposite: it collects a <strong>lower percentage</strong> of income from high-income earners and a <strong>higher percentage</strong> from low-income earners. This type of tax makes income distribution <strong>more unequal</strong>.</p>
+      <p className="mb-2"><strong>Example:</strong> Consider a rich person and a poor person both buying the same $5 drink. The $5 represents a tiny fraction of the rich person's income but a much larger fraction of the poor person's income. <strong>Sales tax</strong> is the most common example of a regressive tax.</p>
+      <figure className="mx-auto my-3 w-full max-w-md">
+        <img src={regressiveTax} alt="Regressive tax table showing higher-income families paying a lower percentage of income in tax" className="h-auto w-full rounded-md border border-border" loading="lazy" />
+        <figcaption className="mt-2 text-center text-sm text-muted-foreground">Regressive Tax — higher income → lower tax rate</figcaption>
+      </figure>
+
+      <h4 className="font-semibold text-primary my-2">❗ Proportional Tax (比例税)</h4>
+      <p>A proportional (flat) tax collects the <strong>same percentage</strong> of income from everyone, regardless of whether their income is high or low. The tax rate remains constant no matter the size of the tax base.</p>
+
+      <AmandaTip>
+        On the AP exam, if they show you a table of income and tax amounts, calculate the <strong>percentage of income paid in tax</strong> for each group. If the percentage goes UP with income → progressive. If it goes DOWN → regressive. If it stays the SAME → proportional. Progressive tax is tested the most!
+      </AmandaTip>
+    </SectionAccordion>
+
+    <SectionAccordion title="8. Income & Wealth Inequality">
       <h4 className="font-semibold text-primary mb-2">Key Concepts</h4>
       <ul className="list-disc pl-5 space-y-1 mb-3">
         <li><strong>Poverty threshold:</strong> Minimum annual income considered adequate for basic needs</li>
