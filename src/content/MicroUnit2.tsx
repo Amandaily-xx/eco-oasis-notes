@@ -5,7 +5,7 @@ import surplusDiagram from "../assets/surplus-diagram.png";
 
 const MicroUnit2Content = () => (
   <div className="space-y-4">
-    <SectionAccordion title="1. Demand" defaultOpen>
+    <SectionAccordion title="1. Demand" defaultOpen highYield>
       <p><strong>Law of Demand:</strong> As price increases, quantity demanded decreases (and vice versa), ceteris paribus.</p>
       <EconGraph type="demand-shift" caption="Demand Shift — D₁ to D₂ (increase in demand shifts right: P↑, Q↑)" />
       <h4 className="font-semibold text-primary my-2">Why does the demand curve slope downward?</h4>
@@ -53,7 +53,7 @@ const MicroUnit2Content = () => (
       <p>When both supply and demand shift simultaneously, either the new equilibrium price OR quantity will be ambiguous (indeterminate).</p>
     </SectionAccordion>
 
-    <SectionAccordion title="4. Price Elasticity of Demand">
+    <SectionAccordion title="4. Price Elasticity of Demand" highYield>
       <div className="formula-block">Ed = |%ΔQd / %ΔP|</div>
       <ul className="list-disc pl-5 space-y-1 my-3">
         <li><strong>Elastic (Ed &gt; 1):</strong> Quantity responds more than proportionally to price</li>
@@ -113,7 +113,7 @@ const MicroUnit2Content = () => (
       </ul>
     </SectionAccordion>
 
-    <SectionAccordion title="7. International Trade">
+    <SectionAccordion title="7. International Trade" highYield>
       <p>Countries trade based on <strong>comparative advantage</strong> — each country specializes in goods they produce at a lower opportunity cost.</p>
       <h4 className="font-semibold text-primary my-2">Key Terms</h4>
       <ul className="list-disc pl-5 space-y-1 mb-3">

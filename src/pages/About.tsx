@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, GraduationCap, Award, Users, Music, Dumbbell, UtensilsCrossed, Lightbulb } from "lucide-react";
+import { ArrowLeft, GraduationCap, Award, Users, Music, Dumbbell, UtensilsCrossed, Lightbulb, BrainCircuit } from "lucide-react";
 import amanda1 from "../assets/amanda-1.png";
 import amanda2 from "../assets/amanda-2.png";
-import amanda3 from "../assets/amanda-3.png";
+import amanda4 from "../assets/amanda-4.png";
 import amandaHobbies from "../assets/amanda-hobbies.png";
 
 const About = () => {
@@ -20,8 +20,8 @@ const About = () => {
 
           <div className="flex justify-center mb-8">
             <motion.img
-              src={amanda3}
-              alt="Amanda"
+              src={amanda4}
+              alt="Amanda cartoon avatar"
               className="w-64 h-64 object-cover rounded-2xl shadow-lg border-4"
               style={{ borderColor: "hsl(var(--accent))" }}
               initial={{ scale: 0.9, opacity: 0 }}
@@ -32,10 +32,13 @@ const About = () => {
 
           <div className="prose-like font-body text-foreground space-y-4 mb-10">
             <p className="text-lg leading-relaxed">
-              Hey there! I'm <strong className="text-accent">Amanda</strong> — a Stats & CS major with an Econ minor at <strong>McGill University</strong>, starting Fall 2025. Currently tackling CS and… let's just say it's been a journey. But hey, we got this!
+              Hey there! I'm <strong className="text-accent">Amanda</strong> — a Stats & CS major with an Econ minor at <strong>McGill University</strong>, starting Fall 2025. Currently tackling CS and… let's just say it's been a journey. But hey, we got this! 🔥
             </p>
             <p className="leading-relaxed">
               These AP Econ notes are pretty close to my heart. Back in my junior year of high school, I created them while preparing for the AP Micro and AP Macro exams. After each unit, I'd put together a set of shared notes and drop them in our class group chat so everyone could study together. My classmates found them super helpful — and honestly, my teacher and friends started calling me the <em>"Economics God"</em> of the class. 😂
+            </p>
+            <p className="leading-relaxed">
+              I've also been an <strong>AP Economics Teaching Assistant</strong> since September 2024. I genuinely enjoy running TA sessions — breaking down tricky concepts and supporting the course alongside the main instructor. I've worked with <strong>9 cohorts</strong> of classes so far!
             </p>
             <p className="leading-relaxed">
               And the result? <strong>Scored a 5 on both AP Micro and AP Macro</strong>, no sweat. So yeah, these notes are battle-tested and student-approved.
@@ -44,7 +47,7 @@ const About = () => {
               I'm not trying to brag (okay, maybe a little), but I genuinely believe these notes can help you understand economics the way I did — intuitively, clearly, and without the 2:00 AM panic spiral.
             </p>
             <p className="text-lg font-semibold text-primary">
-              So folks, let's get started! 🚀🔥
+              So folks, let's get started! 🚀
             </p>
           </div>
 
@@ -63,13 +66,12 @@ const About = () => {
             ))}
           </div>
 
-          {/* Photo gallery — 3 photos in a nice layout */}
+          {/* Photo gallery — 2 photos in a nice layout */}
           <h2 className="font-display text-2xl font-bold text-primary mb-4">Gallery 📸</h2>
-          <div className="grid grid-cols-3 gap-4 mb-10">
+          <div className="grid grid-cols-2 gap-4 mb-10">
             {[
               { src: amanda1, alt: "Amanda at McGill stickers" },
               { src: amanda2, alt: "McGill Arts Building" },
-              { src: amanda3, alt: "Amanda in Toronto" },
             ].map(({ src, alt }, i) => (
               <motion.img
                 key={alt}
@@ -97,31 +99,31 @@ const About = () => {
             />
             <div className="flex flex-col justify-center space-y-4 font-body text-foreground">
               <div className="flex items-start gap-3">
-                <Lightbulb className="w-5 h-5 text-accent mt-0.5 shrink-0" />
+                <BrainCircuit className="w-5 h-5 text-accent mt-0.5 shrink-0" />
                 <div>
-                  <p className="font-semibold text-primary">AI & Data Analysis</p>
-                  <p className="text-sm text-muted-foreground">Passionate about leveraging AI and data to uncover insights — from building models to crunching datasets, it's where stats meets creativity.</p>
+                  <p className="font-semibold text-primary">AI & Data Analysis 🤖</p>
+                  <p className="text-sm text-muted-foreground">Not a pro or dev yet, but I will be — I hope! 😄 Fascinated by how AI and data can unlock insights, especially when it comes to money. Yeah, I'm very interested in delving into finance and figuring out how to earn it!</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Dumbbell className="w-5 h-5 text-accent mt-0.5 shrink-0" />
                 <div>
-                  <p className="font-semibold text-primary">Fitness & Badminton</p>
-                  <p className="text-sm text-muted-foreground">Staying active with gym sessions and badminton matches — gotta keep that energy up for late-night study grinds.</p>
+                  <p className="font-semibold text-primary">Fitness & Badminton 💪</p>
+                  <p className="text-sm text-muted-foreground">Staying active with gym sessions and intense badminton matches — gotta keep that energy up for those late-night study grinds! Nothing beats a good rally to clear the mind.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Music className="w-5 h-5 text-accent mt-0.5 shrink-0" />
                 <div>
-                  <p className="font-semibold text-primary">Singing & Music</p>
-                  <p className="text-sm text-muted-foreground">When I'm not crunching numbers, you'll find me singing my heart out. It's the best stress reliever!</p>
+                  <p className="font-semibold text-primary">Singing & Music 🎶</p>
+                  <p className="text-sm text-muted-foreground">When I'm not crunching numbers, you'll find me singing my heart out — it's honestly the best stress reliever after a long day of econ and code!</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <UtensilsCrossed className="w-5 h-5 text-accent mt-0.5 shrink-0" />
                 <div>
-                  <p className="font-semibold text-primary">Food Explorer</p>
-                  <p className="text-sm text-muted-foreground">Big foodie energy — from ramen to matcha to burgers, I'm always hunting for the next best bite in Montreal.</p>
+                  <p className="font-semibold text-primary">Food Explorer 🍴</p>
+                  <p className="text-sm text-muted-foreground">Big foodie energy — from ramen 🍜 to matcha 🍵 to char siu, cheung fun, and rice noodles. I'm always hunting for the next best bite in Montreal!</p>
                 </div>
               </div>
             </div>

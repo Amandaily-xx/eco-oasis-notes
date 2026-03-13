@@ -20,7 +20,7 @@ const MacroUnit5Content = () => (
       </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="2. The Phillips Curve">
+    <SectionAccordion title="2. The Phillips Curve" highYield>
       <h4 className="font-semibold text-primary mb-2">Short-Run Phillips Curve (SRPC)</h4>
       <EconGraph type="phillips-curve" caption="Phillips Curve — SRPC shows short-run inflation/unemployment trade-off; LRPC is vertical at NRU" />
       <p>Shows an <strong>inverse relationship</strong> between inflation and unemployment in the short run.</p>
@@ -58,7 +58,7 @@ const MacroUnit5Content = () => (
       <p>If V and Y are constant: a 1% increase in M → 1% increase in P. Money supply growth drives inflation in the long run.</p>
     </SectionAccordion>
 
-    <SectionAccordion title="4. Long-Run Economic Growth">
+    <SectionAccordion title="4. Long-Run Economic Growth" highYield>
       <EconGraph type="long-run-growth" caption="Three views of long-run growth: LRAS shifts right, PPC shifts outward, real GDP rises over time" />
       <h4 className="font-semibold text-primary mb-2">Measurement</h4>
       <p>Long-run growth is measured by <strong>real GDP per capita</strong>.</p>
@@ -89,26 +89,6 @@ const MacroUnit5Content = () => (
         <li>Provide political stability and protect property rights</li>
         <li>Use supply-side policies → promote productivity → shift SRAS & LRAS right</li>
       </ul>
-    </SectionAccordion>
-
-    <SectionAccordion title="5. National Debt & Crowding Out">
-      <h4 className="font-semibold text-primary mb-2">Key Concepts</h4>
-      <ul className="list-disc pl-5 space-y-1 mb-3">
-        <li><strong>Budget deficit:</strong> Government spending &gt; tax revenue in a single year</li>
-        <li><strong>National debt:</strong> The sum of all past budget deficits minus surpluses</li>
-        <li>Deficits increase the debt; surpluses decrease it</li>
-      </ul>
-
-      <h4 className="font-semibold text-primary my-2">The Crowding-Out Effect</h4>
-      <p>When the government runs a deficit and borrows in the loanable funds market:</p>
-      <div className="formula-block">
-        Gov't deficit ↑ → Demand for loanable funds ↑ → Real interest rate ↑ → Private investment ↓ → AD partially offset
-      </div>
-      <p className="mt-2">This means expansionary fiscal policy is <strong>less effective</strong> than it appears because higher government borrowing "crowds out" private investment.</p>
-
-      <AmandaTip>
-        Crowding out is why the actual AD shift from fiscal policy is smaller than the simple multiplier suggests. The government borrows more → interest rates rise → businesses invest less. It's a partial offset, not a complete cancellation!
-      </AmandaTip>
     </SectionAccordion>
   </div>
 );

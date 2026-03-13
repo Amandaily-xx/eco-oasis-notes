@@ -21,7 +21,7 @@ const MicroUnit3Content = () => (
       </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="2. Short-Run Cost Curves">
+    <SectionAccordion title="2. Short-Run Cost Curves" highYield>
       <EconGraph type="short-run-costs" caption="Short-Run Cost Curves — MC intersects AVC and ATC at their minimum points" />
       <h4 className="font-semibold text-primary mb-2">Key Relationships</h4>
       <ul className="list-disc pl-5 space-y-1 mb-3">
@@ -48,9 +48,19 @@ const MicroUnit3Content = () => (
         <li><strong>Diseconomies of Scale:</strong> LRATC increases as output increases (communication breakdowns, bureaucracy)</li>
         <li><strong>Minimum Efficient Scale:</strong> The smallest output where LRATC is minimized</li>
       </ul>
+
+      <h4 className="font-semibold text-primary my-2">💡 Economies of Scale vs. Increasing Returns to Scale</h4>
+      <p className="mb-2">Many students confuse these two concepts — they sound similar (both are "good things"), but they're not the same!</p>
+      <ul className="list-disc pl-5 space-y-1 mb-3">
+        <li><strong>Economies of Scale</strong> refers to the portion of the LRATC curve where long-run average total cost <strong>decreases</strong> as output increases. The key idea: it's about <strong>Long-Run Average Cost</strong>.</li>
+        <li><strong>Increasing Returns to Scale</strong> refers to a situation where the percentage increase in <strong>output</strong> is greater than the percentage increase in <strong>inputs</strong> (labor, capital). The key idea: it's about the relationship between <strong>Output and Input</strong>.</li>
+      </ul>
+      <AmandaTip>
+        ⚠️ These two don't always occur at the same time! However, if a firm is experiencing economies of scale, it is very likely (but not guaranteed) also experiencing increasing returns to scale. Remember: economies of scale = LRATC falling; increasing returns to scale = output growing faster than inputs.
+      </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="4. Perfect Competition: Structure">
+    <SectionAccordion title="4. Perfect Competition: Structure" highYield>
       <EconGraph type="perfect-competition" caption="Perfect Competition — firm is a price taker, D = MR = P is horizontal" />
       <ul className="list-disc pl-5 space-y-1">
         <li>Many buyers and sellers</li>
@@ -62,7 +72,7 @@ const MicroUnit3Content = () => (
       <div className="formula-block">In perfect competition: P = MR = AR = D (for the firm)</div>
     </SectionAccordion>
 
-    <SectionAccordion title="5. Profit Maximization (MR = MC)">
+    <SectionAccordion title="5. Profit Maximization (MR = MC)" highYield>
       <EconGraph type="profit-max-pc" caption="Profit Maximization — firm produces at q₀ where P = MC, profit = rectangle EpAB" />
       <ul className="list-disc pl-5 space-y-1 mb-3">
         <li>If MR &gt; MC → Produce more (profit increases)</li>
@@ -72,7 +82,7 @@ const MicroUnit3Content = () => (
       <div className="formula-block">Profit = (P − ATC) × Q</div>
     </SectionAccordion>
 
-    <SectionAccordion title="6. Short-Run & Long-Run Decisions">
+    <SectionAccordion title="6. Short-Run & Long-Run Decisions" highYield>
       <h4 className="font-semibold text-primary mb-2">Short-Run Shutdown Rule</h4>
       <ul className="list-disc pl-5 space-y-1 mb-3">
         <li>If P ≥ AVC → Continue producing</li>

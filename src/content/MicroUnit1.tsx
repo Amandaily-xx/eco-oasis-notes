@@ -76,9 +76,9 @@ const MicroUnit1Content = () => (
     <SectionAccordion title="6. Production Possibilities Curve (PPC)">
       <p>The PPC shows the maximum combinations of two goods an economy can produce using all its resources efficiently.</p>
       <ul className="list-disc pl-5 space-y-1 my-3">
-        <li><strong>On the curve:</strong> Productively efficient (using all resources)</li>
-        <li><strong>Inside the curve:</strong> Inefficient (underutilization of resources)</li>
-        <li><strong>Outside the curve:</strong> Unattainable (given current resources)</li>
+        <li><strong>On the curve (A, B, C):</strong> Productively efficient (using all resources)</li>
+        <li><strong>Inside the curve (D):</strong> Inefficient (underutilization of resources)</li>
+        <li><strong>Outside the curve (F):</strong> Impossible / unattainable (given current resources)</li>
       </ul>
       <h4 className="font-semibold text-primary mb-2">PPC Shifts</h4>
       <ul className="list-disc pl-5 space-y-1 mb-3">
@@ -89,12 +89,12 @@ const MicroUnit1Content = () => (
       <figure className="mx-auto my-3 w-full max-w-2xl">
         <img
           src={ppcDiagram}
-          alt="Production possibilities curve with PPC1 and outward-shifted PPC2, showing an efficient point, an inefficient point, and an unattainable point"
+          alt="Production Possibilities Curve showing efficient points A, B, C on the curve, inefficient point D inside, and impossible point F outside"
           className="h-auto w-full rounded-md border border-border"
           loading="lazy"
         />
         <figcaption className="mt-2 text-center text-sm text-muted-foreground">
-          Production Possibilities Curve — points on the curve are efficient, inside is inefficient, outside is unattainable
+          Production Possibilities Curve (PPC) — points on the curve are efficient, inside is inefficient, outside is impossible
         </figcaption>
       </figure>
 

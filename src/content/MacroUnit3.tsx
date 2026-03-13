@@ -12,7 +12,7 @@ const MacroUnit3Content = () => (
       </ol>
     </SectionAccordion>
 
-    <SectionAccordion title="1. Aggregate Demand (AD)">
+    <SectionAccordion title="1. Aggregate Demand (AD)" highYield>
       <p>The total spending on domestic goods and services at each price level.</p>
       <div className="formula-block">AD = C + I + G + (X − M) = Real GDP</div>
       <h4 className="font-semibold text-primary my-2">Why AD Slopes Downward</h4>
@@ -43,7 +43,7 @@ const MacroUnit3Content = () => (
       </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="2. Multipliers">
+    <SectionAccordion title="2. Multipliers" highYield>
       <div className="formula-block">MPC + MPS = 1</div>
       <div className="formula-block">Spending Multiplier = 1 / (1 − MPC) = 1 / MPS</div>
       <div className="formula-block">Tax Multiplier = −MPC / (1 − MPC)</div>
@@ -89,7 +89,7 @@ const MacroUnit3Content = () => (
       </ul>
     </SectionAccordion>
 
-    <SectionAccordion title="5. The AD-AS Model">
+    <SectionAccordion title="5. The AD-AS Model" highYield>
       <EconGraph type="ad-as" caption="Long-run equilibrium — AD, SRAS, and LRAS intersect at full employment (Yf)" />
       <h4 className="font-semibold text-primary mb-2">AD Shocks</h4>
       <ul className="list-disc pl-5 space-y-1 mb-3">
@@ -106,7 +106,7 @@ const MacroUnit3Content = () => (
       </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="6. Output Gaps & Solutions">
+    <SectionAccordion title="6. Output Gaps & Solutions (with Fiscal Policy)" highYield>
       <h4 className="font-semibold text-primary mb-2">Recessionary Gap (Actual &lt; Potential)</h4>
       <EconGraph type="ad-as-recessionary" caption="Recessionary gap — AD is left of LRAS; expansionary policy shifts AD right" />
       <ul className="list-disc pl-5 space-y-1 mb-3">
