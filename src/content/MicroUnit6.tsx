@@ -83,7 +83,7 @@ const MicroUnit6Content = () => (
         <figcaption className="mt-2 text-center text-sm text-muted-foreground">Progressive Tax — higher income → higher tax rate</figcaption>
       </figure>
 
-      <h4 className="font-semibold text-primary my-2">❗ Regressive Tax (累退税)</h4>
+      <h4 className="font-semibold text-primary my-2">❗ Regressive Tax</h4>
       <p className="mb-2">A regressive tax is the opposite: it collects a <strong>lower percentage</strong> of income from high-income earners and a <strong>higher percentage</strong> from low-income earners. This type of tax makes income distribution <strong>more unequal</strong>.</p>
       <p className="mb-2"><strong>Example:</strong> Consider a rich person and a poor person both buying the same $5 drink. The $5 represents a tiny fraction of the rich person's income but a much larger fraction of the poor person's income. <strong>Sales tax</strong> is the most common example of a regressive tax.</p>
       <figure className="mx-auto my-3 w-full max-w-md">
