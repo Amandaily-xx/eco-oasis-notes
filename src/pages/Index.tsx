@@ -5,21 +5,19 @@ import amanda4 from "../assets/amanda-4.png";
 
 const microUnits = [
 { id: 1, title: "Basic Economic Concepts", desc: "Scarcity, Opportunity Cost, PPC, Economic Systems, Comparative Advantage" },
-{ id: 2, title: "Supply & Demand", desc: "Demand & Supply Curves, Elasticity, Market Equilibrium, Price Controls" },
-{ id: 3, title: "Costs & Perfect Competition", desc: "Production Costs, Profit Types, Cost Curves, Perfect Competition" },
-{ id: 4, title: "Imperfect Competition", desc: "Monopoly, Monopolistic Competition, Oligopoly, Game Theory" },
-{ id: 5, title: "Factor Markets", desc: "Labor Markets, MRP, Wage Determination, Monopsony" },
-{ id: 6, title: "Market Failure", desc: "Externalities, Public Goods, Income Inequality, Government Intervention" }];
-
+{ id: 2, title: "Demand & Supply", desc: "Demand & Supply Curves, Elasticity, Market Equilibrium, Price Controls, International Trade" },
+{ id: 3, title: "Costs & Perfect Competition", desc: "Production Costs, Profit Types, Cost Curves, Perfect Competition, Long-Run & Short-Run Decisions" },
+{ id: 4, title: "Imperfect Competition", desc: "Monopoly, Natural Monopoly, Price Discrimination, Monopolistic Competition, Oligopoly, Game Theory" },
+{ id: 5, title: "Factor Markets", desc: "Factors of Production, Derived Demand, MRP, Wage Determination, Monopsony" },
+{ id: 6, title: "Market Failure & Role of Government", desc: "Externalities, Public Goods, Income Inequality, Government Intervention, Types of Tax" }];
 
 const macroUnits = [
 { id: 1, title: "Basic Economic Concepts", desc: "Same foundational concepts as Micro Unit 1!", isShared: true },
-{ id: 2, title: "Economic Indicators", desc: "Circular Flow, GDP, Unemployment, Inflation, Business Cycles" },
-{ id: 3, title: "National Income & Price Determination", desc: "AD-AS Model, Multipliers, Fiscal Policy, Output Gaps" },
-{ id: 4, title: "Financial Sector", desc: "Financial Assets, Money & Banking, Money Market, Monetary Policy, Loanable Funds" },
-{ id: 5, title: "Long-Run Consequences & Stabilization", desc: "Phillips Curve, Money Neutrality, Economic Growth, National Debt" },
-{ id: 6, title: "International Trade & Finance", desc: "Balance of Payments, Exchange Rates, Foreign Exchange Market, Trade Policy" }];
-
+{ id: 2, title: "Economic Indicators", desc: "Circular Flow, GDP, Price Indices, Unemployment, Cost of Inflation, Business Cycles" },
+{ id: 3, title: "National Income & Price Determination", desc: "Multipliers, AD-AS Model, Long-Run Self-Adjustment, Fiscal Policy, Output Gaps" },
+{ id: 4, title: "Financial Sector", desc: "Financial Assets, Money & Banking, Money Supply, Money Market, Monetary Policy, Loanable Funds Market, Crowding Out" },
+{ id: 5, title: "Long-Run Consequences & Stabilization", desc: "Phillips Curve, Money Neutrality, Long-Run Economic Growth" },
+{ id: 6, title: "International Trade & Finance", desc: "Balance of Payments Accounts, Exchange Rates, Foreign Exchange Market, Trade Policy on Exchange Market" }];
 
 const Index = () => {
   return (
@@ -41,7 +39,7 @@ const Index = () => {
           
           <div className="flex-1 text-center sm:text-left">
             <p className="font-display font-bold text-primary text-xl">Meet Amanda ✨</p>
-            <p className="font-body text-sm text-muted-foreground mt-1">Stats & CS major, Econ minor @ McGill · Scored 5 on both AP Micro & Macro 
+            <p className="font-body text-sm text-muted-foreground mt-1">Stats & CS major, Econ minor @ McGill · Scored 5 on both AP Micro & Macro 
 · AP Econ TA since 2024 · 200+ students helped
             </p>
           </div>
@@ -197,7 +195,6 @@ const Index = () => {
         </p>
       </footer>
     </div>);
-
 };
 
 export default Index;

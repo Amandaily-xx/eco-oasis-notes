@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, GraduationCap, Award, Users, Music, Dumbbell, UtensilsCrossed, Lightbulb, BrainCircuit } from "lucide-react";
+import { ArrowLeft, GraduationCap, Award, Users, Music, Dumbbell, UtensilsCrossed, BrainCircuit } from "lucide-react";
 import amanda1 from "../assets/amanda-1.png";
 import amanda2 from "../assets/amanda-2.png";
 import amanda4 from "../assets/amanda-4.png";
+import amanda5 from "../assets/amanda-5.png";
 import amandaHobbies from "../assets/amanda-hobbies.png";
 
 const About = () => {
@@ -15,7 +16,6 @@ const About = () => {
         </Link>
 
         <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
-          {/* About Amanda — top section */}
           <h1 className="font-display text-3xl md:text-4xl font-bold text-primary mb-6">About Amanda ✨</h1>
 
           <div className="flex justify-center mb-8">
@@ -32,7 +32,7 @@ const About = () => {
 
           <div className="prose-like font-body text-foreground space-y-4 mb-10">
             <p className="text-lg leading-relaxed">
-              Hey there! I'm <strong className="text-accent">Amanda</strong> — a Stats & CS major with an Econ minor at <strong>McGill University</strong>, starting Fall 2025. Currently tackling CS and… let's just say it's been a journey. But hey, we got this! 🔥
+              Hey there! I'm <strong className="text-accent">Amanda X.L.</strong> — a Stats & CS major with an Econ minor at <strong>McGill University</strong>, starting Fall 2025. Currently tackling CS and… let's just say it's been a journey. But hey, we got this! 🔥
             </p>
             <p className="leading-relaxed">
               These AP Econ notes are pretty close to my heart. Back in my junior year of high school, I created them while preparing for the AP Micro and AP Macro exams. After each unit, I'd put together a set of shared notes and drop them in our class group chat so everyone could study together. My classmates found them super helpful — and honestly, my teacher and friends started calling me the <em>"Economics God"</em> of the class. 😂
@@ -56,7 +56,7 @@ const About = () => {
             {[
               { icon: Award, label: "AP Score", value: "5 / 5" },
               { icon: GraduationCap, label: "University", value: "McGill" },
-              { icon: Users, label: "Students Helped", value: "50+" },
+              { icon: Users, label: "Students Helped", value: "200+" },
             ].map(({ icon: Icon, label, value }) => (
               <div key={label} className="text-center p-4 rounded-xl border" style={{ background: "hsl(var(--card))", borderColor: "hsl(var(--border))" }}>
                 <Icon className="w-5 h-5 mx-auto mb-2 text-accent" />
@@ -66,12 +66,13 @@ const About = () => {
             ))}
           </div>
 
-          {/* Photo gallery — 2 photos in a nice layout */}
+          {/* Photo gallery — 3 photos */}
           <h2 className="font-display text-2xl font-bold text-primary mb-4">Gallery 📸</h2>
-          <div className="grid grid-cols-2 gap-4 mb-10">
+          <div className="grid grid-cols-3 gap-4 mb-10">
             {[
               { src: amanda1, alt: "Amanda at McGill stickers" },
               { src: amanda2, alt: "McGill Arts Building" },
+              { src: amanda5, alt: "Amanda AMD sticker art" },
             ].map(({ src, alt }, i) => (
               <motion.img
                 key={alt}

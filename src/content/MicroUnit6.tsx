@@ -76,14 +76,14 @@ const MicroUnit6Content = () => (
     <SectionAccordion title="7. Types of Taxes" highYield>
       <p>Understanding the different types of taxes is essential — <strong>progressive tax</strong> is one of the most frequently tested topics in the MCQ section!</p>
 
-      <h4 className="font-semibold text-primary my-2">❗ Progressive Tax (累进税)</h4>
+      <h4 className="font-semibold text-primary my-2">❗ Progressive Tax</h4>
       <p className="mb-2">A progressive tax collects a <strong>higher percentage</strong> of income from high-income earners and a <strong>lower percentage</strong> from low-income earners. This type of tax promotes <strong>greater income equality</strong>.</p>
       <figure className="mx-auto my-3 w-full max-w-md">
         <img src={progressiveTax} alt="Progressive tax table showing higher-income families paying a higher percentage of income in tax" className="h-auto w-full rounded-md border border-border" loading="lazy" />
         <figcaption className="mt-2 text-center text-sm text-muted-foreground">Progressive Tax — higher income → higher tax rate</figcaption>
       </figure>
 
-      <h4 className="font-semibold text-primary my-2">❗ Regressive Tax (累退税)</h4>
+      <h4 className="font-semibold text-primary my-2">❗ Regressive Tax</h4>
       <p className="mb-2">A regressive tax is the opposite: it collects a <strong>lower percentage</strong> of income from high-income earners and a <strong>higher percentage</strong> from low-income earners. This type of tax makes income distribution <strong>more unequal</strong>.</p>
       <p className="mb-2"><strong>Example:</strong> Consider a rich person and a poor person both buying the same $5 drink. The $5 represents a tiny fraction of the rich person's income but a much larger fraction of the poor person's income. <strong>Sales tax</strong> is the most common example of a regressive tax.</p>
       <figure className="mx-auto my-3 w-full max-w-md">
@@ -91,7 +91,7 @@ const MicroUnit6Content = () => (
         <figcaption className="mt-2 text-center text-sm text-muted-foreground">Regressive Tax — higher income → lower tax rate</figcaption>
       </figure>
 
-      <h4 className="font-semibold text-primary my-2">❗ Proportional Tax (比例税)</h4>
+      <h4 className="font-semibold text-primary my-2">❗ Proportional Tax</h4>
       <p>A proportional (flat) tax collects the <strong>same percentage</strong> of income from everyone, regardless of whether their income is high or low. The tax rate remains constant no matter the size of the tax base.</p>
 
       <AmandaTip>

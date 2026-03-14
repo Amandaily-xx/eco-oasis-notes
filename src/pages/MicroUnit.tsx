@@ -1,8 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import AmandaTip from "../components/AmandaTip";
-import SectionAccordion from "../components/SectionAccordion";
 import MicroUnit1Content from "../content/MicroUnit1";
 import MicroUnit2Content from "../content/MicroUnit2";
 import MicroUnit3Content from "../content/MicroUnit3";
@@ -12,11 +10,11 @@ import MicroUnit6Content from "../content/MicroUnit6";
 
 const unitInfo: Record<number, { title: string; subtitle: string }> = {
   1: { title: "Basic Economic Concepts", subtitle: "Scarcity, Opportunity Cost, PPC & Economic Systems" },
-  2: { title: "Supply & Demand", subtitle: "Demand, Supply, Elasticity & Market Equilibrium" },
-  3: { title: "Production Costs & Perfect Competition", subtitle: "Cost Curves, Profit Types & Competitive Markets" },
-  4: { title: "Imperfect Competition", subtitle: "Monopoly, Monopolistic Competition, Oligopoly & Game Theory" },
-  5: { title: "Factor Markets", subtitle: "Labor Markets, MRP, Wage Determination & Monopsony" },
-  6: { title: "Market Failure & Government", subtitle: "Externalities, Public Goods & Income Inequality" },
+  2: { title: "Demand & Supply", subtitle: "Demand & Supply Curves, Elasticity, Market Equilibrium, Price Controls, International Trade" },
+  3: { title: "Production Costs & Perfect Competition", subtitle: "Cost Curves, Profit Types, Competitive Markets, Long-Run & Short-Run Decisions" },
+  4: { title: "Imperfect Competition", subtitle: "Monopoly, Natural Monopoly, Price Discrimination, Monopolistic Competition, Oligopoly & Game Theory" },
+  5: { title: "Factor Markets", subtitle: "Factors of Production, Derived Demand, MRP, Wage Determination & Monopsony" },
+  6: { title: "Market Failure & Role of Government", subtitle: "Externalities, Public Goods, Income Inequality, Types of Tax" },
 };
 
 const contentMap: Record<number, React.FC> = {
@@ -61,7 +59,6 @@ const MicroUnit = () => {
           <ContentComponent />
         </motion.div>
 
-        {/* Nav between units */}
         <div className="flex justify-between mt-12 pt-6 border-t font-body text-sm">
           {id > 1 ? (
             <Link to={`/micro/${id - 1}`} className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
