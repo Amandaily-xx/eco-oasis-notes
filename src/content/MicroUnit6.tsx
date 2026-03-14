@@ -76,7 +76,7 @@ const MicroUnit6Content = () => (
     <SectionAccordion title="7. Types of Taxes" highYield>
       <p>Understanding the different types of taxes is essential — <strong>progressive tax</strong> is one of the most frequently tested topics in the MCQ section!</p>
 
-      <h4 className="font-semibold text-primary my-2">❗ Progressive Tax (累进税)</h4>
+      <h4 className="font-semibold text-primary my-2">❗ Progressive Tax</h4>
       <p className="mb-2">A progressive tax collects a <strong>higher percentage</strong> of income from high-income earners and a <strong>lower percentage</strong> from low-income earners. This type of tax promotes <strong>greater income equality</strong>.</p>
       <figure className="mx-auto my-3 w-full max-w-md">
         <img src={progressiveTax} alt="Progressive tax table showing higher-income families paying a higher percentage of income in tax" className="h-auto w-full rounded-md border border-border" loading="lazy" />
