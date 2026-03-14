@@ -8,11 +8,11 @@ import MacroUnit5Content from "../content/MacroUnit5";
 import MacroUnit6Content from "../content/MacroUnit6";
 
 const unitInfo: Record<number, { title: string; subtitle: string }> = {
-  2: { title: "Economic Indicators & Business Cycles", subtitle: "Circular Flow, GDP, Unemployment, Inflation & Business Cycles" },
-  3: { title: "National Income & Price Determination", subtitle: "Aggregate Demand, Aggregate Supply, AD-AS Model & Fiscal Policy" },
-  4: { title: "Financial Sector", subtitle: "Financial Assets, Money & Banking, Money Market, Monetary Policy & Loanable Funds" },
-  5: { title: "Long-Run Consequences & Stabilization", subtitle: "Phillips Curve, Money Neutrality, Quantity Theory, Economic Growth & National Debt" },
-  6: { title: "International Trade & Finance", subtitle: "Balance of Payments, Exchange Rates, Foreign Exchange Market & Trade Policy" },
+  2: { title: "Economic Indicators & Business Cycles", subtitle: "Circular Flow, GDP, Price Indices, Unemployment, Cost of Inflation & Business Cycles" },
+  3: { title: "National Income & Price Determination", subtitle: "Multipliers, AD-AS Model, Long-Run Self-Adjustment, Fiscal Policy & Output Gaps" },
+  4: { title: "Financial Sector", subtitle: "Financial Assets, Money & Banking, Money Supply, Money Market, Monetary Policy, Loanable Funds Market & Crowding Out" },
+  5: { title: "Long-Run Consequences & Stabilization", subtitle: "Phillips Curve, Money Neutrality, Quantity Theory & Long-Run Economic Growth" },
+  6: { title: "International Trade & Finance", subtitle: "Balance of Payments Accounts, Exchange Rates, Foreign Exchange Market & Trade Policy on Exchange Market" },
 };
 
 const contentMap: Record<number, React.FC> = {

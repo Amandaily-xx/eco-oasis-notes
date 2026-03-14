@@ -20,7 +20,20 @@ const MicroUnit5Content = () => (
       </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="2. Demand for Labor (MRP)" highYield>
+    <SectionAccordion title="2. Derived Demand" highYield>
+      <p>The demand for a factor of production (like labor) is called a <strong>derived demand</strong> because it is derived from (depends on) the demand for the final product that the factor helps produce.</p>
+      <ul className="list-disc pl-5 space-y-1 my-3">
+        <li>If demand for the product <strong>increases</strong>, demand for the labor that produces it also <strong>increases</strong></li>
+        <li>If demand for the product <strong>decreases</strong>, demand for the labor also <strong>decreases</strong></li>
+        <li>The value of a worker to a firm depends on <strong>how much revenue that worker generates</strong>, which depends on the price and demand for the good</li>
+      </ul>
+      <p><strong>Example:</strong> If demand for smartphones rises, the demand for smartphone assembly workers also rises — their labor is "derived" from consumer demand for phones.</p>
+      <AmandaTip>
+        This concept connects product markets to factor markets! If the AP exam asks "Why does the demand for nurses increase?", the answer is because the demand for healthcare services increased. Always trace it back to the product market.
+      </AmandaTip>
+    </SectionAccordion>
+
+    <SectionAccordion title="3. Demand for Labor (MRP)" highYield>
       <p>The demand for labor is a <strong>derived demand</strong> — it depends on the demand for the product the labor produces.</p>
       <div className="formula-block">MRP = MP × MR &nbsp;&nbsp;|&nbsp;&nbsp; In perfect competition: MRP = MP × P = VMP</div>
       <h4 className="font-semibold text-primary my-2">Hiring Decision Rule</h4>
@@ -33,7 +46,7 @@ const MicroUnit5Content = () => (
       <p className="mt-2">The <strong>MRP curve</strong> IS the individual firm's labor demand curve. It slopes downward due to <strong>diminishing marginal returns</strong>.</p>
     </SectionAccordion>
 
-    <SectionAccordion title="3. Supply of Labor & Equilibrium">
+    <SectionAccordion title="4. Supply of Labor & Equilibrium">
       <p>Workers trade off between <strong>leisure</strong> and <strong>work</strong>.</p>
       <ul className="list-disc pl-5 space-y-1 my-3">
         <li><strong>Substitution effect:</strong> Wage ↑ → cost of leisure ↑ → work more</li>
@@ -42,7 +55,7 @@ const MicroUnit5Content = () => (
       <p>In a <strong>perfectly competitive labor market</strong>, each firm is too small to affect the wage. The firm's labor supply curve is <strong>horizontal</strong> at the market wage. MFC = Wage.</p>
     </SectionAccordion>
 
-    <SectionAccordion title="4. Labor Market Changes">
+    <SectionAccordion title="5. Labor Market Changes">
       <h4 className="font-semibold text-primary mb-2">Minimum Wage</h4>
       <p>If set above equilibrium wage: creates a <strong>surplus of labor</strong> (unemployment). Workers want to work but firms hire fewer workers.</p>
       <h4 className="font-semibold text-primary my-2">Labor Demand Shifters</h4>
@@ -60,7 +73,7 @@ const MicroUnit5Content = () => (
       </ul>
     </SectionAccordion>
 
-    <SectionAccordion title="5. Cost-Minimization Rule">
+    <SectionAccordion title="6. Cost-Minimization Rule">
       <div className="formula-block">MP_L / w = MP_K / r</div>
       <p>The firm minimizes cost when the marginal product per dollar spent is equal across all inputs.</p>
       <p>If MP_L / w &gt; MP_K / r → Hire more labor, use less capital.</p>
@@ -69,7 +82,7 @@ const MicroUnit5Content = () => (
       </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="6. Monopsony" highYield>
+    <SectionAccordion title="7. Monopsony" highYield>
       <p>A <strong>monopsony</strong> is a market with only ONE buyer of labor (single employer in a town).</p>
       <EconGraph type="monopsony" caption="Monopsony — hires at MRP = MFC but pays lower wage from supply curve" />
       <ul className="list-disc pl-5 space-y-1 my-3">

@@ -91,7 +91,7 @@ const MicroUnit6Content = () => (
         <figcaption className="mt-2 text-center text-sm text-muted-foreground">Regressive Tax — higher income → lower tax rate</figcaption>
       </figure>
 
-      <h4 className="font-semibold text-primary my-2">❗ Proportional Tax (比例税)</h4>
+      <h4 className="font-semibold text-primary my-2">❗ Proportional Tax</h4>
       <p>A proportional (flat) tax collects the <strong>same percentage</strong> of income from everyone, regardless of whether their income is high or low. The tax rate remains constant no matter the size of the tax base.</p>
 
       <AmandaTip>

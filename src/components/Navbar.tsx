@@ -11,8 +11,9 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 border-b bg-background/90 backdrop-blur-md">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        <Link to="/" className="font-display font-bold text-primary text-2xl text-left">AP Economics Notes
-
+        <Link to="/" className="font-display font-bold text-2xl text-left">
+          <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">AP Econ</span>
+          <span className="text-muted-foreground text-lg font-normal ml-1.5">by Amanda ✨</span>
         </Link>
 
         {/* Desktop */}
@@ -27,7 +28,7 @@ const Navbar = () => {
             <div className="absolute top-full left-0 mt-2 w-56 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2">
               {[1, 2, 3, 4, 5, 6].map((i) =>
               <Link key={i} to={`/micro/${i}`} className="block px-3 py-2 rounded-md text-sm hover:bg-secondary transition-colors">
-                  Unit {i}: {["Basic Concepts", "Supply & Demand", "Costs & Perfect Competition", "Imperfect Competition", "Factor Markets", "Market Failure"][i - 1]}
+                  Unit {i}: {["Basic Concepts", "Demand & Supply", "Costs & Perfect Competition", "Imperfect Competition", "Factor Markets", "Market Failure"][i - 1]}
                 </Link>
               )}
             </div>
@@ -46,7 +47,6 @@ const Navbar = () => {
                   <Link key={i} to={`/macro/${i}`} className="block px-3 py-2 rounded-md text-sm hover:bg-secondary transition-colors">
                     Unit {i}: {macroNames[i]}
                   </Link>);
-
               })}
             </div>
           </div>
@@ -76,7 +76,6 @@ const Navbar = () => {
         </div>
       }
     </nav>);
-
 };
 
 export default Navbar;
