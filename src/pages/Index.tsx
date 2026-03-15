@@ -67,7 +67,7 @@ const Index = () => {
             AP Econ, simplified.
           </h1>
           <p className="font-body text-lg md:text-xl text-accent font-semibold mb-6">
-            by Amanda ✨
+            by Amanda
           </p>
           <div className="max-w-2xl mx-auto font-body text-base md:text-lg text-muted-foreground leading-relaxed">
             <p>
