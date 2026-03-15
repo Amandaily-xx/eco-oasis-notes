@@ -39,7 +39,7 @@ const Index = () => {
             style={{ borderColor: "hsl(var(--accent))" }} />
           
           <div className="flex-1 text-center sm:text-left">
-            <p className="font-display font-bold text-primary text-xl">Meet Amanda ✨</p>
+            <p className="font-display font-bold text-primary text-xl">Meet Amanda 🎓</p>
             <p className="font-body text-sm text-muted-foreground mt-1">Stats & CS major, Econ minor @ McGill · Scored 5 on both AP Micro & Macro 
 · AP Econ TA since 2024 · 200+ students helped
             </p>
