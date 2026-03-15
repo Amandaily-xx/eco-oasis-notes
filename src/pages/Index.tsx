@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { BookOpen, TrendingUp, ArrowRight, Sparkles, Lightbulb, Shield, Mail, User, Star } from "lucide-react";
+import { BookOpen, TrendingUp, ArrowRight, Sparkles, Lightbulb, Shield, Mail, User, Star, MapPin } from "lucide-react";
 import amanda4 from "../assets/amanda-4.png";
+import amdLogo from "../assets/amd-logo.png";
 
 const microUnits = [
 { id: 1, title: "Basic Economic Concepts", desc: "Scarcity, Opportunity Cost, PPC, Economic Systems, Comparative Advantage" },
@@ -38,7 +39,7 @@ const Index = () => {
             style={{ borderColor: "hsl(var(--accent))" }} />
           
           <div className="flex-1 text-center sm:text-left">
-            <p className="font-display font-bold text-primary text-xl">Meet Amanda ✨</p>
+            <p className="font-display font-bold text-primary text-xl">Meet Amanda 🎓</p>
             <p className="font-body text-sm text-muted-foreground mt-1">Stats & CS major, Econ minor @ McGill · Scored 5 on both AP Micro & Macro 
 · AP Econ TA since 2024 · 200+ students helped
             </p>
@@ -66,7 +67,7 @@ const Index = () => {
             AP Econ, simplified.
           </h1>
           <p className="font-body text-lg md:text-xl text-accent font-semibold mb-6">
-            by Amanda ✨
+            by Amanda
           </p>
           <div className="max-w-2xl mx-auto font-body text-base md:text-lg text-muted-foreground leading-relaxed">
             <p>
@@ -177,21 +178,28 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t py-8 text-center font-body text-sm text-muted-foreground space-y-2">
+      <footer className="border-t py-8 text-center font-body text-sm text-muted-foreground space-y-3">
+        <div className="flex justify-center mb-2">
+          <img src={amdLogo} alt="AMD logo" className="h-8 w-auto opacity-80" />
+        </div>
         <p>Made with ❤️ by Amanda X.L. · AP Economics Study Guide</p>
         <p className="flex items-center justify-center gap-1.5">
-          <Shield className="w-3.5 h-3.5" />
-          © {new Date().getFullYear()} Amanda X.L. All rights reserved.
-          {" · "}
-          <Link to="/terms" className="underline hover:text-accent transition-colors">Terms of Use</Link>
+          <MapPin className="w-3.5 h-3.5" /> Montreal, Quebec, Canada
+        </p>
+        <p className="flex flex-wrap items-center justify-center gap-1.5">
+          <Link to="/about" className="inline-flex items-center gap-1 underline hover:text-accent transition-colors">
+            <User className="w-3.5 h-3.5" /> About Amanda
+          </Link>
           {" · "}
           <Link to="/contact" className="inline-flex items-center gap-1 underline hover:text-accent transition-colors">
             <Mail className="w-3.5 h-3.5" /> Contact
           </Link>
           {" · "}
-          <Link to="/about" className="inline-flex items-center gap-1 underline hover:text-accent transition-colors">
-            <User className="w-3.5 h-3.5" /> About Amanda
-          </Link>
+          <Link to="/terms" className="underline hover:text-accent transition-colors">Terms of Use</Link>
+        </p>
+        <p className="flex items-center justify-center gap-1.5">
+          <Shield className="w-3.5 h-3.5" />
+          © {new Date().getFullYear()} Amanda X.L. All rights reserved.
         </p>
       </footer>
     </div>);

@@ -50,6 +50,15 @@ const Navbar = () => {
               })}
             </div>
           </div>
+          <Link to="/resources" className={`transition-colors hover:text-accent ${isActive("/resources") ? "text-accent" : "text-muted-foreground"}`}>
+            Resources
+          </Link>
+          <Link to="/about" className={`transition-colors hover:text-accent ${isActive("/about") ? "text-accent" : "text-muted-foreground"}`}>
+            About
+          </Link>
+          <Link to="/contact" className={`transition-colors hover:text-accent ${isActive("/contact") ? "text-accent" : "text-muted-foreground"}`}>
+            Contact
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -73,6 +82,10 @@ const Navbar = () => {
           {[2, 3, 4, 5, 6].map((i) =>
         <Link key={i} to={`/macro/${i}`} onClick={() => setMobileOpen(false)} className="block py-1 pl-3">Unit {i}</Link>
         )}
+          <div className="border-t my-2" style={{ borderColor: "hsl(var(--border))" }} />
+          <Link to="/resources" onClick={() => setMobileOpen(false)} className="block py-1">📚 Resources</Link>
+          <Link to="/about" onClick={() => setMobileOpen(false)} className="block py-1">👩‍🎓 About</Link>
+          <Link to="/contact" onClick={() => setMobileOpen(false)} className="block py-1">✉️ Contact</Link>
         </div>
       }
     </nav>);
