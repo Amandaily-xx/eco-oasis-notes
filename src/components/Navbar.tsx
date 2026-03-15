@@ -82,6 +82,10 @@ const Navbar = () => {
           {[2, 3, 4, 5, 6].map((i) =>
         <Link key={i} to={`/macro/${i}`} onClick={() => setMobileOpen(false)} className="block py-1 pl-3">Unit {i}</Link>
         )}
+          <div className="border-t my-2" style={{ borderColor: "hsl(var(--border))" }} />
+          <Link to="/resources" onClick={() => setMobileOpen(false)} className="block py-1">📚 Resources</Link>
+          <Link to="/about" onClick={() => setMobileOpen(false)} className="block py-1">👩‍🎓 About</Link>
+          <Link to="/contact" onClick={() => setMobileOpen(false)} className="block py-1">✉️ Contact</Link>
         </div>
       }
     </nav>);

@@ -178,21 +178,28 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t py-8 text-center font-body text-sm text-muted-foreground space-y-2">
+      <footer className="border-t py-8 text-center font-body text-sm text-muted-foreground space-y-3">
+        <div className="flex justify-center mb-2">
+          <img src={amdLogo} alt="AMD logo" className="h-8 w-auto opacity-80" />
+        </div>
         <p>Made with ❤️ by Amanda X.L. · AP Economics Study Guide</p>
         <p className="flex items-center justify-center gap-1.5">
-          <Shield className="w-3.5 h-3.5" />
-          © {new Date().getFullYear()} Amanda X.L. All rights reserved.
-          {" · "}
-          <Link to="/terms" className="underline hover:text-accent transition-colors">Terms of Use</Link>
+          <MapPin className="w-3.5 h-3.5" /> Montreal, Quebec, Canada
+        </p>
+        <p className="flex flex-wrap items-center justify-center gap-1.5">
+          <Link to="/about" className="inline-flex items-center gap-1 underline hover:text-accent transition-colors">
+            <User className="w-3.5 h-3.5" /> About Amanda
+          </Link>
           {" · "}
           <Link to="/contact" className="inline-flex items-center gap-1 underline hover:text-accent transition-colors">
             <Mail className="w-3.5 h-3.5" /> Contact
           </Link>
           {" · "}
-          <Link to="/about" className="inline-flex items-center gap-1 underline hover:text-accent transition-colors">
-            <User className="w-3.5 h-3.5" /> About Amanda
-          </Link>
+          <Link to="/terms" className="underline hover:text-accent transition-colors">Terms of Use</Link>
+        </p>
+        <p className="flex items-center justify-center gap-1.5">
+          <Shield className="w-3.5 h-3.5" />
+          © {new Date().getFullYear()} Amanda X.L. All rights reserved.
         </p>
       </footer>
     </div>);
