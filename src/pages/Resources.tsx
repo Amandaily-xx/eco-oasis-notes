@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, Youtube, GraduationCap, BookOpen, BrainCircuit, ClipboardList, Sparkles } from "lucide-react";
+import { ArrowLeft, Youtube, GraduationCap, BookOpen, BrainCircuit, ClipboardList, Sparkles, Rocket } from "lucide-react";
 
 const resources = [
   {
@@ -104,6 +104,27 @@ const Resources = () => {
                       >
                         <Sparkles className="w-3.5 h-3.5" /> {r.linkLabel} →
                       </a>
+                    )}
+
+                    {/* SkipLec subsection under the AI resource */}
+                    {r.title === "Use AI to Generate Practice Questions!" && (
+                      <div className="mt-4 p-4 rounded-lg border" style={{ background: "hsl(var(--tip-bg))", borderColor: "hsl(var(--border))" }}>
+                        <div className="flex items-center gap-2 mb-2">
+                          <Rocket className="w-5 h-5 text-accent" />
+                          <h4 className="font-display font-semibold text-primary">Try SkipLec! 🚀</h4>
+                        </div>
+                        <p className="font-body text-sm text-muted-foreground leading-relaxed mb-2">
+                          I'd also love to recommend an app built by me and 3 other McGill undergrads — designed for students who are actually cramming for exams while staring at hundreds of pages of lecture notes! 😂 The best part? SkipLec gives you the <strong>exact slide number</strong> for every answer, so you can verify it against the source instead of just hoping the AI didn't hallucinate. That's our main difference — we have citations, and you won't miss key points that some AI tools don't catch!
+                        </p>
+                        <a
+                          href="https://web-production2-1146.up.railway.app"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-sm font-body font-semibold text-accent hover:underline"
+                        >
+                          <Sparkles className="w-3.5 h-3.5" /> Go to SkipLec →
+                        </a>
+                      </div>
                     )}
                   </div>
                 </div>

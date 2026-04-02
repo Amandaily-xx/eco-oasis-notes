@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { BookOpen, TrendingUp, ArrowRight, Sparkles, Lightbulb, Shield, Mail, User, Star, MapPin } from "lucide-react";
 import amanda4 from "../assets/amanda-4.png";
-import amdLogo from "../assets/amd-logo.png";
 
 const microUnits = [
 { id: 1, title: "Basic Economic Concepts", desc: "Scarcity, Opportunity Cost, PPC, Economic Systems, Comparative Advantage" },
@@ -179,9 +178,7 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="border-t py-8 text-center font-body text-sm text-muted-foreground space-y-3">
-        <div className="flex justify-center mb-2">
-          <img src={amdLogo} alt="AMD logo" className="h-8 w-auto opacity-80" />
-        </div>
+        <p className="font-display font-bold text-2xl text-primary tracking-wide">AMD</p>
         <p>Made with ❤️ by Amanda X.L. · AP Economics Study Guide</p>
         <p className="flex items-center justify-center gap-1.5">
           <MapPin className="w-3.5 h-3.5" /> Montreal, Quebec, Canada

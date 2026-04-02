@@ -18,6 +18,12 @@ const MicroUnit4Content = () => (
       <div className="formula-block">MR curve lies below the demand curve &nbsp;|&nbsp; MR has twice the slope of D</div>
     </SectionAccordion>
 
+    <div className="p-4 rounded-xl border-2 border-accent mb-4" style={{ background: "hsl(var(--tip-bg))" }}>
+      <p className="font-body font-semibold text-sm" style={{ color: "hsl(var(--tip-text))" }}>
+        ⭐ <strong>KEY RULE:</strong> MC always intersects with the minimum point of ATC and AVC, whether in perfect competition, monopoly, or monopolistic competition (short & long run)!
+      </p>
+    </div>
+
     <SectionAccordion title="2. Monopoly vs. Perfect Competition">
       <table className="w-full text-sm border-collapse my-3">
         <thead><tr className="border-b font-semibold"><th className="text-left py-2 pr-3">Feature</th><th className="text-left py-2 pr-3">Perfect Competition</th><th className="text-left py-2">Monopoly</th></tr></thead>
