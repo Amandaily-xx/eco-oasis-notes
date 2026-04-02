@@ -50,11 +50,11 @@ const Navbar = () => {
               })}
             </div>
           </div>
-          <Link to="/resources" className={`transition-colors hover:text-accent ${isActive("/resources") ? "text-accent" : "text-muted-foreground"}`}>
-            Resources
-          </Link>
           <Link to="/about" className={`transition-colors hover:text-accent ${isActive("/about") ? "text-accent" : "text-muted-foreground"}`}>
             About
+          </Link>
+          <Link to="/resources" className={`transition-colors hover:text-accent ${isActive("/resources") ? "text-accent" : "text-muted-foreground"}`}>
+            Resources
           </Link>
           <Link to="/contact" className={`transition-colors hover:text-accent ${isActive("/contact") ? "text-accent" : "text-muted-foreground"}`}>
             Contact
