@@ -17,7 +17,7 @@ const resources = [
     title: "ReviewEcon (YouTube + Website)",
     tag: "Great for Concept Clarity",
     description:
-      'ReviewEcon is excellent at explaining concepts — he goes at a steady pace so you can really absorb the material. He also has a fantastic website with videos breaking down every problem. Honestly, these two channels are like the "monopoly" of the AP Econ YouTube market — they\'re probably the only ones covering all sections across all units! (Sorry if I\'m missing other great channels!)',
+      'ReviewEcon is excellent at explaining concepts — he goes at a steady pace so you can really absorb the material. He also has a fantastic website with videos breaking down every problem. Honestly, these two channels (Jacob Clifford and ReviewEcon) are like the "monopoly" of the AP Econ YouTube market — they\'re probably the only ones covering all sections across all units! (Sorry if I\'m missing other great channels!)',
     link: "https://www.reviewecon.com/",
     linkLabel: "Visit ReviewEcon.com",
   },
