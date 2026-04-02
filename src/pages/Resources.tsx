@@ -9,7 +9,7 @@ const resources = [
     tag: "Highly Recommended ⭐",
     description:
       "When I was in high school, I always watched Jacob Clifford — and I can't recommend him enough! He covers every unit for both AP Micro and Macro. Just make sure you watch the latest versions of his videos, as there are older ones floating around too.",
-    link: "https://www.youtube.com/@JacobClifford",
+    link: "https://www.youtube.com/@JacobAClifford",
     linkLabel: "Visit Channel",
   },
   {
