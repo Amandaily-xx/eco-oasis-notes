@@ -21,6 +21,9 @@ const Navbar = () => {
           <Link to="/" className={`transition-colors hover:text-accent ${location.pathname === "/" ? "text-accent" : "text-muted-foreground"}`}>
             Home
           </Link>
+          <Link to="/about" className={`transition-colors hover:text-accent ${isActive("/about") ? "text-accent" : "text-muted-foreground"}`}>
+            About
+          </Link>
           <div className="relative group">
             <span className={`cursor-default transition-colors hover:text-accent ${isActive("/micro") ? "text-accent" : "text-muted-foreground"}`}>
               Microeconomics
@@ -50,9 +53,6 @@ const Navbar = () => {
               })}
             </div>
           </div>
-          <Link to="/about" className={`transition-colors hover:text-accent ${isActive("/about") ? "text-accent" : "text-muted-foreground"}`}>
-            About
-          </Link>
           <Link to="/resources" className={`transition-colors hover:text-accent ${isActive("/resources") ? "text-accent" : "text-muted-foreground"}`}>
             Resources
           </Link>
@@ -71,6 +71,7 @@ const Navbar = () => {
       {mobileOpen &&
       <div className="md:hidden border-t bg-background px-6 py-4 space-y-3 font-body text-sm">
           <Link to="/" onClick={() => setMobileOpen(false)} className="block py-1">Home</Link>
+          <Link to="/about" onClick={() => setMobileOpen(false)} className="block py-1">👩‍🎓 About</Link>
           <div className="font-semibold text-muted-foreground mt-3">Microeconomics</div>
           {[1, 2, 3, 4, 5, 6].map((i) =>
         <Link key={i} to={`/micro/${i}`} onClick={() => setMobileOpen(false)} className="block py-1 pl-3">
@@ -83,7 +84,6 @@ const Navbar = () => {
         <Link key={i} to={`/macro/${i}`} onClick={() => setMobileOpen(false)} className="block py-1 pl-3">Unit {i}</Link>
         )}
           <div className="border-t my-2" style={{ borderColor: "hsl(var(--border))" }} />
-          <Link to="/about" onClick={() => setMobileOpen(false)} className="block py-1">👩‍🎓 About</Link>
           <Link to="/resources" onClick={() => setMobileOpen(false)} className="block py-1">📚 Resources</Link>
           <Link to="/contact" onClick={() => setMobileOpen(false)} className="block py-1">✉️ Contact</Link>
         </div>

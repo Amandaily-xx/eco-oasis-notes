@@ -9,16 +9,18 @@ import amandaHobbies from "../assets/amanda-hobbies.png";
 
 const awards = [
   { year: "2025", title: "James McGill Major Entrance Scholarship", detail: "Awarded for academic excellence" },
-  { year: "2024", title: "International Economics Olympiad — Bern, Switzerland", detail: "Individual Gold Award, Top 5% nationally" },
+  { year: "2024", title: "International Economics Olympiad", detail: "Individual Gold Award, Top 5% nationally" },
   { year: "2024", title: "CEMC Euclid Mathematics Competition — University of Waterloo", detail: "Honor Roll, Top 5% globally" },
   { year: "2024", title: "National Economic Competition", detail: "Individual Silver Award nationally" },
 ];
 
 const experiences = [
+  { period: "Jan 2026 – Present", role: "Social Media Coordinator, McGill Food Coalition", detail: "Developed and published weekly digital posters highlighting accessible and no-cost food resources near campus, and managed the coalition's social media account" },
   { period: "Jan 2026 – Present", role: "McGill PHYS 102 Prep Session Advisor" },
   { period: "Sep 2024 – Present", role: "AP Economics Teaching Assistant", detail: "Explaining difficult concepts and supporting the course alongside the main instructor across 9 cohorts" },
+  { period: "Aug 2025 – Dec 2025", role: "MATH 180 Peer Note-Sharing Provider — McGill", detail: "Uploaded handwritten lecture notes during Fall 2025 to help peers with exam prep" },
   { period: "Jun 2025 – Dec 2025", role: "Online English Teacher" },
-  { period: "2025", role: "McGill AeroHacks – Hackathon", detail: "Built AirAid, a software platform that converts drone technology into a comprehensive navigation service for the visually impaired" },
+  { period: "May 2026", role: "McGill AeroHacks — Hackathon 🚁", detail: "Built AeroGuide, a software platform that converts drone technology into a comprehensive navigation service for the visually impaired", link: "https://github.com/Amandaily-xx/AeroGuide-Drone-Platform" },
 ];
 
 const About = () => {
@@ -30,7 +32,7 @@ const About = () => {
         </Link>
 
         <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
-          <h1 className="font-display text-3xl md:text-4xl font-bold text-primary mb-6">About Amanda ✨</h1>
+          <h1 className="font-display text-3xl md:text-4xl font-bold text-primary mb-6">About Amanda 🎓</h1>
 
           <div className="flex justify-center mb-8">
             <motion.img
@@ -106,12 +108,17 @@ const About = () => {
                   <span className="text-xs font-body font-semibold text-accent">{e.period}</span>
                   <p className="font-body font-semibold text-sm text-primary">{e.role}</p>
                   {e.detail && <p className="font-body text-xs text-muted-foreground">{e.detail}</p>}
+                  {e.link && (
+                    <a href={e.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs font-body font-semibold text-accent hover:underline mt-1">
+                      View on GitHub →
+                    </a>
+                  )}
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Hobbies & Interests — moved before Gallery */}
+          {/* Hobbies & Interests */}
           <h2 className="font-display text-2xl font-bold text-primary mb-4">Hobbies & Interests 🎯</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             <motion.img
@@ -133,15 +140,15 @@ const About = () => {
               <div className="flex items-start gap-3">
                 <Dumbbell className="w-5 h-5 text-accent mt-0.5 shrink-0" />
                 <div>
-                  <p className="font-semibold text-primary">Fitness & Badminton 💪</p>
-                  <p className="text-sm text-muted-foreground">Staying active with gym sessions and intense badminton matches — gotta keep that energy up for those late-night study grinds! Nothing beats a good rally to clear the mind.</p>
+                  <p className="font-semibold text-primary">Fitness & Badminton 🏸</p>
+                  <p className="text-sm text-muted-foreground">Staying active with gym sessions and intense badminton matches — especially doubles, which I absolutely love! Nothing beats a good rally with a partner to clear the mind after a long study grind.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Music className="w-5 h-5 text-accent mt-0.5 shrink-0" />
                 <div>
                   <p className="font-semibold text-primary">Singing & Music 🎶</p>
-                  <p className="text-sm text-muted-foreground">When I'm not crunching numbers, you'll find me singing my heart out — it's honestly the best stress reliever after a long day of econ and code!</p>
+                  <p className="text-sm text-muted-foreground">When I'm not crunching numbers, you'll find me singing my heart out — I love karaoke and recording songs on the WeSing app. It's honestly the best stress reliever after a long day of econ and code!</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -154,7 +161,7 @@ const About = () => {
             </div>
           </div>
 
-          {/* Photo Gallery — moved after Hobbies */}
+          {/* Photo Gallery */}
           <h2 className="font-display text-2xl font-bold text-primary mb-4">Gallery 📸</h2>
           <div className="grid grid-cols-3 gap-4 mb-10">
             {[
