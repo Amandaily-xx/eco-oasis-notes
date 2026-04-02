@@ -9,7 +9,7 @@ const resources = [
     tag: "Highly Recommended ⭐",
     description:
       "When I was in high school, I always watched Jacob Clifford — and I can't recommend him enough! He covers every unit for both AP Micro and Macro. Just make sure you watch the latest versions of his videos, as there are older ones floating around too.",
-    link: "https://www.youtube.com/@JacobClifford",
+    link: "https://www.youtube.com/@JacobAClifford",
     linkLabel: "Visit Channel",
   },
   {
@@ -17,7 +17,7 @@ const resources = [
     title: "ReviewEcon (YouTube + Website)",
     tag: "Great for Concept Clarity",
     description:
-      'ReviewEcon is excellent at explaining concepts — he goes at a steady pace so you can really absorb the material. He also has a fantastic website with videos breaking down every problem. Honestly, these two channels are like the "monopoly" of the AP Econ YouTube market — they\'re probably the only ones covering all sections across all units! (Sorry if I\'m missing other great channels!)',
+      'ReviewEcon is excellent at explaining concepts — he goes at a steady pace so you can really absorb the material. He also has a fantastic website with videos breaking down every problem. Honestly, these two channels (Jacob Clifford and ReviewEcon) are like the "monopoly" of the AP Econ YouTube market — they\'re probably the only ones covering all sections across all units! (Sorry if I\'m missing other great channels!)',
     link: "https://www.reviewecon.com/",
     linkLabel: "Visit ReviewEcon.com",
   },
@@ -26,7 +26,7 @@ const resources = [
     title: "College Board (AP Classroom)",
     tag: "Most Exam-Like Practice",
     description:
-      "This is where you registered for your exams and where your teachers distribute homework and assignments. The resources here are the most similar to the actual exam in terms of format, difficulty, and wording — that's guaranteed! There are FRQs with solutions for you to practice, and from the teacher's side, there are hundreds of MCQs for all units and around 8–9 FRQs available. Don't be afraid to ask your teacher for more resources and practice! 😄",
+      "This is where you registered for your exams and where your teachers distribute homework and assignments. The resources here are the most similar to the actual exam in terms of format, difficulty, and wording — that's guaranteed! There are FRQs with solutions for you to practice, and from the teacher's side, there are hundreds of MCQs for all units and around 8–9 FRQs available. I remembered doing tons of questions and the printed booklet was so thick and heavy! Don't be afraid to ask your teacher for more resources and practice! 😄",
     link: "https://apclassroom.collegeboard.org/",
     linkLabel: "Go to AP Classroom",
   },

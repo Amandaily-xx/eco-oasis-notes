@@ -1,11 +1,25 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, GraduationCap, Award, Users, Music, Dumbbell, UtensilsCrossed, BrainCircuit } from "lucide-react";
+import { ArrowLeft, GraduationCap, Award, Users, Music, Dumbbell, UtensilsCrossed, BrainCircuit, Trophy, Briefcase } from "lucide-react";
 import amanda1 from "../assets/amanda-1.png";
 import amanda2 from "../assets/amanda-2.png";
 import amanda4 from "../assets/amanda-4.png";
 import amanda5 from "../assets/amanda-5.png";
 import amandaHobbies from "../assets/amanda-hobbies.png";
+
+const awards = [
+  { year: "2025", title: "James McGill Major Entrance Scholarship", detail: "Awarded for academic excellence" },
+  { year: "2024", title: "International Economics Olympiad — Bern, Switzerland", detail: "Individual Gold Award, Top 5% nationally" },
+  { year: "2024", title: "CEMC Euclid Mathematics Competition — University of Waterloo", detail: "Honor Roll, Top 5% globally" },
+  { year: "2024", title: "National Economic Competition", detail: "Individual Silver Award nationally" },
+];
+
+const experiences = [
+  { period: "Jan 2026 – Present", role: "McGill PHYS 102 Prep Session Advisor" },
+  { period: "Sep 2024 – Present", role: "AP Economics Teaching Assistant", detail: "Explaining difficult concepts and supporting the course alongside the main instructor across 9 cohorts" },
+  { period: "Jun 2025 – Dec 2025", role: "Online English Teacher" },
+  { period: "2025", role: "McGill AeroHacks – Hackathon", detail: "Built AirAid, a software platform that converts drone technology into a comprehensive navigation service for the visually impaired" },
+];
 
 const About = () => {
   return (
@@ -66,30 +80,40 @@ const About = () => {
             ))}
           </div>
 
-          {/* Photo gallery — 3 photos */}
-          <h2 className="font-display text-2xl font-bold text-primary mb-4">Gallery 📸</h2>
-          <div className="grid grid-cols-3 gap-4 mb-10">
-            {[
-              { src: amanda1, alt: "Amanda at McGill stickers" },
-              { src: amanda2, alt: "McGill Arts Building" },
-              { src: amanda5, alt: "Amanda AMD sticker art" },
-            ].map(({ src, alt }, i) => (
-              <motion.img
-                key={alt}
-                src={src}
-                alt={alt}
-                className="w-full rounded-xl shadow-md object-cover aspect-square"
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-              />
-            ))}
+          {/* Awards & Experience */}
+          <h2 className="font-display text-2xl font-bold text-primary mb-4">Awards & Experience 🏆</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            {/* Awards */}
+            <div className="space-y-3">
+              <h3 className="font-display font-semibold text-lg text-accent flex items-center gap-2">
+                <Trophy className="w-5 h-5" /> Awards
+              </h3>
+              {awards.map((a) => (
+                <div key={a.title} className="p-3 rounded-xl border" style={{ background: "hsl(var(--card))", borderColor: "hsl(var(--border))" }}>
+                  <span className="text-xs font-body font-semibold text-accent">{a.year}</span>
+                  <p className="font-body font-semibold text-sm text-primary">{a.title}</p>
+                  <p className="font-body text-xs text-muted-foreground">{a.detail}</p>
+                </div>
+              ))}
+            </div>
+            {/* Experience */}
+            <div className="space-y-3">
+              <h3 className="font-display font-semibold text-lg text-accent flex items-center gap-2">
+                <Briefcase className="w-5 h-5" /> Experience
+              </h3>
+              {experiences.map((e) => (
+                <div key={e.role} className="p-3 rounded-xl border" style={{ background: "hsl(var(--card))", borderColor: "hsl(var(--border))" }}>
+                  <span className="text-xs font-body font-semibold text-accent">{e.period}</span>
+                  <p className="font-body font-semibold text-sm text-primary">{e.role}</p>
+                  {e.detail && <p className="font-body text-xs text-muted-foreground">{e.detail}</p>}
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Hobbies & Interests */}
+          {/* Hobbies & Interests — moved before Gallery */}
           <h2 className="font-display text-2xl font-bold text-primary mb-4">Hobbies & Interests 🎯</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             <motion.img
               src={amandaHobbies}
               alt="Amanda's hobbies and interests"
@@ -128,6 +152,27 @@ const About = () => {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Photo Gallery — moved after Hobbies */}
+          <h2 className="font-display text-2xl font-bold text-primary mb-4">Gallery 📸</h2>
+          <div className="grid grid-cols-3 gap-4 mb-10">
+            {[
+              { src: amanda1, alt: "Amanda at McGill stickers" },
+              { src: amanda2, alt: "McGill Arts Building" },
+              { src: amanda5, alt: "Amanda AMD sticker art" },
+            ].map(({ src, alt }, i) => (
+              <motion.img
+                key={alt}
+                src={src}
+                alt={alt}
+                className="w-full rounded-xl shadow-md object-cover aspect-square"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+              />
+            ))}
           </div>
         </motion.div>
       </div>
