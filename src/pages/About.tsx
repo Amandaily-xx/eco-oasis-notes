@@ -1,27 +1,11 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, GraduationCap, Award, Users, Music, Dumbbell, UtensilsCrossed, BrainCircuit, Trophy, Briefcase } from "lucide-react";
+import { ArrowLeft, Award, Users, Music, Dumbbell, UtensilsCrossed, BrainCircuit } from "lucide-react";
 import amanda1 from "../assets/amanda-1.png";
 import amanda2 from "../assets/amanda-2.png";
 import amanda4 from "../assets/amanda-4.png";
 import amanda5 from "../assets/amanda-5.png";
 import amandaHobbies from "../assets/amanda-hobbies.png";
-
-const awards = [
-  { year: "2025", title: "James McGill Major Entrance Scholarship", detail: "Awarded for academic excellence" },
-  { year: "2024", title: "International Economics Olympiad", detail: "Individual Gold Award, Top 5% nationally" },
-  { year: "2024", title: "CEMC Euclid Mathematics Competition — University of Waterloo", detail: "Honor Roll, Top 5% globally" },
-  { year: "2024", title: "National Economic Competition", detail: "Individual Silver Award nationally" },
-];
-
-const experiences = [
-  { period: "Jan 2026 – Present", role: "Social Media Coordinator, McGill Food Coalition", detail: "Developed and published weekly digital posters highlighting accessible and no-cost food resources near campus, and managed the coalition's social media account" },
-  { period: "Jan 2026 – Present", role: "McGill PHYS 102 Prep Session Advisor" },
-  { period: "Sep 2024 – Present", role: "AP Economics Teaching Assistant", detail: "Explaining difficult concepts and supporting the course alongside the main instructor across 9 cohorts" },
-  { period: "Aug 2025 – Dec 2025", role: "MATH 180 Peer Note-Sharing Provider — McGill", detail: "Uploaded handwritten lecture notes during Fall 2025 to help peers with exam prep" },
-  { period: "Jun 2025 – Dec 2025", role: "Online English Teacher" },
-  { period: "May 2026", role: "McGill AeroHacks — Hackathon 🚁", detail: "Built AeroGuide, a software platform that converts drone technology into a comprehensive navigation service for the visually impaired", link: "https://github.com/Amandaily-xx/AeroGuide-Drone-Platform" },
-];
 
 const About = () => {
   return (
@@ -48,7 +32,7 @@ const About = () => {
 
           <div className="prose-like font-body text-foreground space-y-4 mb-10">
             <p className="text-lg leading-relaxed">
-              Hey there! I'm <strong className="text-accent">Amanda X.L.</strong> — a Stats & CS major with an Econ minor at <strong>McGill University</strong>, starting Fall 2025. Currently tackling CS and… let's just say it's been a journey. But hey, we got this! 🔥
+              Hey there! I'm <strong className="text-accent">Amanda X.L.</strong> — a Stats & CS major with an Econ minor, starting Fall 2025. Currently tackling CS and… let's just say it's been a journey. But hey, we got this! 🔥
             </p>
             <p className="leading-relaxed">
               These AP Econ notes are pretty close to my heart. Back in my junior year of high school, I created them while preparing for the AP Micro and AP Macro exams. After each unit, I'd put together a set of shared notes and drop them in our class group chat so everyone could study together. My classmates found them super helpful — and honestly, my teacher and friends started calling me the <em>"Economics God"</em> of the class. 😂
@@ -71,8 +55,8 @@ const About = () => {
           <div className="grid grid-cols-3 gap-4 mb-10">
             {[
               { icon: Award, label: "AP Score", value: "5 / 5" },
-              { icon: GraduationCap, label: "University", value: "McGill" },
               { icon: Users, label: "Students Helped", value: "200+" },
+              { icon: Award, label: "Cohorts", value: "9+" },
             ].map(({ icon: Icon, label, value }) => (
               <div key={label} className="text-center p-4 rounded-xl border" style={{ background: "hsl(var(--card))", borderColor: "hsl(var(--border))" }}>
                 <Icon className="w-5 h-5 mx-auto mb-2 text-accent" />
@@ -80,42 +64,6 @@ const About = () => {
                 <div className="text-xs font-body text-muted-foreground">{label}</div>
               </div>
             ))}
-          </div>
-
-          {/* Awards & Experience */}
-          <h2 className="font-display text-2xl font-bold text-primary mb-4">Awards & Experience 🏆</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-            {/* Awards */}
-            <div className="space-y-3">
-              <h3 className="font-display font-semibold text-lg text-accent flex items-center gap-2">
-                <Trophy className="w-5 h-5" /> Awards
-              </h3>
-              {awards.map((a) => (
-                <div key={a.title} className="p-3 rounded-xl border" style={{ background: "hsl(var(--card))", borderColor: "hsl(var(--border))" }}>
-                  <span className="text-xs font-body font-semibold text-accent">{a.year}</span>
-                  <p className="font-body font-semibold text-sm text-primary">{a.title}</p>
-                  <p className="font-body text-xs text-muted-foreground">{a.detail}</p>
-                </div>
-              ))}
-            </div>
-            {/* Experience */}
-            <div className="space-y-3">
-              <h3 className="font-display font-semibold text-lg text-accent flex items-center gap-2">
-                <Briefcase className="w-5 h-5" /> Experience
-              </h3>
-              {experiences.map((e) => (
-                <div key={e.role} className="p-3 rounded-xl border" style={{ background: "hsl(var(--card))", borderColor: "hsl(var(--border))" }}>
-                  <span className="text-xs font-body font-semibold text-accent">{e.period}</span>
-                  <p className="font-body font-semibold text-sm text-primary">{e.role}</p>
-                  {e.detail && <p className="font-body text-xs text-muted-foreground">{e.detail}</p>}
-                  {e.link && (
-                    <a href={e.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs font-body font-semibold text-accent hover:underline mt-1">
-                      View on GitHub →
-                    </a>
-                  )}
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Hobbies & Interests */}
@@ -165,8 +113,8 @@ const About = () => {
           <h2 className="font-display text-2xl font-bold text-primary mb-4">Gallery 📸</h2>
           <div className="grid grid-cols-3 gap-4 mb-10">
             {[
-              { src: amanda1, alt: "Amanda at McGill stickers" },
-              { src: amanda2, alt: "McGill Arts Building" },
+              { src: amanda1, alt: "Amanda stickers" },
+              { src: amanda2, alt: "Arts Building" },
               { src: amanda5, alt: "Amanda AMD sticker art" },
             ].map(({ src, alt }, i) => (
               <motion.img

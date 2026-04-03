@@ -30,6 +30,13 @@ const MicroUnit1Content = () => (
         <li><strong>Rational Producers:</strong> Maximize profit</li>
       </ul>
       <div className="formula-block">If MB ≥ MC → Take action! &nbsp;&nbsp;|&nbsp;&nbsp; If MB &lt; MC → Don't do it.</div>
+
+      <div className="p-4 rounded-xl border-2 border-accent my-4" style={{ background: "hsl(var(--tip-bg))" }}>
+        <p className="font-body text-sm" style={{ color: "hsl(var(--tip-text))" }}>
+          🥟 <strong>Amanda's Dumpling Example:</strong> Think of it this way — I love eating dumplings. When I'm super hungry, the first dumpling gives me maximum satisfaction (high marginal benefit!). But as I keep eating, I gradually feel full, so each additional dumpling gives me less and less satisfaction. That's <strong>diminishing marginal utility</strong> in action! At some point, the marginal benefit of one more dumpling drops below the marginal cost (feeling too stuffed) — and that's when you stop eating.
+        </p>
+      </div>
+
       <AmandaTip>
         The marginal analysis rule is one of the most tested concepts on the AP exam. Whenever a question asks "should the firm produce one more unit?" — compare MB and MC!
       </AmandaTip>
@@ -73,7 +80,7 @@ const MicroUnit1Content = () => (
       </ul>
     </SectionAccordion>
 
-    <SectionAccordion title="6. Production Possibilities Curve (PPC)">
+    <SectionAccordion title="6. Production Possibilities Curve (PPC)" highYield>
       <p>The PPC shows the maximum combinations of two goods an economy can produce using all its resources efficiently.</p>
       <ul className="list-disc pl-5 space-y-1 my-3">
         <li><strong>On the curve (A, B, C):</strong> Productively efficient (using all resources)</li>
