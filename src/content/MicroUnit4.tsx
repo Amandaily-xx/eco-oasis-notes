@@ -1,6 +1,8 @@
 import AmandaTip from "../components/AmandaTip";
 import SectionAccordion from "../components/SectionAccordion";
 import EconGraph from "../components/EconGraph";
+import gameTheoryExample from "../assets/game-theory-example.jpg";
+import naturalMonopolyLoss from "../assets/natural-monopoly-loss.jpg";
 
 const MicroUnit4Content = () => (
   <div className="space-y-4">
@@ -48,6 +50,27 @@ const MicroUnit4Content = () => (
         <li><strong>Fair-return price (C = ATC):</strong> At point B — firm earns zero economic profit, still some DWL</li>
         <li><strong>Socially optimal price (P1 = MC):</strong> At point A — allocatively efficient, but firm loses money (MC &lt; ATC)</li>
       </ul>
+
+      {/* Natural Monopoly Loss Explanation */}
+      <div className="p-4 rounded-xl border-2 border-accent mt-4" style={{ background: "hsl(var(--tip-bg))" }}>
+        <h4 className="font-semibold text-primary mb-2">📝 Why Does P = MC Cause Losses in a Natural Monopoly?</h4>
+        <p className="text-sm font-body mb-2" style={{ color: "hsl(var(--tip-text))" }}>
+          In a natural monopoly, ATC keeps declining because of massive fixed costs. The key insight: <strong>marginal willingness to pay is essentially marginal benefit, which is represented by the demand curve.</strong>
+        </p>
+        <p className="text-sm font-body mb-2" style={{ color: "hsl(var(--tip-text))" }}>
+          When the government sets P = MC, look at where the demand curve intersects MC — at that quantity, MB = MC, which achieves <strong>allocative efficiency</strong>.
+        </p>
+        <p className="text-sm font-body mb-2" style={{ color: "hsl(var(--tip-text))" }}>
+          But here's the problem: because of the enormous fixed costs, ATC is <strong>always above MC</strong> in a natural monopoly (you can see it clearly in the graph). So even though P = MC is the "ideal" price, the firm is selling each unit below its average total cost → <strong>economic loss</strong> (the red shaded area).
+        </p>
+        <p className="text-sm font-body" style={{ color: "hsl(var(--tip-text))" }}>
+          That's why the government often needs to <strong>subsidize</strong> natural monopolies or use the fair-return price (P = ATC) as a compromise.
+        </p>
+        <figure className="mx-auto my-3 w-full max-w-2xl">
+          <img src={naturalMonopolyLoss} alt="Natural monopoly graph showing ATC always above MC, with loss area when P = MC" className="h-auto w-full rounded-md border border-border" loading="lazy" />
+          <figcaption className="mt-2 text-center text-sm text-muted-foreground">Natural Monopoly — when P = MC (allocative efficiency), P is below ATC, creating an economic loss (red area)</figcaption>
+        </figure>
+      </div>
     </SectionAccordion>
 
     <SectionAccordion title="4. Price Discrimination" highYield>
@@ -117,6 +140,30 @@ const MicroUnit4Content = () => (
       <AmandaTip>
         For game theory payoff matrices: circle each player's best response to each of the other player's strategies. If two circles land in the same box = Nash Equilibrium. If a player has circles all in one row (or column) = Dominant Strategy.
       </AmandaTip>
+
+      {/* Game Theory Worked Example */}
+      <div className="p-4 rounded-xl border-2 border-accent mt-4" style={{ background: "hsl(var(--tip-bg))" }}>
+        <h4 className="font-semibold text-primary mb-2">📝 Worked Example: Finding Dominant Strategy & Nash Equilibrium</h4>
+        <figure className="mx-auto my-3 w-full max-w-2xl">
+          <img src={gameTheoryExample} alt="Game theory payoff matrix — North vs South, maintain vs increase output" className="h-auto w-full rounded-md border border-border" loading="lazy" />
+          <figcaption className="mt-2 text-center text-sm text-muted-foreground">Payoff matrix: North (rows) vs. South (columns) — Maintain or Increase output</figcaption>
+        </figure>
+        <p className="text-sm font-body mb-2" style={{ color: "hsl(var(--tip-text))" }}>
+          <strong>How to find the Dominant Strategy:</strong> A dominant strategy is the action a player will <em>always</em> choose, no matter what the other player does. Look at each player one at a time:
+        </p>
+        <ul className="list-disc pl-5 space-y-1 text-sm font-body mb-3" style={{ color: "hsl(var(--tip-text))" }}>
+          <li><strong>North's perspective:</strong> If South maintains → North gets 15 (maintain) vs. 30 (increase) → increase is better. If South increases → North gets 15 (maintain) vs. 27 (increase) → increase is still better. So North's dominant strategy is <strong>Increase</strong>.</li>
+          <li><strong>South's perspective:</strong> If North maintains → South gets 30 (maintain) vs. 45 (increase) → increase is better. If North increases → South gets 26 (maintain) vs. 28 (increase) → increase is still better. So South's dominant strategy is <strong>Increase</strong>.</li>
+        </ul>
+        <p className="text-sm font-body mb-2" style={{ color: "hsl(var(--tip-text))" }}>
+          <strong>Nash Equilibrium:</strong> Since both players choose "Increase," we look at the cell where both increase → <strong>(27, 28)</strong>. This is also the Nash Equilibrium because neither player wants to switch:
+        </p>
+        <ul className="list-disc pl-5 space-y-1 text-sm font-body" style={{ color: "hsl(var(--tip-text))" }}>
+          <li>If South switches to "Maintain," South's payoff drops from 28 → 26. South won't switch.</li>
+          <li>If North switches to "Maintain," North's payoff drops from 27 → 15. North won't switch.</li>
+          <li>Since neither player has an incentive to change, <strong>(27, 28) is the Nash Equilibrium</strong> — a stable point where everyone is doing their best given the other's choice.</li>
+        </ul>
+      </div>
     </SectionAccordion>
 
     <SectionAccordion title="7. Market Structure Summary">

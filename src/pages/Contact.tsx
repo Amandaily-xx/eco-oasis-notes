@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, Mail, Send, CheckCircle, AlertCircle } from "lucide-react";
+import { ArrowLeft, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { useState } from "react";
 
 const Contact = () => {
@@ -55,16 +55,6 @@ const Contact = () => {
           </p>
 
           <div className="rounded-xl border p-6 mb-8" style={{ background: "hsl(var(--card))", borderColor: "hsl(var(--border))" }}>
-            <div className="flex items-center gap-3 mb-6">
-              <Mail className="w-5 h-5 text-accent" />
-              <a
-                href="mailto:xintong.lee0130@gmail.com"
-                className="font-body text-primary hover:text-accent transition-colors underline"
-              >
-                xintong.lee0130@gmail.com
-              </a>
-            </div>
-
             {status === "sent" ? (
               <div className="flex items-center gap-3 p-4 rounded-lg bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300 border border-green-200 dark:border-green-800">
                 <CheckCircle className="w-5 h-5 flex-shrink-0" />
@@ -123,7 +113,7 @@ const Contact = () => {
                 {status === "error" && (
                   <div className="flex items-center gap-2 text-red-600 dark:text-red-400 text-sm font-body">
                     <AlertCircle className="w-4 h-4" />
-                    Something went wrong. Please try again or email directly.
+                    Something went wrong. Please try again later.
                   </div>
                 )}
                 <button

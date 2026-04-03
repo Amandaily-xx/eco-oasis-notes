@@ -1,6 +1,8 @@
 import AmandaTip from "../components/AmandaTip";
 import SectionAccordion from "../components/SectionAccordion";
 import EconGraph from "../components/EconGraph";
+import taxTypesExample from "../assets/tax-types-example.jpg";
+import firmExitExample from "../assets/firm-exit-example.jpg";
 
 const MicroUnit3Content = () => (
   <div className="space-y-4">
@@ -97,6 +99,57 @@ const MicroUnit3Content = () => (
       </ul>
       <AmandaTip>
         In long-run equilibrium for perfect competition: P = MC = ATC(min). This means the firm achieves both allocative efficiency (P = MC) and productive efficiency (P = ATC min). This is why perfect competition is considered the "ideal" market structure!
+      </AmandaTip>
+
+      {/* Worked Example: Firm Exit & Long-Run Adjustment */}
+      <div className="p-4 rounded-xl border-2 border-accent mt-4" style={{ background: "hsl(var(--tip-bg))" }}>
+        <h4 className="font-semibold text-primary mb-2">📝 Worked Example: Firm Exit in a Constant-Cost Industry</h4>
+        <p className="text-sm font-body mb-2" style={{ color: "hsl(var(--tip-text))" }}>
+          <strong>Question:</strong> A typical firm in a perfectly competitive constant-cost industry is operating with an economic loss in the short run. When the industry returns to long-run equilibrium, what happens to the number of firms, the market price, and the typical firm's quantity?
+        </p>
+        <p className="text-sm font-body mb-2" style={{ color: "hsl(var(--tip-text))" }}>
+          <strong>Logic chain:</strong> Loss → firms find the market unattractive → firms exit → supply of firms decreases (supply curve shifts left) → market price rises → now map the new higher price onto the individual firm's graph (remember, in perfect competition the firm is a price taker!) → the new price line (which is also MR) intersects MC at a higher quantity for the remaining firms.
+        </p>
+        <ul className="list-disc pl-5 space-y-1 text-sm font-body" style={{ color: "hsl(var(--tip-text))" }}>
+          <li><strong>Number of firms:</strong> Decreases (firms exit due to losses)</li>
+          <li><strong>Market price:</strong> Increases (less supply → higher equilibrium price)</li>
+          <li><strong>Typical firm's quantity:</strong> Increases (the remaining firm produces more at the new, higher price)</li>
+        </ul>
+        <figure className="mx-auto my-3 w-full max-w-2xl">
+          <img src={firmExitExample} alt="Firm exit and long-run adjustment in perfect competition — Market graph shows supply shifting left, firm graph shows new higher price and quantity" className="h-auto w-full rounded-md border border-border" loading="lazy" />
+          <figcaption className="mt-2 text-center text-sm text-muted-foreground">Market (left) and Firm (right) — supply shifts left as firms exit, price rises, and each remaining firm's quantity increases</figcaption>
+        </figure>
+      </div>
+    </SectionAccordion>
+
+    <SectionAccordion title="7. Per-Unit Tax vs. Lump-Sum Tax" highYield>
+      <p className="mb-3">Two common types of taxes on firms — they look similar but affect cost curves very differently!</p>
+
+      <h4 className="font-semibold text-primary mb-2">Per-Unit Tax</h4>
+      <p className="text-sm mb-2">A per-unit tax charges a fixed amount of tax for <strong>every unit sold</strong>. So every time the firm produces one more unit, its cost goes up by the tax amount.</p>
+      <ul className="list-disc pl-5 space-y-1 mb-3">
+        <li>This increases <strong>variable cost</strong> → MC shifts up, AVC shifts up, ATC shifts up</li>
+        <li>The new MC intersects MR at a lower quantity → <strong>output decreases</strong></li>
+        <li>Price charged to consumers <strong>increases</strong> (the firm passes on some of the tax)</li>
+      </ul>
+
+      <h4 className="font-semibold text-primary mb-2">Lump-Sum Tax</h4>
+      <p className="text-sm mb-2">A lump-sum tax is a <strong>fixed total amount</strong> the firm must pay regardless of how much it produces. It doesn't change with output.</p>
+      <ul className="list-disc pl-5 space-y-1 mb-3">
+        <li>This is essentially a <strong>fixed cost</strong> 💡 → AFC increases, ATC increases</li>
+        <li>But <strong>MC does not change</strong> (since MC depends on variable costs, not fixed costs)</li>
+        <li>Since MC is unchanged, the MC = MR intersection stays the same → <strong>price and quantity remain the same</strong></li>
+        <li>However, ATC has shifted up → the gap between P and ATC shrinks → <strong>profit decreases</strong></li>
+      </ul>
+      <div className="formula-block">Per-unit tax: MC↑, AVC↑, ATC↑ → P↑, Q↓ &nbsp;&nbsp;|&nbsp;&nbsp; Lump-sum tax: ATC↑ only → P same, Q same, Profit↓</div>
+
+      <figure className="mx-auto my-3 w-full max-w-2xl">
+        <img src={taxTypesExample} alt="Per-unit tax shifts MC up (price rises, quantity falls); Lump-sum tax shifts only ATC up (price and quantity unchanged, profit falls)" className="h-auto w-full rounded-md border border-border" loading="lazy" />
+        <figcaption className="mt-2 text-center text-sm text-muted-foreground">Left: Per-unit tax — MC shifts up, P↑ Q↓. Right: Lump-sum tax — only ATC shifts up, P and Q unchanged but profit↓</figcaption>
+      </figure>
+
+      <AmandaTip>
+        Key takeaway: Per-unit tax affects marginal decisions (MC moves!), while lump-sum tax only affects average cost. This is a classic AP exam distinction — if they say "fixed tax" or "licensing fee," think lump-sum!
       </AmandaTip>
     </SectionAccordion>
   </div>
