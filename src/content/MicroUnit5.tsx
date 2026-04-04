@@ -1,6 +1,7 @@
 import AmandaTip from "../components/AmandaTip";
 import SectionAccordion from "../components/SectionAccordion";
 import EconGraph from "../components/EconGraph";
+import mrpHiringExample from "../assets/mrp-hiring-example.jpg";
 
 const MicroUnit5Content = () => (
   <div className="space-y-4">
