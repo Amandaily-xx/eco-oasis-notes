@@ -70,7 +70,7 @@ const MacroUnit = () => {
           ) : <div />}
         </div>
       </div>
-      <AiStudyBuddy />
+      
     </div>
   );
 };
