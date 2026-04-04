@@ -7,6 +7,7 @@ import MicroUnit3Content from "../content/MicroUnit3";
 import MicroUnit4Content from "../content/MicroUnit4";
 import MicroUnit5Content from "../content/MicroUnit5";
 import MicroUnit6Content from "../content/MicroUnit6";
+import AiStudyBuddy from "../components/AiStudyBuddy";
 
 const unitInfo: Record<number, { title: string; subtitle: string }> = {
   1: { title: "Basic Economic Concepts", subtitle: "Scarcity, Opportunity Cost, PPC & Economic Systems" },
@@ -72,6 +73,7 @@ const MicroUnit = () => {
           ) : <div />}
         </div>
       </div>
+      <AiStudyBuddy />
     </div>
   );
 };
