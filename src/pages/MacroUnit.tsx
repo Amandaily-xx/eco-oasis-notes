@@ -6,7 +6,7 @@ import MacroUnit3Content from "../content/MacroUnit3";
 import MacroUnit4Content from "../content/MacroUnit4";
 import MacroUnit5Content from "../content/MacroUnit5";
 import MacroUnit6Content from "../content/MacroUnit6";
-import AiStudyBuddy from "../components/AiStudyBuddy";
+
 
 const unitInfo: Record<number, { title: string; subtitle: string }> = {
   2: { title: "Economic Indicators & Business Cycles", subtitle: "Circular Flow, GDP, Price Indices, Unemployment, Cost of Inflation & Business Cycles" },
