@@ -73,6 +73,7 @@ const MicroUnit = () => {
           ) : <div />}
         </div>
       </div>
+      <AiStudyBuddy />
     </div>
   );
 };
