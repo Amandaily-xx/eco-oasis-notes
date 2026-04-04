@@ -1,6 +1,7 @@
 import AmandaTip from "../components/AmandaTip";
 import SectionAccordion from "../components/SectionAccordion";
 import EconGraph from "../components/EconGraph";
+import mrpHiringExample from "../assets/mrp-hiring-example.jpg";
 
 const MicroUnit5Content = () => (
   <div className="space-y-4">
@@ -44,6 +45,43 @@ const MicroUnit5Content = () => (
       </ul>
       <EconGraph type="factor-market" caption="Competitive Factor Market — firm hires where MRP = Wage" />
       <p className="mt-2">The <strong>MRP curve</strong> IS the individual firm's labor demand curve. It slopes downward due to <strong>diminishing marginal returns</strong>.</p>
+
+      {/* Worked Example: Optimal Hiring */}
+      <div className="p-4 rounded-xl border-2 border-accent my-4" style={{ background: "hsl(var(--tip-bg))" }}>
+        <h4 className="font-semibold text-primary mb-2">📝 Worked Example: Finding the Optimal Number of Workers</h4>
+        <p className="font-body text-sm mb-2" style={{ color: "hsl(var(--tip-text))" }}>
+          A firm needs to compare two things: <strong>(1)</strong> the cost of hiring one more worker (the <strong>wage rate</strong>), and <strong>(2)</strong> the extra revenue that worker brings in (the <strong>MRP = MP × Price</strong>).
+        </p>
+        <figure className="mx-auto my-3 w-full max-w-lg">
+          <img
+            src={mrpHiringExample}
+            alt="Worked example showing MRP vs wage rate for each worker, with optimal hiring at worker 4"
+            className="h-auto w-full rounded-md border border-border"
+            loading="lazy"
+          />
+        </figure>
+        <p className="font-body text-sm mb-1" style={{ color: "hsl(var(--tip-text))" }}>
+          With a price of $0.50 per sandwich and a wage rate of $20:
+        </p>
+        <table className="w-full text-sm border-collapse my-2">
+          <thead><tr className="border-b font-semibold"><th className="text-left py-1 pr-2">Workers</th><th className="text-left py-1 pr-2">TP</th><th className="text-left py-1 pr-2">MP</th><th className="text-left py-1 pr-2">MRP (MP × $0.50)</th><th className="text-left py-1">Wage</th></tr></thead>
+          <tbody>
+            <tr className="border-b"><td className="py-1 pr-2">1</td><td className="py-1 pr-2">80</td><td className="py-1 pr-2">80</td><td className="py-1 pr-2">$40</td><td className="py-1">$20 → Hire ✅</td></tr>
+            <tr className="border-b"><td className="py-1 pr-2">2</td><td className="py-1 pr-2">150</td><td className="py-1 pr-2">70</td><td className="py-1 pr-2">$35</td><td className="py-1">$20 → Hire ✅</td></tr>
+            <tr className="border-b"><td className="py-1 pr-2">3</td><td className="py-1 pr-2">200</td><td className="py-1 pr-2">50</td><td className="py-1 pr-2">$25</td><td className="py-1">$20 → Hire ✅</td></tr>
+            <tr className="border-b font-bold"><td className="py-1 pr-2">4</td><td className="py-1 pr-2">240</td><td className="py-1 pr-2">40</td><td className="py-1 pr-2">$20</td><td className="py-1">$20 → MRP = Wage ✔️</td></tr>
+            <tr className="border-b text-muted-foreground"><td className="py-1 pr-2">5</td><td className="py-1 pr-2">250</td><td className="py-1 pr-2">10</td><td className="py-1 pr-2">$5</td><td className="py-1">$20 → Don't hire ❌</td></tr>
+            <tr className="border-b text-muted-foreground"><td className="py-1 pr-2">6</td><td className="py-1 pr-2">230</td><td className="py-1 pr-2">-20</td><td className="py-1 pr-2">-$10</td><td className="py-1">$20 → Don't hire ❌</td></tr>
+            <tr className="text-muted-foreground"><td className="py-1 pr-2">7</td><td className="py-1 pr-2">200</td><td className="py-1 pr-2">-30</td><td className="py-1 pr-2">-$15</td><td className="py-1">$20 → Don't hire ❌</td></tr>
+          </tbody>
+        </table>
+        <p className="font-body text-sm mb-2" style={{ color: "hsl(var(--tip-text))" }}>
+          The 4th worker's MRP exactly equals the wage rate ($20 = $20) — this is the <strong>profit-maximizing hiring point</strong>. The firm should hire <strong>4 workers</strong>.
+        </p>
+        <p className="font-body text-sm font-bold" style={{ color: "hsl(var(--tip-text))" }}>
+          💡 Tip: If no worker has MRP exactly equal to the wage, find the closest point where MRP is still <strong>greater than or equal to</strong> the wage. You might see two points near the MRP = Wage line — always pick the one where the firm still earns profit (MRP ≥ Wage), not the one where MRP &lt; Wage, because the firm can't afford to lose money on that worker!
+        </p>
+      </div>
     </SectionAccordion>
 
     <SectionAccordion title="4. Supply of Labor & Equilibrium">

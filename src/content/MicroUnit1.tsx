@@ -1,6 +1,10 @@
 import AmandaTip from "../components/AmandaTip";
 import SectionAccordion from "../components/SectionAccordion";
 import ppcDiagram from "../assets/ppc-diagram.png";
+import ppcIdleResources from "../assets/ppc-idle-resources.png";
+import compAdvTable from "../assets/comparative-adv-table.png";
+import crossMultiplyOutput from "../assets/cross-multiply-output.jpg";
+import crossMultiplyInput from "../assets/cross-multiply-input.jpg";
 
 const MicroUnit1Content = () => (
   <div className="space-y-4">
@@ -105,18 +109,119 @@ const MicroUnit1Content = () => (
         </figcaption>
       </figure>
 
+      {/* Worked Example: Moving from inside to on the curve */}
+      <div className="p-4 rounded-xl border-2 border-accent my-4" style={{ background: "hsl(var(--tip-bg))" }}>
+        <h4 className="font-semibold text-primary mb-2">📝 Worked Example: From Inside the Curve to On the Curve</h4>
+        <figure className="mx-auto my-3 w-full max-w-md">
+          <img
+            src={ppcIdleResources}
+            alt="PPC diagram showing points A and B inside/on the curve, and point C outside"
+            className="h-auto w-full rounded-md border border-border"
+            loading="lazy"
+          />
+        </figure>
+        <p className="font-body text-sm mb-2" style={{ color: "hsl(var(--tip-text))" }}>
+          To move from a point <strong>inside</strong> the curve to a point <strong>on</strong> the curve, society needs to <strong>take advantage of and utilize idle resources and technology</strong> — those resources that were previously sitting unused.
+        </p>
+        <p className="font-body text-sm mb-2" style={{ color: "hsl(var(--tip-text))" }}>
+          For example, if the unemployment rate drops (or employment rate rises), firms start hiring previously unemployed workers — putting those "idle resources" to work. The economy moves from an inefficient interior point to an efficient point on the PPC.
+        </p>
+        <p className="font-body text-sm font-bold" style={{ color: "hsl(var(--tip-text))" }}>
+          ⚠️ This is NOT economic growth! The curve itself does not shift. Economic growth means the entire PPC shifts outward (more resources or better technology). Moving from inside to on the curve is simply utilizing existing resources more fully.
+        </p>
+      </div>
+
       <AmandaTip>
         A point that produces more capital goods leads to greater economic growth in the future (bigger outward shift of PPC). This is a classic FRQ trap — always explain WHY more capital = future growth!
       </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="7. Comparative & Absolute Advantage">
+    <SectionAccordion title="7. Comparative & Absolute Advantage" highYield>
       <p><strong>Absolute Advantage:</strong> The ability to produce more of a good using the same resources (or the same amount with fewer resources).</p>
       <p><strong>Comparative Advantage:</strong> The ability to produce a good at a lower opportunity cost than another producer.</p>
       <div className="formula-block">
         Trade is based on COMPARATIVE advantage, not absolute advantage.
       </div>
       <p>Countries/individuals should specialize in producing goods for which they have the <strong>lowest opportunity cost</strong>, then trade.</p>
+
+      {/* Worked Example: Output Table */}
+      <div className="p-4 rounded-xl border-2 border-accent my-4" style={{ background: "hsl(var(--tip-bg))" }}>
+        <h4 className="font-semibold text-primary mb-2">📝 Worked Example: Output Table (Comparative Advantage)</h4>
+        <figure className="mx-auto my-3 w-full max-w-md">
+          <img
+            src={compAdvTable}
+            alt="Table showing units of manufactured goods and service goods produced by Country A and Country B"
+            className="h-auto w-full rounded-md border border-border"
+            loading="lazy"
+          />
+        </figure>
+        <p className="font-body text-sm mb-2" style={{ color: "hsl(var(--tip-text))" }}>
+          <strong>Step 1 — Calculate Opportunity Costs:</strong> If Country A uses all its labor to produce 100 units of manufactured goods, it gives up 300 units of service goods.
+        </p>
+        <div className="formula-block text-sm my-2">
+          OC of Manufactured Goods = (Service Goods given up) ÷ (Manufactured Goods produced)
+        </div>
+        <ul className="list-disc pl-5 space-y-1 text-sm mb-3" style={{ color: "hsl(var(--tip-text))" }}>
+          <li><strong>Country A:</strong> OC of Manufactured Goods = 300 / 100 = <strong>3</strong>; OC of Service Goods = 100 / 300 = <strong>1/3</strong></li>
+          <li><strong>Country B:</strong> OC of Manufactured Goods = 150 / 75 = <strong>2</strong>; OC of Service Goods = 75 / 150 = <strong>1/2</strong></li>
+        </ul>
+        <p className="font-body text-sm mb-2" style={{ color: "hsl(var(--tip-text))" }}>
+          <strong>Step 2 — Compare:</strong> Country A has the comparative advantage in <strong>Service Goods</strong> (1/3 &lt; 1/2). Country B has the comparative advantage in <strong>Manufactured Goods</strong> (2 &lt; 3).
+        </p>
+        <p className="font-body text-sm" style={{ color: "hsl(var(--tip-text))" }}>
+          Each country should specialize in the good where it has the <strong>lower</strong> opportunity cost, then trade for the other good.
+        </p>
+      </div>
+
+      {/* Cross-Multiply Trick */}
+      <div className="p-4 rounded-xl border-2 border-info my-4" style={{ background: "hsl(var(--info-bg))" }}>
+        <h4 className="font-semibold text-primary mb-2">⚡ Quick Trick: Cross-Multiplication Method (for Output Tables)</h4>
+        <figure className="mx-auto my-3 w-full max-w-xl">
+          <img
+            src={crossMultiplyOutput}
+            alt="Cross-multiplication method for finding comparative advantage in output tables"
+            className="h-auto w-full rounded-md border border-border"
+            loading="lazy"
+          />
+        </figure>
+        <p className="font-body text-sm mb-2" style={{ color: "hsl(var(--info-text))" }}>
+          <strong>How it works:</strong> Cross-multiply diagonally through the table. Whichever product is <strong>larger</strong> tells you which country has the comparative advantage in the good on its corresponding row.
+        </p>
+        <ul className="list-disc pl-5 space-y-1 text-sm mb-3" style={{ color: "hsl(var(--info-text))" }}>
+          <li>75 × 300 = <strong>22,500</strong></li>
+          <li>100 × 150 = <strong>15,000</strong></li>
+        </ul>
+        <p className="font-body text-sm mb-2" style={{ color: "hsl(var(--info-text))" }}>
+          22,500 &gt; 15,000, so the items connected to the larger product have the comparative advantage: <strong>Country B</strong> in Manufactured Goods (75) and <strong>Country A</strong> in Service Goods (300).
+        </p>
+        <p className="font-body text-sm font-bold" style={{ color: "hsl(var(--info-text))" }}>
+          ⚠️ This shortcut is great for MCQs to save time. For FRQs, always show the full opportunity cost calculation!
+        </p>
+      </div>
+
+      {/* Input Table Trick */}
+      <div className="p-4 rounded-xl border-2 border-info my-4" style={{ background: "hsl(var(--info-bg))" }}>
+        <h4 className="font-semibold text-primary mb-2">⚡ Input Tables: Flip the Rule!</h4>
+        <figure className="mx-auto my-3 w-full max-w-xl">
+          <img
+            src={crossMultiplyInput}
+            alt="Cross-multiplication method for finding comparative advantage in input (labor hours) tables"
+            className="h-auto w-full rounded-md border border-border"
+            loading="lazy"
+          />
+        </figure>
+        <p className="font-body text-sm mb-2" style={{ color: "hsl(var(--info-text))" }}>
+          When a table shows <strong>input</strong> (e.g., labor hours needed to produce one unit), the cross-multiplication trick is <strong>reversed</strong>: the <strong>smaller</strong> cross-product indicates the comparative advantage.
+        </p>
+        <ul className="list-disc pl-5 space-y-1 text-sm mb-3" style={{ color: "hsl(var(--info-text))" }}>
+          <li>15 × 12 = <strong>180</strong></li>
+          <li>10 × 12 = <strong>120</strong></li>
+        </ul>
+        <p className="font-body text-sm" style={{ color: "hsl(var(--info-text))" }}>
+          120 &lt; 180, so the items connected to the <strong>smaller</strong> product have the comparative advantage: <strong>Jasminia</strong> in MP3 Players (10) and <strong>Lauraland</strong> in Tablet Computers (12).
+        </p>
+      </div>
+
       <AmandaTip>
         To find comparative advantage: calculate the opportunity cost for each producer for each good. Whoever has the LOWER opportunity cost has the comparative advantage in that good. Both parties benefit from trade!
       </AmandaTip>
