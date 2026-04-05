@@ -28,7 +28,10 @@ interface EconGraphProps {
     | "long-run-growth"
     | "natural-monopoly"
     | "price-discrimination"
-    | "tariff";
+    | "tariff"
+    | "total-marginal-product"
+    | "ped-types"
+    | "pes-types";
   caption?: string;
 }
 
