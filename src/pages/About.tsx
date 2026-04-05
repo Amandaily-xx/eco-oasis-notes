@@ -38,7 +38,7 @@ const About = () => {
               These AP Econ notes are pretty close to my heart. Back in my junior year of high school, I created them while preparing for the AP Micro and AP Macro exams. After each unit, I'd put together a set of shared notes and drop them in our class group chat so everyone could study together. My classmates found them super helpful — and honestly, my teacher and friends started calling me the <em>"Economics God"</em> of the class. 😂
             </p>
             <p className="leading-relaxed">
-              I've also been an <strong>AP Economics Teaching Assistant</strong> since September 2024. I genuinely enjoy running TA sessions — breaking down tricky concepts and supporting the course alongside the main instructor. I've worked with <strong>9 cohorts</strong> of classes so far!
+              I've also been an <strong>AP Economics Teaching Assistant</strong> since September 2024. I genuinely enjoy running TA sessions — breaking down tricky concepts and supporting the course alongside the main instructor. I've worked with <strong>11 cohorts</strong> of classes so far!
             </p>
             <p className="leading-relaxed">
               And the result? <strong>Scored a 5 on both AP Micro and AP Macro</strong>, no sweat. So yeah, these notes are battle-tested and student-approved.
