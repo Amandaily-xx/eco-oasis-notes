@@ -55,8 +55,8 @@ const About = () => {
           <div className="grid grid-cols-3 gap-4 mb-10">
             {[
               { icon: Award, label: "AP Score", value: "5 / 5" },
-              { icon: Users, label: "Students Helped", value: "200+" },
-              { icon: Award, label: "Cohorts", value: "9+" },
+              { icon: Users, label: "Students Helped", value: "240+" },
+              { icon: Award, label: "Cohorts", value: "11+" },
             ].map(({ icon: Icon, label, value }) => (
               <div key={label} className="text-center p-4 rounded-xl border" style={{ background: "hsl(var(--card))", borderColor: "hsl(var(--border))" }}>
                 <Icon className="w-5 h-5 mx-auto mb-2 text-accent" />
