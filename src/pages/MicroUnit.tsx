@@ -10,9 +10,9 @@ import MicroUnit6Content from "../content/MicroUnit6";
 
 
 const unitInfo: Record<number, { title: string; subtitle: string }> = {
-  1: { title: "Basic Economic Concepts", subtitle: "Scarcity, Opportunity Cost, PPC & Economic Systems" },
-  2: { title: "Demand & Supply", subtitle: "Demand & Supply Curves, Elasticity, Market Equilibrium, Price Controls, International Trade" },
-  3: { title: "Production Costs & Perfect Competition", subtitle: "Cost Curves, Profit Types, Competitive Markets, Long-Run & Short-Run Decisions" },
+  1: { title: "Basic Economic Concepts", subtitle: "Scarcity, Resource Allocation, PPC, Comparative Advantage, Marginal Analysis" },
+  2: { title: "Demand & Supply", subtitle: "Demand & Supply, Elasticity (PED & PES), Market Equilibrium, Price Controls, International Trade" },
+  3: { title: "Production Costs & Perfect Competition", subtitle: "Production Function, Cost Curves, Profit Types, Profit Maximization, Competitive Markets" },
   4: { title: "Imperfect Competition", subtitle: "Monopoly, Natural Monopoly, Price Discrimination, Monopolistic Competition, Oligopoly & Game Theory" },
   5: { title: "Factor Markets", subtitle: "Factors of Production, Derived Demand, MRP, Wage Determination & Monopsony" },
   6: { title: "Market Failure & Role of Government", subtitle: "Externalities, Public Goods, Income Inequality, Types of Tax" },
