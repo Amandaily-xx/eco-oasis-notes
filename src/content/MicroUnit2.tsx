@@ -62,6 +62,15 @@ const MicroUnit2Content = () => (
         <li><strong>Perfectly elastic (Ed = ∞):</strong> Horizontal demand curve</li>
         <li><strong>Perfectly inelastic (Ed = 0):</strong> Vertical demand curve</li>
       </ul>
+
+      <EconGraph type="ped-types" caption="Five Types of Price Elasticity of Demand" />
+
+      <div className="p-4 rounded-xl border-2 border-accent my-4" style={{ background: "hsl(var(--tip-bg))" }}>
+        <p className="font-body text-sm font-bold" style={{ color: "hsl(var(--tip-text))" }}>
+          🧠 Memory trick: The graph for <strong>perfectly Inelastic</strong> looks like the letter "<strong>I</strong>" — a vertical line, so <strong>I</strong>nelastic! The graph for <strong>perfectly Elastic</strong> looks like a rotated "<strong>E</strong>" — a horizontal line, so <strong>E</strong>lastic!
+        </p>
+      </div>
+
       <h4 className="font-semibold text-primary my-2">Total Revenue Test</h4>
       <ul className="list-disc pl-5 space-y-1">
         <li>Elastic: Price ↑ → TR ↓ (quantity effect dominates)</li>
@@ -72,7 +81,34 @@ const MicroUnit2Content = () => (
       </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="5. Government Intervention: Price Controls">
+    <SectionAccordion title="5. Price Elasticity of Supply">
+      <div className="formula-block">Es = %ΔQs / %ΔP</div>
+      <ul className="list-disc pl-5 space-y-1 my-3">
+        <li><strong>Elastic (Es &gt; 1):</strong> Quantity supplied responds more than proportionally to price — flatter curve</li>
+        <li><strong>Unit elastic (Es = 1):</strong> Percentage change in Qs equals percentage change in P</li>
+        <li><strong>Inelastic (Es &lt; 1):</strong> Quantity supplied responds less than proportionally — steeper curve</li>
+        <li><strong>Perfectly elastic (Es = ∞):</strong> Horizontal supply curve</li>
+        <li><strong>Perfectly inelastic (Es = 0):</strong> Vertical supply curve</li>
+      </ul>
+
+      <EconGraph type="pes-types" caption="Five Types of Price Elasticity of Supply" />
+
+      <div className="p-4 rounded-xl border-2 border-accent my-4" style={{ background: "hsl(var(--tip-bg))" }}>
+        <p className="font-body text-sm" style={{ color: "hsl(var(--tip-text))" }}>
+          💡 The same visual rules apply for supply! <strong>Perfectly inelastic supply</strong> is a vertical line (like "I"), and <strong>perfectly elastic supply</strong> is a horizontal line (like a rotated "E"). The graphs for perfectly inelastic and perfectly elastic look exactly the same whether we're talking about demand or supply — only the label (D or S) changes.
+        </p>
+      </div>
+
+      <h4 className="font-semibold text-primary my-2">Determinants of Supply Elasticity</h4>
+      <ul className="list-disc pl-5 space-y-1">
+        <li><strong>Time:</strong> Supply is more elastic in the long run (firms can adjust capacity)</li>
+        <li><strong>Availability of inputs:</strong> Easy-to-obtain inputs → more elastic supply</li>
+        <li><strong>Spare capacity:</strong> Firms with excess capacity can increase output quickly → more elastic</li>
+        <li><strong>Ease of storage:</strong> Storable goods have more elastic supply</li>
+      </ul>
+    </SectionAccordion>
+
+    <SectionAccordion title="6. Government Intervention: Price Controls">
       <h4 className="font-semibold text-primary mb-2">Price Ceiling (Maximum Price)</h4>
       <EconGraph type="price-ceiling" caption="Price Ceiling — set below equilibrium, creates a shortage" />
       <ul className="list-disc pl-5 space-y-1 mb-3">
@@ -92,17 +128,10 @@ const MicroUnit2Content = () => (
       <p>Government limits the quantity that can be sold. If binding (quota &lt; Qe), creates deadweight loss and raises the price buyers pay while lowering the price sellers receive.</p>
     </SectionAccordion>
 
-    <SectionAccordion title="6. Consumer & Producer Surplus">
+    <SectionAccordion title="7. Consumer & Producer Surplus">
       <figure className="mx-auto my-3 w-full max-w-2xl">
-        <img
-          src={surplusDiagram}
-          alt="Supply and demand graph showing consumer surplus above equilibrium price and producer surplus below equilibrium price"
-          className="h-auto w-full rounded-md border border-border"
-          loading="lazy"
-        />
-        <figcaption className="mt-2 text-center text-sm text-muted-foreground">
-          Consumer surplus (CS) and producer surplus (PS) at equilibrium
-        </figcaption>
+        <img src={surplusDiagram} alt="Supply and demand graph showing consumer surplus above equilibrium price and producer surplus below equilibrium price" className="h-auto w-full rounded-md border border-border" loading="lazy" />
+        <figcaption className="mt-2 text-center text-sm text-muted-foreground">Consumer surplus (CS) and producer surplus (PS) at equilibrium</figcaption>
       </figure>
 
       <ul className="list-disc pl-5 space-y-1">
@@ -113,7 +142,7 @@ const MicroUnit2Content = () => (
       </ul>
     </SectionAccordion>
 
-    <SectionAccordion title="7. International Trade" highYield>
+    <SectionAccordion title="8. International Trade" highYield>
       <p>Countries trade based on <strong>comparative advantage</strong> — each country specializes in goods they produce at a lower opportunity cost.</p>
       <h4 className="font-semibold text-primary my-2">Key Terms</h4>
       <ul className="list-disc pl-5 space-y-1 mb-3">
@@ -134,7 +163,7 @@ const MicroUnit2Content = () => (
       </ul>
     </SectionAccordion>
 
-    <SectionAccordion title="8. Tariffs vs. Taxes">
+    <SectionAccordion title="9. Tariffs vs. Taxes">
       <EconGraph type="tariff" caption="Tariff on imports — raises price from Pw to Pw+Tariff, creates DWL and tax revenue" />
       <h4 className="font-semibold text-primary my-2">Tariffs</h4>
       <p className="mb-2">A <strong>tariff</strong> is a tax on imported goods.</p>
