@@ -958,6 +958,142 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
           </svg>
         );
 
+      case "total-marginal-product":
+        return (
+          <svg viewBox="0 0 420 300" className="w-full max-w-md mx-auto">
+            <defs><marker id="ah-tmp" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="hsl(var(--primary))" /></marker></defs>
+            {/* TP Graph (top) */}
+            <text x="10" y="15" fontSize="11" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Output</text>
+            <line x1="50" y1="130" x2="390" y2="130" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
+            <line x1="50" y1="130" x2="50" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
+            <path d="M 50 120 Q 100 110, 150 80 Q 200 45, 250 30 Q 280 25, 310 28 Q 340 32, 370 50" fill="none" stroke="hsl(var(--accent))" strokeWidth="2.5" />
+            <text x="372" y="45" fontSize="10" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">TP</text>
+            {/* Green phase */}
+            <path d="M 50 120 Q 100 110, 150 80" fill="none" stroke="hsl(var(--chart-2))" strokeWidth="3" />
+            {/* Blue phase */}
+            <path d="M 150 80 Q 200 45, 250 30 Q 280 25, 310 28" fill="none" stroke="hsl(var(--chart-1))" strokeWidth="3" />
+            {/* Red phase */}
+            <path d="M 310 28 Q 340 32, 370 50" fill="none" stroke="hsl(var(--destructive))" strokeWidth="3" />
+            <line x1="310" y1="28" x2="310" y2="130" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <text x="300" y="142" fontSize="9" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">MP=0</text>
+            <text x="375" y="142" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Labor</text>
+            {/* MP/AP Graph (bottom) */}
+            <line x1="50" y1="280" x2="390" y2="280" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
+            <line x1="50" y1="280" x2="50" y2="160" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
+            {/* MP curve */}
+            <path d="M 60 240 Q 100 180, 150 190 Q 200 200, 250 230 Q 280 250, 310 280 Q 340 300, 370 310" fill="none" stroke="hsl(var(--chart-1))" strokeWidth="2.5" />
+            <text x="372" y="308" fontSize="10" fill="hsl(var(--chart-1))" fontWeight="600" fontFamily="var(--font-body)">MP</text>
+            {/* AP curve */}
+            <path d="M 60 250 Q 120 210, 180 205 Q 220 203, 260 215 Q 300 235, 340 260" fill="none" stroke="hsl(var(--chart-2))" strokeWidth="2" />
+            <text x="345" y="258" fontSize="10" fill="hsl(var(--chart-2))" fontWeight="600" fontFamily="var(--font-body)">AP</text>
+            <text x="375" y="278" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Labor</text>
+          </svg>
+        );
+
+      case "ped-types":
+        return (
+          <svg viewBox="0 0 500 220" className="w-full max-w-lg mx-auto">
+            <defs><marker id="ah-ped" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><polygon points="0 0, 6 2.5, 0 5" fill="hsl(var(--primary))" /></marker></defs>
+            {/* Perfectly Inelastic */}
+            <line x1="20" y1="180" x2="90" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-ped)" />
+            <line x1="20" y1="180" x2="20" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-ped)" />
+            <line x1="55" y1="170" x2="55" y2="25" stroke="hsl(var(--accent))" strokeWidth="2.5" />
+            <text x="48" y="20" fontSize="9" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">D</text>
+            <text x="10" y="200" fontSize="8" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Perfectly Inelastic</text>
+            <text x="35" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Ed = 0</text>
+            <text x="8" y="8" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
+            <text x="85" y="195" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
+            {/* Inelastic */}
+            <line x1="120" y1="180" x2="190" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-ped)" />
+            <line x1="120" y1="180" x2="120" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-ped)" />
+            <line x1="130" y1="25" x2="175" y2="170" stroke="hsl(var(--accent))" strokeWidth="2.5" />
+            <text x="170" y="165" fontSize="9" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">D</text>
+            <text x="125" y="200" fontSize="8" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Inelastic</text>
+            <text x="130" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Ed &lt; 1</text>
+            <text x="108" y="8" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
+            <text x="185" y="195" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
+            {/* Unit Elastic */}
+            <line x1="220" y1="180" x2="290" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-ped)" />
+            <line x1="220" y1="180" x2="220" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-ped)" />
+            <path d="M 230 25 Q 240 100, 280 170" fill="none" stroke="hsl(var(--accent))" strokeWidth="2.5" />
+            <text x="275" y="165" fontSize="9" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">D</text>
+            <text x="225" y="200" fontSize="8" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Unit Elastic</text>
+            <text x="235" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Ed = 1</text>
+            <text x="208" y="8" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
+            <text x="285" y="195" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
+            {/* Elastic */}
+            <line x1="320" y1="180" x2="390" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-ped)" />
+            <line x1="320" y1="180" x2="320" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-ped)" />
+            <line x1="325" y1="60" x2="385" y2="170" stroke="hsl(var(--accent))" strokeWidth="2.5" />
+            <text x="380" y="165" fontSize="9" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">D</text>
+            <text x="335" y="200" fontSize="8" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Elastic</text>
+            <text x="335" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Ed &gt; 1</text>
+            <text x="308" y="8" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
+            <text x="385" y="195" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
+            {/* Perfectly Elastic */}
+            <line x1="420" y1="180" x2="490" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-ped)" />
+            <line x1="420" y1="180" x2="420" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-ped)" />
+            <line x1="425" y1="90" x2="485" y2="90" stroke="hsl(var(--accent))" strokeWidth="2.5" />
+            <text x="480" y="85" fontSize="9" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">D</text>
+            <text x="420" y="200" fontSize="8" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Perfectly Elastic</text>
+            <text x="435" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Ed = ∞</text>
+            <text x="408" y="8" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
+            <text x="485" y="195" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
+          </svg>
+        );
+
+      case "pes-types":
+        return (
+          <svg viewBox="0 0 500 220" className="w-full max-w-lg mx-auto">
+            <defs><marker id="ah-pes" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><polygon points="0 0, 6 2.5, 0 5" fill="hsl(var(--primary))" /></marker></defs>
+            {/* Perfectly Inelastic */}
+            <line x1="20" y1="180" x2="90" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
+            <line x1="20" y1="180" x2="20" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
+            <line x1="55" y1="170" x2="55" y2="25" stroke="hsl(var(--chart-2))" strokeWidth="2.5" />
+            <text x="48" y="20" fontSize="9" fill="hsl(var(--chart-2))" fontWeight="600" fontFamily="var(--font-body)">S</text>
+            <text x="10" y="200" fontSize="8" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Perfectly Inelastic</text>
+            <text x="35" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Es = 0</text>
+            <text x="8" y="8" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
+            <text x="85" y="195" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
+            {/* Inelastic */}
+            <line x1="120" y1="180" x2="190" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
+            <line x1="120" y1="180" x2="120" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
+            <line x1="135" y1="170" x2="165" y2="25" stroke="hsl(var(--chart-2))" strokeWidth="2.5" />
+            <text x="160" y="20" fontSize="9" fill="hsl(var(--chart-2))" fontWeight="600" fontFamily="var(--font-body)">S</text>
+            <text x="125" y="200" fontSize="8" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Inelastic</text>
+            <text x="130" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Es &lt; 1</text>
+            <text x="108" y="8" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
+            <text x="185" y="195" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
+            {/* Unit Elastic */}
+            <line x1="220" y1="180" x2="290" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
+            <line x1="220" y1="180" x2="220" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
+            <line x1="225" y1="175" x2="280" y2="25" stroke="hsl(var(--chart-2))" strokeWidth="2.5" />
+            <text x="275" y="20" fontSize="9" fill="hsl(var(--chart-2))" fontWeight="600" fontFamily="var(--font-body)">S</text>
+            <text x="225" y="200" fontSize="8" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Unit Elastic</text>
+            <text x="235" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Es = 1</text>
+            <text x="208" y="8" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
+            <text x="285" y="195" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
+            {/* Elastic */}
+            <line x1="320" y1="180" x2="390" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
+            <line x1="320" y1="180" x2="320" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
+            <line x1="325" y1="160" x2="385" y2="60" stroke="hsl(var(--chart-2))" strokeWidth="2.5" />
+            <text x="380" y="55" fontSize="9" fill="hsl(var(--chart-2))" fontWeight="600" fontFamily="var(--font-body)">S</text>
+            <text x="335" y="200" fontSize="8" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Elastic</text>
+            <text x="335" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Es &gt; 1</text>
+            <text x="308" y="8" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
+            <text x="385" y="195" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
+            {/* Perfectly Elastic */}
+            <line x1="420" y1="180" x2="490" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
+            <line x1="420" y1="180" x2="420" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
+            <line x1="425" y1="90" x2="485" y2="90" stroke="hsl(var(--chart-2))" strokeWidth="2.5" />
+            <text x="480" y="85" fontSize="9" fill="hsl(var(--chart-2))" fontWeight="600" fontFamily="var(--font-body)">S</text>
+            <text x="420" y="200" fontSize="8" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Perfectly Elastic</text>
+            <text x="435" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Es = ∞</text>
+            <text x="408" y="8" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
+            <text x="485" y="195" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
+          </svg>
+        );
+
       default:
         return null;
     }
