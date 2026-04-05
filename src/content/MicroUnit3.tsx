@@ -6,24 +6,43 @@ import firmExitExample from "../assets/firm-exit-example.jpg";
 
 const MicroUnit3Content = () => (
   <div className="space-y-4">
-    <SectionAccordion title="1. Types of Profit" defaultOpen>
-      <div className="formula-block">Total Profit = Total Revenue − Total Cost = (P × Q) − TC</div>
-      <h4 className="font-semibold text-primary my-2">Explicit vs. Implicit Costs</h4>
+    {/* 3.1 The Production Function */}
+    <SectionAccordion title="3.1 The Production Function" defaultOpen highYield>
+      <p>The <strong>production function</strong> describes the relationship between inputs (like labor) and the total output produced. Two key concepts emerge from this relationship:</p>
+
+      <h4 className="font-semibold text-primary my-2">Total Product (TP) & Marginal Product (MP)</h4>
       <ul className="list-disc pl-5 space-y-1 mb-3">
-        <li><strong>Explicit costs:</strong> Direct out-of-pocket payments (wages, rent, materials)</li>
-        <li><strong>Implicit costs:</strong> Opportunity costs of using your own resources (foregone salary, foregone interest on savings)</li>
+        <li><strong>Total Product (TP):</strong> The total quantity of output produced by a given number of workers</li>
+        <li><strong>Marginal Product (MP):</strong> The additional output produced by hiring one more worker</li>
       </ul>
+      <div className="formula-block">MP = ΔTP / ΔL (change in total product ÷ change in labor)</div>
+
+      <EconGraph type="total-marginal-product" caption="Total Product and Marginal Product — MP is the slope of TP" />
+
+      <h4 className="font-semibold text-primary my-2">Key Relationships Between TP and MP</h4>
+      <ul className="list-disc pl-5 space-y-1 mb-3">
+        <li>MP represents the <strong>slope</strong> of the TP curve</li>
+        <li>When MP is <strong>increasing</strong> → TP is increasing at an <strong>increasing</strong> rate</li>
+        <li>When MP is <strong>positive but decreasing</strong> → TP is increasing at a <strong>decreasing</strong> rate</li>
+        <li>When MP is <strong>zero</strong> → TP is at its <strong>maximum</strong></li>
+        <li>When MP is <strong>negative</strong> → TP is <strong>decreasing</strong></li>
+      </ul>
+
+      <h4 className="font-semibold text-primary my-2">Average Product (AP)</h4>
+      <div className="formula-block">AP = TP / L (total product ÷ number of workers)</div>
       <ul className="list-disc pl-5 space-y-1">
-        <li><strong>Accounting Profit</strong> = TR − Explicit Costs − Depreciation</li>
-        <li><strong>Economic Profit</strong> = TR − Explicit Costs − Implicit Costs − Depreciation</li>
-        <li><strong>Normal Profit:</strong> Economic profit = 0 (firm covers all costs including opportunity costs)</li>
+        <li>When MP &gt; AP → AP is <strong>rising</strong></li>
+        <li>When MP = AP → AP is at its <strong>maximum</strong></li>
+        <li>When MP &lt; AP → AP is <strong>falling</strong></li>
       </ul>
+
       <AmandaTip>
-        When economists say "profits," they mean ECONOMIC profit. Accounting profit is almost always greater than economic profit because it ignores implicit costs. If economic profit = 0, the firm is still earning enough to stay in business — that's normal profit!
+        The Law of Diminishing Marginal Returns: As you add more and more of a variable input (labor) to a fixed input (capital), eventually each additional worker contributes LESS additional output. This is why MP eventually declines — and it's the foundation for why cost curves are shaped the way they are!
       </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="2. Short-Run Cost Curves" highYield>
+    {/* 3.2 Short-Run Production Costs */}
+    <SectionAccordion title="3.2 Short-Run Production Costs" highYield>
       <EconGraph type="short-run-costs" caption="Short-Run Cost Curves — MC intersects AVC and ATC at their minimum points" />
       <h4 className="font-semibold text-primary mb-2">Key Relationships</h4>
       <ul className="list-disc pl-5 space-y-1 mb-3">
@@ -42,7 +61,8 @@ const MicroUnit3Content = () => (
       </ul>
     </SectionAccordion>
 
-    <SectionAccordion title="3. Long-Run Costs & Economies of Scale">
+    {/* 3.3 Long-Run Production Costs */}
+    <SectionAccordion title="3.3 Long-Run Costs & Economies of Scale">
       <EconGraph type="economies-of-scale" caption="Long-Run Average Cost — economies of scale, constant returns, and diseconomies of scale" />
       <ul className="list-disc pl-5 space-y-1">
         <li><strong>Economies of Scale:</strong> LRATC decreases as output increases (specialization, bulk buying)</li>
@@ -62,19 +82,26 @@ const MicroUnit3Content = () => (
       </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="4. Perfect Competition: Structure" highYield>
-      <EconGraph type="perfect-competition" caption="Perfect Competition — firm is a price taker, D = MR = P is horizontal" />
-      <ul className="list-disc pl-5 space-y-1">
-        <li>Many buyers and sellers</li>
-        <li>Identical (homogeneous) products</li>
-        <li>Each firm is a <strong>price taker</strong></li>
-        <li>Free entry and exit in the long run</li>
-        <li>Demand curve for an individual firm is <strong>perfectly elastic</strong> (horizontal)</li>
+    {/* 3.4 Types of Profit */}
+    <SectionAccordion title="3.4 Types of Profit">
+      <div className="formula-block">Total Profit = Total Revenue − Total Cost = (P × Q) − TC</div>
+      <h4 className="font-semibold text-primary my-2">Explicit vs. Implicit Costs</h4>
+      <ul className="list-disc pl-5 space-y-1 mb-3">
+        <li><strong>Explicit costs:</strong> Direct out-of-pocket payments (wages, rent, materials)</li>
+        <li><strong>Implicit costs:</strong> Opportunity costs of using your own resources (foregone salary, foregone interest on savings)</li>
       </ul>
-      <div className="formula-block">In perfect competition: P = MR = AR = D (for the firm)</div>
+      <ul className="list-disc pl-5 space-y-1">
+        <li><strong>Accounting Profit</strong> = TR − Explicit Costs − Depreciation</li>
+        <li><strong>Economic Profit</strong> = TR − Explicit Costs − Implicit Costs − Depreciation</li>
+        <li><strong>Normal Profit:</strong> Economic profit = 0 (firm covers all costs including opportunity costs)</li>
+      </ul>
+      <AmandaTip>
+        When economists say "profits," they mean ECONOMIC profit. Accounting profit is almost always greater than economic profit because it ignores implicit costs. If economic profit = 0, the firm is still earning enough to stay in business — that's normal profit!
+      </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="5. Profit Maximization (MR = MC)" highYield>
+    {/* 3.5 Profit Maximization */}
+    <SectionAccordion title="3.5 Profit Maximization (MR = MC)" highYield>
       <EconGraph type="profit-max-pc" caption="Profit Maximization — firm produces at q₀ where P = MC, profit = rectangle EpAB" />
       <ul className="list-disc pl-5 space-y-1 mb-3">
         <li>If MR &gt; MC → Produce more (profit increases)</li>
@@ -84,7 +111,8 @@ const MicroUnit3Content = () => (
       <div className="formula-block">Profit = (P − ATC) × Q</div>
     </SectionAccordion>
 
-    <SectionAccordion title="6. Short-Run & Long-Run Decisions" highYield>
+    {/* 3.6 Short-Run & Long-Run Decisions */}
+    <SectionAccordion title="3.6 Firms' Short-Run & Long-Run Decisions" highYield>
       <h4 className="font-semibold text-primary mb-2">Short-Run Shutdown Rule</h4>
       <ul className="list-disc pl-5 space-y-1 mb-3">
         <li>If P ≥ AVC → Continue producing</li>
@@ -101,7 +129,7 @@ const MicroUnit3Content = () => (
         In long-run equilibrium for perfect competition: P = MC = ATC(min). This means the firm achieves both allocative efficiency (P = MC) and productive efficiency (P = ATC min). This is why perfect competition is considered the "ideal" market structure!
       </AmandaTip>
 
-      {/* Worked Example: Firm Exit & Long-Run Adjustment */}
+      {/* Worked Example: Firm Exit */}
       <div className="p-4 rounded-xl border-2 border-accent mt-4" style={{ background: "hsl(var(--tip-bg))" }}>
         <h4 className="font-semibold text-primary mb-2">📝 Worked Example: Firm Exit in a Constant-Cost Industry</h4>
         <p className="text-sm font-body mb-2" style={{ color: "hsl(var(--tip-text))" }}>
@@ -116,13 +144,27 @@ const MicroUnit3Content = () => (
           <li><strong>Typical firm's quantity:</strong> Increases (the remaining firm produces more at the new, higher price)</li>
         </ul>
         <figure className="mx-auto my-3 w-full max-w-2xl">
-          <img src={firmExitExample} alt="Firm exit and long-run adjustment in perfect competition — Market graph shows supply shifting left, firm graph shows new higher price and quantity" className="h-auto w-full rounded-md border border-border" loading="lazy" />
+          <img src={firmExitExample} alt="Firm exit and long-run adjustment in perfect competition" className="h-auto w-full rounded-md border border-border" loading="lazy" />
           <figcaption className="mt-2 text-center text-sm text-muted-foreground">Market (left) and Firm (right) — supply shifts left as firms exit, price rises, and each remaining firm's quantity increases</figcaption>
         </figure>
       </div>
     </SectionAccordion>
 
-    <SectionAccordion title="7. Per-Unit Tax vs. Lump-Sum Tax" highYield>
+    {/* 3.7 Perfect Competition */}
+    <SectionAccordion title="3.7 Perfect Competition" highYield>
+      <EconGraph type="perfect-competition" caption="Perfect Competition — firm is a price taker, D = MR = P is horizontal" />
+      <ul className="list-disc pl-5 space-y-1">
+        <li>Many buyers and sellers</li>
+        <li>Identical (homogeneous) products</li>
+        <li>Each firm is a <strong>price taker</strong></li>
+        <li>Free entry and exit in the long run</li>
+        <li>Demand curve for an individual firm is <strong>perfectly elastic</strong> (horizontal)</li>
+      </ul>
+      <div className="formula-block">In perfect competition: P = MR = AR = D (for the firm)</div>
+    </SectionAccordion>
+
+    {/* Per-Unit Tax vs. Lump-Sum Tax */}
+    <SectionAccordion title="3.8 Per-Unit Tax vs. Lump-Sum Tax" highYield>
       <p className="mb-3">Two common types of taxes on firms — they look similar but affect cost curves very differently!</p>
 
       <h4 className="font-semibold text-primary mb-2">Per-Unit Tax</h4>
@@ -144,7 +186,7 @@ const MicroUnit3Content = () => (
       <div className="formula-block">Per-unit tax: MC↑, AVC↑, ATC↑ → P↑, Q↓ &nbsp;&nbsp;|&nbsp;&nbsp; Lump-sum tax: ATC↑ only → P same, Q same, Profit↓</div>
 
       <figure className="mx-auto my-3 w-full max-w-2xl">
-        <img src={taxTypesExample} alt="Per-unit tax shifts MC up (price rises, quantity falls); Lump-sum tax shifts only ATC up (price and quantity unchanged, profit falls)" className="h-auto w-full rounded-md border border-border" loading="lazy" />
+        <img src={taxTypesExample} alt="Per-unit tax shifts MC up; Lump-sum tax shifts only ATC up" className="h-auto w-full rounded-md border border-border" loading="lazy" />
         <figcaption className="mt-2 text-center text-sm text-muted-foreground">Left: Per-unit tax — MC shifts up, P↑ Q↓. Right: Lump-sum tax — only ATC shifts up, P and Q unchanged but profit↓</figcaption>
       </figure>
 

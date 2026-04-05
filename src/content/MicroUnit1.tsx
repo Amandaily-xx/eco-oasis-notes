@@ -8,13 +8,16 @@ import crossMultiplyInput from "../assets/cross-multiply-input.jpg";
 
 const MicroUnit1Content = () => (
   <div className="space-y-4">
-    <SectionAccordion title="1. Scarcity & Economics" defaultOpen>
+    {/* 1.1 Scarcity */}
+    <SectionAccordion title="1.1 Scarcity" defaultOpen>
       <p><strong>Scarcity:</strong> Resources are limited, but human wants are unlimited. This is the fundamental economic problem.</p>
       <p><strong>Economics</strong> is the study of how people make decisions about allocating scarce resources to satisfy their unlimited wants.</p>
       <p>Because resources are scarce, people must make <strong>trade-offs</strong> — giving up one thing to get another.</p>
     </SectionAccordion>
 
-    <SectionAccordion title="2. Opportunity Cost">
+    {/* 1.2 Resource Allocation and Economic Systems */}
+    <SectionAccordion title="1.2 Resource Allocation & Economic Systems">
+      <h4 className="font-semibold text-primary mb-2">Opportunity Cost</h4>
       <p><strong>Opportunity Cost:</strong> The value of the next best alternative you must give up when making a choice.</p>
       <div className="formula-block">Opportunity Cost = Value of the next best alternative forgone</div>
       <p><strong>Example:</strong> Going to college → the opportunity cost includes the income you could have earned working full-time.</p>
@@ -25,35 +28,8 @@ const MicroUnit1Content = () => (
           <tr><td className="py-2 pr-4">Better job opportunities</td><td className="py-2 pr-4">Room & board</td><td className="py-2">Lost work experience</td></tr>
         </tbody>
       </table>
-    </SectionAccordion>
 
-    <SectionAccordion title="3. Marginal Analysis">
-      <p><strong>Rational people think at the margin:</strong> They systematically and purposefully do the best they can.</p>
-      <ul className="list-disc pl-5 space-y-1">
-        <li><strong>Rational Consumers:</strong> Maximize utility (satisfaction)</li>
-        <li><strong>Rational Producers:</strong> Maximize profit</li>
-      </ul>
-      <div className="formula-block">If MB ≥ MC → Take action! &nbsp;&nbsp;|&nbsp;&nbsp; If MB &lt; MC → Don't do it.</div>
-
-      <div className="p-4 rounded-xl border-2 border-accent my-4" style={{ background: "hsl(var(--tip-bg))" }}>
-        <p className="font-body text-sm" style={{ color: "hsl(var(--tip-text))" }}>
-          🥟 <strong>Amanda's Dumpling Example:</strong> Think of it this way — I love eating dumplings. When I'm super hungry, the first dumpling gives me maximum satisfaction (high marginal benefit!). But as I keep eating, I gradually feel full, so each additional dumpling gives me less and less satisfaction. That's <strong>diminishing marginal utility</strong> in action! At some point, the marginal benefit of one more dumpling drops below the marginal cost (feeling too stuffed) — and that's when you stop eating.
-        </p>
-      </div>
-
-      <AmandaTip>
-        The marginal analysis rule is one of the most tested concepts on the AP exam. Whenever a question asks "should the firm produce one more unit?" — compare MB and MC!
-      </AmandaTip>
-    </SectionAccordion>
-
-    <SectionAccordion title="4. Positive vs. Normative Economics">
-      <ul className="list-disc pl-5 space-y-1">
-        <li><strong>Positive economics:</strong> Objective, fact-based statements that can be tested. ("Unemployment is 5%.")</li>
-        <li><strong>Normative economics:</strong> Subjective, value-based opinions. ("The government should reduce unemployment.")</li>
-      </ul>
-    </SectionAccordion>
-
-    <SectionAccordion title="5. Economic Systems">
+      <h4 className="font-semibold text-primary mb-2 mt-4">Economic Systems</h4>
       <h4 className="font-semibold text-primary mb-2">Traditional Economy</h4>
       <ul className="list-disc pl-5 space-y-1 mb-3">
         <li>Based on customs and traditions; answers economic questions through habits</li>
@@ -84,7 +60,8 @@ const MicroUnit1Content = () => (
       </ul>
     </SectionAccordion>
 
-    <SectionAccordion title="6. Production Possibilities Curve (PPC)" highYield>
+    {/* 1.3 Production Possibilities Curve */}
+    <SectionAccordion title="1.3 Production Possibilities Curve (PPC)" highYield>
       <p>The PPC shows the maximum combinations of two goods an economy can produce using all its resources efficiently.</p>
       <ul className="list-disc pl-5 space-y-1 my-3">
         <li><strong>On the curve (A, B, C):</strong> Productively efficient (using all resources)</li>
@@ -98,27 +75,15 @@ const MicroUnit1Content = () => (
       </ul>
 
       <figure className="mx-auto my-3 w-full max-w-2xl">
-        <img
-          src={ppcDiagram}
-          alt="Production Possibilities Curve showing efficient points A, B, C on the curve, inefficient point D inside, and impossible point F outside"
-          className="h-auto w-full rounded-md border border-border"
-          loading="lazy"
-        />
-        <figcaption className="mt-2 text-center text-sm text-muted-foreground">
-          Production Possibilities Curve (PPC) — points on the curve are efficient, inside is inefficient, outside is impossible
-        </figcaption>
+        <img src={ppcDiagram} alt="Production Possibilities Curve showing efficient points A, B, C on the curve, inefficient point D inside, and impossible point F outside" className="h-auto w-full rounded-md border border-border" loading="lazy" />
+        <figcaption className="mt-2 text-center text-sm text-muted-foreground">Production Possibilities Curve (PPC) — points on the curve are efficient, inside is inefficient, outside is impossible</figcaption>
       </figure>
 
-      {/* Worked Example: Moving from inside to on the curve */}
+      {/* Worked Example: Inside to On the Curve */}
       <div className="p-4 rounded-xl border-2 border-accent my-4" style={{ background: "hsl(var(--tip-bg))" }}>
         <h4 className="font-semibold text-primary mb-2">📝 Worked Example: From Inside the Curve to On the Curve</h4>
         <figure className="mx-auto my-3 w-full max-w-md">
-          <img
-            src={ppcIdleResources}
-            alt="PPC diagram showing points A and B inside/on the curve, and point C outside"
-            className="h-auto w-full rounded-md border border-border"
-            loading="lazy"
-          />
+          <img src={ppcIdleResources} alt="PPC diagram showing points A and B inside/on the curve, and point C outside" className="h-auto w-full rounded-md border border-border" loading="lazy" />
         </figure>
         <p className="font-body text-sm mb-2" style={{ color: "hsl(var(--tip-text))" }}>
           To move from a point <strong>inside</strong> the curve to a point <strong>on</strong> the curve, society needs to <strong>take advantage of and utilize idle resources and technology</strong> — those resources that were previously sitting unused.
@@ -136,7 +101,8 @@ const MicroUnit1Content = () => (
       </AmandaTip>
     </SectionAccordion>
 
-    <SectionAccordion title="7. Comparative & Absolute Advantage" highYield>
+    {/* 1.4 Comparative Advantage and Trade */}
+    <SectionAccordion title="1.4 Comparative & Absolute Advantage" highYield>
       <p><strong>Absolute Advantage:</strong> The ability to produce more of a good using the same resources (or the same amount with fewer resources).</p>
       <p><strong>Comparative Advantage:</strong> The ability to produce a good at a lower opportunity cost than another producer.</p>
       <div className="formula-block">
@@ -148,12 +114,7 @@ const MicroUnit1Content = () => (
       <div className="p-4 rounded-xl border-2 border-accent my-4" style={{ background: "hsl(var(--tip-bg))" }}>
         <h4 className="font-semibold text-primary mb-2">📝 Worked Example: Output Table (Comparative Advantage)</h4>
         <figure className="mx-auto my-3 w-full max-w-md">
-          <img
-            src={compAdvTable}
-            alt="Table showing units of manufactured goods and service goods produced by Country A and Country B"
-            className="h-auto w-full rounded-md border border-border"
-            loading="lazy"
-          />
+          <img src={compAdvTable} alt="Table showing units of manufactured goods and service goods produced by Country A and Country B" className="h-auto w-full rounded-md border border-border" loading="lazy" />
         </figure>
         <p className="font-body text-sm mb-2" style={{ color: "hsl(var(--tip-text))" }}>
           <strong>Step 1 — Calculate Opportunity Costs:</strong> If Country A uses all its labor to produce 100 units of manufactured goods, it gives up 300 units of service goods.
@@ -173,16 +134,11 @@ const MicroUnit1Content = () => (
         </p>
       </div>
 
-      {/* Cross-Multiply Trick */}
+      {/* Cross-Multiply Trick: Output */}
       <div className="p-4 rounded-xl border-2 border-info my-4" style={{ background: "hsl(var(--info-bg))" }}>
         <h4 className="font-semibold text-primary mb-2">⚡ Quick Trick: Cross-Multiplication Method (for Output Tables)</h4>
         <figure className="mx-auto my-3 w-full max-w-xl">
-          <img
-            src={crossMultiplyOutput}
-            alt="Cross-multiplication method for finding comparative advantage in output tables"
-            className="h-auto w-full rounded-md border border-border"
-            loading="lazy"
-          />
+          <img src={crossMultiplyOutput} alt="Cross-multiplication method for finding comparative advantage in output tables" className="h-auto w-full rounded-md border border-border" loading="lazy" />
         </figure>
         <p className="font-body text-sm mb-2" style={{ color: "hsl(var(--info-text))" }}>
           <strong>How it works:</strong> Cross-multiply diagonally through the table. Whichever product is <strong>larger</strong> tells you which country has the comparative advantage in the good on its corresponding row.
@@ -203,12 +159,7 @@ const MicroUnit1Content = () => (
       <div className="p-4 rounded-xl border-2 border-info my-4" style={{ background: "hsl(var(--info-bg))" }}>
         <h4 className="font-semibold text-primary mb-2">⚡ Input Tables: Flip the Rule!</h4>
         <figure className="mx-auto my-3 w-full max-w-xl">
-          <img
-            src={crossMultiplyInput}
-            alt="Cross-multiplication method for finding comparative advantage in input (labor hours) tables"
-            className="h-auto w-full rounded-md border border-border"
-            loading="lazy"
-          />
+          <img src={crossMultiplyInput} alt="Cross-multiplication method for finding comparative advantage in input (labor hours) tables" className="h-auto w-full rounded-md border border-border" loading="lazy" />
         </figure>
         <p className="font-body text-sm mb-2" style={{ color: "hsl(var(--info-text))" }}>
           When a table shows <strong>input</strong> (e.g., labor hours needed to produce one unit), the cross-multiplication trick is <strong>reversed</strong>: the <strong>smaller</strong> cross-product indicates the comparative advantage.
@@ -224,6 +175,34 @@ const MicroUnit1Content = () => (
 
       <AmandaTip>
         To find comparative advantage: calculate the opportunity cost for each producer for each good. Whoever has the LOWER opportunity cost has the comparative advantage in that good. Both parties benefit from trade!
+      </AmandaTip>
+    </SectionAccordion>
+
+    {/* 1.5 Cost-Benefit Analysis (Positive vs. Normative) */}
+    <SectionAccordion title="1.5 Positive vs. Normative Economics">
+      <ul className="list-disc pl-5 space-y-1">
+        <li><strong>Positive economics:</strong> Objective, fact-based statements that can be tested. ("Unemployment is 5%.")</li>
+        <li><strong>Normative economics:</strong> Subjective, value-based opinions. ("The government should reduce unemployment.")</li>
+      </ul>
+    </SectionAccordion>
+
+    {/* 1.6 Marginal Analysis and Consumer Choice */}
+    <SectionAccordion title="1.6 Marginal Analysis & Consumer Choice">
+      <p><strong>Rational people think at the margin:</strong> They systematically and purposefully do the best they can.</p>
+      <ul className="list-disc pl-5 space-y-1">
+        <li><strong>Rational Consumers:</strong> Maximize utility (satisfaction)</li>
+        <li><strong>Rational Producers:</strong> Maximize profit</li>
+      </ul>
+      <div className="formula-block">If MB ≥ MC → Take action! &nbsp;&nbsp;|&nbsp;&nbsp; If MB &lt; MC → Don't do it.</div>
+
+      <div className="p-4 rounded-xl border-2 border-accent my-4" style={{ background: "hsl(var(--tip-bg))" }}>
+        <p className="font-body text-sm" style={{ color: "hsl(var(--tip-text))" }}>
+          🥟 <strong>Amanda's Dumpling Example:</strong> Think of it this way — I love eating dumplings. When I'm super hungry, the first dumpling gives me maximum satisfaction (high marginal benefit!). But as I keep eating, I gradually feel full, so each additional dumpling gives me less and less satisfaction. That's <strong>diminishing marginal utility</strong> in action! At some point, the marginal benefit of one more dumpling drops below the marginal cost (feeling too stuffed) — and that's when you stop eating.
+        </p>
+      </div>
+
+      <AmandaTip>
+        The marginal analysis rule is one of the most tested concepts on the AP exam. Whenever a question asks "should the firm produce one more unit?" — compare MB and MC!
       </AmandaTip>
     </SectionAccordion>
   </div>
