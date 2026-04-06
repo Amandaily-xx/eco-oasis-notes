@@ -60,7 +60,13 @@ const MicroUnit = () => {
           <ContentComponent />
         </motion.div>
 
-        <div className="flex justify-between mt-12 pt-6 border-t font-body text-sm">
+        <div className="mt-10 mb-2">
+          <Link to="/micro/practice" className="block w-full text-center py-3 px-6 rounded-xl font-body text-sm font-semibold bg-accent/15 text-accent hover:bg-accent/25 transition-colors">
+            📝 Test Your Knowledge → Practice Quizzes
+          </Link>
+        </div>
+
+        <div className="flex justify-between mt-6 pt-6 border-t font-body text-sm">
           {id > 1 ? (
             <Link to={`/micro/${id - 1}`} className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
               <ArrowLeft className="w-4 h-4" /> Unit {id - 1}

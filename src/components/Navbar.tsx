@@ -34,6 +34,10 @@ const Navbar = () => {
                   Unit {i}: {["Basic Concepts", "Demand & Supply", "Costs & Perfect Competition", "Imperfect Competition", "Factor Markets", "Market Failure"][i - 1]}
                 </Link>
               )}
+              <div className="border-t my-1" />
+              <Link to="/micro/practice" className="block px-3 py-2 rounded-md text-sm font-semibold text-accent hover:bg-secondary transition-colors">
+                📝 Practice Quizzes
+              </Link>
             </div>
           </div>
           <div className="relative group">
@@ -78,6 +82,7 @@ const Navbar = () => {
               Unit {i}
             </Link>
         )}
+          <Link to="/micro/practice" onClick={() => setMobileOpen(false)} className="block py-1 pl-3 font-semibold text-accent">📝 Practice Quizzes</Link>
           <div className="font-semibold text-muted-foreground mt-3">Macroeconomics</div>
           <Link to="/micro/1" onClick={() => setMobileOpen(false)} className="block py-1 pl-3">Unit 1 (→ Micro)</Link>
           {[2, 3, 4, 5, 6].map((i) =>
