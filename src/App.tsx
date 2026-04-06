@@ -16,9 +16,9 @@ const App = () => (
     <Navbar />
     <Routes>
       <Route path="/" element={<Index />} />
+      <Route path="/micro/practice" element={<MicroPractice />} />
       <Route path="/micro/:unitId" element={<MicroUnit />} />
       <Route path="/macro/:unitId" element={<MacroUnit />} />
-      <Route path="/micro/practice" element={<MicroPractice />} />
       <Route path="/terms" element={<Terms />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/about" element={<About />} />
