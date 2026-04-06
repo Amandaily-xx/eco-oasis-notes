@@ -82,6 +82,7 @@ const Navbar = () => {
               Unit {i}
             </Link>
         )}
+          <Link to="/micro/practice" onClick={() => setMobileOpen(false)} className="block py-1 pl-3 font-semibold text-accent">📝 Practice Quizzes</Link>
           <div className="font-semibold text-muted-foreground mt-3">Macroeconomics</div>
           <Link to="/micro/1" onClick={() => setMobileOpen(false)} className="block py-1 pl-3">Unit 1 (→ Micro)</Link>
           {[2, 3, 4, 5, 6].map((i) =>
