@@ -34,6 +34,10 @@ const Navbar = () => {
                   Unit {i}: {["Basic Concepts", "Demand & Supply", "Costs & Perfect Competition", "Imperfect Competition", "Factor Markets", "Market Failure"][i - 1]}
                 </Link>
               )}
+              <div className="border-t my-1" />
+              <Link to="/micro/practice" className="block px-3 py-2 rounded-md text-sm font-semibold text-accent hover:bg-secondary transition-colors">
+                📝 Practice Quizzes
+              </Link>
             </div>
           </div>
           <div className="relative group">
