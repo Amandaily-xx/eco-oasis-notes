@@ -168,7 +168,7 @@ const PracticeQuiz = ({ questions, title }: PracticeQuizProps) => {
               </button>
             ) : (
               <button onClick={handleNext} className="inline-flex items-center gap-2 px-5 py-2 bg-primary text-primary-foreground rounded-lg font-body text-sm font-medium hover:bg-primary/90 transition-colors">
-                {currentIdx < questions.length - 1 ? <>Next <ArrowRight className="w-4 h-4" /></> : "See Results"}
+                {currentIdx < activeQuestions.length - 1 ? <>Next <ArrowRight className="w-4 h-4" /></> : "See Results"}
               </button>
             )}
           </div>
