@@ -115,7 +115,7 @@ const PracticeQuiz = ({ questions, title }: PracticeQuizProps) => {
       <div className="flex items-center justify-between mb-2">
         <span className="text-xs font-body font-semibold uppercase tracking-wider text-accent">{title}</span>
         <span className="text-sm font-body text-muted-foreground">
-          Question {currentIdx + 1} of {questions.length} · Score: {score}/{answeredCount}
+          Question {currentIdx + 1} of {activeQuestions.length} · Score: {score}/{answeredCount}
         </span>
       </div>
 
