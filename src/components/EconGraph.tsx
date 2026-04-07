@@ -904,89 +904,94 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
 
       case "tariff":
         return (
-          <svg viewBox="0 0 340 280" className="w-full max-w-sm mx-auto">
+          <svg viewBox="0 0 340 290" className="w-full max-w-sm mx-auto">
             <defs><marker id="ah-tar" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="hsl(var(--primary))" /></marker></defs>
             <line x1="50" y1="240" x2="310" y2="240" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-tar)" />
             <line x1="50" y1="240" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-tar)" />
-            {/* Domestic Supply (DS) */}
-            <line x1="60" y1="220" x2="280" y2="30" stroke="hsl(210 80% 55%)" strokeWidth="2.5" />
-            <text x="275" y="28" fontSize="11" fill="hsl(210 80% 55%)" fontWeight="600" fontFamily="var(--font-body)">DS</text>
-            {/* Domestic Demand (DD) */}
-            <line x1="60" y1="30" x2="280" y2="220" stroke="hsl(210 80% 55%)" strokeWidth="2.5" />
+            {/* Domestic Supply (DS): from (60,220) to (280,40) */}
+            <line x1="60" y1="220" x2="280" y2="40" stroke="hsl(210 80% 55%)" strokeWidth="2.5" />
+            <text x="275" y="35" fontSize="11" fill="hsl(210 80% 55%)" fontWeight="600" fontFamily="var(--font-body)">DS</text>
+            {/* Domestic Demand (DD): from (60,40) to (280,220) */}
+            <line x1="60" y1="40" x2="280" y2="220" stroke="hsl(210 80% 55%)" strokeWidth="2.5" />
             <text x="275" y="218" fontSize="11" fill="hsl(210 80% 55%)" fontWeight="600" fontFamily="var(--font-body)">DD</text>
-            {/* World Supply (Ws) — horizontal */}
-            <line x1="50" y1="170" x2="300" y2="170" stroke="hsl(120 50% 45%)" strokeWidth="2" />
-            <text x="282" y="165" fontSize="10" fill="hsl(120 50% 45%)" fontWeight="600" fontFamily="var(--font-body)">Ws</text>
-            {/* World Supply + Tariff (Ws + Tariff) — horizontal, higher */}
-            <line x1="50" y1="145" x2="300" y2="145" stroke="hsl(120 50% 45%)" strokeWidth="2" />
-            <text x="262" y="140" fontSize="9" fill="hsl(120 50% 45%)" fontWeight="600" fontFamily="var(--font-body)">Ws + Tariff</text>
+            {/* World Supply (Ws) at y=175 */}
+            <line x1="50" y1="175" x2="300" y2="175" stroke="hsl(120 50% 45%)" strokeWidth="2" />
+            <text x="282" y="170" fontSize="10" fill="hsl(120 50% 45%)" fontWeight="600" fontFamily="var(--font-body)">Ws</text>
+            {/* World Supply + Tariff at y=150 */}
+            <line x1="50" y1="150" x2="300" y2="150" stroke="hsl(120 50% 45%)" strokeWidth="2" />
+            <text x="262" y="145" fontSize="9" fill="hsl(120 50% 45%)" fontWeight="600" fontFamily="var(--font-body)">Ws + T</text>
             {/* Price labels */}
-            <text x="20" y="174" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Pw</text>
-            <text x="4" y="149" fontSize="9" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Pw+T</text>
-            {/* Q labels — Q1, Q3, Q4, Q2 */}
-            <line x1="95" y1="170" x2="95" y2="240" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
-            <line x1="115" y1="145" x2="115" y2="240" stroke="hsl(var(--destructive))" strokeWidth="1.5" strokeDasharray="4 3" />
-            <line x1="215" y1="145" x2="215" y2="240" stroke="hsl(var(--destructive))" strokeWidth="1.5" strokeDasharray="4 3" />
-            <line x1="240" y1="170" x2="240" y2="240" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
-            <text x="88" y="254" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q1</text>
-            <text x="108" y="254" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q3</text>
-            <text x="208" y="254" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q4</text>
-            <text x="233" y="254" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q2</text>
-            {/* Consumer Surplus — triangle above Pw+Tariff to DD */}
-            <polygon points="60,30 60,145 215,145" fill="hsl(50 90% 55%)" opacity="0.2" />
-            <text x="75" y="100" fontSize="9" fill="hsl(50 80% 40%)" fontWeight="600" fontFamily="var(--font-body)">Consumer</text>
-            <text x="75" y="112" fontSize="9" fill="hsl(50 80% 40%)" fontWeight="600" fontFamily="var(--font-body)">Surplus</text>
-            {/* Producer Surplus — triangle below Pw+Tariff to DS */}
-            <polygon points="60,220 60,145 115,145" fill="hsl(200 70% 55%)" opacity="0.2" />
+            <text x="20" y="179" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Pw</text>
+            <text x="4" y="154" fontSize="9" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Pw+T</text>
+            {/* Q intersections: DS∩Ws at Q1≈(97,175), DD∩Ws at Q2≈(237,175), DS∩(Ws+T) at Q3≈(117,150), DD∩(Ws+T) at Q4≈(216,150) */}
+            <line x1="97" y1="175" x2="97" y2="240" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <line x1="117" y1="150" x2="117" y2="240" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <line x1="216" y1="150" x2="216" y2="240" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <line x1="237" y1="175" x2="237" y2="240" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <text x="90" y="254" fontSize="9" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q1</text>
+            <text x="110" y="254" fontSize="9" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q3</text>
+            <text x="209" y="254" fontSize="9" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q4</text>
+            <text x="230" y="254" fontSize="9" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q2</text>
+            {/* Consumer Surplus — triangle above Pw+T between DD intercept at top and DD∩(Ws+T) */}
+            <polygon points="60,40 60,150 216,150" fill="hsl(50 90% 55%)" opacity="0.2" />
+            <text x="70" y="100" fontSize="9" fill="hsl(50 80% 40%)" fontWeight="600" fontFamily="var(--font-body)">Consumer</text>
+            <text x="70" y="112" fontSize="9" fill="hsl(50 80% 40%)" fontWeight="600" fontFamily="var(--font-body)">Surplus</text>
+            {/* Producer Surplus — triangle below Pw+T between DS intercept at bottom and DS∩(Ws+T) */}
+            <polygon points="60,220 60,150 117,150" fill="hsl(200 70% 55%)" opacity="0.2" />
             <text x="62" y="195" fontSize="8" fill="hsl(200 70% 45%)" fontWeight="600" fontFamily="var(--font-body)">Producer</text>
             <text x="62" y="205" fontSize="8" fill="hsl(200 70% 45%)" fontFamily="var(--font-body)">Surplus</text>
-            {/* Tax Revenue rectangle */}
-            <rect x="115" y="145" width="100" height="25" fill="hsl(120 60% 45%)" opacity="0.2" rx="2" />
-            <text x="135" y="162" fontSize="9" fill="hsl(120 60% 35%)" fontWeight="600" fontFamily="var(--font-body)">Tax Revenue</text>
-            {/* DWL triangles */}
-            <polygon points="95,170 115,145 115,170" fill="hsl(50 90% 50%)" opacity="0.3" />
-            <polygon points="215,145 215,170 240,170" fill="hsl(50 90% 50%)" opacity="0.3" />
-            <text x="96" y="167" fontSize="7" fill="hsl(0 70% 45%)" fontWeight="700" fontFamily="var(--font-body)">DWL</text>
-            <text x="218" y="167" fontSize="7" fill="hsl(0 70% 45%)" fontWeight="700" fontFamily="var(--font-body)">DWL</text>
+            {/* Tax Revenue rectangle — between Q3 and Q4 at tariff height */}
+            <rect x="117" y="150" width="99" height="25" fill="hsl(120 60% 45%)" opacity="0.2" rx="2" />
+            <text x="135" y="167" fontSize="9" fill="hsl(120 60% 35%)" fontWeight="600" fontFamily="var(--font-body)">Tax Revenue</text>
+            {/* DWL triangle 1: between Q1, Q3 on DS line */}
+            <polygon points="97,175 117,150 117,175" fill="hsl(0 70% 55%)" opacity="0.3" />
+            <text x="98" y="172" fontSize="7" fill="hsl(0 70% 45%)" fontWeight="700" fontFamily="var(--font-body)">DWL</text>
+            {/* DWL triangle 2: between Q4, Q2 on DD line */}
+            <polygon points="216,150 237,175 216,175" fill="hsl(0 70% 55%)" opacity="0.3" />
+            <text x="217" y="172" fontSize="7" fill="hsl(0 70% 45%)" fontWeight="700" fontFamily="var(--font-body)">DWL</text>
             {/* Imported bracket */}
-            <line x1="115" y1="265" x2="215" y2="265" stroke="hsl(var(--foreground))" strokeWidth="2" />
-            <line x1="115" y1="260" x2="115" y2="270" stroke="hsl(var(--foreground))" strokeWidth="2" />
-            <line x1="215" y1="260" x2="215" y2="270" stroke="hsl(var(--foreground))" strokeWidth="2" />
-            <text x="140" y="278" fontSize="10" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">Imported</text>
-            <text x="280" y="256" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Q</text>
+            <line x1="117" y1="268" x2="216" y2="268" stroke="hsl(var(--foreground))" strokeWidth="2" />
+            <line x1="117" y1="263" x2="117" y2="273" stroke="hsl(var(--foreground))" strokeWidth="2" />
+            <line x1="216" y1="263" x2="216" y2="273" stroke="hsl(var(--foreground))" strokeWidth="2" />
+            <text x="140" y="282" fontSize="10" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">Imported</text>
+            <text x="290" y="256" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Q</text>
             <text x="30" y="22" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">P</text>
           </svg>
         );
 
       case "total-marginal-product":
         return (
-          <svg viewBox="0 0 420 300" className="w-full max-w-md mx-auto">
+          <svg viewBox="0 0 420 320" className="w-full max-w-md mx-auto">
             <defs><marker id="ah-tmp" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="hsl(var(--primary))" /></marker></defs>
             {/* TP Graph (top) */}
-            <text x="10" y="15" fontSize="11" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Output</text>
-            <line x1="50" y1="130" x2="390" y2="130" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
-            <line x1="50" y1="130" x2="50" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
-            <path d="M 50 120 Q 100 110, 150 80 Q 200 45, 250 30 Q 280 25, 310 28 Q 340 32, 370 50" fill="none" stroke="hsl(var(--accent))" strokeWidth="2.5" />
-            <text x="372" y="45" fontSize="10" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">TP</text>
-            {/* Green phase */}
-            <path d="M 50 120 Q 100 110, 150 80" fill="none" stroke="hsl(var(--chart-2))" strokeWidth="3" />
-            {/* Blue phase */}
-            <path d="M 150 80 Q 200 45, 250 30 Q 280 25, 310 28" fill="none" stroke="hsl(var(--chart-1))" strokeWidth="3" />
-            {/* Red phase */}
-            <path d="M 310 28 Q 340 32, 370 50" fill="none" stroke="hsl(var(--destructive))" strokeWidth="3" />
-            <line x1="310" y1="28" x2="310" y2="130" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
-            <text x="300" y="142" fontSize="9" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">MP=0</text>
-            <text x="375" y="142" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Labor</text>
-            {/* MP/AP Graph (bottom) */}
-            <line x1="50" y1="280" x2="390" y2="280" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
-            <line x1="50" y1="280" x2="50" y2="160" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
-            {/* MP curve */}
-            <path d="M 60 240 Q 100 180, 150 190 Q 200 200, 250 230 Q 280 250, 310 280 Q 340 300, 370 310" fill="none" stroke="hsl(var(--chart-1))" strokeWidth="2.5" />
-            <text x="372" y="308" fontSize="10" fill="hsl(var(--chart-1))" fontWeight="600" fontFamily="var(--font-body)">MP</text>
-            {/* AP curve */}
-            <path d="M 60 250 Q 120 210, 180 205 Q 220 203, 260 215 Q 300 235, 340 260" fill="none" stroke="hsl(var(--chart-2))" strokeWidth="2" />
-            <text x="345" y="258" fontSize="10" fill="hsl(var(--chart-2))" fontWeight="600" fontFamily="var(--font-body)">AP</text>
-            <text x="375" y="278" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Labor</text>
+            <text x="10" y="15" fontSize="11" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Total Product</text>
+            <line x1="50" y1="140" x2="390" y2="140" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
+            <line x1="50" y1="140" x2="50" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
+            {/* TP curve: rises at increasing rate, then decreasing rate, then declines */}
+            <path d="M 60 130 Q 90 125, 120 110 Q 160 80, 200 55 Q 240 35, 270 28 Q 300 25, 320 30 Q 345 38, 365 55" fill="none" stroke="hsl(50 80% 50%)" strokeWidth="3" />
+            <text x="368" y="50" fontSize="10" fill="hsl(50 80% 50%)" fontWeight="700" fontFamily="var(--font-body)">TP</text>
+            {/* Dashed lines for inflection point and max */}
+            <line x1="200" y1="55" x2="200" y2="140" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <line x1="300" y1="25" x2="300" y2="140" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <text x="375" y="140" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Labor</text>
+
+            {/* MP & AP Graph (bottom) */}
+            <text x="10" y="168" fontSize="11" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Marginal / Average Product</text>
+            <line x1="50" y1="300" x2="390" y2="300" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
+            <line x1="50" y1="300" x2="50" y2="175" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
+            {/* Zero line */}
+            <line x1="50" y1="300" x2="390" y2="300" stroke="hsl(var(--muted-foreground))" strokeWidth="0.5" />
+            {/* MP curve: rises to peak at inflection of TP, then falls through zero */}
+            <path d="M 60 270 Q 100 230, 140 210 Q 170 200, 200 195 Q 210 196, 200 195" fill="none" stroke="hsl(0 70% 60%)" strokeWidth="2.5" />
+            <path d="M 200 195 Q 240 210, 270 240 Q 300 270, 310 300 Q 320 315, 350 330" fill="none" stroke="hsl(0 70% 60%)" strokeWidth="2.5" />
+            <text x="352" y="328" fontSize="10" fill="hsl(0 70% 60%)" fontWeight="700" fontFamily="var(--font-body)">MP</text>
+            {/* AP curve: rises slower, peaks after MP peak, then falls (MP crosses AP at AP max) */}
+            <path d="M 60 275 Q 120 240, 180 220 Q 220 212, 250 215 Q 280 220, 310 240 Q 340 260, 360 275" fill="none" stroke="hsl(180 60% 50%)" strokeWidth="2.5" />
+            <text x="362" y="273" fontSize="10" fill="hsl(180 60% 50%)" fontWeight="700" fontFamily="var(--font-body)">AP</text>
+            {/* Dashed lines connecting to top graph */}
+            <line x1="200" y1="195" x2="200" y2="300" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <line x1="300" y1="300" x2="300" y2="300" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <text x="375" y="298" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Labor</text>
           </svg>
         );
 
@@ -994,7 +999,7 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
         return (
           <svg viewBox="0 0 500 220" className="w-full max-w-lg mx-auto">
             <defs><marker id="ah-ped" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><polygon points="0 0, 6 2.5, 0 5" fill="hsl(var(--primary))" /></marker></defs>
-            {/* Perfectly Inelastic */}
+            {/* Perfectly Inelastic — vertical line */}
             <line x1="20" y1="180" x2="90" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-ped)" />
             <line x1="20" y1="180" x2="20" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-ped)" />
             <line x1="55" y1="170" x2="55" y2="25" stroke="hsl(var(--accent))" strokeWidth="2.5" />
@@ -1003,34 +1008,34 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <text x="35" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Ed = 0</text>
             <text x="8" y="8" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
             <text x="85" y="195" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
-            {/* Inelastic */}
+            {/* Inelastic — STEEP slope (almost vertical) */}
             <line x1="120" y1="180" x2="190" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-ped)" />
             <line x1="120" y1="180" x2="120" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-ped)" />
-            <line x1="130" y1="25" x2="175" y2="170" stroke="hsl(var(--accent))" strokeWidth="2.5" />
-            <text x="170" y="165" fontSize="9" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">D</text>
+            <line x1="133" y1="25" x2="160" y2="170" stroke="hsl(var(--accent))" strokeWidth="2.5" />
+            <text x="157" y="165" fontSize="9" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">D</text>
             <text x="125" y="200" fontSize="8" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Inelastic</text>
             <text x="130" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Ed &lt; 1</text>
             <text x="108" y="8" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
             <text x="185" y="195" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
-            {/* Unit Elastic */}
+            {/* Unit Elastic — 45° diagonal */}
             <line x1="220" y1="180" x2="290" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-ped)" />
             <line x1="220" y1="180" x2="220" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-ped)" />
-            <path d="M 230 25 Q 240 100, 280 170" fill="none" stroke="hsl(var(--accent))" strokeWidth="2.5" />
-            <text x="275" y="165" fontSize="9" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">D</text>
+            <line x1="228" y1="25" x2="283" y2="170" stroke="hsl(var(--accent))" strokeWidth="2.5" />
+            <text x="278" y="165" fontSize="9" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">D</text>
             <text x="225" y="200" fontSize="8" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Unit Elastic</text>
             <text x="235" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Ed = 1</text>
             <text x="208" y="8" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
             <text x="285" y="195" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
-            {/* Elastic */}
+            {/* Elastic — FLAT slope (almost horizontal) */}
             <line x1="320" y1="180" x2="390" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-ped)" />
             <line x1="320" y1="180" x2="320" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-ped)" />
-            <line x1="325" y1="60" x2="385" y2="170" stroke="hsl(var(--accent))" strokeWidth="2.5" />
-            <text x="380" y="165" fontSize="9" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">D</text>
+            <line x1="325" y1="70" x2="385" y2="140" stroke="hsl(var(--accent))" strokeWidth="2.5" />
+            <text x="380" y="135" fontSize="9" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">D</text>
             <text x="335" y="200" fontSize="8" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Elastic</text>
             <text x="335" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Ed &gt; 1</text>
             <text x="308" y="8" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
             <text x="385" y="195" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
-            {/* Perfectly Elastic */}
+            {/* Perfectly Elastic — horizontal line */}
             <line x1="420" y1="180" x2="490" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-ped)" />
             <line x1="420" y1="180" x2="420" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-ped)" />
             <line x1="425" y1="90" x2="485" y2="90" stroke="hsl(var(--accent))" strokeWidth="2.5" />
@@ -1046,7 +1051,7 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
         return (
           <svg viewBox="0 0 500 220" className="w-full max-w-lg mx-auto">
             <defs><marker id="ah-pes" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><polygon points="0 0, 6 2.5, 0 5" fill="hsl(var(--primary))" /></marker></defs>
-            {/* Perfectly Inelastic */}
+            {/* Perfectly Inelastic — vertical line */}
             <line x1="20" y1="180" x2="90" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
             <line x1="20" y1="180" x2="20" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
             <line x1="55" y1="170" x2="55" y2="25" stroke="hsl(var(--chart-2))" strokeWidth="2.5" />
@@ -1055,34 +1060,34 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <text x="35" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Es = 0</text>
             <text x="8" y="8" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
             <text x="85" y="195" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
-            {/* Inelastic */}
+            {/* Inelastic — steep upward slope, starts from P-axis */}
             <line x1="120" y1="180" x2="190" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
             <line x1="120" y1="180" x2="120" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
-            <line x1="135" y1="170" x2="165" y2="25" stroke="hsl(var(--chart-2))" strokeWidth="2.5" />
-            <text x="160" y="20" fontSize="9" fill="hsl(var(--chart-2))" fontWeight="600" fontFamily="var(--font-body)">S</text>
+            <line x1="125" y1="140" x2="175" y2="25" stroke="hsl(var(--chart-2))" strokeWidth="2.5" />
+            <text x="170" y="20" fontSize="9" fill="hsl(var(--chart-2))" fontWeight="600" fontFamily="var(--font-body)">S</text>
             <text x="125" y="200" fontSize="8" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Inelastic</text>
             <text x="130" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Es &lt; 1</text>
             <text x="108" y="8" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
             <text x="185" y="195" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
-            {/* Unit Elastic */}
+            {/* Unit Elastic — line through origin (45°) */}
             <line x1="220" y1="180" x2="290" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
             <line x1="220" y1="180" x2="220" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
-            <line x1="225" y1="175" x2="280" y2="25" stroke="hsl(var(--chart-2))" strokeWidth="2.5" />
+            <line x1="220" y1="180" x2="280" y2="25" stroke="hsl(var(--chart-2))" strokeWidth="2.5" />
             <text x="275" y="20" fontSize="9" fill="hsl(var(--chart-2))" fontWeight="600" fontFamily="var(--font-body)">S</text>
             <text x="225" y="200" fontSize="8" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Unit Elastic</text>
             <text x="235" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Es = 1</text>
             <text x="208" y="8" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
             <text x="285" y="195" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
-            {/* Elastic */}
+            {/* Elastic — gentle upward slope, starts from Q-axis */}
             <line x1="320" y1="180" x2="390" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
             <line x1="320" y1="180" x2="320" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
-            <line x1="325" y1="160" x2="385" y2="60" stroke="hsl(var(--chart-2))" strokeWidth="2.5" />
+            <line x1="330" y1="165" x2="385" y2="60" stroke="hsl(var(--chart-2))" strokeWidth="2.5" />
             <text x="380" y="55" fontSize="9" fill="hsl(var(--chart-2))" fontWeight="600" fontFamily="var(--font-body)">S</text>
             <text x="335" y="200" fontSize="8" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Elastic</text>
             <text x="335" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Es &gt; 1</text>
             <text x="308" y="8" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
             <text x="385" y="195" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
-            {/* Perfectly Elastic */}
+            {/* Perfectly Elastic — horizontal line */}
             <line x1="420" y1="180" x2="490" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
             <line x1="420" y1="180" x2="420" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
             <line x1="425" y1="90" x2="485" y2="90" stroke="hsl(var(--chart-2))" strokeWidth="2.5" />

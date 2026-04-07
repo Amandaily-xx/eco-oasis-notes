@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { Coffee, X, Heart } from "lucide-react";
+import { Coffee, X, Heart, ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+
+const PAYPAL_LINK = "https://paypal.me/AmandaEconOasis"; // Replace with your actual PayPal.me link
 
 const SupportButton = () => {
   const [open, setOpen] = useState(false);
@@ -50,16 +52,32 @@ const SupportButton = () => {
                 Thank you so much for supporting the Oasis. Your contribution helps cover server costs and keeps these notes free, accurate, and updated for everyone. Happy studying! — Amanda
               </p>
 
-              <button
-                onClick={() => setOpen(false)}
-                className="px-6 py-2.5 rounded-xl font-body text-sm font-medium transition-all hover:opacity-90"
-                style={{
-                  background: "hsl(174 35% 45%)",
-                  color: "white",
-                }}
-              >
-                Close
-              </button>
+              <div className="flex flex-col gap-3 items-center">
+                <a
+                  href={PAYPAL_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl font-body text-sm font-medium transition-all hover:opacity-90 hover:scale-105"
+                  style={{
+                    background: "hsl(174 35% 45%)",
+                    color: "white",
+                  }}
+                >
+                  <Coffee className="w-4 h-4" />
+                  Donate via PayPal
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+
+                <button
+                  onClick={() => setOpen(false)}
+                  className="px-6 py-2 rounded-xl font-body text-sm font-medium transition-all hover:opacity-80"
+                  style={{
+                    color: "hsl(174 20% 45%)",
+                  }}
+                >
+                  Close
+                </button>
+              </div>
 
               {/* Animated Heart */}
               <div className="mt-4 flex justify-center">
