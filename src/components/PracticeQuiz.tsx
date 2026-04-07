@@ -93,12 +93,12 @@ const PracticeQuiz = ({ questions, title }: PracticeQuizProps) => {
   };
 
   if (finished) {
-    const pct = Math.round((score / questions.length) * 100);
+    const pct = Math.round((score / activeQuestions.length) * 100);
     return (
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="bg-card border rounded-xl p-8 text-center">
         <h3 className="font-display text-2xl font-bold text-primary mb-4">Quiz Complete! 🎉</h3>
         <p className="font-body text-lg mb-2">
-          You scored <strong className="text-primary">{score}/{questions.length}</strong> ({pct}%)
+          You scored <strong className="text-primary">{score}/{activeQuestions.length}</strong> ({pct}%)
         </p>
         <p className="font-body text-muted-foreground mb-6">
           {pct >= 80 ? "Excellent work! You're well-prepared. 🔥" : pct >= 60 ? "Good effort! Review the topics you missed. 📖" : "Keep studying — you'll get there! 💪"}
