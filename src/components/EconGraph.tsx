@@ -904,56 +904,57 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
 
       case "tariff":
         return (
-          <svg viewBox="0 0 340 280" className="w-full max-w-sm mx-auto">
+          <svg viewBox="0 0 340 290" className="w-full max-w-sm mx-auto">
             <defs><marker id="ah-tar" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="hsl(var(--primary))" /></marker></defs>
             <line x1="50" y1="240" x2="310" y2="240" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-tar)" />
             <line x1="50" y1="240" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-tar)" />
-            {/* Domestic Supply (DS) */}
-            <line x1="60" y1="220" x2="280" y2="30" stroke="hsl(210 80% 55%)" strokeWidth="2.5" />
-            <text x="275" y="28" fontSize="11" fill="hsl(210 80% 55%)" fontWeight="600" fontFamily="var(--font-body)">DS</text>
-            {/* Domestic Demand (DD) */}
-            <line x1="60" y1="30" x2="280" y2="220" stroke="hsl(210 80% 55%)" strokeWidth="2.5" />
+            {/* Domestic Supply (DS): from (60,220) to (280,40) */}
+            <line x1="60" y1="220" x2="280" y2="40" stroke="hsl(210 80% 55%)" strokeWidth="2.5" />
+            <text x="275" y="35" fontSize="11" fill="hsl(210 80% 55%)" fontWeight="600" fontFamily="var(--font-body)">DS</text>
+            {/* Domestic Demand (DD): from (60,40) to (280,220) */}
+            <line x1="60" y1="40" x2="280" y2="220" stroke="hsl(210 80% 55%)" strokeWidth="2.5" />
             <text x="275" y="218" fontSize="11" fill="hsl(210 80% 55%)" fontWeight="600" fontFamily="var(--font-body)">DD</text>
-            {/* World Supply (Ws) — horizontal */}
-            <line x1="50" y1="170" x2="300" y2="170" stroke="hsl(120 50% 45%)" strokeWidth="2" />
-            <text x="282" y="165" fontSize="10" fill="hsl(120 50% 45%)" fontWeight="600" fontFamily="var(--font-body)">Ws</text>
-            {/* World Supply + Tariff (Ws + Tariff) — horizontal, higher */}
-            <line x1="50" y1="145" x2="300" y2="145" stroke="hsl(120 50% 45%)" strokeWidth="2" />
-            <text x="262" y="140" fontSize="9" fill="hsl(120 50% 45%)" fontWeight="600" fontFamily="var(--font-body)">Ws + Tariff</text>
+            {/* World Supply (Ws) at y=175 */}
+            <line x1="50" y1="175" x2="300" y2="175" stroke="hsl(120 50% 45%)" strokeWidth="2" />
+            <text x="282" y="170" fontSize="10" fill="hsl(120 50% 45%)" fontWeight="600" fontFamily="var(--font-body)">Ws</text>
+            {/* World Supply + Tariff at y=150 */}
+            <line x1="50" y1="150" x2="300" y2="150" stroke="hsl(120 50% 45%)" strokeWidth="2" />
+            <text x="262" y="145" fontSize="9" fill="hsl(120 50% 45%)" fontWeight="600" fontFamily="var(--font-body)">Ws + T</text>
             {/* Price labels */}
-            <text x="20" y="174" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Pw</text>
-            <text x="4" y="149" fontSize="9" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Pw+T</text>
-            {/* Q labels — Q1, Q3, Q4, Q2 */}
-            <line x1="95" y1="170" x2="95" y2="240" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
-            <line x1="115" y1="145" x2="115" y2="240" stroke="hsl(var(--destructive))" strokeWidth="1.5" strokeDasharray="4 3" />
-            <line x1="215" y1="145" x2="215" y2="240" stroke="hsl(var(--destructive))" strokeWidth="1.5" strokeDasharray="4 3" />
-            <line x1="240" y1="170" x2="240" y2="240" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
-            <text x="88" y="254" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q1</text>
-            <text x="108" y="254" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q3</text>
-            <text x="208" y="254" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q4</text>
-            <text x="233" y="254" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q2</text>
-            {/* Consumer Surplus — triangle above Pw+Tariff to DD */}
-            <polygon points="60,30 60,145 215,145" fill="hsl(50 90% 55%)" opacity="0.2" />
-            <text x="75" y="100" fontSize="9" fill="hsl(50 80% 40%)" fontWeight="600" fontFamily="var(--font-body)">Consumer</text>
-            <text x="75" y="112" fontSize="9" fill="hsl(50 80% 40%)" fontWeight="600" fontFamily="var(--font-body)">Surplus</text>
-            {/* Producer Surplus — triangle below Pw+Tariff to DS */}
-            <polygon points="60,220 60,145 115,145" fill="hsl(200 70% 55%)" opacity="0.2" />
+            <text x="20" y="179" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Pw</text>
+            <text x="4" y="154" fontSize="9" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Pw+T</text>
+            {/* Q intersections: DS∩Ws at Q1≈(97,175), DD∩Ws at Q2≈(237,175), DS∩(Ws+T) at Q3≈(117,150), DD∩(Ws+T) at Q4≈(216,150) */}
+            <line x1="97" y1="175" x2="97" y2="240" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <line x1="117" y1="150" x2="117" y2="240" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <line x1="216" y1="150" x2="216" y2="240" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <line x1="237" y1="175" x2="237" y2="240" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="3 3" />
+            <text x="90" y="254" fontSize="9" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q1</text>
+            <text x="110" y="254" fontSize="9" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q3</text>
+            <text x="209" y="254" fontSize="9" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q4</text>
+            <text x="230" y="254" fontSize="9" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q2</text>
+            {/* Consumer Surplus — triangle above Pw+T between DD intercept at top and DD∩(Ws+T) */}
+            <polygon points="60,40 60,150 216,150" fill="hsl(50 90% 55%)" opacity="0.2" />
+            <text x="70" y="100" fontSize="9" fill="hsl(50 80% 40%)" fontWeight="600" fontFamily="var(--font-body)">Consumer</text>
+            <text x="70" y="112" fontSize="9" fill="hsl(50 80% 40%)" fontWeight="600" fontFamily="var(--font-body)">Surplus</text>
+            {/* Producer Surplus — triangle below Pw+T between DS intercept at bottom and DS∩(Ws+T) */}
+            <polygon points="60,220 60,150 117,150" fill="hsl(200 70% 55%)" opacity="0.2" />
             <text x="62" y="195" fontSize="8" fill="hsl(200 70% 45%)" fontWeight="600" fontFamily="var(--font-body)">Producer</text>
             <text x="62" y="205" fontSize="8" fill="hsl(200 70% 45%)" fontFamily="var(--font-body)">Surplus</text>
-            {/* Tax Revenue rectangle */}
-            <rect x="115" y="145" width="100" height="25" fill="hsl(120 60% 45%)" opacity="0.2" rx="2" />
-            <text x="135" y="162" fontSize="9" fill="hsl(120 60% 35%)" fontWeight="600" fontFamily="var(--font-body)">Tax Revenue</text>
-            {/* DWL triangles */}
-            <polygon points="95,170 115,145 115,170" fill="hsl(50 90% 50%)" opacity="0.3" />
-            <polygon points="215,145 215,170 240,170" fill="hsl(50 90% 50%)" opacity="0.3" />
-            <text x="96" y="167" fontSize="7" fill="hsl(0 70% 45%)" fontWeight="700" fontFamily="var(--font-body)">DWL</text>
-            <text x="218" y="167" fontSize="7" fill="hsl(0 70% 45%)" fontWeight="700" fontFamily="var(--font-body)">DWL</text>
+            {/* Tax Revenue rectangle — between Q3 and Q4 at tariff height */}
+            <rect x="117" y="150" width="99" height="25" fill="hsl(120 60% 45%)" opacity="0.2" rx="2" />
+            <text x="135" y="167" fontSize="9" fill="hsl(120 60% 35%)" fontWeight="600" fontFamily="var(--font-body)">Tax Revenue</text>
+            {/* DWL triangle 1: between Q1, Q3 on DS line */}
+            <polygon points="97,175 117,150 117,175" fill="hsl(0 70% 55%)" opacity="0.3" />
+            <text x="98" y="172" fontSize="7" fill="hsl(0 70% 45%)" fontWeight="700" fontFamily="var(--font-body)">DWL</text>
+            {/* DWL triangle 2: between Q4, Q2 on DD line */}
+            <polygon points="216,150 237,175 216,175" fill="hsl(0 70% 55%)" opacity="0.3" />
+            <text x="217" y="172" fontSize="7" fill="hsl(0 70% 45%)" fontWeight="700" fontFamily="var(--font-body)">DWL</text>
             {/* Imported bracket */}
-            <line x1="115" y1="265" x2="215" y2="265" stroke="hsl(var(--foreground))" strokeWidth="2" />
-            <line x1="115" y1="260" x2="115" y2="270" stroke="hsl(var(--foreground))" strokeWidth="2" />
-            <line x1="215" y1="260" x2="215" y2="270" stroke="hsl(var(--foreground))" strokeWidth="2" />
-            <text x="140" y="278" fontSize="10" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">Imported</text>
-            <text x="280" y="256" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Q</text>
+            <line x1="117" y1="268" x2="216" y2="268" stroke="hsl(var(--foreground))" strokeWidth="2" />
+            <line x1="117" y1="263" x2="117" y2="273" stroke="hsl(var(--foreground))" strokeWidth="2" />
+            <line x1="216" y1="263" x2="216" y2="273" stroke="hsl(var(--foreground))" strokeWidth="2" />
+            <text x="140" y="282" fontSize="10" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">Imported</text>
+            <text x="290" y="256" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Q</text>
             <text x="30" y="22" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">P</text>
           </svg>
         );
