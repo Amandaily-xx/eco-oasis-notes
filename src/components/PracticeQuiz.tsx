@@ -20,6 +20,35 @@ interface PracticeQuizProps {
 }
 
 const PracticeQuiz = ({ questions, title }: PracticeQuizProps) => {
+  const shuffleAndSelect = (qs: MCQuestion[]): MCQuestion[] => {
+    // Group by unit
+    const byUnit: Record<number, MCQuestion[]> = {};
+    qs.forEach(q => {
+      if (!byUnit[q.unit]) byUnit[q.unit] = [];
+      byUnit[q.unit].push(q);
+    });
+    const units = Object.keys(byUnit).map(Number).sort((a, b) => a - b);
+    const selected: MCQuestion[] = [];
+    const perUnit = Math.max(1, Math.floor(20 / units.length));
+    const remainder = 20 - perUnit * units.length;
+    
+    units.forEach((unit, i) => {
+      const pool = [...byUnit[unit]].sort(() => Math.random() - 0.5);
+      const take = perUnit + (i < remainder ? 1 : 0);
+      selected.push(...pool.slice(0, Math.min(take, pool.length)));
+    });
+    
+    // If we still need more, fill from remaining
+    if (selected.length < 20) {
+      const usedIds = new Set(selected.map(q => q.id));
+      const remaining = qs.filter(q => !usedIds.has(q.id)).sort(() => Math.random() - 0.5);
+      selected.push(...remaining.slice(0, 20 - selected.length));
+    }
+    
+    return selected.sort(() => Math.random() - 0.5).slice(0, 20);
+  };
+
+  const [activeQuestions, setActiveQuestions] = useState<MCQuestion[]>(() => shuffleAndSelect(questions));
   const [currentIdx, setCurrentIdx] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
   const [showResult, setShowResult] = useState(false);
@@ -27,7 +56,7 @@ const PracticeQuiz = ({ questions, title }: PracticeQuizProps) => {
   const [finished, setFinished] = useState(false);
   const [answeredCount, setAnsweredCount] = useState(0);
 
-  const q = questions[currentIdx];
+  const q = activeQuestions[currentIdx];
 
   const handleSelect = (label: string) => {
     if (showResult) return;
@@ -44,7 +73,7 @@ const PracticeQuiz = ({ questions, title }: PracticeQuizProps) => {
   };
 
   const handleNext = () => {
-    if (currentIdx < questions.length - 1) {
+    if (currentIdx < activeQuestions.length - 1) {
       setCurrentIdx((i) => i + 1);
       setSelected(null);
       setShowResult(false);
@@ -54,6 +83,7 @@ const PracticeQuiz = ({ questions, title }: PracticeQuizProps) => {
   };
 
   const handleRestart = () => {
+    setActiveQuestions(shuffleAndSelect(questions));
     setCurrentIdx(0);
     setSelected(null);
     setShowResult(false);
