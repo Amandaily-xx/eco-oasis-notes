@@ -960,33 +960,37 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
 
       case "total-marginal-product":
         return (
-          <svg viewBox="0 0 420 300" className="w-full max-w-md mx-auto">
+          <svg viewBox="0 0 420 320" className="w-full max-w-md mx-auto">
             <defs><marker id="ah-tmp" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="hsl(var(--primary))" /></marker></defs>
             {/* TP Graph (top) */}
-            <text x="10" y="15" fontSize="11" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Output</text>
-            <line x1="50" y1="130" x2="390" y2="130" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
-            <line x1="50" y1="130" x2="50" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
-            <path d="M 50 120 Q 100 110, 150 80 Q 200 45, 250 30 Q 280 25, 310 28 Q 340 32, 370 50" fill="none" stroke="hsl(var(--accent))" strokeWidth="2.5" />
-            <text x="372" y="45" fontSize="10" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">TP</text>
-            {/* Green phase */}
-            <path d="M 50 120 Q 100 110, 150 80" fill="none" stroke="hsl(var(--chart-2))" strokeWidth="3" />
-            {/* Blue phase */}
-            <path d="M 150 80 Q 200 45, 250 30 Q 280 25, 310 28" fill="none" stroke="hsl(var(--chart-1))" strokeWidth="3" />
-            {/* Red phase */}
-            <path d="M 310 28 Q 340 32, 370 50" fill="none" stroke="hsl(var(--destructive))" strokeWidth="3" />
-            <line x1="310" y1="28" x2="310" y2="130" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
-            <text x="300" y="142" fontSize="9" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">MP=0</text>
-            <text x="375" y="142" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Labor</text>
-            {/* MP/AP Graph (bottom) */}
-            <line x1="50" y1="280" x2="390" y2="280" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
-            <line x1="50" y1="280" x2="50" y2="160" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
-            {/* MP curve */}
-            <path d="M 60 240 Q 100 180, 150 190 Q 200 200, 250 230 Q 280 250, 310 280 Q 340 300, 370 310" fill="none" stroke="hsl(var(--chart-1))" strokeWidth="2.5" />
-            <text x="372" y="308" fontSize="10" fill="hsl(var(--chart-1))" fontWeight="600" fontFamily="var(--font-body)">MP</text>
-            {/* AP curve */}
-            <path d="M 60 250 Q 120 210, 180 205 Q 220 203, 260 215 Q 300 235, 340 260" fill="none" stroke="hsl(var(--chart-2))" strokeWidth="2" />
-            <text x="345" y="258" fontSize="10" fill="hsl(var(--chart-2))" fontWeight="600" fontFamily="var(--font-body)">AP</text>
-            <text x="375" y="278" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Labor</text>
+            <text x="10" y="15" fontSize="11" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Total Product</text>
+            <line x1="50" y1="140" x2="390" y2="140" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
+            <line x1="50" y1="140" x2="50" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
+            {/* TP curve: rises at increasing rate, then decreasing rate, then declines */}
+            <path d="M 60 130 Q 90 125, 120 110 Q 160 80, 200 55 Q 240 35, 270 28 Q 300 25, 320 30 Q 345 38, 365 55" fill="none" stroke="hsl(50 80% 50%)" strokeWidth="3" />
+            <text x="368" y="50" fontSize="10" fill="hsl(50 80% 50%)" fontWeight="700" fontFamily="var(--font-body)">TP</text>
+            {/* Dashed lines for inflection point and max */}
+            <line x1="200" y1="55" x2="200" y2="140" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <line x1="300" y1="25" x2="300" y2="140" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <text x="375" y="140" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Labor</text>
+
+            {/* MP & AP Graph (bottom) */}
+            <text x="10" y="168" fontSize="11" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Marginal / Average Product</text>
+            <line x1="50" y1="300" x2="390" y2="300" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
+            <line x1="50" y1="300" x2="50" y2="175" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
+            {/* Zero line */}
+            <line x1="50" y1="300" x2="390" y2="300" stroke="hsl(var(--muted-foreground))" strokeWidth="0.5" />
+            {/* MP curve: rises to peak at inflection of TP, then falls through zero */}
+            <path d="M 60 270 Q 100 230, 140 210 Q 170 200, 200 195 Q 210 196, 200 195" fill="none" stroke="hsl(0 70% 60%)" strokeWidth="2.5" />
+            <path d="M 200 195 Q 240 210, 270 240 Q 300 270, 310 300 Q 320 315, 350 330" fill="none" stroke="hsl(0 70% 60%)" strokeWidth="2.5" />
+            <text x="352" y="328" fontSize="10" fill="hsl(0 70% 60%)" fontWeight="700" fontFamily="var(--font-body)">MP</text>
+            {/* AP curve: rises slower, peaks after MP peak, then falls (MP crosses AP at AP max) */}
+            <path d="M 60 275 Q 120 240, 180 220 Q 220 212, 250 215 Q 280 220, 310 240 Q 340 260, 360 275" fill="none" stroke="hsl(180 60% 50%)" strokeWidth="2.5" />
+            <text x="362" y="273" fontSize="10" fill="hsl(180 60% 50%)" fontWeight="700" fontFamily="var(--font-body)">AP</text>
+            {/* Dashed lines connecting to top graph */}
+            <line x1="200" y1="195" x2="200" y2="300" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <line x1="300" y1="300" x2="300" y2="300" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <text x="375" y="298" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Labor</text>
           </svg>
         );
 
