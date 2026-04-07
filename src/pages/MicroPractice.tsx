@@ -56,7 +56,7 @@ const MicroPractice = () => {
             <div>
               <div className="info-box mb-6">
                 <p className="text-sm font-body">
-                  📌 These questions are adapted from the <strong>2012 College Board AP Microeconomics Exam</strong>. After answering, read the explanation and click the link to review the relevant section in the notes.
+                  📌 These are sample MCQs adapted from <strong>College Board AP Microeconomics Exams</strong>. Each trial generates <strong>20 random questions</strong> covering all units. After answering, read the explanation and click the link to review the relevant section.
                 </p>
               </div>
               <PracticeQuiz questions={microMCQuestions} title="AP Microeconomics MCQ Practice" />
