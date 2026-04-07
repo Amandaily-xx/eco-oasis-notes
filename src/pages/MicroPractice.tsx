@@ -68,7 +68,7 @@ const MicroPractice = () => {
             <div>
               <div className="info-box mb-6">
                 <p className="text-sm font-body">
-                  📝 These are real past AP Micro FRQs (2022–2023). Type your answer in each box, hit <strong>Submit</strong>, then <strong>Reveal Answer</strong> to compare. FRQ answers are not auto-graded — use them to self-check your reasoning.
+                  📝 These are real past AP Micro FRQs (2019–2023). Type your answer, hit <strong>Submit</strong>, then <strong>Reveal Answer</strong> to compare. FRQ answers are not auto-graded — use them to self-check your reasoning.
                 </p>
               </div>
               <div className="amanda-tip mb-6">
