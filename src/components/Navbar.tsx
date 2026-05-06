@@ -55,6 +55,10 @@ const Navbar = () => {
                     Unit {i}: {macroNames[i]}
                   </Link>);
               })}
+              <div className="border-t my-1" />
+              <Link to="/macro/practice" className="block px-3 py-2 rounded-md text-sm font-semibold text-accent hover:bg-secondary transition-colors">
+                📝 Practice Quizzes
+              </Link>
             </div>
           </div>
           <Link to="/resources" className={`transition-colors hover:text-accent ${isActive("/resources") ? "text-accent" : "text-muted-foreground"}`}>
@@ -88,6 +92,7 @@ const Navbar = () => {
           {[2, 3, 4, 5, 6].map((i) =>
         <Link key={i} to={`/macro/${i}`} onClick={() => setMobileOpen(false)} className="block py-1 pl-3">Unit {i}</Link>
         )}
+          <Link to="/macro/practice" onClick={() => setMobileOpen(false)} className="block py-1 pl-3 font-semibold text-accent">📝 Practice Quizzes</Link>
           <div className="border-t my-2" style={{ borderColor: "hsl(var(--border))" }} />
           <Link to="/resources" onClick={() => setMobileOpen(false)} className="block py-1">📚 Resources</Link>
           <Link to="/contact" onClick={() => setMobileOpen(false)} className="block py-1">✉️ Contact</Link>
