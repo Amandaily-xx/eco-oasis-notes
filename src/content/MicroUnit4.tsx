@@ -120,6 +120,19 @@ const MicroUnit4Content = () => (
         <li><strong>P &gt; MC:</strong> Allocative inefficiency</li>
       </ul>
       <p className="mt-2"><strong>Product differentiation</strong> through advertising and brand names increases market power and sales.</p>
+
+      <div className="amanda-tip mt-4">
+        <p className="text-sm font-body">
+          <strong>Amanda's Tip — Elasticity ↔ Differentiation:</strong> The more <em>differentiated</em> a monopolistically competitive firm's product is, the <strong>less elastic</strong> (steeper) its demand curve.
+        </p>
+        <ul className="list-disc pl-5 mt-2 text-sm space-y-1">
+          <li><strong>Highly differentiated</strong> (unique brand, few close substitutes) → consumers are not very price-sensitive → demand is more <strong>inelastic</strong>.</li>
+          <li><strong>Less differentiated</strong> (many similar rivals) → consumers easily switch when price rises → demand is more <strong>elastic</strong>.</li>
+        </ul>
+        <p className="text-sm mt-2">
+          So a firm's demand becomes <strong>least elastic</strong> when the number of rivals producing differentiated products <em>decreases</em> (fewer close substitutes), and <strong>most elastic</strong> when more rivals offer similar products.
+        </p>
+      </div>
     </SectionAccordion>
 
     <SectionAccordion title="6. Oligopoly & Game Theory" highYield>
