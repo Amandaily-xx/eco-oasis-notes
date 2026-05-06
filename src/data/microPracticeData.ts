@@ -821,4 +821,111 @@ export const microFRQQuestions: FRQQuestion[] = [
       },
     ],
   },
+  {
+    id: 6,
+    year: "2021",
+    type: "Long",
+    topic: "Monopoly with Table",
+    parts: [
+      {
+        label: "a",
+        question: "Bobcat Inc. is a single-price monopolist. Use the table:\n\nQ | Price | TC\n1 | $20 | $14\n2 | $18 | $20\n3 | $16 | $28\n4 | $14 | $38\n5 | $12 | $50\n\nCalculate the marginal revenue of the 3rd unit. Show your work.",
+        answer: "TR(2) = 2 × $18 = $36. TR(3) = 3 × $16 = $48. MR of 3rd unit = $48 − $36 = $12."
+      },
+      {
+        label: "b",
+        question: "What is the profit-maximizing quantity? Explain using MR and MC.",
+        answer: "Compare MR and MC for each unit:\nQ=1: MR=$20, MC=$14\nQ=2: MR=$16, MC=$6\nQ=3: MR=$12, MC=$8\nQ=4: MR=$8, MC=$10\nFirm produces while MR ≥ MC. At Q=3, MR ($12) > MC ($8). At Q=4, MR ($8) < MC ($10). Profit-maximizing Q = 3."
+      },
+      {
+        label: "c",
+        question: "Calculate economic profit at the profit-maximizing quantity. Show your work.",
+        answer: "At Q = 3: Price = $16, TR = $48. TC = $28. Economic Profit = TR − TC = $48 − $28 = $20."
+      },
+      {
+        label: "d",
+        question: "Draw a correctly labeled graph showing the firm earning positive economic profit. Identify (i) the profit-maximizing quantity Q*, (ii) the price P*, (iii) the area of economic profit (shaded).",
+        answer: "Graph: downward-sloping D, MR below D, U-shaped ATC, MC intersecting ATC at minimum. Q* where MR = MC. P* read off Demand at Q*. Profit rectangle = (P* − ATC at Q*) × Q*, shaded between P* and ATC from 0 to Q*."
+      },
+    ],
+  },
+  {
+    id: 7,
+    year: "2020",
+    type: "Short",
+    topic: "Perfect Competition + Externality",
+    parts: [
+      {
+        label: "a",
+        question: "Acme is a typical firm in a perfectly competitive industry, currently earning positive economic profit. Draw a side-by-side graph (industry + firm) showing the current short-run equilibrium. Label price P1, firm's quantity q1, industry quantity Q1.",
+        answer: "Industry: upward-sloping S1 intersecting downward-sloping D at P1, Q1. Firm: horizontal d=MR=P1 above ATC at q1 (where MC=MR). Profit area = (P1 − ATC at q1) × q1, shaded above ATC."
+      },
+      {
+        label: "b",
+        question: "In the long run, what happens to the number of firms, market price, and the firm's output? Explain.",
+        answer: "Positive profit attracts entry → industry supply shifts right → market price falls until P = min ATC. Number of firms increases, price decreases, the typical firm's output decreases back to minimum-ATC quantity, and economic profit returns to zero."
+      },
+      {
+        label: "c",
+        question: "Suppose Acme's production creates a negative externality (pollution). Compare the market quantity to the socially optimal quantity, and explain.",
+        answer: "The market quantity is greater than the socially optimal quantity. With a negative externality, MSC = MPC + MEC > MPC. The market sets MPC = MSB, but social optimum requires MSC = MSB. Because MSC lies above MPC, the socially optimal quantity is lower than the market quantity → overproduction and deadweight loss."
+      },
+      {
+        label: "d",
+        question: "Identify one government policy that would move output toward the socially optimal level, and explain how it works.",
+        answer: "A per-unit Pigouvian tax equal to the marginal external cost. The tax shifts each firm's MC up by the amount of MEC, raising market price and reducing market quantity to the socially optimal level where MSC = MSB."
+      },
+    ],
+  },
+  {
+    id: 8,
+    year: "2019",
+    type: "Long",
+    topic: "Factor Market with Table",
+    parts: [
+      {
+        label: "a",
+        question: "Sweet Treats sells cupcakes for $2 each in a perfectly competitive product market and hires labor in a perfectly competitive labor market at wage = $16/hr.\n\nLabor | Total Product\n0 | 0\n1 | 12\n2 | 22\n3 | 30\n4 | 36\n5 | 40\n\nCalculate the marginal revenue product (MRP) of the 3rd worker. Show your work.",
+        answer: "MP(3rd) = TP(3) − TP(2) = 30 − 22 = 8 cupcakes. MRP = MP × P = 8 × $2 = $16."
+      },
+      {
+        label: "b",
+        question: "How many workers will Sweet Treats hire to maximize profit? Explain.",
+        answer: "Hire while MRP ≥ wage ($16).\n1st: MRP = 12 × $2 = $24 ≥ $16 ✓\n2nd: MRP = 10 × $2 = $20 ≥ $16 ✓\n3rd: MRP = 8 × $2 = $16 = $16 ✓ (hire)\n4th: MRP = 6 × $2 = $12 < $16 ✗\nProfit-maximizing number = 3 workers."
+      },
+      {
+        label: "c",
+        question: "Suppose the price of cupcakes rises to $3. Will the profit-maximizing number of workers increase, decrease, or stay the same? Explain.",
+        answer: "Increase. Higher product price raises MRP at every quantity (MRP = MP × P). The labor demand curve shifts right, so the firm hires more workers at the same wage of $16."
+      },
+      {
+        label: "d",
+        question: "Now assume the labor market becomes a monopsony. Compared with perfect competition, will the wage and quantity of labor hired be higher, lower, or the same? Explain.",
+        answer: "Both wage and quantity will be lower. A monopsony faces an upward-sloping labor supply, so MFC > wage. It hires where MRP = MFC (a lower quantity than where MRP = S in PC), and pays the wage from the supply curve at that quantity (lower than the competitive wage)."
+      },
+    ],
+  },
+  {
+    id: 9,
+    year: "2019",
+    type: "Short",
+    topic: "Comparative Advantage with Table",
+    parts: [
+      {
+        label: "a",
+        question: "Two countries each have 100 hours of labor.\n\nCountry | Hours per Shirt | Hours per Bushel of Wheat\nAlpha | 2 | 5\nBeta  | 4 | 4\n\nWhich country has the absolute advantage in producing shirts? Explain.",
+        answer: "Alpha has the absolute advantage in shirts because it requires fewer labor hours (2) to produce one shirt than Beta (4 hours)."
+      },
+      {
+        label: "b",
+        question: "Which country has the comparative advantage in producing wheat? Show the opportunity costs.",
+        answer: "Alpha's OC of 1 wheat = 5/2 = 2.5 shirts. Beta's OC of 1 wheat = 4/4 = 1 shirt. Beta has the lower opportunity cost, so Beta has the comparative advantage in wheat."
+      },
+      {
+        label: "c",
+        question: "Identify a terms-of-trade range (shirts per bushel of wheat) that would benefit both countries.",
+        answer: "Between 1 and 2.5 shirts per bushel of wheat. (Beta's OC = 1; Alpha's OC = 2.5.) Any rate strictly between 1 and 2.5 makes both countries better off than producing on their own."
+      },
+    ],
+  },
 ];
