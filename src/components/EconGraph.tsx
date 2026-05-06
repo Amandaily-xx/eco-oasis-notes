@@ -1060,10 +1060,10 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <text x="35" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Es = 0</text>
             <text x="8" y="8" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
             <text x="85" y="195" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
-            {/* Inelastic — steep upward slope, starts from P-axis */}
+            {/* Inelastic — VERY steep upward slope, starts from P-axis */}
             <line x1="120" y1="180" x2="190" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
             <line x1="120" y1="180" x2="120" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
-            <line x1="125" y1="140" x2="175" y2="25" stroke="hsl(var(--chart-2))" strokeWidth="2.5" />
+            <line x1="135" y1="170" x2="155" y2="20" stroke="hsl(var(--chart-2))" strokeWidth="2.5" />
             <text x="170" y="20" fontSize="9" fill="hsl(var(--chart-2))" fontWeight="600" fontFamily="var(--font-body)">S</text>
             <text x="125" y="200" fontSize="8" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Inelastic</text>
             <text x="130" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Es &lt; 1</text>
@@ -1078,10 +1078,10 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <text x="235" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Es = 1</text>
             <text x="208" y="8" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
             <text x="285" y="195" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
-            {/* Elastic — gentle upward slope, starts from Q-axis */}
+            {/* Elastic — VERY flat upward slope, starts from Q-axis */}
             <line x1="320" y1="180" x2="390" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
             <line x1="320" y1="180" x2="320" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-pes)" />
-            <line x1="330" y1="165" x2="385" y2="60" stroke="hsl(var(--chart-2))" strokeWidth="2.5" />
+            <line x1="325" y1="130" x2="390" y2="100" stroke="hsl(var(--chart-2))" strokeWidth="2.5" />
             <text x="380" y="55" fontSize="9" fill="hsl(var(--chart-2))" fontWeight="600" fontFamily="var(--font-body)">S</text>
             <text x="335" y="200" fontSize="8" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Elastic</text>
             <text x="335" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Es &gt; 1</text>
