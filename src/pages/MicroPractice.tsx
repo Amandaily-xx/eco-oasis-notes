@@ -5,12 +5,18 @@ import PracticeQuiz from "../components/PracticeQuiz";
 import FRQPractice from "../components/FRQPractice";
 import { microMCQuestions, microFRQQuestions } from "../data/microPracticeData";
 import { useState } from "react";
+import Seo from "../components/Seo";
 
 const MicroPractice = () => {
   const [tab, setTab] = useState<"mcq" | "frq" | "resources">("mcq");
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="AP Microeconomics Practice — MCQs & FRQs"
+        description="Practice AP Microeconomics with randomized multiple choice questions and free response prompts, complete with explanations and answer reveals."
+        path="/micro/practice"
+      />
       <div className="container mx-auto px-6 py-10 max-w-3xl">
         <Link to="/" className="inline-flex items-center gap-2 text-sm font-body text-muted-foreground hover:text-primary transition-colors mb-6">
           <ArrowLeft className="w-4 h-4" /> Back to Home
