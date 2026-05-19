@@ -1,0 +1,30 @@
+# AP Econ by Amanda
+
+> Free AP Microeconomics and Macroeconomics study notes, graphs, and practice quizzes by Amanda X.L. Written to help students score a 5.
+
+## Pages
+
+- [Home](/): Overview of all AP Micro and Macro units.
+- [About Amanda](/about): Author bio and teaching background.
+- [Resources](/resources): Curated YouTube channels, books, and AI study tools.
+- [Contact](/contact): Send Amanda a message.
+- [Terms of Use](/terms): How this site's content may be used.
+
+## AP Microeconomics
+
+- [Unit 1: Basic Economic Concepts](/micro/1): Scarcity, PPC, comparative advantage, marginal analysis. Shared with Macro Unit 1.
+- [Unit 2: Demand & Supply](/micro/2): Elasticity (PED, PES), market equilibrium, price controls, international trade.
+- [Unit 3: Production, Costs & Perfect Competition](/micro/3): Production function, cost curves, profit maximization, perfect competition.
+- [Unit 4: Imperfect Competition](/micro/4): Monopoly, price discrimination, monopolistic competition, oligopoly, game theory.
+- [Unit 5: Factor Markets](/micro/5): Derived demand, MRP, wage determination, monopsony.
+- [Unit 6: Market Failure & Government](/micro/6): Externalities, public goods, income inequality, taxation.
+- [Micro Practice Quizzes](/micro/practice): Randomized MCQs and FRQ practice with explanations.
+
+## AP Macroeconomics
+
+- [Unit 2: Economic Indicators](/macro/2): Circular flow, GDP, price indices, unemployment, business cycles.
+- [Unit 3: National Income & AD-AS](/macro/3): Multipliers, AD-AS model, fiscal policy, output gaps.
+- [Unit 4: Financial Sector](/macro/4): Money & banking, money market, monetary policy, loanable funds.
+- [Unit 5: Long-Run Consequences](/macro/5): Phillips curve, money neutrality, long-run growth.
+- [Unit 6: International Trade & Finance](/macro/6): Balance of payments, exchange rates, FX market.
+- [Macro Practice Quizzes](/macro/practice): Randomized MCQs and FRQ practice with explanations.
