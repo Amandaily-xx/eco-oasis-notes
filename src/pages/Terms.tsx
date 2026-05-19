@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, Shield } from "lucide-react";
+import Seo from "../components/Seo";
 
 const Terms = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Terms of Use — AP Econ by Amanda"
+        description="Terms of use for AP Econ by Amanda: how the study notes, graphs, and practice quizzes on this site may be used."
+        path="/terms"
+      />
       <div className="container mx-auto px-6 py-12 max-w-3xl">
         <Link to="/" className="inline-flex items-center gap-2 text-accent hover:text-primary transition-colors font-body text-sm mb-8">
           <ArrowLeft className="w-4 h-4" />

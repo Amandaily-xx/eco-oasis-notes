@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { useState } from "react";
+import Seo from "../components/Seo";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -43,6 +44,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Contact Amanda — AP Econ by Amanda"
+        description="Have a question about AP Micro or Macro notes, graphs, or practice quizzes? Send Amanda a message."
+        path="/contact"
+        jsonLd={{ "@context": "https://schema.org", "@type": "ContactPage", url: "https://amandaaa-xlee30-ap-econ-note.lovable.app/contact" }}
+      />
       <div className="container mx-auto px-6 py-10 max-w-2xl">
         <Link to="/" className="inline-flex items-center gap-2 text-sm font-body text-muted-foreground hover:text-primary transition-colors mb-6">
           <ArrowLeft className="w-4 h-4" /> Back to Home

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { BookOpen, TrendingUp, ArrowRight, Sparkles, Lightbulb, Shield, Mail, User, Star, MapPin } from "lucide-react";
 import amanda4 from "../assets/amanda-4.png";
+import Seo from "../components/Seo";
 
 const microUnits = [
 { id: 1, title: "Basic Economic Concepts", desc: "Scarcity, Opportunity Cost, PPC, Economic Systems, Comparative Advantage" },
@@ -22,6 +23,26 @@ const macroUnits = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="AP Econ by Amanda — Notes & Practice for Micro and Macro"
+        description="Free, plain-English AP Microeconomics and Macroeconomics study notes, graphs, and practice quizzes by Amanda. Score a 5 with confidence."
+        path="/"
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "AP Econ by Amanda",
+            url: "https://amandaaa-xlee30-ap-econ-note.lovable.app/",
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Amanda X.L.",
+            jobTitle: "AP Economics Teaching Assistant",
+            url: "https://amandaaa-xlee30-ap-econ-note.lovable.app/about",
+          },
+        ]}
+      />
       {/* About Amanda Banner + Contact */}
       <section className="container mx-auto px-6 pt-8 max-w-5xl">
         <motion.div

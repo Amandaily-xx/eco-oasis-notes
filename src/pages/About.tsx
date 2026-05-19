@@ -6,10 +6,20 @@ import amanda2 from "../assets/amanda-2.png";
 import amanda4 from "../assets/amanda-4.png";
 import amanda5 from "../assets/amanda-5.png";
 import amandaHobbies from "../assets/amanda-hobbies.png";
+import Seo from "../components/Seo";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="About Amanda — AP Econ Tutor & TA"
+        description="Meet Amanda: Stats & CS major, Econ minor, 5/5 on AP Micro and Macro, and an AP Econ TA who has helped 240+ students across 11 cohorts."
+        path="/about"
+        jsonLd={[
+          { "@context": "https://schema.org", "@type": "AboutPage", url: "https://amandaaa-xlee30-ap-econ-note.lovable.app/about" },
+          { "@context": "https://schema.org", "@type": "Person", name: "Amanda X.L.", jobTitle: "AP Economics Teaching Assistant" },
+        ]}
+      />
       <div className="container mx-auto px-6 py-10 max-w-3xl">
         <Link to="/" className="inline-flex items-center gap-2 text-sm font-body text-muted-foreground hover:text-primary transition-colors mb-6">
           <ArrowLeft className="w-4 h-4" /> Back to Home

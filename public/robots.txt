@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://amandaaa-xlee30-ap-econ-note.lovable.app/sitemap.xml

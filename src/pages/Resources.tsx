@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Youtube, GraduationCap, BookOpen, BrainCircuit, ClipboardList, Sparkles, Rocket } from "lucide-react";
+import Seo from "../components/Seo";
 
 const resources = [
   {
@@ -65,6 +66,11 @@ const resources = [
 const Resources = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="AP Econ Resources — Videos, Books & AI Tools"
+        description="Curated AP Microeconomics and Macroeconomics resources: Jacob Clifford, ReviewEcon, ACDC Leadership, recommended books, and AI study tools."
+        path="/resources"
+      />
       <div className="container mx-auto px-6 py-10 max-w-4xl">
         <Link to="/" className="inline-flex items-center gap-2 text-sm font-body text-muted-foreground hover:text-primary transition-colors mb-6">
           <ArrowLeft className="w-4 h-4" /> Back to Home
