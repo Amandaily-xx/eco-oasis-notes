@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Youtube, GraduationCap, BookOpen, BrainCircuit, ClipboardList, Sparkles, Rocket } from "lucide-react";
+import Seo from "../components/Seo";
 
 const resources = [
   {
