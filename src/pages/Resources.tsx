@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, Youtube, GraduationCap, BookOpen, BrainCircuit, ClipboardList, Sparkles, Rocket } from "lucide-react";
+import { ArrowLeft, Youtube, GraduationCap, BookOpen, BrainCircuit, ClipboardList, Sparkles } from "lucide-react";
 import Seo from "../components/Seo";
 
 const resources = [
   {
     icon: Youtube,
+    image: "https://yt3.googleusercontent.com/ytc/AIdro_mFB4w0lh3wDi3MyaTHfV5DM5ECxV8eVGzAtnvbwiqIeg=s176-c-k-c0x00ffffff-no-rj",
     title: "Jacob Clifford (YouTube)",
     tag: "Highly Recommended ⭐",
     description:
@@ -15,6 +16,7 @@ const resources = [
   },
   {
     icon: Youtube,
+    image: "https://www.google.com/s2/favicons?domain=reviewecon.com&sz=128",
     title: "ReviewEcon (YouTube + Website)",
     tag: "Great for Concept Clarity",
     description:
@@ -24,6 +26,7 @@ const resources = [
   },
   {
     icon: GraduationCap,
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/2e/College_Board_Acorn_logo.svg",
     title: "College Board (AP Classroom)",
     tag: "Most Exam-Like Practice",
     description:
@@ -33,6 +36,7 @@ const resources = [
   },
   {
     icon: ClipboardList,
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/15/Khan_Academy_logo_%282018%29.svg",
     title: "Khan Academy — AP Micro & Macro",
     tag: "Quick Section Quizzes",
     description:
@@ -42,6 +46,7 @@ const resources = [
   },
   {
     icon: BookOpen,
+    image: "https://m.media-amazon.com/images/I/51FjY4hQGAL._SY466_.jpg",
     title: "Textbook: Krugman's Economics for the AP Course (4th Edition)",
     tag: "The Classic Textbook 📖",
     description:
@@ -49,6 +54,7 @@ const resources = [
   },
   {
     icon: ClipboardList,
+    image: "https://www.google.com/s2/favicons?domain=barronseduc.com&sz=128",
     title: "Barron's AP Microeconomics / Macroeconomics",
     tag: "Popular Practice Book",
     description:
@@ -94,7 +100,18 @@ const Resources = () => {
                 style={{ background: "hsl(var(--card))", borderColor: "hsl(var(--border))" }}
               >
                 <div className="flex items-start gap-4">
-                  <r.icon className="w-6 h-6 text-accent mt-1 shrink-0" />
+                  {r.image ? (
+                    <img
+                      src={r.image}
+                      alt={`${r.title} logo`}
+                      loading="lazy"
+                      onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = "none"; }}
+                      className="w-14 h-14 rounded-md object-contain bg-background border p-1 shrink-0"
+                      style={{ borderColor: "hsl(var(--border))" }}
+                    />
+                  ) : (
+                    <r.icon className="w-6 h-6 text-accent mt-1 shrink-0" />
+                  )}
                   <div className="flex-1">
                     <div className="flex flex-wrap items-center gap-2 mb-1">
                       <h3 className="font-display font-semibold text-lg text-primary">{r.title}</h3>
@@ -110,27 +127,6 @@ const Resources = () => {
                       >
                         <Sparkles className="w-3.5 h-3.5" /> {r.linkLabel} →
                       </a>
-                    )}
-
-                    {/* SkipLec subsection under the AI resource */}
-                    {r.title === "Use AI to Generate Practice Questions!" && (
-                      <div className="mt-4 p-4 rounded-lg border" style={{ background: "hsl(var(--tip-bg))", borderColor: "hsl(var(--border))" }}>
-                        <div className="flex items-center gap-2 mb-2">
-                          <Rocket className="w-5 h-5 text-accent" />
-                          <h4 className="font-display font-semibold text-primary">Try SkipLec! 🚀</h4>
-                        </div>
-                        <p className="font-body text-sm text-muted-foreground leading-relaxed mb-2">
-                          I'd also love to recommend an app built by me and 3 other McGill undergrads — designed for students who are actually cramming for exams while staring at hundreds of pages of lecture notes! 😂 The best part? SkipLec gives you the <strong>exact slide number</strong> for every answer, so you can verify it against the source instead of just hoping the AI didn't hallucinate. That's our main difference — we have citations, and you won't miss key points that some AI tools don't catch!
-                        </p>
-                        <a
-                          href="https://web-production2-1146.up.railway.app"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-sm font-body font-semibold text-accent hover:underline"
-                        >
-                          <Sparkles className="w-3.5 h-3.5" /> Go to SkipLec →
-                        </a>
-                      </div>
                     )}
                   </div>
                 </div>

@@ -1113,6 +1113,10 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             {caption}
           </p>
         )}
+        <div className="flex items-center justify-center gap-1.5 mt-2 text-[10px] font-body italic" style={{ color: "hsl(var(--accent))" }}>
+          <span aria-hidden>✓</span>
+          <span>Manually Verified &amp; Corrected for AP Exam Alignment</span>
+        </div>
       </div>
     </div>
   );
