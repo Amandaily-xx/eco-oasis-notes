@@ -9,11 +9,15 @@ interface SectionAccordionProps {
   highYield?: boolean;
 }
 
+const slugify = (s: string) =>
+  s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
 const SectionAccordion = ({ title, children, defaultOpen = false, highYield = false }: SectionAccordionProps) => {
   const [open, setOpen] = useState(defaultOpen);
+  const id = `sec-${slugify(title)}`;
 
   return (
-    <div className="concept-block">
+    <div className="concept-block scroll-mt-24" id={id} data-section-title={title}>
       <button
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between text-left"

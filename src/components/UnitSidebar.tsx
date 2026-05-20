@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 type Track = "micro" | "macro";
 
@@ -30,6 +31,35 @@ const UnitSidebar = ({ track, currentUnit }: Props) => {
   const label = track === "micro" ? "AP Microeconomics" : "AP Macroeconomics";
   const practicePath = track === "micro" ? "/micro/practice" : "/macro/practice";
   const { pathname } = useLocation();
+
+  const [sections, setSections] = useState<{ id: string; title: string }[]>([]);
+  const [activeId, setActiveId] = useState<string | null>(null);
+
+  useEffect(() => {
+    const t = setTimeout(() => {
+      const nodes = Array.from(document.querySelectorAll<HTMLElement>("[data-section-title]"));
+      setSections(nodes.map((n) => ({ id: n.id, title: n.dataset.sectionTitle || n.id })));
+    }, 100);
+    return () => clearTimeout(t);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (sections.length === 0) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible[0]) setActiveId(visible[0].target.id);
+      },
+      { rootMargin: "-96px 0px -60% 0px", threshold: 0 }
+    );
+    sections.forEach((s) => {
+      const el = document.getElementById(s.id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, [sections]);
 
   return (
     <aside className="hidden lg:block w-60 shrink-0">
@@ -64,6 +94,40 @@ const UnitSidebar = ({ track, currentUnit }: Props) => {
             📝 Practice Quizzes
           </Link>
         </nav>
+
+        {sections.length > 0 && (
+          <div className="mt-4 pt-4 border-t" style={{ borderColor: "hsl(var(--border))" }}>
+            <div className="text-[11px] uppercase tracking-wider font-semibold text-muted-foreground mb-2 font-body">
+              On this page
+            </div>
+            <nav className="space-y-0.5 max-h-[40vh] overflow-y-auto pr-1">
+              {sections.map((s) => {
+                const isActive = s.id === activeId;
+                return (
+                  <a
+                    key={s.id}
+                    href={`#${s.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const el = document.getElementById(s.id);
+                      if (el) {
+                        el.scrollIntoView({ behavior: "smooth", block: "start" });
+                        history.replaceState(null, "", `#${s.id}`);
+                      }
+                    }}
+                    className={`block px-3 py-1.5 rounded-md text-xs font-body leading-snug transition-colors border-l-2 ${
+                      isActive
+                        ? "bg-accent/15 text-accent font-semibold border-accent"
+                        : "text-muted-foreground hover:bg-secondary hover:text-primary border-transparent"
+                    }`}
+                  >
+                    {s.title}
+                  </a>
+                );
+              })}
+            </nav>
+          </div>
+        )}
       </div>
     </aside>
   );
