@@ -2,11 +2,15 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Youtube, GraduationCap, BookOpen, BrainCircuit, ClipboardList, Sparkles } from "lucide-react";
 import Seo from "../components/Seo";
+import jacobCliffordImg from "../assets/resource-jacob-clifford.png";
+import reviewEconImg from "../assets/resource-reviewecon.png";
+import krugmanImg from "../assets/resource-krugman.png";
+import barronsImg from "../assets/resource-barrons.png";
 
 const resources = [
   {
     icon: Youtube,
-    image: "https://yt3.googleusercontent.com/ytc/AIdro_mFB4w0lh3wDi3MyaTHfV5DM5ECxV8eVGzAtnvbwiqIeg=s176-c-k-c0x00ffffff-no-rj",
+    image: jacobCliffordImg,
     title: "Jacob Clifford (YouTube)",
     tag: "Highly Recommended ⭐",
     description:
@@ -16,7 +20,7 @@ const resources = [
   },
   {
     icon: Youtube,
-    image: "https://www.google.com/s2/favicons?domain=reviewecon.com&sz=128",
+    image: reviewEconImg,
     title: "ReviewEcon (YouTube + Website)",
     tag: "Great for Concept Clarity",
     description:
@@ -46,7 +50,7 @@ const resources = [
   },
   {
     icon: BookOpen,
-    image: "https://m.media-amazon.com/images/I/51FjY4hQGAL._SY466_.jpg",
+    image: krugmanImg,
     title: "Textbook: Krugman's Economics for the AP Course (4th Edition)",
     tag: "The Classic Textbook 📖",
     description:
@@ -54,7 +58,7 @@ const resources = [
   },
   {
     icon: ClipboardList,
-    image: "https://www.google.com/s2/favicons?domain=barronseduc.com&sz=128",
+    image: barronsImg,
     title: "Barron's AP Microeconomics / Macroeconomics",
     tag: "Popular Practice Book",
     description:
