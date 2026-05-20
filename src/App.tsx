@@ -11,6 +11,7 @@ import Resources from "./pages/Resources";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import SupportButton from "./components/SupportButton";
+import SiteFooter from "./components/SiteFooter";
 
 const App = () => (
   <BrowserRouter>
@@ -27,6 +28,7 @@ const App = () => (
       <Route path="/resources" element={<Resources />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
+    <SiteFooter />
     <SupportButton />
   </BrowserRouter>
 );

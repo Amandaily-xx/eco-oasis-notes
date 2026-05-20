@@ -2,6 +2,7 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Seo from "../components/Seo";
+import UnitSidebar from "../components/UnitSidebar";
 import MacroUnit2Content from "../content/MacroUnit2";
 import MacroUnit3Content from "../content/MacroUnit3";
 import MacroUnit4Content from "../content/MacroUnit4";
@@ -55,7 +56,9 @@ const MacroUnit = () => {
           provider: { "@type": "Person", name: "Amanda X.L." },
         }}
       />
-      <div className="container mx-auto px-6 py-10 max-w-3xl">
+      <div className="container mx-auto px-6 py-10 flex gap-8">
+        <UnitSidebar track="macro" currentUnit={id} />
+        <div className="flex-1 max-w-3xl">
         <Link to="/" className="inline-flex items-center gap-2 text-sm font-body text-muted-foreground hover:text-primary transition-colors mb-6">
           <ArrowLeft className="w-4 h-4" /> Back to Home
         </Link>
@@ -82,6 +85,7 @@ const MacroUnit = () => {
               Unit {id + 1} <ArrowRight className="w-4 h-4" />
             </Link>
           ) : <div />}
+        </div>
         </div>
       </div>
       
