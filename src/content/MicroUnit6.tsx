@@ -117,6 +117,7 @@ const MicroUnit6Content = () => (
       <ul className="list-disc pl-5 space-y-1 mb-3">
         <li><strong>Lorenz Curve:</strong> Shows cumulative % of income vs. cumulative % of population</li>
         <li><strong>Gini Coefficient:</strong> 0 = perfect equality; 1 = perfect inequality</li>
+        <li><strong>Gini Coefficient Formula:</strong> <span className="font-semibold">Gini = A / (A + B)</span>, where <strong>A</strong> is the area between the line of equality and the Lorenz curve, and <strong>B</strong> is the area under the Lorenz curve.</li>
       </ul>
       <h4 className="font-semibold text-primary mb-2">Antipoverty Programs</h4>
       <ul className="list-disc pl-5 space-y-1">
@@ -124,6 +125,9 @@ const MicroUnit6Content = () => (
         <li><strong>Monetary transfers:</strong> Cash assistance</li>
         <li><strong>In-kind benefits:</strong> Goods and services (food stamps, housing assistance)</li>
       </ul>
+      <AmandaTip>
+        📘 <strong>Heads up:</strong> Some details in this section — especially the specific antipoverty programs like <em>in-kind benefits</em>, <em>monetary transfers</em>, and the full list of means-tested programs — are <strong>unlikely to appear on the AP exam</strong>. Treat them as <strong>additional/enrichment material</strong> for general understanding. Focus your exam prep on the <strong>Lorenz curve, Gini coefficient, and causes of inequality</strong> instead.
+      </AmandaTip>
     </SectionAccordion>
   </div>
 );

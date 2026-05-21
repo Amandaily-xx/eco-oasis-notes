@@ -432,10 +432,10 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <path d="M 50 230 Q 100 225, 140 210 Q 180 185, 210 140 Q 235 90, 250 30" fill="none" stroke="hsl(var(--accent))" strokeWidth="2.5" />
             <text x="200" y="185" fontSize="10" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">Lorenz Curve</text>
             {/* Shaded area A between curves */}
-            <path d="M 50 230 Q 100 225, 140 210 Q 180 185, 210 140 Q 235 90, 250 30 L 50 230 Z" fill="hsl(var(--accent))" opacity="0.12" />
-            <text x="110" y="175" fontSize="10" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">A</text>
-            <text x="175" y="218" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">B</text>
-            <text x="90" y="260" fontSize="9" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Gini = A / (A + B)</text>
+            <path d="M 50 230 Q 100 225, 140 210 Q 180 185, 210 140 Q 235 90, 250 30 L 50 230 Z" fill="hsl(var(--accent))" opacity="0.18" />
+            <text x="105" y="178" fontSize="20" fill="hsl(var(--accent))" fontWeight="900" fontFamily="var(--font-display)">A</text>
+            <text x="180" y="222" fontSize="20" fill="hsl(var(--primary))" fontWeight="900" fontFamily="var(--font-display)">B</text>
+            <text x="80" y="262" fontSize="11" fill="hsl(var(--foreground))" fontWeight="700" fontFamily="var(--font-body)">Gini = A / (A + B)</text>
             <text x="175" y="250" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">% of Population</text>
             <text x="4" y="22" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">% of Income</text>
           </svg>
@@ -983,14 +983,18 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <line x1="50" y1="300" x2="390" y2="300" stroke="hsl(var(--muted-foreground))" strokeWidth="0.5" />
             {/* MP curve: rises to peak at inflection of TP, then falls through zero */}
             <path d="M 60 270 Q 100 230, 140 210 Q 170 200, 200 195 Q 210 196, 200 195" fill="none" stroke="hsl(0 70% 60%)" strokeWidth="2.5" />
-            <path d="M 200 195 Q 240 210, 270 240 Q 300 270, 310 300 Q 320 315, 350 330" fill="none" stroke="hsl(0 70% 60%)" strokeWidth="2.5" />
-            <text x="352" y="328" fontSize="10" fill="hsl(0 70% 60%)" fontWeight="700" fontFamily="var(--font-body)">MP</text>
+            <path d="M 200 195 Q 230 215, 260 245 Q 285 275, 300 300 Q 320 320, 350 335" fill="none" stroke="hsl(0 70% 60%)" strokeWidth="2.5" />
+            <text x="352" y="333" fontSize="10" fill="hsl(0 70% 60%)" fontWeight="700" fontFamily="var(--font-body)">MP</text>
+            {/* MP = 0 label where MP crosses Labor axis */}
+            <circle cx="300" cy="300" r="3" fill="hsl(0 70% 60%)" />
+            <text x="305" y="293" fontSize="10" fill="hsl(0 70% 60%)" fontWeight="700" fontFamily="var(--font-body)">MP = 0</text>
             {/* AP curve: rises slower, peaks after MP peak, then falls (MP crosses AP at AP max) */}
             <path d="M 60 275 Q 120 240, 180 220 Q 220 212, 250 215 Q 280 220, 310 240 Q 340 260, 360 275" fill="none" stroke="hsl(180 60% 50%)" strokeWidth="2.5" />
             <text x="362" y="273" fontSize="10" fill="hsl(180 60% 50%)" fontWeight="700" fontFamily="var(--font-body)">AP</text>
             {/* Dashed lines connecting to top graph */}
             <line x1="200" y1="195" x2="200" y2="300" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
-            <line x1="300" y1="300" x2="300" y2="300" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            {/* Extend TP-peak dashed line down through bottom graph to MP = 0 on Labor axis */}
+            <line x1="300" y1="175" x2="300" y2="300" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
             <text x="375" y="298" fontSize="10" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Labor</text>
           </svg>
         );

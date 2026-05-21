@@ -91,11 +91,9 @@ const MicroUnit2Content = () => (
         <li><strong>Perfectly inelastic (Es = 0):</strong> Vertical supply curve</li>
       </ul>
 
-      <EconGraph type="pes-types" caption="Five Types of Price Elasticity of Supply" />
-
       <div className="p-4 rounded-xl border-2 border-accent my-4" style={{ background: "hsl(var(--tip-bg))" }}>
         <p className="font-body text-sm" style={{ color: "hsl(var(--tip-text))" }}>
-          💡 The same visual rules apply for supply! <strong>Perfectly inelastic supply</strong> is a vertical line (like "I"), and <strong>perfectly elastic supply</strong> is a horizontal line (like a rotated "E"). The graphs for perfectly inelastic and perfectly elastic look exactly the same whether we're talking about demand or supply — only the label (D or S) changes.
+          💡 <strong>No new graph needed here!</strong> The five types of Price Elasticity of Supply look <strong>visually identical</strong> to the five types of Price Elasticity of Demand — just swap the "D" label for "S". Scroll up to the <strong>PED graph in Section 4</strong> and apply the same shapes: vertical line = perfectly inelastic, horizontal line = perfectly elastic, steeper = inelastic, flatter = elastic.
         </p>
       </div>
 
