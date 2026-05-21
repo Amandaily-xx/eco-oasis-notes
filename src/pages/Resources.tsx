@@ -6,6 +6,8 @@ import jacobCliffordImg from "../assets/resource-jacob-clifford.png";
 import reviewEconImg from "../assets/resource-reviewecon.png";
 import krugmanImg from "../assets/resource-krugman.png";
 import barronsImg from "../assets/resource-barrons.png";
+import khanImg from "../assets/resource-khan.png";
+import collegeBoardImg from "../assets/resource-collegeboard.png";
 
 const resources = [
   {
@@ -30,7 +32,7 @@ const resources = [
   },
   {
     icon: GraduationCap,
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/2e/College_Board_Acorn_logo.svg",
+    image: collegeBoardImg,
     title: "College Board (AP Classroom)",
     tag: "Most Exam-Like Practice",
     description:
@@ -40,7 +42,7 @@ const resources = [
   },
   {
     icon: ClipboardList,
-    image: "https://upload.wikimedia.org/wikipedia/commons/1/15/Khan_Academy_logo_%282018%29.svg",
+    image: khanImg,
     title: "Khan Academy — AP Micro & Macro",
     tag: "Quick Section Quizzes",
     description:
