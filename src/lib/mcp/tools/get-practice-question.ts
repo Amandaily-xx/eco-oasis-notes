@@ -1,7 +1,7 @@
 import { defineTool } from "@lovable.dev/mcp-js";
 import { z } from "zod";
-import { microMCQuestions } from "@/data/microPracticeData";
-import { macroMCQuestions } from "@/data/macroPracticeData";
+import { microMCQuestions } from "../../../data/microPracticeData";
+import { macroMCQuestions } from "../../../data/macroPracticeData";
 
 export default defineTool({
   name: "get_practice_question",

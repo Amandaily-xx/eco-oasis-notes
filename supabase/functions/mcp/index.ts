@@ -68,8 +68,1268 @@ var list_resources_default = defineTool2({
 // src/lib/mcp/tools/get-practice-question.ts
 import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.22.2";
 import { z } from "npm:zod@^4.4.3";
-import { microMCQuestions } from "npm:@/data/microPracticeData";
-import { macroMCQuestions } from "npm:@/data/macroPracticeData";
+
+// src/data/microPracticeData.ts
+var microMCQuestions = [
+  // ===== UNIT 1 =====
+  {
+    id: 1,
+    unit: 1,
+    source: "Sample MCQ",
+    question: "Which of the following best defines opportunity cost?",
+    options: [
+      { label: "A", text: "The cost of producing those goods most desired by a given economy" },
+      { label: "B", text: "The cost of the input mix that will lead to the greatest rate of growth" },
+      { label: "C", text: "The amount of one product that must be given up to produce an additional unit of another" },
+      { label: "D", text: "The use of the least-cost method of production" },
+      { label: "E", text: "The cost of labor used in the production process" }
+    ],
+    answer: "C",
+    explanation: "Opportunity cost is the value of the next best alternative forgone \u2014 the amount of one good you must sacrifice to produce an additional unit of another.",
+    noteLink: { path: "/micro/1", label: "Unit 1 \u2014 Opportunity Cost" }
+  },
+  {
+    id: 2,
+    unit: 1,
+    source: "Sample MCQ",
+    question: "Which of the following explains why a production possibilities curve is often concave (bowed out) from the origin?",
+    options: [
+      { label: "A", text: "The law of demand" },
+      { label: "B", text: "The law of supply" },
+      { label: "C", text: "Constant returns to scale" },
+      { label: "D", text: "Decreasing opportunity cost" },
+      { label: "E", text: "Increasing opportunity cost" }
+    ],
+    answer: "E",
+    explanation: "The PPC is bowed out because of the law of increasing opportunity cost \u2014 as you produce more of one good, resources are less suited to its production, so you give up more of the other good.",
+    noteLink: { path: "/micro/1", label: "Unit 1 \u2014 PPC" }
+  },
+  {
+    id: 3,
+    unit: 1,
+    source: "Sample MCQ",
+    question: "After graduating from high school, Peggy decided to enroll at community college rather than accept a job paying $12,000/yr. If annual tuition is $4,600, the annual opportunity cost of attending is",
+    options: [
+      { label: "A", text: "$4,600" },
+      { label: "B", text: "$7,400" },
+      { label: "C", text: "$12,000" },
+      { label: "D", text: "$16,600" },
+      { label: "E", text: "$24,000" }
+    ],
+    answer: "D",
+    explanation: "Opportunity cost = explicit costs + implicit costs = $4,600 (tuition) + $12,000 (forgone salary) = $16,600.",
+    noteLink: { path: "/micro/1", label: "Unit 1 \u2014 Opportunity Cost" }
+  },
+  {
+    id: 4,
+    unit: 1,
+    source: "Sample MCQ",
+    question: "If Italy has a comparative advantage in wine production, which statement is NOT true?",
+    options: [
+      { label: "A", text: "Italy must hold an absolute advantage in wine production." },
+      { label: "B", text: "Greece holds a comparative advantage in olive oil production." },
+      { label: "C", text: "Italy's opportunity cost of wine is lower than Greece's." },
+      { label: "D", text: "Greece's opportunity cost of olive oil is lower than Italy's." },
+      { label: "E", text: "If trade is open, these countries have an incentive to trade." }
+    ],
+    answer: "A",
+    explanation: "Having a comparative advantage does NOT require an absolute advantage. Comparative advantage is about lower opportunity cost, not higher total output.",
+    noteLink: { path: "/micro/1", label: "Unit 1 \u2014 Comparative Advantage" }
+  },
+  {
+    id: 5,
+    unit: 1,
+    source: "Sample MCQ",
+    question: "According to the law of diminishing marginal utility, which of the following is true?",
+    options: [
+      { label: "A", text: "Total satisfaction decreases as more units of a good are consumed." },
+      { label: "B", text: "The additional satisfaction from consuming extra units decreases as consumption increases." },
+      { label: "C", text: "The additional satisfaction from consuming extra units decreases as consumption decreases." },
+      { label: "D", text: "The additional satisfaction from consuming extra units increases as consumption increases." },
+      { label: "E", text: "When marginal utility is decreasing, total utility is decreasing." }
+    ],
+    answer: "B",
+    explanation: "Diminishing marginal utility means each additional unit consumed gives less extra satisfaction than the previous one.",
+    noteLink: { path: "/micro/1", label: "Unit 1 \u2014 Marginal Analysis" }
+  },
+  {
+    id: 60,
+    unit: 1,
+    source: "Sample MCQ",
+    question: "An outward shift of a production possibilities curve can be caused by",
+    options: [
+      { label: "A", text: "Planting a more profitable farm crop" },
+      { label: "B", text: "Improving technology" },
+      { label: "C", text: "Using idle resources" },
+      { label: "D", text: "Changing consumer preferences" },
+      { label: "E", text: "Increasing the minimum wage" }
+    ],
+    answer: "B",
+    explanation: "Improved technology shifts the PPC outward because the economy can produce more of both goods. Using idle resources moves to the curve, not beyond it.",
+    noteLink: { path: "/micro/1", label: "Unit 1 \u2014 PPC" }
+  },
+  {
+    id: 61,
+    unit: 1,
+    source: "Sample MCQ",
+    question: "A linear production possibilities curve indicates which of the following?",
+    options: [
+      { label: "A", text: "Constant opportunity costs" },
+      { label: "B", text: "Decreasing opportunity costs" },
+      { label: "C", text: "Increasing opportunity costs" },
+      { label: "D", text: "Diminishing marginal returns" },
+      { label: "E", text: "Labor-intensive production" }
+    ],
+    answer: "A",
+    explanation: "A straight-line PPC means the opportunity cost of producing one good in terms of the other remains constant.",
+    noteLink: { path: "/micro/1", label: "Unit 1 \u2014 PPC" }
+  },
+  {
+    id: 62,
+    unit: 1,
+    source: "Sample MCQ",
+    question: "Which of the following is a defining characteristic of a market economy?",
+    options: [
+      { label: "A", text: "Private ownership of resources" },
+      { label: "B", text: "Equitable distribution of income" },
+      { label: "C", text: "Taxation of personal income" },
+      { label: "D", text: "Reliance on public goods" },
+      { label: "E", text: "Government-guided resource allocation" }
+    ],
+    answer: "A",
+    explanation: "A market economy is characterized by private ownership of resources, with prices determined by supply and demand.",
+    noteLink: { path: "/micro/1", label: "Unit 1 \u2014 Economic Systems" }
+  },
+  {
+    id: 63,
+    unit: 1,
+    source: "Sample MCQ",
+    question: "The amount of product Z that must be forgone to obtain some amount of product Y is called",
+    options: [
+      { label: "A", text: "Factor payments" },
+      { label: "B", text: "Opportunity cost" },
+      { label: "C", text: "Marginal product" },
+      { label: "D", text: "Income effect" },
+      { label: "E", text: "Substitution effect" }
+    ],
+    answer: "B",
+    explanation: "Opportunity cost is what you give up to get something else.",
+    noteLink: { path: "/micro/1", label: "Unit 1 \u2014 Opportunity Cost" }
+  },
+  // ===== UNIT 2 =====
+  {
+    id: 6,
+    unit: 2,
+    source: "Sample MCQ",
+    question: "If Clark's income and the prices of goods X and Y all double, Clark will",
+    options: [
+      { label: "A", text: "Double the purchase of goods X and Y" },
+      { label: "B", text: "Buy more of good X and less of good Y" },
+      { label: "C", text: "Buy less of good X and more of good Y" },
+      { label: "D", text: "Buy less of both goods X and Y" },
+      { label: "E", text: "Buy the same amounts of goods X and Y" }
+    ],
+    answer: "E",
+    explanation: "If income and all prices double, real purchasing power stays the same. The budget constraint is unchanged in real terms.",
+    noteLink: { path: "/micro/2", label: "Unit 2 \u2014 Demand" }
+  },
+  {
+    id: 7,
+    unit: 2,
+    source: "Sample MCQ",
+    question: "Laws prohibiting price increases for flashlights during power outages would most likely",
+    options: [
+      { label: "A", text: "Make flashlights more available" },
+      { label: "B", text: "Create a shortage of flashlights" },
+      { label: "C", text: "Shift the demand curve for flashlights to the right" },
+      { label: "D", text: "Shift the supply curve for flashlights to the left" },
+      { label: "E", text: "Have no effect on the availability of flashlights" }
+    ],
+    answer: "B",
+    explanation: "A price ceiling below the equilibrium price causes quantity demanded to exceed quantity supplied, creating a shortage.",
+    noteLink: { path: "/micro/2", label: "Unit 2 \u2014 Price Controls" }
+  },
+  {
+    id: 8,
+    unit: 2,
+    source: "Sample MCQ",
+    question: "If a drought destroys peanut crops and farmers' revenues increase, demand for peanuts must be",
+    options: [
+      { label: "A", text: "Unit price elastic" },
+      { label: "B", text: "Price elastic" },
+      { label: "C", text: "Price inelastic" },
+      { label: "D", text: "Supply is price inelastic" },
+      { label: "E", text: "Supply is price elastic" }
+    ],
+    answer: "C",
+    explanation: "Supply decreased \u2192 price rose \u2192 TR increased. When price rises and TR increases, demand is inelastic.",
+    noteLink: { path: "/micro/2", label: "Unit 2 \u2014 Elasticity" }
+  },
+  {
+    id: 9,
+    unit: 2,
+    source: "Sample MCQ",
+    question: "If the supply of hamburgers decreases, the demand for onions (a complement) will most likely",
+    options: [
+      { label: "A", text: "Remain unchanged because they are different goods" },
+      { label: "B", text: "Increase because they are substitutes" },
+      { label: "C", text: "Increase because they are complements" },
+      { label: "D", text: "Decrease because they are complements" },
+      { label: "E", text: "Decrease because they are substitutes" }
+    ],
+    answer: "D",
+    explanation: "Hamburgers and onions are complements. Less hamburger supply \u2192 higher price \u2192 less hamburger demand \u2192 less onion demand.",
+    noteLink: { path: "/micro/2", label: "Unit 2 \u2014 Demand & Supply" }
+  },
+  {
+    id: 10,
+    unit: 2,
+    source: "Sample MCQ",
+    question: "If consumers pay $10.45 and producers receive $9.45 after a unit tax, what is the tax?",
+    options: [
+      { label: "A", text: "$0.00" },
+      { label: "B", text: "$0.45" },
+      { label: "C", text: "$0.55" },
+      { label: "D", text: "$1.00" },
+      { label: "E", text: "$1.45" }
+    ],
+    answer: "D",
+    explanation: "Unit tax = price paid by consumers \u2212 price received by producers = $10.45 \u2212 $9.45 = $1.00.",
+    noteLink: { path: "/micro/2", label: "Unit 2 \u2014 Taxes" }
+  },
+  {
+    id: 64,
+    unit: 2,
+    source: "Sample MCQ",
+    question: "If the price elasticity of supply for pickles is 2 and the price increases by 10%, quantity supplied will increase by",
+    options: [
+      { label: "A", text: "0.2%" },
+      { label: "B", text: "5%" },
+      { label: "C", text: "8%" },
+      { label: "D", text: "12%" },
+      { label: "E", text: "20%" }
+    ],
+    answer: "E",
+    explanation: "PES = %\u0394Qs / %\u0394P \u2192 %\u0394Qs = PES \xD7 %\u0394P = 2 \xD7 10% = 20%.",
+    noteLink: { path: "/micro/2", label: "Unit 2 \u2014 Price Elasticity of Supply" }
+  },
+  {
+    id: 65,
+    unit: 2,
+    source: "Sample MCQ",
+    question: "If a 10% increase in the price of Good X causes a 20% decrease in quantity demanded of Good Y, then",
+    options: [
+      { label: "A", text: "X and Y are complements with cross-price elasticity \u22120.5" },
+      { label: "B", text: "X and Y are substitutes with income elasticity +2" },
+      { label: "C", text: "X and Y are complements with cross-price elasticity \u22122" },
+      { label: "D", text: "X and Y are normal goods with income elasticity +2" },
+      { label: "E", text: "X and Y are substitutes with cross-price elasticity \u22122" }
+    ],
+    answer: "C",
+    explanation: "Cross-price elasticity = %\u0394Qd_Y / %\u0394P_X = \u221220% / 10% = \u22122. Negative \u2192 complements.",
+    noteLink: { path: "/micro/2", label: "Unit 2 \u2014 Elasticity" }
+  },
+  {
+    id: 66,
+    unit: 2,
+    source: "Sample MCQ",
+    question: "Demand for vegetables is price elastic. If price increases by 5%, quantity demanded would",
+    options: [
+      { label: "A", text: "Increase by 5 percent" },
+      { label: "B", text: "Increase by more than 5 percent" },
+      { label: "C", text: "Increase by less than 5 percent" },
+      { label: "D", text: "Decrease by more than 5 percent" },
+      { label: "E", text: "Decrease by less than 5 percent" }
+    ],
+    answer: "D",
+    explanation: "Elastic demand means %\u0394Qd > %\u0394P. A 5% price increase causes Qd to decrease by more than 5%.",
+    noteLink: { path: "/micro/2", label: "Unit 2 \u2014 Elasticity" }
+  },
+  {
+    id: 67,
+    unit: 2,
+    source: "Sample MCQ",
+    question: "At a price of $10, Qd is 100 and Qs is 150. Which statement must be true?",
+    options: [
+      { label: "A", text: "There is a shortage at $10." },
+      { label: "B", text: "The equilibrium price is below $10." },
+      { label: "C", text: "150 pizzas will be sold." },
+      { label: "D", text: "At equilibrium, fewer than 100 will be sold." },
+      { label: "E", text: "The market is in equilibrium." }
+    ],
+    answer: "B",
+    explanation: "Qs > Qd means surplus. Price must fall to reach equilibrium, so the equilibrium price is below $10.",
+    noteLink: { path: "/micro/2", label: "Unit 2 \u2014 Market Equilibrium" }
+  },
+  {
+    id: 68,
+    unit: 2,
+    source: "Sample MCQ",
+    question: "Which of the following will increase the demand for pizza, a normal good?",
+    options: [
+      { label: "A", text: "An increase in the cost of producing pizza" },
+      { label: "B", text: "A decrease in the price of pizza" },
+      { label: "C", text: "An increase in the price of a complementary product" },
+      { label: "D", text: "An increase in consumers' income" },
+      { label: "E", text: "An increase in the number of restaurants selling pizza" }
+    ],
+    answer: "D",
+    explanation: "For a normal good, an increase in income increases demand (shifts the demand curve right). A price change moves along the curve, not shifts it.",
+    noteLink: { path: "/micro/2", label: "Unit 2 \u2014 Demand" }
+  },
+  // ===== UNIT 3 =====
+  {
+    id: 11,
+    unit: 3,
+    source: "Sample MCQ",
+    question: "As a firm hires additional workers in a new plant with fixed machinery, marginal product will",
+    options: [
+      { label: "A", text: "Fall initially, but eventually rise" },
+      { label: "B", text: "Rise initially, but eventually fall" },
+      { label: "C", text: "Rise consistently due to diminishing returns" },
+      { label: "D", text: "Rise consistently due to specialization" },
+      { label: "E", text: "Rise consistently due to economies of scale" }
+    ],
+    answer: "B",
+    explanation: "Initially, specialization gains cause MP to rise. Eventually, diminishing marginal returns set in and MP falls.",
+    noteLink: { path: "/micro/3", label: "Unit 3 \u2014 Production Function" }
+  },
+  {
+    id: 12,
+    unit: 3,
+    source: "Sample MCQ",
+    question: "Which short-run cost must continuously decrease as output increases?",
+    options: [
+      { label: "A", text: "Total variable cost" },
+      { label: "B", text: "Total fixed cost" },
+      { label: "C", text: "Average variable cost" },
+      { label: "D", text: "Average fixed cost" },
+      { label: "E", text: "Average total cost" }
+    ],
+    answer: "D",
+    explanation: "AFC = TFC / Q. Since TFC is constant and Q increases, AFC always decreases \u2014 the 'spreading effect.'",
+    noteLink: { path: "/micro/3", label: "Unit 3 \u2014 Short-Run Costs" }
+  },
+  {
+    id: 13,
+    unit: 3,
+    source: "Sample MCQ",
+    question: "If AVC of 5 units is $100 and AVC of 6 units is $150, MC of the 6th unit is",
+    options: [
+      { label: "A", text: "$50" },
+      { label: "B", text: "$250" },
+      { label: "C", text: "$300" },
+      { label: "D", text: "$400" },
+      { label: "E", text: "$500" }
+    ],
+    answer: "D",
+    explanation: "TVC at 5 = 5 \xD7 $100 = $500. TVC at 6 = 6 \xD7 $150 = $900. MC = $900 \u2212 $500 = $400.",
+    noteLink: { path: "/micro/3", label: "Unit 3 \u2014 Short-Run Costs" }
+  },
+  {
+    id: 14,
+    unit: 3,
+    source: "Sample MCQ",
+    question: "In a constant-cost perfectly competitive industry in long-run equilibrium, an increase in demand will cause",
+    options: [
+      { label: "A", text: "No change in the long-run equilibrium price." },
+      { label: "B", text: "No change in the long-run equilibrium quantity." },
+      { label: "C", text: "The long-run supply curve to be upward sloping." },
+      { label: "D", text: "The long-run supply curve to be perfectly inelastic." },
+      { label: "E", text: "Total cost of production to remain the same." }
+    ],
+    answer: "A",
+    explanation: "In a constant-cost industry, the long-run supply curve is horizontal, so price returns to its original level.",
+    noteLink: { path: "/micro/3", label: "Unit 3 \u2014 Perfect Competition" }
+  },
+  {
+    id: 15,
+    unit: 3,
+    source: "Sample MCQ",
+    question: "If labor is the only variable input, MC is upward sloping because as more labor is added",
+    options: [
+      { label: "A", text: "Output decreases, so MC increases" },
+      { label: "B", text: "Output increases, so MC increases" },
+      { label: "C", text: "Output increases at an increasing rate, so the cost per unit increases" },
+      { label: "D", text: "Output increases at a decreasing rate, so the cost per unit increases" },
+      { label: "E", text: "Output increases at a decreasing rate, so the cost per unit decreases" }
+    ],
+    answer: "D",
+    explanation: "Diminishing marginal returns: each worker adds less output. Since wage is constant but each worker produces less, MC rises.",
+    noteLink: { path: "/micro/3", label: "Unit 3 \u2014 Short-Run Costs" }
+  },
+  {
+    id: 30,
+    unit: 3,
+    source: "Sample MCQ",
+    question: "Sally starts her own printing firm instead of working at $25,000/yr. She uses her own building (could rent for $10,000/yr) and spends $125,000 on materials. Revenue is $155,000. Her economic profit is",
+    options: [
+      { label: "A", text: "-$5,000" },
+      { label: "B", text: "$5,000" },
+      { label: "C", text: "$20,000" },
+      { label: "D", text: "$30,000" },
+      { label: "E", text: "$120,000" }
+    ],
+    answer: "A",
+    explanation: "Economic profit = $155,000 \u2212 $125,000 \u2212 $25,000 \u2212 $10,000 = \u2212$5,000.",
+    noteLink: { path: "/micro/3", label: "Unit 3 \u2014 Types of Profit" }
+  },
+  {
+    id: 69,
+    unit: 3,
+    source: "Sample MCQ",
+    question: "If labor is the only variable input and MC is increasing, which must be true?",
+    options: [
+      { label: "A", text: "Average product of labor is constant" },
+      { label: "B", text: "Average product of labor is increasing" },
+      { label: "C", text: "MP of labor is greater than AP of labor" },
+      { label: "D", text: "Marginal product of labor is decreasing" },
+      { label: "E", text: "Total product of labor is decreasing" }
+    ],
+    answer: "D",
+    explanation: "MC = w / MP. If wage is constant and MC is rising, MP must be falling (diminishing marginal returns).",
+    noteLink: { path: "/micro/3", label: "Unit 3 \u2014 Production Function" }
+  },
+  {
+    id: 70,
+    unit: 3,
+    source: "Sample MCQ",
+    question: "When the MC curve lies below the ATC curve, as output increases",
+    options: [
+      { label: "A", text: "Marginal cost is decreasing" },
+      { label: "B", text: "Marginal cost is increasing" },
+      { label: "C", text: "Average total cost is decreasing" },
+      { label: "D", text: "Average total cost is increasing" },
+      { label: "E", text: "Average variable cost is decreasing" }
+    ],
+    answer: "C",
+    explanation: "When MC < ATC, each additional unit pulls the average down. So ATC is decreasing.",
+    noteLink: { path: "/micro/3", label: "Unit 3 \u2014 Short-Run Costs" }
+  },
+  {
+    id: 71,
+    unit: 3,
+    source: "Sample MCQ",
+    question: "Economic profit can be calculated as accounting profit minus",
+    options: [
+      { label: "A", text: "Fixed costs" },
+      { label: "B", text: "Implicit costs" },
+      { label: "C", text: "Marginal costs" },
+      { label: "D", text: "Explicit costs" },
+      { label: "E", text: "Total costs" }
+    ],
+    answer: "B",
+    explanation: "Economic profit = Accounting profit \u2212 Implicit costs. Accounting profit only subtracts explicit costs.",
+    noteLink: { path: "/micro/3", label: "Unit 3 \u2014 Types of Profit" }
+  },
+  {
+    id: 72,
+    unit: 3,
+    source: "Sample MCQ",
+    question: "Which of the following indicates economies of scale?",
+    options: [
+      { label: "A", text: "The firm's long-run supply curve is horizontal" },
+      { label: "B", text: "The firm's long-run marginal cost increases as output increases" },
+      { label: "C", text: "The firm's long-run average total cost decreases as output increases" },
+      { label: "D", text: "The firm's long-run total cost decreases as output increases" },
+      { label: "E", text: "The firm's total revenues increase as output sold increases" }
+    ],
+    answer: "C",
+    explanation: "Economies of scale means LRATC falls as output increases \u2014 the firm becomes more efficient at larger scale.",
+    noteLink: { path: "/micro/3", label: "Unit 3 \u2014 Long-Run Costs" }
+  },
+  // ===== UNIT 4 =====
+  {
+    id: 16,
+    unit: 4,
+    source: "Sample MCQ",
+    question: "Within the range of market demand, a natural monopoly has",
+    options: [
+      { label: "A", text: "Long-run total cost that decreases as output increases" },
+      { label: "B", text: "Long-run ATC that remains constant as output increases" },
+      { label: "C", text: "Long-run ATC that decreases as output increases" },
+      { label: "D", text: "Marginal cost that exceeds average cost" },
+      { label: "E", text: "Setting P = MC will maximize profits" }
+    ],
+    answer: "C",
+    explanation: "A natural monopoly has economies of scale over the entire range of demand \u2014 LRATC continuously falls.",
+    noteLink: { path: "/micro/4", label: "Unit 4 \u2014 Natural Monopoly" }
+  },
+  {
+    id: 17,
+    unit: 4,
+    source: "Sample MCQ",
+    question: "Which best describes an oligopolistic market?",
+    options: [
+      { label: "A", text: "Many sellers with identical products and no barriers" },
+      { label: "B", text: "Many sellers with differentiated products and no barriers" },
+      { label: "C", text: "A few competing sellers with similar products and high barriers" },
+      { label: "D", text: "A few sellers of identical products and no barriers" },
+      { label: "E", text: "No competition and high barriers to entry" }
+    ],
+    answer: "C",
+    explanation: "An oligopoly: few dominant firms, similar products, high barriers, mutual interdependence.",
+    noteLink: { path: "/micro/4", label: "Unit 4 \u2014 Oligopoly" }
+  },
+  {
+    id: 18,
+    unit: 4,
+    source: "Sample MCQ",
+    question: "A monopoly is inefficient because it",
+    options: [
+      { label: "A", text: "Has no incentive to minimize costs" },
+      { label: "B", text: "Produces too little output and sets P above MC" },
+      { label: "C", text: "Earns too much profit by charging any price it wants" },
+      { label: "D", text: "Produces too much output, wasting scarce resources" },
+      { label: "E", text: "Usually produces unsafe products if unregulated" }
+    ],
+    answer: "B",
+    explanation: "A monopoly restricts output (MR = MC) and charges P > MC, creating deadweight loss.",
+    noteLink: { path: "/micro/4", label: "Unit 4 \u2014 Monopoly" }
+  },
+  {
+    id: 19,
+    unit: 4,
+    source: "Sample MCQ",
+    question: "In monopolistic competition long-run equilibrium: P = price, MR = marginal revenue, MC = marginal cost, ATC = average total cost",
+    options: [
+      { label: "A", text: "P > ATC, MR = MC, P > MC" },
+      { label: "B", text: "P > ATC, MR > MC, P = MC" },
+      { label: "C", text: "P = ATC, MR = MC, P > MC" },
+      { label: "D", text: "P = ATC, MR = MC, P = MC" },
+      { label: "E", text: "P = ATC, MR > MC, P > MC" }
+    ],
+    answer: "C",
+    explanation: "Long-run: zero economic profit (P = ATC), profit max (MR = MC), market power (P > MC).",
+    noteLink: { path: "/micro/4", label: "Unit 4 \u2014 Monopolistic Competition" }
+  },
+  {
+    id: 20,
+    unit: 4,
+    source: "Sample MCQ",
+    question: `Two firms UA and UB choose to reduce production by 10% or 20%. Payoffs (UA, UB):
+\u2022 Both 20%: ($150, $150)
+\u2022 UA 20%, UB 10%: ($50, $250)
+\u2022 UA 10%, UB 20%: ($250, $50)
+\u2022 Both 10%: ($100, $100)
+
+Assuming no cooperation, which is true?`,
+    options: [
+      { label: "A", text: "Neither has a dominant strategy" },
+      { label: "B", text: "Both have an incentive to reduce by 10%" },
+      { label: "C", text: "Both have an incentive to reduce by 20%" },
+      { label: "D", text: "Only UA has an incentive to reduce by 20%" },
+      { label: "E", text: "Only UB has an incentive to reduce by 20%" }
+    ],
+    answer: "B",
+    explanation: "Each firm's dominant strategy is 10%: UA gets $250 vs $150 (if UB picks 20%) and $100 vs $50 (if UB picks 10%). Nash Equilibrium is (10%, 10%).",
+    noteLink: { path: "/micro/4", label: "Unit 4 \u2014 Game Theory" }
+  },
+  {
+    id: 73,
+    unit: 4,
+    source: "Sample MCQ",
+    question: "Game theory is used to explain",
+    options: [
+      { label: "A", text: "Why firms price discriminate" },
+      { label: "B", text: "How monopolies evolve into oligopolies" },
+      { label: "C", text: "Strategic behavior of firms in oligopoly" },
+      { label: "D", text: "Profit maximization in monopoly" },
+      { label: "E", text: "Price leadership of monopolistic competition" }
+    ],
+    answer: "C",
+    explanation: "Game theory models strategic interactions between firms \u2014 primarily used for oligopoly analysis.",
+    noteLink: { path: "/micro/4", label: "Unit 4 \u2014 Game Theory" }
+  },
+  {
+    id: 74,
+    unit: 4,
+    source: "Sample MCQ",
+    question: "If a firm engages in perfect price discrimination, it charges",
+    options: [
+      { label: "A", text: "Each customer the highest price they're willing to pay" },
+      { label: "B", text: "Each customer the average cost of the product" },
+      { label: "C", text: "Each customer the lowest price they're willing to pay" },
+      { label: "D", text: "Different prices based on age" },
+      { label: "E", text: "Different prices based on quantity purchased" }
+    ],
+    answer: "A",
+    explanation: "Perfect price discrimination = charging each consumer their maximum willingness to pay, capturing all consumer surplus.",
+    noteLink: { path: "/micro/4", label: "Unit 4 \u2014 Price Discrimination" }
+  },
+  {
+    id: 75,
+    unit: 4,
+    source: "Sample MCQ",
+    question: "Compared with a perfectly competitive market, a single-price monopoly will",
+    options: [
+      { label: "A", text: "Increase output and price" },
+      { label: "B", text: "Increase output and decrease price" },
+      { label: "C", text: "Decrease output and price" },
+      { label: "D", text: "Decrease output and increase price" },
+      { label: "E", text: "Produce the same output and increase price" }
+    ],
+    answer: "D",
+    explanation: "A monopoly restricts output below the competitive level and charges a higher price.",
+    noteLink: { path: "/micro/4", label: "Unit 4 \u2014 Monopoly" }
+  },
+  {
+    id: 76,
+    unit: 4,
+    source: "Sample MCQ",
+    question: "When a profit-maximizing monopolist produces in the elastic portion of its demand curve",
+    options: [
+      { label: "A", text: "It can increase TR by raising price" },
+      { label: "B", text: "It can decrease ATC by reducing output" },
+      { label: "C", text: "Price is equal to marginal revenue" },
+      { label: "D", text: "Marginal revenue is less than marginal cost" },
+      { label: "E", text: "Marginal revenue is positive" }
+    ],
+    answer: "E",
+    explanation: "In the elastic portion of demand, MR is positive. A monopolist always produces in the elastic range because MR must be positive where MR = MC (with MC > 0).",
+    noteLink: { path: "/micro/4", label: "Unit 4 \u2014 Monopoly" }
+  },
+  // ===== UNIT 5 =====
+  {
+    id: 21,
+    unit: 5,
+    source: "Sample MCQ",
+    question: `Workers and coal output (tons/day):
+0\u21920, 1\u219225, 2\u219244, 3\u219260, 4\u219270, 5\u219275
+
+How many workers would the coal company hire if coal is $5/ton and the wage rate is $40/day?`,
+    options: [
+      { label: "A", text: "5" },
+      { label: "B", text: "4" },
+      { label: "C", text: "3" },
+      { label: "D", text: "2" },
+      { label: "E", text: "0" }
+    ],
+    answer: "B",
+    explanation: "MRP: 1st=$125, 2nd=$95, 3rd=$80, 4th=$50, 5th=$25. Hire where MRP \u2265 wage ($40). 4th MRP=$50 > $40 \u2713, 5th MRP=$25 < $40 \u2717. Hire 4.",
+    noteLink: { path: "/micro/5", label: "Unit 5 \u2014 MRP & Hiring" }
+  },
+  {
+    id: 22,
+    unit: 5,
+    source: "Sample MCQ",
+    question: "The optimal combination of labor and capital in the long run requires",
+    options: [
+      { label: "A", text: "MP per dollar spent on labor equals MP per dollar spent on capital" },
+      { label: "B", text: "MP of labor equals MP of capital" },
+      { label: "C", text: "Total product of labor equals total product of capital" },
+      { label: "D", text: "MP of labor and capital are both zero" },
+      { label: "E", text: "All marginal products equal all average products" }
+    ],
+    answer: "A",
+    explanation: "Cost-minimization rule: MP_L / w = MP_K / r.",
+    noteLink: { path: "/micro/5", label: "Unit 5 \u2014 Cost-Minimization Rule" }
+  },
+  {
+    id: 23,
+    unit: 5,
+    source: "Sample MCQ",
+    question: "A profit-maximizing firm should hire an input up to the point where",
+    options: [
+      { label: "A", text: "Marginal physical product equals MRP" },
+      { label: "B", text: "MR equals marginal factor cost" },
+      { label: "C", text: "MRP equals marginal revenue" },
+      { label: "D", text: "MRP equals marginal factor cost" },
+      { label: "E", text: "Marginal physical product equals MFC" }
+    ],
+    answer: "D",
+    explanation: "Profit-maximizing hiring rule: MRP = MFC. Hire until the revenue from the last worker equals the cost of hiring them.",
+    noteLink: { path: "/micro/5", label: "Unit 5 \u2014 MRP & Hiring" }
+  },
+  {
+    id: 24,
+    unit: 5,
+    source: "Sample MCQ",
+    question: "An increase in the effective minimum wage will have less impact on employment if labor demand is",
+    options: [
+      { label: "A", text: "A derived demand" },
+      { label: "B", text: "Decreasing" },
+      { label: "C", text: "Relatively elastic" },
+      { label: "D", text: "Relatively inelastic" },
+      { label: "E", text: "Unit elastic" }
+    ],
+    answer: "D",
+    explanation: "If labor demand is inelastic, a wage increase causes a smaller reduction in employment.",
+    noteLink: { path: "/micro/5", label: "Unit 5 \u2014 Labor Markets" }
+  },
+  {
+    id: 77,
+    unit: 5,
+    source: "Sample MCQ",
+    question: "Which indicates a perfectly competitive firm has hired the profit-maximizing amount of labor?",
+    options: [
+      { label: "A", text: "Total product exceeds total real wage payments" },
+      { label: "B", text: "Average product exceeds the real wage" },
+      { label: "C", text: "MRP of labor is below the wage" },
+      { label: "D", text: "MRP of labor is above the wage" },
+      { label: "E", text: "MRP of labor equals the wage" }
+    ],
+    answer: "E",
+    explanation: "Profit maximization: hire until MRP = wage (MFC in a competitive labor market).",
+    noteLink: { path: "/micro/5", label: "Unit 5 \u2014 MRP & Hiring" }
+  },
+  {
+    id: 78,
+    unit: 5,
+    source: "Sample MCQ",
+    question: "The monopsonist's MFC curve is above the labor supply curve because",
+    options: [
+      { label: "A", text: "The product price is on the demand curve above MR = MC" },
+      { label: "B", text: "To hire more workers, the firm must raise the wage for all workers" },
+      { label: "C", text: "The firm is a wage taker" },
+      { label: "D", text: "Diminishing marginal returns to labor" },
+      { label: "E", text: "To sell more output, the firm must lower its price" }
+    ],
+    answer: "B",
+    explanation: "A monopsonist faces an upward-sloping supply curve. To hire one more worker, it must raise wages for all workers, making MFC > wage.",
+    noteLink: { path: "/micro/5", label: "Unit 5 \u2014 Monopsony" }
+  },
+  // ===== UNIT 6 =====
+  {
+    id: 25,
+    unit: 6,
+    source: "Sample MCQ",
+    question: "A per-unit tax on pollution will affect the firm's output and pollution in which way?",
+    options: [
+      { label: "A", text: "Output: Increase, Pollution: Increase" },
+      { label: "B", text: "Output: Increase, Pollution: Decrease" },
+      { label: "C", text: "Output: Decrease, Pollution: Increase" },
+      { label: "D", text: "Output: Decrease, Pollution: Decrease" },
+      { label: "E", text: "Output: No change, Pollution: No change" }
+    ],
+    answer: "D",
+    explanation: "A per-unit pollution tax increases MC, reducing output. Less output means less pollution.",
+    noteLink: { path: "/micro/6", label: "Unit 6 \u2014 Externalities" }
+  },
+  {
+    id: 26,
+    unit: 6,
+    source: "Sample MCQ",
+    question: "If production of a good generates a positive externality, the government can increase efficiency by",
+    options: [
+      { label: "A", text: "Taxing the producer" },
+      { label: "B", text: "Subsidizing the producer" },
+      { label: "C", text: "Prosecuting firms that produce the good" },
+      { label: "D", text: "Setting a price ceiling" },
+      { label: "E", text: "Setting a price floor" }
+    ],
+    answer: "B",
+    explanation: "Positive externality \u2192 market underproduces. A subsidy increases output toward the socially optimal quantity.",
+    noteLink: { path: "/micro/6", label: "Unit 6 \u2014 Externalities Solutions" }
+  },
+  {
+    id: 27,
+    unit: 6,
+    source: "Sample MCQ",
+    question: "Which is the best example of a pure public good?",
+    options: [
+      { label: "A", text: "Electricity from a public utility" },
+      { label: "B", text: "Mail delivery by the post office" },
+      { label: "C", text: "Social Security payments" },
+      { label: "D", text: "National defense" },
+      { label: "E", text: "Imported oil" }
+    ],
+    answer: "D",
+    explanation: "National defense is non-rival and non-excludable \u2014 the classic pure public good.",
+    noteLink: { path: "/micro/6", label: "Unit 6 \u2014 Public Goods" }
+  },
+  {
+    id: 28,
+    unit: 6,
+    source: "Sample MCQ",
+    question: "Which will most likely lead to a more equal distribution of income?",
+    options: [
+      { label: "A", text: "More regressive national sales tax" },
+      { label: "B", text: "More progressive income taxes" },
+      { label: "C", text: "An increase in the high school dropout rate" },
+      { label: "D", text: "An increase in structural unemployment" },
+      { label: "E", text: "An increase in earnings for owners of capital" }
+    ],
+    answer: "B",
+    explanation: "Progressive taxes take a higher % from higher incomes, redistributing income and reducing inequality.",
+    noteLink: { path: "/micro/6", label: "Unit 6 \u2014 Types of Tax" }
+  },
+  {
+    id: 29,
+    unit: 6,
+    source: "Sample MCQ",
+    question: "The Lorenz curve represents the relationship between",
+    options: [
+      { label: "A", text: "Cumulative % of households and cumulative % of income" },
+      { label: "B", text: "Income tax rates and income tax revenues" },
+      { label: "C", text: "Child labor rates and poverty levels" },
+      { label: "D", text: "Income inequality and education level" },
+      { label: "E", text: "Market structure and the number of firms" }
+    ],
+    answer: "A",
+    explanation: "The Lorenz curve plots cumulative % of population vs. cumulative % of income to visualize inequality.",
+    noteLink: { path: "/micro/6", label: "Unit 6 \u2014 Income Inequality" }
+  },
+  {
+    id: 79,
+    unit: 6,
+    source: "Sample MCQ",
+    question: "In a competitive market where production causes pollution, the socially optimal output differs from equilibrium because",
+    options: [
+      { label: "A", text: "Marginal social benefit > marginal social cost" },
+      { label: "B", text: "Marginal social benefit < marginal private cost" },
+      { label: "C", text: "Marginal social cost > marginal private cost" },
+      { label: "D", text: "Marginal social benefit > marginal private benefit" },
+      { label: "E", text: "Total social cost < total social benefit" }
+    ],
+    answer: "C",
+    explanation: "Pollution means MSC > MPC. The market ignores external costs, so it overproduces relative to the social optimum.",
+    noteLink: { path: "/micro/6", label: "Unit 6 \u2014 Externalities" }
+  },
+  {
+    id: 80,
+    unit: 6,
+    source: "Sample MCQ",
+    question: "A progressive income tax is characterized by",
+    options: [
+      { label: "A", text: "A higher average tax rate at low income levels" },
+      { label: "B", text: "Tax rates that increase total tax revenues" },
+      { label: "C", text: "Marginal tax rates that do not change as income changes" },
+      { label: "D", text: "Marginal tax rates that decrease as income increases" },
+      { label: "E", text: "Marginal tax rates that increase as income increases" }
+    ],
+    answer: "E",
+    explanation: "Progressive tax: higher income \u2192 higher marginal tax rate. This is the defining feature.",
+    noteLink: { path: "/micro/6", label: "Unit 6 \u2014 Types of Tax" }
+  },
+  {
+    id: 81,
+    unit: 6,
+    source: "Sample MCQ",
+    question: "The government must provide public goods because",
+    options: [
+      { label: "A", text: "Production requires economies of scale the private sector cannot achieve" },
+      { label: "B", text: "It is generally impossible to exclude those who value them but do not pay" },
+      { label: "C", text: "They cannot be produced privately since they have inelastic demand" },
+      { label: "D", text: "Private producers charge P substantially greater than MC" },
+      { label: "E", text: "No single individual should have to pay since they benefit society" }
+    ],
+    answer: "B",
+    explanation: "Public goods are non-excludable \u2014 you can't prevent non-payers from consuming them (free-rider problem).",
+    noteLink: { path: "/micro/6", label: "Unit 6 \u2014 Public Goods" }
+  }
+];
+
+// src/data/macroPracticeData.ts
+var macroMCQuestions = [
+  // ===== UNIT 2 — Economic Indicators =====
+  {
+    id: 1,
+    unit: 2,
+    source: "Sample MCQ",
+    question: "Which of the following is included in the calculation of GDP?",
+    options: [
+      { label: "A", text: "The sale of a used textbook" },
+      { label: "B", text: "An unpaid parent caring for their child at home" },
+      { label: "C", text: "A new haircut purchased this year" },
+      { label: "D", text: "The purchase of 100 shares of stock" },
+      { label: "E", text: "Illegal gambling activity" }
+    ],
+    answer: "C",
+    explanation: "GDP counts the market value of new, final goods and services produced this year. Used goods, financial transactions, unpaid work, and illegal/underground activity are excluded.",
+    noteLink: { path: "/macro/2", label: "Macro Unit 2 \u2014 GDP" }
+  },
+  {
+    id: 2,
+    unit: 2,
+    source: "Sample MCQ",
+    question: "If nominal GDP rises by 6% and real GDP rises by 2%, what is the approximate inflation rate?",
+    options: [
+      { label: "A", text: "2%" },
+      { label: "B", text: "3%" },
+      { label: "C", text: "4%" },
+      { label: "D", text: "6%" },
+      { label: "E", text: "8%" }
+    ],
+    answer: "C",
+    explanation: "Nominal GDP growth \u2248 Real GDP growth + Inflation. So inflation \u2248 6% \u2212 2% = 4%.",
+    noteLink: { path: "/macro/2", label: "Macro Unit 2 \u2014 Price Indices" }
+  },
+  {
+    id: 3,
+    unit: 2,
+    source: "Sample MCQ",
+    question: "A worker who has lost a manufacturing job because the factory closed and whose skills do not match available openings is best classified as",
+    options: [
+      { label: "A", text: "Frictionally unemployed" },
+      { label: "B", text: "Cyclically unemployed" },
+      { label: "C", text: "Structurally unemployed" },
+      { label: "D", text: "Not in the labor force" },
+      { label: "E", text: "Seasonally employed" }
+    ],
+    answer: "C",
+    explanation: "Structural unemployment occurs when workers' skills no longer match available jobs (technology, industry shifts).",
+    noteLink: { path: "/macro/2", label: "Macro Unit 2 \u2014 Unemployment" }
+  },
+  {
+    id: 4,
+    unit: 2,
+    source: "Sample MCQ",
+    question: "If the CPI rises from 200 to 210, the inflation rate is",
+    options: [
+      { label: "A", text: "0.5%" },
+      { label: "B", text: "5%" },
+      { label: "C", text: "10%" },
+      { label: "D", text: "15%" },
+      { label: "E", text: "20%" }
+    ],
+    answer: "B",
+    explanation: "Inflation = (210 \u2212 200)/200 \xD7 100% = 5%.",
+    noteLink: { path: "/macro/2", label: "Macro Unit 2 \u2014 CPI" }
+  },
+  {
+    id: 5,
+    unit: 2,
+    source: "Sample MCQ",
+    question: "Who is hurt the most by unanticipated inflation?",
+    options: [
+      { label: "A", text: "Borrowers with fixed-rate loans" },
+      { label: "B", text: "Workers with cost-of-living adjustments" },
+      { label: "C", text: "Lenders with fixed-rate loans" },
+      { label: "D", text: "Owners of real assets like houses" },
+      { label: "E", text: "Holders of inflation-indexed bonds" }
+    ],
+    answer: "C",
+    explanation: "Unanticipated inflation hurts lenders (and savers/fixed-income earners) and helps borrowers, because loans are repaid in dollars worth less than expected.",
+    noteLink: { path: "/macro/2", label: "Macro Unit 2 \u2014 Cost of Inflation" }
+  },
+  // ===== UNIT 3 — AD-AS / Multipliers / Fiscal =====
+  {
+    id: 6,
+    unit: 3,
+    source: "Sample MCQ",
+    question: "If the marginal propensity to consume (MPC) is 0.8, the spending multiplier is",
+    options: [
+      { label: "A", text: "1.25" },
+      { label: "B", text: "2" },
+      { label: "C", text: "4" },
+      { label: "D", text: "5" },
+      { label: "E", text: "8" }
+    ],
+    answer: "D",
+    explanation: "Spending multiplier = 1 / (1 \u2212 MPC) = 1 / 0.2 = 5.",
+    noteLink: { path: "/macro/3", label: "Macro Unit 3 \u2014 Multipliers" }
+  },
+  {
+    id: 7,
+    unit: 3,
+    source: "Sample MCQ",
+    question: "An increase in government spending of $100 billion when MPC = 0.75 will, all else equal, shift AD by approximately",
+    options: [
+      { label: "A", text: "$25 billion" },
+      { label: "B", text: "$75 billion" },
+      { label: "C", text: "$100 billion" },
+      { label: "D", text: "$300 billion" },
+      { label: "E", text: "$400 billion" }
+    ],
+    answer: "E",
+    explanation: "Multiplier = 1/(1\u22120.75) = 4. \u0394AD = $100B \xD7 4 = $400 billion.",
+    noteLink: { path: "/macro/3", label: "Macro Unit 3 \u2014 Fiscal Policy" }
+  },
+  {
+    id: 8,
+    unit: 3,
+    source: "Sample MCQ",
+    question: "An economy is in a recessionary gap. Which fiscal policy is most appropriate?",
+    options: [
+      { label: "A", text: "Increase taxes and decrease government spending" },
+      { label: "B", text: "Decrease taxes and increase government spending" },
+      { label: "C", text: "Open market sale of bonds" },
+      { label: "D", text: "Increase the discount rate" },
+      { label: "E", text: "Increase the reserve requirement" }
+    ],
+    answer: "B",
+    explanation: "A recessionary gap calls for expansionary fiscal policy: cut taxes and/or increase G to shift AD right.",
+    noteLink: { path: "/macro/3", label: "Macro Unit 3 \u2014 Output Gaps & Fiscal Policy" }
+  },
+  {
+    id: 9,
+    unit: 3,
+    source: "Sample MCQ",
+    question: "In the long run, an increase in aggregate demand will result in",
+    options: [
+      { label: "A", text: "A higher price level and higher real output" },
+      { label: "B", text: "A higher price level only" },
+      { label: "C", text: "Higher real output only" },
+      { label: "D", text: "A lower price level and lower real output" },
+      { label: "E", text: "No change in either price level or real output" }
+    ],
+    answer: "B",
+    explanation: "Long-run AS is vertical at full-employment output. An AD increase only raises the price level \u2014 real output returns to Yf.",
+    noteLink: { path: "/macro/3", label: "Macro Unit 3 \u2014 AD-AS Long Run" }
+  },
+  {
+    id: 10,
+    unit: 3,
+    source: "Sample MCQ",
+    question: "Which of the following will most likely shift short-run aggregate supply to the LEFT?",
+    options: [
+      { label: "A", text: "A decrease in nominal wages" },
+      { label: "B", text: "A decrease in oil prices" },
+      { label: "C", text: "An increase in productivity" },
+      { label: "D", text: "An increase in the price of imported raw materials" },
+      { label: "E", text: "An income tax cut for households" }
+    ],
+    answer: "D",
+    explanation: "Higher input costs (e.g., imported raw materials) raise per-unit production costs and shift SRAS leftward (negative supply shock).",
+    noteLink: { path: "/macro/3", label: "Macro Unit 3 \u2014 SRAS Shifters" }
+  },
+  // ===== UNIT 4 — Financial Sector =====
+  {
+    id: 11,
+    unit: 4,
+    source: "Sample MCQ",
+    question: "If the required reserve ratio is 10% and a bank receives a new deposit of $1,000, the maximum increase in the money supply is",
+    options: [
+      { label: "A", text: "$100" },
+      { label: "B", text: "$900" },
+      { label: "C", text: "$1,000" },
+      { label: "D", text: "$9,000" },
+      { label: "E", text: "$10,000" }
+    ],
+    answer: "D",
+    explanation: "Money multiplier = 1/RR = 10. Max \u0394MS from new excess reserves = $900 \xD7 10 = $9,000 (the original $1,000 is just a change in composition).",
+    noteLink: { path: "/macro/4", label: "Macro Unit 4 \u2014 Money Multiplier" }
+  },
+  {
+    id: 12,
+    unit: 4,
+    source: "Sample MCQ",
+    question: "To fight inflation, the Federal Reserve should",
+    options: [
+      { label: "A", text: "Buy government bonds in the open market" },
+      { label: "B", text: "Decrease the discount rate" },
+      { label: "C", text: "Decrease the reserve requirement" },
+      { label: "D", text: "Sell government bonds in the open market" },
+      { label: "E", text: "Increase government spending" }
+    ],
+    answer: "D",
+    explanation: "Contractionary monetary policy: selling bonds drains reserves from banks, reducing the money supply, raising interest rates, and slowing AD.",
+    noteLink: { path: "/macro/4", label: "Macro Unit 4 \u2014 Monetary Policy" }
+  },
+  {
+    id: 13,
+    unit: 4,
+    source: "Sample MCQ",
+    question: "An increase in the money supply will, in the short run,",
+    options: [
+      { label: "A", text: "Raise the nominal interest rate and decrease investment" },
+      { label: "B", text: "Lower the nominal interest rate and increase investment" },
+      { label: "C", text: "Lower the nominal interest rate and decrease investment" },
+      { label: "D", text: "Have no effect on the interest rate" },
+      { label: "E", text: "Raise the nominal interest rate and increase investment" }
+    ],
+    answer: "B",
+    explanation: "MS shifts right \u2192 equilibrium nominal interest rate falls \u2192 investment (and AD) rises.",
+    noteLink: { path: "/macro/4", label: "Macro Unit 4 \u2014 Money Market" }
+  },
+  {
+    id: 14,
+    unit: 4,
+    source: "Sample MCQ",
+    question: "Crowding out refers to the situation in which",
+    options: [
+      { label: "A", text: "Government deficit spending raises interest rates and reduces private investment" },
+      { label: "B", text: "Tax cuts raise consumer spending" },
+      { label: "C", text: "Central bank bond purchases lower interest rates" },
+      { label: "D", text: "Imports replace domestically produced goods" },
+      { label: "E", text: "Government surpluses lower interest rates" }
+    ],
+    answer: "A",
+    explanation: "Crowding out: government borrowing increases demand for loanable funds \u2192 real interest rate rises \u2192 private investment falls.",
+    noteLink: { path: "/macro/4", label: "Macro Unit 4 \u2014 Crowding Out" }
+  },
+  {
+    id: 15,
+    unit: 4,
+    source: "Sample MCQ",
+    question: "Which of the following is most liquid?",
+    options: [
+      { label: "A", text: "A house" },
+      { label: "B", text: "A savings bond" },
+      { label: "C", text: "A checking account deposit" },
+      { label: "D", text: "A 5-year certificate of deposit" },
+      { label: "E", text: "A retirement account" }
+    ],
+    answer: "C",
+    explanation: "Checking deposits are part of M1 \u2014 they can be used immediately as a medium of exchange with no penalty.",
+    noteLink: { path: "/macro/4", label: "Macro Unit 4 \u2014 Money Supply" }
+  },
+  // ===== UNIT 5 — Long-Run Consequences =====
+  {
+    id: 16,
+    unit: 5,
+    source: "Sample MCQ",
+    question: "The short-run Phillips curve shows an inverse relationship between",
+    options: [
+      { label: "A", text: "Inflation and the interest rate" },
+      { label: "B", text: "Inflation and unemployment" },
+      { label: "C", text: "Real GDP and the price level" },
+      { label: "D", text: "Real GDP and unemployment" },
+      { label: "E", text: "Money supply and the interest rate" }
+    ],
+    answer: "B",
+    explanation: "SRPC: as inflation rises, unemployment falls (and vice versa). The LRPC is vertical at the natural rate.",
+    noteLink: { path: "/macro/5", label: "Macro Unit 5 \u2014 Phillips Curve" }
+  },
+  {
+    id: 17,
+    unit: 5,
+    source: "Sample MCQ",
+    question: "According to the quantity theory of money (MV = PQ), if velocity is constant and real output grows 3%, an increase in the money supply of 8% will produce inflation of about",
+    options: [
+      { label: "A", text: "3%" },
+      { label: "B", text: "5%" },
+      { label: "C", text: "8%" },
+      { label: "D", text: "11%" },
+      { label: "E", text: "0%" }
+    ],
+    answer: "B",
+    explanation: "%\u0394M + %\u0394V = %\u0394P + %\u0394Q \u2192 8 + 0 = %\u0394P + 3 \u2192 inflation \u2248 5%.",
+    noteLink: { path: "/macro/5", label: "Macro Unit 5 \u2014 Quantity Theory" }
+  },
+  {
+    id: 18,
+    unit: 5,
+    source: "Sample MCQ",
+    question: "Which of the following will increase a country's long-run economic growth?",
+    options: [
+      { label: "A", text: "An increase in current consumption" },
+      { label: "B", text: "An increase in investment in capital and education" },
+      { label: "C", text: "An increase in the money supply only" },
+      { label: "D", text: "A short-run decrease in unemployment" },
+      { label: "E", text: "An increase in the price level" }
+    ],
+    answer: "B",
+    explanation: "Long-run growth requires more/better resources or technology \u2014 investment in physical and human capital shifts LRAS / PPC outward.",
+    noteLink: { path: "/macro/5", label: "Macro Unit 5 \u2014 Long-Run Growth" }
+  },
+  {
+    id: 19,
+    unit: 5,
+    source: "Sample MCQ",
+    question: "If actual inflation turns out higher than expected inflation, in the short run the unemployment rate will",
+    options: [
+      { label: "A", text: "Rise above the natural rate" },
+      { label: "B", text: "Fall below the natural rate" },
+      { label: "C", text: "Equal the natural rate" },
+      { label: "D", text: "Rise to 100%" },
+      { label: "E", text: "Be unaffected" }
+    ],
+    answer: "B",
+    explanation: "Unexpected inflation makes real wages temporarily fall; firms hire more, so unemployment dips below NRU (movement along SRPC).",
+    noteLink: { path: "/macro/5", label: "Macro Unit 5 \u2014 Phillips Curve" }
+  },
+  // ===== UNIT 6 — International Trade & Finance =====
+  {
+    id: 20,
+    unit: 6,
+    source: "Sample MCQ",
+    question: "If the U.S. dollar appreciates relative to the euro, then",
+    options: [
+      { label: "A", text: "U.S. exports to Europe will increase" },
+      { label: "B", text: "U.S. imports from Europe will decrease" },
+      { label: "C", text: "European tourists in the U.S. will spend more" },
+      { label: "D", text: "U.S. exports will decrease and U.S. imports will increase" },
+      { label: "E", text: "The U.S. trade surplus will widen" }
+    ],
+    answer: "D",
+    explanation: "A stronger dollar makes U.S. goods more expensive abroad (exports \u2193) and foreign goods cheaper at home (imports \u2191).",
+    noteLink: { path: "/macro/6", label: "Macro Unit 6 \u2014 Exchange Rates" }
+  },
+  {
+    id: 21,
+    unit: 6,
+    source: "Sample MCQ",
+    question: "An increase in U.S. real interest rates will, in the foreign exchange market,",
+    options: [
+      { label: "A", text: "Increase demand for U.S. dollars and cause the dollar to appreciate" },
+      { label: "B", text: "Decrease demand for U.S. dollars and cause the dollar to depreciate" },
+      { label: "C", text: "Increase the supply of U.S. dollars and cause the dollar to appreciate" },
+      { label: "D", text: "Have no effect on the exchange rate" },
+      { label: "E", text: "Cause hyperinflation" }
+    ],
+    answer: "A",
+    explanation: "Higher U.S. real rates attract foreign financial capital \u2192 demand for dollars rises \u2192 dollar appreciates.",
+    noteLink: { path: "/macro/6", label: "Macro Unit 6 \u2014 FX Market" }
+  },
+  {
+    id: 22,
+    unit: 6,
+    source: "Sample MCQ",
+    question: "Which of the following is recorded in the current account?",
+    options: [
+      { label: "A", text: "Foreign direct investment in the U.S." },
+      { label: "B", text: "Purchase of foreign stocks by U.S. residents" },
+      { label: "C", text: "Exports of goods and services" },
+      { label: "D", text: "Loans from a foreign government" },
+      { label: "E", text: "U.S. purchase of a foreign factory" }
+    ],
+    answer: "C",
+    explanation: "The current account records exports/imports of goods and services, net income, and net transfers. Asset transactions go in the financial (capital) account.",
+    noteLink: { path: "/macro/6", label: "Macro Unit 6 \u2014 Balance of Payments" }
+  },
+  {
+    id: 23,
+    unit: 6,
+    source: "Sample MCQ",
+    question: "If a country runs a current account deficit, it is most likely",
+    options: [
+      { label: "A", text: "Running a financial account surplus of equal size" },
+      { label: "B", text: "Exporting more than it imports" },
+      { label: "C", text: "Receiving fewer foreign investments" },
+      { label: "D", text: "Necessarily in recession" },
+      { label: "E", text: "Experiencing currency appreciation only" }
+    ],
+    answer: "A",
+    explanation: "Balance of payments accounting: the current account and financial account sum to zero, so a current-account deficit is matched by a financial-account surplus.",
+    noteLink: { path: "/macro/6", label: "Macro Unit 6 \u2014 Balance of Payments" }
+  },
+  {
+    id: 24,
+    unit: 6,
+    source: "Sample MCQ",
+    question: "An expansionary monetary policy in the U.S. will most likely cause the U.S. dollar to",
+    options: [
+      { label: "A", text: "Appreciate, because interest rates rise" },
+      { label: "B", text: "Depreciate, because U.S. interest rates fall and financial capital flows out" },
+      { label: "C", text: "Remain unchanged" },
+      { label: "D", text: "Appreciate, because exports rise" },
+      { label: "E", text: "Depreciate, because exports fall" }
+    ],
+    answer: "B",
+    explanation: "Expansionary MP lowers U.S. interest rates \u2192 capital flows out \u2192 supply of $ on FX market rises (and demand falls) \u2192 dollar depreciates.",
+    noteLink: { path: "/macro/6", label: "Macro Unit 6 \u2014 Monetary Policy & FX" }
+  },
+  {
+    id: 25,
+    unit: 5,
+    source: "Sample MCQ",
+    question: "In the long run, an increase in the money supply will most likely",
+    options: [
+      { label: "A", text: "Increase real GDP and lower unemployment" },
+      { label: "B", text: "Have no effect on real GDP \u2014 money is neutral in the long run" },
+      { label: "C", text: "Lower the price level" },
+      { label: "D", text: "Permanently reduce the natural rate of unemployment" },
+      { label: "E", text: "Decrease nominal GDP" }
+    ],
+    answer: "B",
+    explanation: "Money neutrality: in the long run, changes in the money supply affect only nominal variables (price level, nominal wages) \u2014 not real GDP.",
+    noteLink: { path: "/macro/5", label: "Macro Unit 5 \u2014 Money Neutrality" }
+  }
+];
+
+// src/lib/mcp/tools/get-practice-question.ts
 var get_practice_question_default = defineTool3({
   name: "get_practice_question",
   title: "Get a practice question",
