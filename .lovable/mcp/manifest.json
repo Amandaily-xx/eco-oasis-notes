@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "sdk_version": "0.22.2",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "ap-econ-by-amanda-mcp",
+      "version": "0.1.0",
+      "title": "AP Econ by Amanda"
+    },
+    "tools": [
+      {
+        "name": "list_units",
+        "title": "List AP Econ units",
+        "description": "List all AP Microeconomics and AP Macroeconomics units covered on this study site, with their titles and page paths.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_resources",
+        "title": "List study resources",
+        "description": "List curated AP Economics study resources (YouTube channels, books, and official College Board materials) recommended on this site.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_practice_question",
+        "title": "Get a practice question",
+        "description": "Return a random AP Econ multiple-choice practice question with options, correct answer, and an explanation. Optionally filter by course (micro or macro) and unit number.",
+        "annotations": {
+          "readOnlyHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "course": {
+              "description": "Which course to draw from. Omit for either.",
+              "type": "string",
+              "enum": [
+                "micro",
+                "macro"
+              ]
+            },
+            "unit": {
+              "description": "Restrict to a specific unit (1-6).",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 6
+            }
+          }
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
