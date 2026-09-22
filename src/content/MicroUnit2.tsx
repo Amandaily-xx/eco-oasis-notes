@@ -55,6 +55,16 @@ const MicroUnit2Content = () => (
 
     <SectionAccordion title="4. Price Elasticity of Demand" highYield>
       <div className="formula-block">Ed = |%ΔQd / %ΔP|</div>
+      <h4 className="font-semibold text-primary mt-4 mb-2">Midpoint Method</h4>
+      <div className="formula-block">
+        <span className="italic">η</span> (PED) = |(ΔQ / Q̄) ÷ (ΔP / P̄)|
+      </div>
+      <p className="text-sm text-muted-foreground my-3">
+        Here, <strong>Q̄ = (Q₁ + Q₂) / 2</strong> is average quantity and <strong>P̄ = (P₁ + P₂) / 2</strong> is average price. This midpoint formula gives the same elasticity whichever direction the change is measured, so it is the safest method for any two-point problem—especially when the wording does not clearly say “increases from,” “decreases from,” or otherwise identify a starting value.
+      </p>
+      <AmandaTip>
+        Use the midpoint method whenever two prices and quantities are given. Unlike the ordinary percentage-change method, it does not produce a different answer when the direction is reversed.
+      </AmandaTip>
       <ul className="list-disc pl-5 space-y-1 my-3">
         <li><strong>Elastic (Ed &gt; 1):</strong> Quantity responds more than proportionally to price</li>
         <li><strong>Unit elastic (Ed = 1):</strong> Total revenue is maximized at this point</li>
@@ -79,6 +89,14 @@ const MicroUnit2Content = () => (
       <AmandaTip>
         Remember: elasticity varies along a linear demand curve! The top half is elastic, the midpoint is unit elastic, and the bottom half is inelastic. Slope ≠ elasticity!
       </AmandaTip>
+
+      <h4 className="font-semibold text-primary mt-5 mb-2">What Determines Elasticity of Demand?</h4>
+      <ol className="list-decimal pl-5 space-y-3">
+        <li><strong>Availability of substitutes:</strong> Goods with many close substitutes tend to have elastic demand because consumers can switch easily. Goods with few or no close substitutes tend to have inelastic demand.</li>
+        <li><strong>Necessity, luxury, and share of the budget:</strong> Necessities and goods that take up a small share of a consumer’s budget tend to be less elastic. Optional goods and purchases that take up a large share of the budget tend to be more elastic. Here, “luxury” means something consumers can live without—not only expensive goods such as gold.</li>
+        <li><strong>Time available to adjust:</strong> Demand is usually relatively inelastic in the short run because consumers cannot immediately change their habits. In the long run, consumers have time to find or develop substitutes, so demand becomes more elastic.</li>
+      </ol>
+      <EconGraph type="demand-elasticity-time" caption="Demand becomes more elastic in the long run as consumers have more time to adjust" />
     </SectionAccordion>
 
     <SectionAccordion title="5. Price Elasticity of Supply">
