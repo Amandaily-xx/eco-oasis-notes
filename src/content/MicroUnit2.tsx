@@ -6,7 +6,7 @@ import surplusDiagram from "../assets/surplus-diagram.png";
 const MicroUnit2Content = () => (
   <div className="space-y-4">
     <SectionAccordion title="1. Demand" defaultOpen highYield>
-      <p><strong>Law of Demand:</strong> As price increases, quantity demanded decreases (and vice versa), ceteris paribus.</p>
+      <p><strong>Law of Demand:</strong> As price increases, quantity demanded decreases (and vice versa), <em>ceteris paribus</em>—meaning all other factors are held equal.</p>
       <EconGraph type="demand-shift" caption="Demand Shift — D₁ to D₂ (increase in demand shifts right: P↑, Q↑)" />
       <h4 className="font-semibold text-primary my-2">Why does the demand curve slope downward?</h4>
       <ul className="list-disc pl-5 space-y-1">
@@ -62,6 +62,9 @@ const MicroUnit2Content = () => (
       <p className="text-sm text-muted-foreground my-3">
         Here, <strong>Q̄ = (Q₁ + Q₂) / 2</strong> is average quantity and <strong>P̄ = (P₁ + P₂) / 2</strong> is average price. This midpoint formula gives the same elasticity whichever direction the change is measured, so it is the safest method for any two-point problem—especially when the wording does not clearly say “increases from,” “decreases from,” or otherwise identify a starting value.
       </p>
+      <p className="text-sm text-muted-foreground my-3">
+        Because price and quantity demanded move in opposite directions, <strong>η is mathematically negative</strong>. By convention, we ignore the negative sign and report price elasticity of demand as a positive number.
+      </p>
       <AmandaTip>
         Use the midpoint method whenever two prices and quantities are given. Unlike the ordinary percentage-change method, it does not produce a different answer when the direction is reversed.
       </AmandaTip>
@@ -96,7 +99,7 @@ const MicroUnit2Content = () => (
         <li><strong>Necessity, luxury, and share of the budget:</strong> Necessities and goods that take up a small share of a consumer’s budget tend to be less elastic. Optional goods and purchases that take up a large share of the budget tend to be more elastic. Here, “luxury” means something consumers can live without—not only expensive goods such as gold.</li>
         <li><strong>Time available to adjust:</strong> Demand is usually relatively inelastic in the short run because consumers cannot immediately change their habits. In the long run, consumers have time to find or develop substitutes, so demand becomes more elastic.</li>
       </ol>
-      <EconGraph type="demand-elasticity-time" caption="Demand becomes more elastic in the long run as consumers have more time to adjust" />
+      <EconGraph type="demand-elasticity-time" caption="After a positive supply shock (S₀ → S₁), short-run demand Dₛ is relatively inelastic while long-run demand Dₗ is more elastic" />
     </SectionAccordion>
 
     <SectionAccordion title="5. Price Elasticity of Supply">
