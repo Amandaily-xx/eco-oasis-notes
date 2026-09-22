@@ -31,6 +31,7 @@ interface EconGraphProps {
     | "tariff"
     | "total-marginal-product"
     | "ped-types"
+    | "demand-elasticity-time"
     | "pes-types";
   caption?: string;
 }
@@ -158,10 +159,17 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <text x="245" y="38" fontSize="12" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">S</text>
             <line x1="50" y1="145" x2="260" y2="145" stroke="hsl(var(--destructive))" strokeWidth="2" strokeDasharray="6 4" />
             <text x="200" y="140" fontSize="11" fill="hsl(var(--destructive))" fontWeight="600" fontFamily="var(--font-body)">Price Ceiling</text>
-            <line x1="102" y1="145" x2="102" y2="155" stroke="hsl(var(--foreground))" strokeWidth="1.5" />
-            <line x1="218" y1="145" x2="218" y2="155" stroke="hsl(var(--foreground))" strokeWidth="1.5" />
-            <line x1="102" y1="155" x2="218" y2="155" stroke="hsl(var(--foreground))" strokeWidth="1.5" />
-            <text x="140" y="170" fontSize="10" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Shortage</text>
+            {/* At Pc, supply intersects at Qs=124 and demand intersects at Qd=196 */}
+            <circle cx="124" cy="145" r="4" fill="hsl(var(--accent))" />
+            <circle cx="196" cy="145" r="4" fill="hsl(var(--destructive))" />
+            <line x1="124" y1="145" x2="124" y2="200" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <line x1="196" y1="145" x2="196" y2="200" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <line x1="124" y1="165" x2="196" y2="165" stroke="hsl(var(--foreground))" strokeWidth="1.5" />
+            <line x1="124" y1="160" x2="124" y2="170" stroke="hsl(var(--foreground))" strokeWidth="1.5" />
+            <line x1="196" y1="160" x2="196" y2="170" stroke="hsl(var(--foreground))" strokeWidth="1.5" />
+            <text x="141" y="180" fontSize="10" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">Shortage</text>
+            <text x="117" y="215" fontSize="10" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">Qs</text>
+            <text x="189" y="215" fontSize="10" fill="hsl(var(--destructive))" fontWeight="600" fontFamily="var(--font-body)">Qd</text>
             <text x="30" y="149" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Pc</text>
             <text x="255" y="218" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Q</text>
             <text x="30" y="22" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">P</text>
@@ -180,10 +188,17 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <text x="245" y="38" fontSize="12" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">S</text>
             <line x1="50" y1="85" x2="260" y2="85" stroke="hsl(var(--accent))" strokeWidth="2" strokeDasharray="6 4" />
             <text x="200" y="80" fontSize="11" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">Price Floor</text>
-            <line x1="102" y1="85" x2="102" y2="75" stroke="hsl(var(--foreground))" strokeWidth="1.5" />
-            <line x1="218" y1="85" x2="218" y2="75" stroke="hsl(var(--foreground))" strokeWidth="1.5" />
-            <line x1="102" y1="75" x2="218" y2="75" stroke="hsl(var(--foreground))" strokeWidth="1.5" />
-            <text x="142" y="70" fontSize="10" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Surplus</text>
+            {/* At Pf, demand intersects at Qd=124 and supply intersects at Qs=196 */}
+            <circle cx="124" cy="85" r="4" fill="hsl(var(--destructive))" />
+            <circle cx="196" cy="85" r="4" fill="hsl(var(--accent))" />
+            <line x1="124" y1="85" x2="124" y2="200" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <line x1="196" y1="85" x2="196" y2="200" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
+            <line x1="124" y1="65" x2="196" y2="65" stroke="hsl(var(--foreground))" strokeWidth="1.5" />
+            <line x1="124" y1="60" x2="124" y2="70" stroke="hsl(var(--foreground))" strokeWidth="1.5" />
+            <line x1="196" y1="60" x2="196" y2="70" stroke="hsl(var(--foreground))" strokeWidth="1.5" />
+            <text x="143" y="57" fontSize="10" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">Surplus</text>
+            <text x="117" y="215" fontSize="10" fill="hsl(var(--destructive))" fontWeight="600" fontFamily="var(--font-body)">Qd</text>
+            <text x="189" y="215" fontSize="10" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">Qs</text>
             <text x="30" y="89" fontSize="10" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Pf</text>
             <text x="255" y="218" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Q</text>
             <text x="30" y="22" fontSize="12" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">P</text>
@@ -1048,6 +1063,26 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <text x="435" y="210" fontSize="8" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Ed = ∞</text>
             <text x="408" y="8" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">P</text>
             <text x="485" y="195" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Q</text>
+          </svg>
+        );
+
+      case "demand-elasticity-time":
+        return (
+          <svg viewBox="0 0 360 270" className="w-full max-w-md mx-auto">
+            <defs><marker id="ah-det" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 7 3, 0 6" fill="hsl(var(--primary))" /></marker></defs>
+            <line x1="55" y1="220" x2="325" y2="220" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-det)" />
+            <line x1="55" y1="220" x2="55" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-det)" />
+            <line x1="75" y1="45" x2="305" y2="200" stroke="hsl(var(--accent))" strokeWidth="2.5" />
+            <text x="305" y="198" fontSize="11" fill="hsl(var(--accent))" fontWeight="700" fontFamily="var(--font-body)">S₁</text>
+            <line x1="95" y1="110" x2="300" y2="145" stroke="hsl(var(--destructive))" strokeWidth="2.5" />
+            <text x="301" y="149" fontSize="11" fill="hsl(var(--destructive))" fontWeight="700" fontFamily="var(--font-body)">D long run</text>
+            <line x1="165" y1="35" x2="205" y2="205" stroke="hsl(var(--chart-2))" strokeWidth="2.5" />
+            <text x="210" y="202" fontSize="11" fill="hsl(var(--chart-2))" fontWeight="700" fontFamily="var(--font-body)">D short run</text>
+            <circle cx="181" cy="103" r="4" fill="hsl(var(--foreground))" />
+            <text x="163" y="94" fontSize="10" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">Initial</text>
+            <text x="298" y="240" fontSize="11" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Quantity</text>
+            <text x="18" y="24" fontSize="11" fill="hsl(var(--primary))" fontWeight="600" fontFamily="var(--font-body)">Price</text>
+            <text x="72" y="258" fontSize="10" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">More time to adjust → more elastic demand</text>
           </svg>
         );
 
