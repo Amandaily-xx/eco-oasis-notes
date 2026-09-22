@@ -218,6 +218,22 @@ var microMCQuestions = [
   },
   // ===== UNIT 2 =====
   {
+    id: 82,
+    unit: 2,
+    source: "Sample MCQ",
+    question: "Suppose the quantity demanded of skipping ropes rises from 1,250 to 1,750 units when the price falls from $1.25 to $0.75 per unit. Using the midpoint method, the price elasticity of demand for this product is",
+    options: [
+      { label: "A", text: "1/3" },
+      { label: "B", text: "2/3" },
+      { label: "C", text: "1" },
+      { label: "D", text: "3/2" },
+      { label: "E", text: "2" }
+    ],
+    answer: "B",
+    explanation: "Using the midpoint method, the percentage change in quantity is 500 \xF7 1,500 = 1/3, while the absolute percentage change in price is $0.50 \xF7 $1.00 = 1/2. PED = (1/3) \xF7 (1/2) = 2/3, so demand is inelastic.",
+    noteLink: { path: "/micro/2", label: "Unit 2 \u2014 Price Elasticity of Demand" }
+  },
+  {
     id: 6,
     unit: 2,
     source: "Sample MCQ",
