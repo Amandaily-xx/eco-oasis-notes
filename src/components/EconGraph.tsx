@@ -1069,7 +1069,10 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
       case "demand-elasticity-time":
         return (
           <svg viewBox="0 0 360 270" className="w-full max-w-md mx-auto">
-            <defs><marker id="ah-det" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 7 3, 0 6" fill="hsl(var(--primary))" /></marker></defs>
+            <defs>
+              <marker id="ah-det" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 7 3, 0 6" fill="hsl(var(--primary))" /></marker>
+              <marker id="ah-supply-shift" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 7 3, 0 6" fill="hsl(var(--destructive))" /></marker>
+            </defs>
             <line x1="55" y1="220" x2="325" y2="220" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-det)" />
             <line x1="55" y1="220" x2="55" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-det)" />
             {/* Supply curves: a positive supply shock shifts S₀ right to S₁. */}
@@ -1077,12 +1080,12 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <text x="302" y="45" fontSize="11" fill="hsl(var(--destructive))" fontWeight="700" fontFamily="var(--font-body)">S₀</text>
             <line x1="90" y1="209" x2="320" y2="90" stroke="hsl(var(--destructive))" strokeWidth="2.5" strokeDasharray="7 5" />
             <text x="321" y="91" fontSize="11" fill="hsl(var(--destructive))" fontWeight="700" fontFamily="var(--font-body)">S₁</text>
-            <path d="M 225 73 L 250 73" fill="none" stroke="hsl(var(--destructive))" strokeWidth="1.5" markerEnd="url(#ah-det)" />
+            <path d="M 225 73 L 250 73" fill="none" stroke="hsl(var(--destructive))" strokeWidth="1.5" markerEnd="url(#ah-supply-shift)" />
             {/* Demand curves share E₀; Dₛ is steep and Dₗ is flatter. */}
-            <line x1="88" y1="86" x2="308" y2="132" stroke="hsl(var(--chart-2))" strokeWidth="2.5" />
-            <text x="309" y="136" fontSize="11" fill="hsl(var(--chart-2))" fontWeight="700" fontFamily="var(--font-body)">Dₗ</text>
-            <line x1="158" y1="30" x2="211" y2="205" stroke="hsl(var(--accent))" strokeWidth="2.5" />
-            <text x="213" y="204" fontSize="11" fill="hsl(var(--accent))" fontWeight="700" fontFamily="var(--font-body)">Dₛ</text>
+            <line x1="88" y1="86" x2="308" y2="132" stroke="hsl(var(--primary))" strokeWidth="2.5" />
+            <text x="309" y="136" fontSize="11" fill="hsl(var(--primary))" fontWeight="700" fontFamily="var(--font-body)">Dₗ</text>
+            <line x1="158" y1="30" x2="211" y2="205" stroke="hsl(var(--primary))" strokeWidth="2.5" />
+            <text x="213" y="204" fontSize="11" fill="hsl(var(--primary))" fontWeight="700" fontFamily="var(--font-body)">Dₛ</text>
             {/* Initial, short-run, and long-run equilibria. */}
             <circle cx="180" cy="105" r="4" fill="hsl(var(--foreground))" />
             <text x="164" y="96" fontSize="10" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">E₀</text>
