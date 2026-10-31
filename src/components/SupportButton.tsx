@@ -1,13 +1,6 @@
 import { useState } from "react";
-import { Coffee, X, Heart, ExternalLink } from "lucide-react";
+import { Coffee, Heart } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
-// PayPal.me requires a claimed username (not an email).
-// To activate: go to https://www.paypal.com/paypalme/grab and claim your username,
-// then replace the placeholder below (e.g. "AmandaLee").
-const PAYPAL_USERNAME = "AmandaEconOasis"; // ← TODO: claim this username at paypal.me/grab
-const PAYPAL_LINK = `https://www.paypal.com/paypalme/${PAYPAL_USERNAME}`;
-const PAYPAL_CLAIM_LINK = "https://www.paypal.com/paypalme/grab";
 
 const SupportButton = () => {
   const [open, setOpen] = useState(false);
@@ -58,31 +51,6 @@ const SupportButton = () => {
               </p>
 
               <div className="flex flex-col gap-3 items-center">
-                <a
-                  href={PAYPAL_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl font-body text-sm font-medium transition-all hover:opacity-90 hover:scale-105"
-                  style={{
-                    background: "hsl(174 35% 45%)",
-                    color: "white",
-                  }}
-                >
-                  <Coffee className="w-4 h-4" />
-                  Donate via PayPal
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
-
-                <a
-                  href={PAYPAL_CLAIM_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[11px] font-body underline opacity-70 hover:opacity-100"
-                  style={{ color: "hsl(174 25% 35%)" }}
-                >
-                  Link not working? Claim your paypal.me username here →
-                </a>
-
                 <button
                   onClick={() => setOpen(false)}
                   className="px-6 py-2 rounded-xl font-body text-sm font-medium transition-all hover:opacity-80"
