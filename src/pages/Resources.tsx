@@ -56,11 +56,9 @@ const resources = [
     title: "Textbook: Krugman's Economics for the AP Course (4th Edition)",
     tag: "The Classic Textbook 📖",
     description:
-      "This is the textbook I used when I was learning AP Econ. I think I was the only person who actually read the modules before class — haha! I like to preview concepts beforehand. Honestly, you can just follow along with your teacher and the College Board syllabus since some sections in this textbook won't be tested. But it's always a plus to know more! The 4th edition is available in paid print and e-book formats. The publisher also hosts an online preview of the earlier 2nd edition, adapted from Krugman and Wells' Economics. Pro tip: if there's an online e-book available, don't buy the hardcopy — it's way more expensive. I got lucky because my school had leftover copies from previous students! 😄",
-    link: "https://www.macmillanlearning.com/college/us/product/Krugmans-Economics-for-the-AP-Course/p/1319409326",
-    linkLabel: "View 4th Edition (Publisher)",
-    secondaryLink: "https://digfir-published.macmillanusa.com/krugmanapecon2e/krugmanapecon2e_fm_1.html",
-    secondaryLinkLabel: "Preview 2nd Edition (Publisher)",
+      "This is the textbook I used when I was learning AP Econ. I think I was the only person who actually read the modules before class — haha! I like to preview concepts beforehand. Honestly, you can just follow along with your teacher and the College Board syllabus since some sections in this textbook won't be tested. But it's always a plus to know more! The freely accessible, externally hosted PDF below is adapted from Economics, Second Edition by Paul Krugman and Robin Wells and covers similar core economics concepts, though organization and details may differ from the 4th edition. Pro tip: if there's an online e-book available, don't buy the hardcopy — it's way more expensive. I got lucky because my school had leftover copies from previous students! 😄",
+    link: "https://russoseconomics.weebly.com/uploads/4/5/5/3/4553532/krugman_s_economics_for_ap.pdf",
+    linkLabel: "View Earlier Edition (PDF)",
   },
   {
     icon: ClipboardList,
@@ -137,16 +135,6 @@ const Resources = () => {
                           className="inline-flex items-center gap-1.5 text-sm font-body font-semibold text-accent hover:underline"
                         >
                           <Sparkles className="w-3.5 h-3.5" /> {r.linkLabel} →
-                        </a>
-                      )}
-                      {r.secondaryLink && (
-                        <a
-                          href={r.secondaryLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-sm font-body font-semibold text-accent hover:underline"
-                        >
-                          <BookOpen className="w-3.5 h-3.5" /> {r.secondaryLinkLabel} →
                         </a>
                       )}
                     </div>
