@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { BookOpen, TrendingUp, ArrowRight, Sparkles, Lightbulb, Shield, Mail, User, Star, MapPin } from "lucide-react";
 import amanda4 from "../assets/amanda-4.png";
 import Seo from "../components/Seo";
+import { authorProfile } from "../data/authorProfile";
 
 const microUnits = [
 { id: 1, title: "Basic Economic Concepts", desc: "Scarcity, Opportunity Cost, PPC, Economic Systems, Comparative Advantage" },
@@ -60,8 +61,8 @@ const Index = () => {
           
           <div className="flex-1 text-center sm:text-left">
             <p className="font-display font-bold text-primary text-xl">Meet Amanda 🎓</p>
-            <p className="font-body text-sm text-muted-foreground mt-1">Stats & CS major, Econ minor · Scored 5 on both AP Micro & Macro 
-· AP Econ TA since 2024 · 240+ students helped across 11 cohorts
+            <p className="font-body text-sm text-muted-foreground mt-1">{authorProfile.major} major, {authorProfile.minor} minor · Scored 5 on both AP Micro & Macro
+· AP Econ TA since 2024 · {authorProfile.studentsHelped}+ students helped across {authorProfile.cohorts} cohorts
             </p>
           </div>
           <div className="flex gap-2">

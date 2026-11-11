@@ -1,0 +1,4 @@
+- [x] Check the PDF link from the preview and published Resources page; preserve its exact destination. Preview opens the PDF; host returns 200; published site still shows an older Resources page.
+- [x] Update all biography references to 12 cohorts, 280+ students, Statistics major and Economics minor.
+- [x] Add unavailable-resource guidance linking to the private-email contact form.
+- [x] Verify changes and save them.

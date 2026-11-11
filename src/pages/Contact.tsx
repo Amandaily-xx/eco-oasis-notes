@@ -58,7 +58,7 @@ const Contact = () => {
         <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
           <h1 className="font-display text-3xl md:text-4xl font-bold text-primary mb-2">Contact</h1>
           <p className="font-body text-muted-foreground mb-8">
-            Found a mistake in the notes? Have a question about a concept? I'd love to hear from you! 💬
+            Found a mistake in the notes? Have a question about a concept? Can't open a resource or PDF? Send me the resource name or link using the form below — your message goes directly to my email. I'd love to hear from you! 💬
           </p>
 
           <div className="rounded-xl border p-6 mb-8" style={{ background: "hsl(var(--card))", borderColor: "hsl(var(--border))" }}>

@@ -95,6 +95,9 @@ const Resources = () => {
           <p className="font-body text-muted-foreground mb-8">
             Here are the resources I personally used or recommend for acing AP Micro & Macro. Hope they help you as much as they helped me!
           </p>
+          <p className="font-body text-sm text-muted-foreground mb-6">
+            Some external resources may be unavailable or their links may stop working. If you can't open one, <Link to="/contact" className="font-semibold text-accent underline">send me a message</Link> with the resource name or link — it goes directly to my email, and I'll try to help! 💬
+          </p>
 
           <div className="space-y-6">
             {resources.map((r, i) => (

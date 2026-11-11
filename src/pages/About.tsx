@@ -7,13 +7,14 @@ import amanda4 from "../assets/amanda-4.png";
 import amanda5 from "../assets/amanda-5.png";
 import amandaHobbies from "../assets/amanda-hobbies.png";
 import Seo from "../components/Seo";
+import { authorProfile } from "../data/authorProfile";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <Seo
         title="About Amanda — AP Econ Tutor & TA"
-        description="Meet Amanda: Stats & CS major, Econ minor, 5/5 on AP Micro and Macro, and an AP Econ TA who has helped 240+ students across 11 cohorts."
+        description={`Meet Amanda: ${authorProfile.major} major, ${authorProfile.minor} minor, 5/5 on AP Micro and Macro, and an AP Econ TA who has helped ${authorProfile.studentsHelped}+ students across ${authorProfile.cohorts} cohorts.`}
         path="/about"
         jsonLd={[
           { "@context": "https://schema.org", "@type": "AboutPage", url: "https://amandaaa-xlee30-ap-econ-note.lovable.app/about" },
@@ -42,13 +43,13 @@ const About = () => {
 
           <div className="prose-like font-body text-foreground space-y-4 mb-10">
             <p className="text-lg leading-relaxed">
-              Hey there! I'm <strong className="text-accent">Amanda X.L.</strong> — a Stats & CS major with an Econ minor, starting Fall 2025. Currently tackling CS and… let's just say it's been a journey. But hey, we got this! 🔥
+              Hey there! I'm <strong className="text-accent">Amanda X.L.</strong> — a {authorProfile.major} major with an {authorProfile.minor} minor. I started my university studies in Fall 2025. We got this! 🔥
             </p>
             <p className="leading-relaxed">
               These AP Econ notes are pretty close to my heart. Back in my junior year of high school, I created them while preparing for the AP Micro and AP Macro exams. After each unit, I'd put together a set of shared notes and drop them in our class group chat so everyone could study together. My classmates found them super helpful — and honestly, my teacher and friends started calling me the <em>"Economics God"</em> of the class. 😂
             </p>
             <p className="leading-relaxed">
-              I've also been an <strong>AP Economics Teaching Assistant</strong> since September 2024. I genuinely enjoy running TA sessions — breaking down tricky concepts and supporting the course alongside the main instructor. I've worked with <strong>11 cohorts</strong> of classes so far!
+              I've also been an <strong>AP Economics Teaching Assistant</strong> since September 2024. I genuinely enjoy running TA sessions — breaking down tricky concepts and supporting the course alongside the main instructor. I've helped <strong>{authorProfile.studentsHelped}+ students</strong> across <strong>{authorProfile.cohorts} cohorts</strong> of classes so far!
             </p>
             <p className="leading-relaxed">
               And the result? <strong>Scored a 5 on both AP Micro and AP Macro</strong>, no sweat. So yeah, these notes are battle-tested and student-approved.
@@ -65,8 +66,8 @@ const About = () => {
           <div className="grid grid-cols-3 gap-4 mb-10">
             {[
               { icon: Award, label: "AP Score", value: "5 / 5" },
-              { icon: Users, label: "Students Helped", value: "240+" },
-              { icon: Award, label: "Cohorts", value: "11+" },
+              { icon: Users, label: "Students Helped", value: `${authorProfile.studentsHelped}+` },
+              { icon: Award, label: "Cohorts", value: `${authorProfile.cohorts}` },
             ].map(({ icon: Icon, label, value }) => (
               <div key={label} className="text-center p-4 rounded-xl border" style={{ background: "hsl(var(--card))", borderColor: "hsl(var(--border))" }}>
                 <Icon className="w-5 h-5 mx-auto mb-2 text-accent" />
