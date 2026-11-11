@@ -56,7 +56,11 @@ const resources = [
     title: "Textbook: Krugman's Economics for the AP Course (4th Edition)",
     tag: "The Classic Textbook 📖",
     description:
-      "This is the textbook I used when I was learning AP Econ. I think I was the only person who actually read the modules before class — haha! I like to preview concepts beforehand. Honestly, you can just follow along with your teacher and the College Board syllabus since some sections in this textbook won't be tested. But it's always a plus to know more! Pro tip: if there's an online e-book available, don't buy the hardcopy — it's way more expensive. I got lucky because my school had leftover copies from previous students! 😄",
+      "This is the textbook I used when I was learning AP Econ. I think I was the only person who actually read the modules before class — haha! I like to preview concepts beforehand. Honestly, you can just follow along with your teacher and the College Board syllabus since some sections in this textbook won't be tested. But it's always a plus to know more! The 4th edition is available in paid print and e-book formats. The publisher also hosts an online preview of the earlier 2nd edition, adapted from Krugman and Wells' Economics. Pro tip: if there's an online e-book available, don't buy the hardcopy — it's way more expensive. I got lucky because my school had leftover copies from previous students! 😄",
+    link: "https://www.macmillanlearning.com/college/us/product/Krugmans-Economics-for-the-AP-Course/p/1319409326",
+    linkLabel: "View 4th Edition (Publisher)",
+    secondaryLink: "https://digfir-published.macmillanusa.com/krugmanapecon2e/krugmanapecon2e_fm_1.html",
+    secondaryLinkLabel: "Preview 2nd Edition (Publisher)",
   },
   {
     icon: ClipboardList,
@@ -124,16 +128,28 @@ const Resources = () => {
                       <span className="text-xs font-body font-semibold px-2 py-0.5 rounded-full bg-accent/15 text-accent">{r.tag}</span>
                     </div>
                     <p className="font-body text-sm text-muted-foreground leading-relaxed mb-2">{r.description}</p>
-                    {r.link && (
-                      <a
-                        href={r.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm font-body font-semibold text-accent hover:underline"
-                      >
-                        <Sparkles className="w-3.5 h-3.5" /> {r.linkLabel} →
-                      </a>
-                    )}
+                    <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+                      {r.link && (
+                        <a
+                          href={r.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-sm font-body font-semibold text-accent hover:underline"
+                        >
+                          <Sparkles className="w-3.5 h-3.5" /> {r.linkLabel} →
+                        </a>
+                      )}
+                      {r.secondaryLink && (
+                        <a
+                          href={r.secondaryLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-sm font-body font-semibold text-accent hover:underline"
+                        >
+                          <BookOpen className="w-3.5 h-3.5" /> {r.secondaryLinkLabel} →
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </motion.div>
