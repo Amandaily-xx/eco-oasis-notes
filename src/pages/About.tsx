@@ -43,7 +43,7 @@ const About = () => {
 
           <div className="prose-like font-body text-foreground space-y-4 mb-10">
             <p className="text-lg leading-relaxed">
-              Hey there! I'm <strong className="text-accent">Amanda X.L.</strong> — a {authorProfile.major} major with an {authorProfile.minor} minor. I started my university studies in Fall 2025. We got this! 🔥
+              Hey there! I'm <strong className="text-accent">Amanda X.L.</strong> — a {authorProfile.major} major with an {authorProfile.minor} minor, starting Fall 2025. These days I'm tackling data analytics tools like SQL and building projects along the way — let's just say it's been a journey. But hey, we got this! 🔥
             </p>
             <p className="leading-relaxed">
               These AP Econ notes are pretty close to my heart. Back in my junior year of high school, I created them while preparing for the AP Micro and AP Macro exams. After each unit, I'd put together a set of shared notes and drop them in our class group chat so everyone could study together. My classmates found them super helpful — and honestly, my teacher and friends started calling me the <em>"Economics God"</em> of the class. 😂
@@ -52,7 +52,7 @@ const About = () => {
               I've also been an <strong>AP Economics Teaching Assistant</strong> since September 2024. I genuinely enjoy running TA sessions — breaking down tricky concepts and supporting the course alongside the main instructor. I've helped <strong>{authorProfile.studentsHelped}+ students</strong> across <strong>{authorProfile.cohorts} cohorts</strong> of classes so far!
             </p>
             <p className="leading-relaxed">
-              And the result? <strong>Scored a 5 on both AP Micro and AP Macro</strong>, no sweat. So yeah, these notes are battle-tested and student-approved.
+              And the result? <strong>Scored a 5 on both AP Micro and AP Macro</strong>, no sweat. These notes are battle-tested and student-approved.
             </p>
             <p className="leading-relaxed">
               I'm not trying to brag (okay, maybe a little), but I genuinely believe these notes can help you understand economics the way I did — intuitively, clearly, and without the 2:00 AM panic spiral.
