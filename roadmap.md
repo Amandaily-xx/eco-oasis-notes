@@ -4,3 +4,4 @@
 - [x] Verify changes and save them.
 - [x] Add substitution/income effects and the handwritten pizza example under Micro Unit 2 Demand.
 - [x] Verify the enrichment graph's tangencies, effect intervals, and desktop/mobile display; save changes.
+- [ ] Add a total price-effect arrow and three SE/IE practice questions from the supplied examples; verify graph and quiz flow.

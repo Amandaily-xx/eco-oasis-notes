@@ -218,6 +218,51 @@ var microMCQuestions = [
   },
   // ===== UNIT 2 =====
   {
+    id: 83,
+    unit: 2,
+    source: "Practice MCQ \u2014 adapted from your study examples",
+    question: "For an inferior good that is not a Giffen good, a fall in its price leads to which of the following? Assume money income and other prices remain constant.",
+    options: [
+      { label: "A", text: "An income effect that reduces consumption and outweighs the substitution effect." },
+      { label: "B", text: "A substitution effect that increases consumption and outweighs an income effect that reduces consumption, so quantity demanded rises." },
+      { label: "C", text: "Both substitution and income effects increasing consumption." },
+      { label: "D", text: "No substitution effect and an income effect that increases consumption." }
+    ],
+    answer: "B",
+    explanation: "The lower relative price encourages substitution toward the good (SE increases consumption). Greater purchasing power reduces consumption of an inferior good (IE decreases consumption). For a non-Giffen inferior good, SE outweighs IE, so the total price effect is an increase in quantity demanded.",
+    noteLink: { path: "/micro/2#section-2-1", label: "Unit 2 \u2014 Demand: Substitution & Income Effects" }
+  },
+  {
+    id: 84,
+    unit: 2,
+    source: "Practice MCQ \u2014 adapted from your study examples",
+    question: "Suppose the price of a normal good increases. Which statement accurately describes the substitution and income effects? Assume money income and other prices remain constant.",
+    options: [
+      { label: "A", text: "Both effects increase quantity demanded." },
+      { label: "B", text: "Both effects decrease quantity demanded." },
+      { label: "C", text: "The substitution effect decreases quantity demanded; the income effect increases it." },
+      { label: "D", text: "The substitution effect is zero; the income effect decreases quantity demanded." }
+    ],
+    answer: "B",
+    explanation: "A higher relative price encourages substitution away from the good. It also lowers real purchasing power, which reduces consumption of a normal good. Both SE and IE reduce quantity demanded, reinforcing the total price effect.",
+    noteLink: { path: "/micro/2#section-2-1", label: "Unit 2 \u2014 Demand: Substitution & Income Effects" }
+  },
+  {
+    id: 85,
+    unit: 2,
+    source: "Practice MCQ \u2014 adapted from your study examples",
+    question: "If good X is a normal good, a decrease in its price will cause which of the following? Assume money income and other prices remain constant.",
+    options: [
+      { label: "A", text: "Both the substitution effect and the income effect to decrease consumption of X." },
+      { label: "B", text: "The substitution effect to increase consumption of X and the income effect to decrease it." },
+      { label: "C", text: "Both the substitution effect and the income effect to increase consumption of X." },
+      { label: "D", text: "No substitution effect and an income effect that increases consumption of X." }
+    ],
+    answer: "C",
+    explanation: "X becomes cheaper relative to other goods, so consumers substitute toward it. The price decrease also raises real purchasing power, increasing consumption because X is normal. SE and IE both increase consumption: SE + IE = the total price effect.",
+    noteLink: { path: "/micro/2#section-2-1", label: "Unit 2 \u2014 Demand: Substitution & Income Effects" }
+  },
+  {
     id: 82,
     unit: 2,
     source: "Sample MCQ",

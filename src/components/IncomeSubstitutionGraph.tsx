@@ -9,9 +9,9 @@ const curve = (utility: number) => Array.from({ length: 181 }, (_, i) => {
 
 const IncomeSubstitutionGraph = () => (
   <figure className="my-5" aria-label="Substitution and income effects for a normal good">
-    <svg viewBox="0 0 560 455" role="img" aria-labelledby="se-ie-title se-ie-desc" className="w-full max-w-md mx-auto font-body">
+    <svg viewBox="0 0 560 490" role="img" aria-labelledby="se-ie-title se-ie-desc" className="w-full max-w-md mx-auto font-body">
       <title id="se-ie-title">A price decrease: substitution effect and income effect</title>
-      <desc id="se-ie-desc">Quantity of good X on the horizontal axis and good Y on the vertical axis. When the price of X falls, the budget line pivots outward from the same Y intercept. A is the original choice, B is the compensated choice on the original indifference curve, and C is the final choice on a higher indifference curve. A to B is the substitution effect; B to C is the income effect. Both increase X for this normal-good example.</desc>
+      <desc id="se-ie-desc">Quantity of good X on the horizontal axis and good Y on the vertical axis. When the price of X falls, the budget line pivots outward from the same Y intercept. A is the original choice, B is the compensated choice on the original indifference curve, and C is the final choice on a higher indifference curve. A to B is the substitution effect; B to C is the income effect. Both increase X for this normal-good example. The third arrow runs from Q₀ to Q₁: SE + IE = price effect.</desc>
       <g stroke="hsl(var(--primary))" strokeWidth="2" fill="none">
         <path d="M 70 35 V 360 H 505" />
         <path d="M 65 43 L 70 35 L 75 43 M 497 355 L 505 360 L 497 365" />
@@ -54,6 +54,11 @@ const IncomeSubstitutionGraph = () => (
           <text x={X((from + to) / 2)} y="425" textAnchor="middle" stroke="none" fontSize="14" fontWeight="700">{label}</text>
         </g>
       ))}
+      <g stroke="hsl(var(--primary))" fill="hsl(var(--primary))">
+        <line x1={X(model.original.x)} y1="447" x2={X(model.final.x) - 2} y2="447" strokeWidth="2" />
+        <path d={`M ${X(model.final.x) - 7} 443 L ${X(model.final.x) - 2} 447 L ${X(model.final.x) - 7} 451`} fill="none" strokeWidth="2" />
+        <text x={X((model.original.x + model.final.x) / 2)} y="470" textAnchor="middle" stroke="none" fontSize="14" fontWeight="700">SE + IE = price effect</text>
+      </g>
     </svg>
     <figcaption className="text-sm space-y-2">
       <p className="font-semibold text-primary">Normal good: price of X falls; money income and the price of Y stay fixed.</p>
