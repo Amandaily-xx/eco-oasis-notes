@@ -1,6 +1,7 @@
 import AmandaTip from "../components/AmandaTip";
 import SectionAccordion from "../components/SectionAccordion";
 import EconGraph from "../components/EconGraph";
+import IncomeSubstitutionGraph from "../components/IncomeSubstitutionGraph";
 import surplusDiagram from "../assets/surplus-diagram.png";
 
 const MicroUnit2Content = () => (
@@ -12,8 +13,34 @@ const MicroUnit2Content = () => (
       <ul className="list-disc pl-5 space-y-1">
         <li><strong>Diminishing Marginal Utility:</strong> Each additional unit consumed provides less satisfaction</li>
         <li><strong>Substitution Effect:</strong> Price ↑ → consumers switch to substitutes → Qd ↓</li>
-        <li><strong>Income Effect:</strong> Price ↑ → purchasing power ↓ → Qd ↓</li>
+        <li><strong>Income Effect (normal goods):</strong> Price ↑ → purchasing power ↓ → Qd ↓</li>
       </ul>
+      <h4 className="font-semibold text-primary mt-5 mb-2">Substitution Effect &amp; Income Effect</h4>
+      <p className="mb-3">A change in a good’s own price affects consumption in two ways, with money income and other prices held constant. Together, these explain the change in quantity demanded—not a shift of the demand curve.</p>
+      <ul className="list-disc pl-5 space-y-3">
+        <li><strong>Substitution effect (SE):</strong> The change in consumption caused by a change in <strong>relative prices</strong>, holding the consumer’s utility (satisfaction) constant. When a good becomes cheaper relative to alternatives, consumers substitute toward it; when it becomes more expensive, they substitute away. A price decrease therefore raises quantity demanded through SE for both normal and inferior goods.</li>
+        <li><strong>Income effect (IE):</strong> The change in consumption caused by a change in <strong>real purchasing power</strong>, evaluated at the new, fixed prices. A price decrease lets the same money income buy more; a price increase lets it buy less. Money income itself has not changed.</li>
+      </ul>
+      <ul className="list-disc pl-5 space-y-2 my-3">
+        <li><strong>Normal good:</strong> After a price decrease, IE increases consumption, reinforcing SE. After a price increase, both effects reduce consumption.</li>
+        <li><strong>Inferior good:</strong> After a price decrease, IE reduces consumption, opposing SE; after a price increase, IE raises consumption. Usually SE is stronger, so demand still slopes downward. An inferior good does not automatically have upward-sloping demand.</li>
+      </ul>
+      <div className="formula-block">Total effect on quantity demanded = SE + IE</div>
+      <h4 className="font-semibold text-primary mt-4 mb-2">Worked Example: Pizza Is a Normal Good</h4>
+      <p>Suppose the price of pizza rises while your money income and other prices stay the same.</p>
+      <ol className="list-decimal pl-5 space-y-2 my-3">
+        <li><strong>SE:</strong> Pizza is now relatively more expensive than other foods, so you switch toward alternatives and buy less pizza. <strong>SE &lt; 0.</strong></li>
+        <li><strong>IE:</strong> Your money buys less than before. Because pizza is a normal good, this lower purchasing power also makes you buy less pizza. <strong>IE &lt; 0.</strong></li>
+        <li><strong>Total effect:</strong> Both effects point in the same direction: <strong>SE + IE &lt; 0</strong>, so quantity demanded of pizza falls.</li>
+      </ol>
+      <h4 className="font-semibold text-primary mt-5 mb-2">Further Study: Separating the Two Effects on a Graph</h4>
+      <p className="text-sm text-muted-foreground mb-3">The concepts above matter for AP demand reasoning; the indifference-curve graph below is enrichment, not required for the AP exam. Unlike the pizza price increase, this graph illustrates a <strong>price decrease</strong> for a normal good.</p>
+      <ol className="list-decimal pl-5 space-y-2">
+        <li>Draw the original budget line and its tangent indifference curve at A. With X horizontal and Y vertical, the budget slope is <strong>−Pₓ / Pᵧ</strong>.</li>
+        <li>Lower Pₓ: the budget line becomes flatter and pivots outward. Its Y intercept stays the same because money income and Pᵧ are unchanged. C is the new choice.</li>
+        <li>Shift the new budget line inward, parallel to itself, until it is tangent to the original indifference curve at B. This hypothetical compensated budget keeps utility constant: A → B isolates SE; B → C isolates IE at the new relative prices.</li>
+      </ol>
+      <IncomeSubstitutionGraph />
       <h4 className="font-semibold text-primary my-2">Change in Quantity Demanded vs. Change in Demand</h4>
       <ul className="list-disc pl-5 space-y-1">
         <li><strong>Change in Qd:</strong> Movement ALONG the curve (caused by price change only)</li>
