@@ -9,7 +9,7 @@ const curve = (utility: number) => Array.from({ length: 181 }, (_, i) => {
 
 const IncomeSubstitutionGraph = () => (
   <figure className="my-5" aria-label="Substitution and income effects for a normal good">
-    <svg viewBox="0 0 560 455" role="img" aria-labelledby="se-ie-title se-ie-desc" className="w-full max-w-2xl mx-auto font-body">
+    <svg viewBox="0 0 560 455" role="img" aria-labelledby="se-ie-title se-ie-desc" className="w-full max-w-md mx-auto font-body">
       <title id="se-ie-title">A price decrease: substitution effect and income effect</title>
       <desc id="se-ie-desc">Quantity of good X on the horizontal axis and good Y on the vertical axis. When the price of X falls, the budget line pivots outward from the same Y intercept. A is the original choice, B is the compensated choice on the original indifference curve, and C is the final choice on a higher indifference curve. A to B is the substitution effect; B to C is the income effect. Both increase X for this normal-good example.</desc>
       <g stroke="hsl(var(--primary))" strokeWidth="2" fill="none">
@@ -57,13 +57,8 @@ const IncomeSubstitutionGraph = () => (
     </svg>
     <figcaption className="text-sm space-y-2">
       <p className="font-semibold text-primary">Normal good: price of X falls; money income and the price of Y stay fixed.</p>
-      <ul className="list-disc pl-5 space-y-1">
-        <li><strong>Solid navy:</strong> original budget. <strong>Solid blue:</strong> new budget. <strong>Dashed blue:</strong> compensated budget, parallel to the new budget and tangent to U₀.</li>
-        <li><strong>A → B (SE):</strong> move along U₀, keeping utility constant. <strong>B → C (IE):</strong> move between parallel budgets at the new relative prices.</li>
-        <li><strong>U₀ and U₁:</strong> indifference curves—each shows bundles giving the same satisfaction; U₁ represents higher satisfaction. Q꜀ is the compensated quantity.</li>
-      </ul>
-      <p className="text-muted-foreground">Further study, not an AP exam graph: indifference curves and the compensated-budget construction are useful in university microeconomics.</p>
-    </figcaption>
+      <p><strong>Solid navy:</strong> original budget · <strong>Solid blue:</strong> new budget · <strong>Dashed:</strong> compensated budget. U₁ gives higher satisfaction than U₀.</p>
+          </figcaption>
   </figure>
 );
 
