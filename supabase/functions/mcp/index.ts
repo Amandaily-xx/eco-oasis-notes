@@ -230,7 +230,7 @@ var microMCQuestions = [
     ],
     answer: "B",
     explanation: "The lower relative price encourages substitution toward the good (SE increases consumption). Greater purchasing power reduces consumption of an inferior good (IE decreases consumption). For a non-Giffen inferior good, SE outweighs IE, so the total price effect is an increase in quantity demanded.",
-    noteLink: { path: "/micro/2#section-2-1", label: "Unit 2 \u2014 Demand: Substitution & Income Effects" }
+    noteLink: { path: "/micro/2", label: "Unit 2 \u2014 Demand: Substitution & Income Effects" }
   },
   {
     id: 84,
@@ -245,7 +245,7 @@ var microMCQuestions = [
     ],
     answer: "B",
     explanation: "A higher relative price encourages substitution away from the good. It also lowers real purchasing power, which reduces consumption of a normal good. Both SE and IE reduce quantity demanded, reinforcing the total price effect.",
-    noteLink: { path: "/micro/2#section-2-1", label: "Unit 2 \u2014 Demand: Substitution & Income Effects" }
+    noteLink: { path: "/micro/2", label: "Unit 2 \u2014 Demand: Substitution & Income Effects" }
   },
   {
     id: 85,
@@ -260,7 +260,7 @@ var microMCQuestions = [
     ],
     answer: "C",
     explanation: "X becomes cheaper relative to other goods, so consumers substitute toward it. The price decrease also raises real purchasing power, increasing consumption because X is normal. SE and IE both increase consumption: SE + IE = the total price effect.",
-    noteLink: { path: "/micro/2#section-2-1", label: "Unit 2 \u2014 Demand: Substitution & Income Effects" }
+    noteLink: { path: "/micro/2", label: "Unit 2 \u2014 Demand: Substitution & Income Effects" }
   },
   {
     id: 82,
