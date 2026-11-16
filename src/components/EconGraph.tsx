@@ -45,8 +45,8 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <defs><marker id="ah-ppc" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="hsl(var(--primary))" /></marker></defs>
             <line x1="50" y1="200" x2="270" y2="200" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-ppc)" />
             <line x1="50" y1="200" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-ppc)" />
-            <path d="M 60 40 Q 100 60, 160 120 Q 200 160, 250 190" fill="none" stroke="hsl(var(--accent))" strokeWidth="2.5" />
-            <path d="M 80 30 Q 130 50, 190 110 Q 230 150, 270 175" fill="none" stroke="hsl(var(--accent))" strokeWidth="2" strokeDasharray="6 4" opacity="0.6" />
+            <path d="M 60 40 C 76.7 53.3, 128.3 95, 160 120 C 191.7 145, 235 178.3, 250 190" fill="none" stroke="hsl(var(--accent))" strokeWidth="2.5" />
+            <path d="M 80 30 C 98.3 43.3, 158.3 85.8, 190 110 C 221.7 134.2, 256.7 164.2, 270 175" fill="none" stroke="hsl(var(--accent))" strokeWidth="2" strokeDasharray="6 4" opacity="0.6" />
             <circle cx="130" cy="100" r="4" fill="hsl(var(--destructive))" />
             <text x="138" y="96" fontSize="11" fill="hsl(var(--foreground))" fontFamily="var(--font-body)">A (efficient)</text>
             <circle cx="100" cy="150" r="4" fill="hsl(var(--muted-foreground))" />
@@ -213,15 +213,15 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <line x1="50" y1="220" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-src)" />
 
             {/* MC curve — passes through AVC min (145,178) and ATC min (180,142) */}
-            <path d="M 75 165 Q 95 185, 115 188 Q 130 185, 145 178 Q 160 163, 180 142 Q 200 100, 220 60 Q 240 30, 260 15" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2.5" />
+            <path d="M 75 165 C 81.7 168.8, 103.3 185.8, 115 188 C 126.7 190.2, 134.2 185.7, 145 178 C 155.8 170.3, 167.5 161.7, 180 142 C 192.5 122.3, 206.7 81.2, 220 60 C 233.3 38.8, 253.3 22.5, 260 15" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2.5" />
             <text x="262" y="18" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">MC</text>
 
             {/* ATC curve — U-shaped, min at (180,142) */}
-            <path d="M 75 55 Q 95 85, 120 112 Q 145 132, 165 140 Q 180 142, 195 140 Q 215 130, 240 105 Q 260 78, 280 48" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2.5" />
+            <path d="M 75 55 C 82.5 64.5, 105 97.8, 120 112 C 135 126.2, 152.5 135.3, 165 140 C 177.5 144.7, 182.5 145.8, 195 140 C 207.5 134.2, 225.8 120.3, 240 105 C 254.2 89.7, 273.3 57.5, 280 48" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2.5" />
             <text x="282" y="52" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">ATC</text>
 
             {/* AVC curve — U-shaped, min at (145,178) */}
-            <path d="M 75 125 Q 95 150, 120 168 Q 135 176, 145 178 Q 160 178, 180 172 Q 205 155, 235 125 Q 260 90, 280 60" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2" />
+            <path d="M 75 125 C 82.5 132.2, 108.3 159.2, 120 168 C 131.7 176.8, 135 177.3, 145 178 C 155 178.7, 165 180.8, 180 172 C 195 163.2, 218.3 143.7, 235 125 C 251.7 106.3, 272.5 70.8, 280 60" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2" />
             <text x="282" y="64" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">AVC</text>
 
             {/* MC intersects AVC at AVC minimum — black dot */}
@@ -248,7 +248,7 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <line x1="50" y1="220" x2="290" y2="220" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-eos)" />
             <line x1="50" y1="220" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-eos)" />
             {/* LRAC curve - deep U-shape: high left, flat bottom, high right */}
-            <path d="M 65 45 Q 80 100, 100 145 Q 120 180, 140 190 Q 160 195, 180 195 Q 200 195, 210 190 Q 230 175, 250 140 Q 265 105, 280 55" fill="none" stroke="hsl(var(--accent))" strokeWidth="3" />
+            <path d="M 65 45 C 70.8 61.7, 87.5 120.8, 100 145 C 112.5 169.2, 126.7 181.7, 140 190 C 153.3 198.3, 168.3 195, 180 195 C 191.7 195, 198.3 199.2, 210 190 C 221.7 180.8, 238.3 162.5, 250 140 C 261.7 117.5, 275 69.2, 280 55" fill="none" stroke="hsl(var(--accent))" strokeWidth="3" />
             <text x="275" y="50" fontSize="12" fill="hsl(var(--accent))" fontWeight="700" fontFamily="var(--font-body)">LRAC</text>
 
             {/* MES vertical dashed line */}
@@ -286,11 +286,11 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <line x1="50" y1="220" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-pmpc)" />
 
             {/* MC curve — U-shaped, crosses P line at (195,105) */}
-            <path d="M 80 180 Q 100 200, 120 198 Q 140 190, 160 170 Q 175 150, 195 105 Q 210 70, 230 40 Q 250 18, 265 8" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2.5" />
+            <path d="M 80 180 C 86.7 183, 106.7 199.7, 120 198 C 133.3 196.3, 147.5 185.5, 160 170 C 172.5 154.5, 183.3 126.7, 195 105 C 206.7 83.3, 218.3 56.2, 230 40 C 241.7 23.8, 259.2 13.3, 265 8" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2.5" />
             <text x="260" y="18" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">MC</text>
 
             {/* ATC curve — U-shaped, min at ~(185,148) */}
-            <path d="M 80 55 Q 105 90, 130 120 Q 155 140, 175 148 Q 195 148, 215 140 Q 240 118, 265 82" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2" />
+            <path d="M 80 55 C 88.3 65.8, 114.2 104.5, 130 120 C 145.8 135.5, 160.8 144.7, 175 148 C 189.2 151.3, 200 151, 215 140 C 230 129, 256.7 91.7, 265 82" fill="none" stroke="hsl(var(--foreground))" strokeWidth="2" />
             <text x="267" y="86" fontSize="11" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">ATC</text>
 
             {/* AR = MR = D horizontal line */}
@@ -325,11 +325,11 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <line x1="50" y1="220" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-pcm)" />
 
             {/* MC curve — U-shaped, crosses P line at (190,130) on rising side */}
-            <path d="M 80 195 Q 105 210, 125 205 Q 145 192, 165 168 Q 180 148, 190 130 Q 205 98, 225 58 Q 245 28, 265 10" fill="none" stroke="hsl(210 80% 65%)" strokeWidth="2.5" />
+            <path d="M 80 195 C 87.5 196.7, 110.8 209.5, 125 205 C 139.2 200.5, 154.2 180.5, 165 168 C 175.8 155.5, 180 148.3, 190 130 C 200 111.7, 212.5 78, 225 58 C 237.5 38, 258.3 18, 265 10" fill="none" stroke="hsl(210 80% 65%)" strokeWidth="2.5" />
             <text x="258" y="15" fontSize="11" fill="hsl(210 80% 65%)" fontWeight="600" fontFamily="var(--font-body)">MC</text>
 
             {/* ATC curve — U-shaped, min tangent to P line at (190,130) */}
-            <path d="M 80 40 Q 110 72, 135 98 Q 160 118, 178 127 Q 190 130, 202 127 Q 222 118, 248 95 Q 268 70, 285 40" fill="none" stroke="hsl(0 70% 65%)" strokeWidth="2.5" />
+            <path d="M 80 40 C 89.2 49.7, 118.7 83.5, 135 98 C 151.3 112.5, 166.8 122.2, 178 127 C 189.2 131.8, 190.3 132.3, 202 127 C 213.7 121.7, 234.2 109.5, 248 95 C 261.8 80.5, 278.8 49.2, 285 40" fill="none" stroke="hsl(0 70% 65%)" strokeWidth="2.5" />
             <text x="282" y="44" fontSize="11" fill="hsl(0 70% 65%)" fontWeight="600" fontFamily="var(--font-body)">ATC</text>
 
             {/* P = MR = AR horizontal line */}
@@ -364,11 +364,11 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <text x="160" y="222" fontSize="10" fill="hsl(220 75% 55%)" fontWeight="600" fontFamily="var(--font-body)">MR</text>
 
             {/* MC curve — U-shaped, passes through MC=MR at (130,163) */}
-            <path d="M 75 210 Q 95 225, 110 222 Q 120 215, 130 163 Q 140 120, 160 80 Q 180 50, 210 30 Q 235 20, 255 15" fill="none" stroke="hsl(160 60% 45%)" strokeWidth="2.5" />
+            <path d="M 75 210 C 80.8 212, 100.8 229.8, 110 222 C 119.2 214.2, 121.7 186.7, 130 163 C 138.3 139.3, 146.7 102.2, 160 80 C 173.3 57.8, 194.2 40.8, 210 30 C 225.8 19.2, 247.5 17.5, 255 15" fill="none" stroke="hsl(160 60% 45%)" strokeWidth="2.5" />
             <text x="252" y="18" fontSize="11" fill="hsl(160 60% 45%)" fontWeight="600" fontFamily="var(--font-body)">MC</text>
 
             {/* ATC curve — U-shaped, at Qf (x=130) ATC is BELOW demand price, showing positive profit */}
-            <path d="M 75 75 Q 95 95, 110 110 Q 120 120, 130 128 Q 150 138, 170 138 Q 195 128, 220 105 Q 245 75, 265 45" fill="none" stroke="hsl(40 85% 55%)" strokeWidth="2.5" />
+            <path d="M 75 75 C 80.8 80.8, 100.8 101.2, 110 110 C 119.2 118.8, 120 123.3, 130 128 C 140 132.7, 155 141.8, 170 138 C 185 134.2, 204.2 120.5, 220 105 C 235.8 89.5, 257.5 55, 265 45" fill="none" stroke="hsl(40 85% 55%)" strokeWidth="2.5" />
             <text x="262" y="48" fontSize="11" fill="hsl(40 85% 55%)" fontWeight="600" fontFamily="var(--font-body)">ATC</text>
 
             {/* MC=MR intersection — BLACK dot */}
@@ -406,11 +406,11 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <line x1="50" y1="230" x2="50" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" markerEnd="url(#ah-mc2)" />
 
             {/* MC curve - U-shaped */}
-            <path d="M 70 180 Q 90 210, 110 210 Q 130 210, 145 195 Q 165 165, 185 120 Q 200 85, 220 55 Q 235 35, 250 25" fill="none" stroke="hsl(160 60% 45%)" strokeWidth="2.5" />
+            <path d="M 70 180 C 76.7 185, 97.5 207.5, 110 210 C 122.5 212.5, 132.5 210, 145 195 C 157.5 180, 172.5 143.3, 185 120 C 197.5 96.7, 209.2 70.8, 220 55 C 230.8 39.2, 245 30, 250 25" fill="none" stroke="hsl(160 60% 45%)" strokeWidth="2.5" />
             <text x="252" y="28" fontSize="11" fill="hsl(160 60% 45%)" fontWeight="600" fontFamily="var(--font-body)">MC</text>
 
             {/* ATC curve - U-shaped, tangent to D at (150, 117) */}
-            <path d="M 80 40 Q 100 70, 120 95 Q 135 110, 150 117 Q 170 124, 185 122 Q 210 108, 235 75 Q 250 50, 265 30" fill="none" stroke="hsl(40 85% 55%)" strokeWidth="2.5" />
+            <path d="M 80 40 C 86.7 49.2, 108.3 82.2, 120 95 C 131.7 107.8, 139.2 112.5, 150 117 C 160.8 121.5, 170.8 129, 185 122 C 199.2 115, 221.7 90.3, 235 75 C 248.3 59.7, 260 37.5, 265 30" fill="none" stroke="hsl(40 85% 55%)" strokeWidth="2.5" />
             <text x="267" y="33" fontSize="11" fill="hsl(40 85% 55%)" fontWeight="600" fontFamily="var(--font-body)">ATC</text>
 
             {/* D curve - downward sloping, tangent to ATC at equilibrium */}
@@ -444,10 +444,10 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <line x1="50" y1="230" x2="250" y2="30" stroke="hsl(var(--muted-foreground))" strokeWidth="2" strokeDasharray="5 3" />
             <text x="155" y="105" fontSize="9" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)" transform="rotate(-45, 155, 105)">Line of Equality</text>
             {/* Lorenz curve */}
-            <path d="M 50 230 Q 100 225, 140 210 Q 180 185, 210 140 Q 235 90, 250 30" fill="none" stroke="hsl(var(--accent))" strokeWidth="2.5" />
+            <path d="M 50 230 C 65 226.7, 113.3 225, 140 210 C 166.7 195, 191.7 170, 210 140 C 228.3 110, 243.3 48.3, 250 30" fill="none" stroke="hsl(var(--accent))" strokeWidth="2.5" />
             <text x="200" y="185" fontSize="10" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">Lorenz Curve</text>
             {/* Shaded area A between curves */}
-            <path d="M 50 230 Q 100 225, 140 210 Q 180 185, 210 140 Q 235 90, 250 30 L 50 230 Z" fill="hsl(var(--accent))" opacity="0.18" />
+            <path d="M 50 230 C 65 226.7, 113.3 225, 140 210 C 166.7 195, 191.7 170, 210 140 C 228.3 110, 243.3 48.3, 250 30 L 50 230 Z" fill="hsl(var(--accent))" opacity="0.18" />
             <text x="105" y="178" fontSize="20" fill="hsl(var(--accent))" fontWeight="900" fontFamily="var(--font-display)">A</text>
             <text x="180" y="222" fontSize="20" fill="hsl(var(--primary))" fontWeight="900" fontFamily="var(--font-display)">B</text>
             <text x="80" y="262" fontSize="11" fill="hsl(var(--foreground))" fontWeight="700" fontFamily="var(--font-body)">Gini = A / (A + B)</text>
@@ -466,7 +466,7 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <line x1="50" y1="160" x2="290" y2="70" stroke="hsl(var(--muted-foreground))" strokeWidth="1.5" strokeDasharray="5 3" />
             <text x="255" y="62" fontSize="9" fill="hsl(var(--muted-foreground))" fontFamily="var(--font-body)">Potential GDP</text>
             {/* Business cycle wave */}
-            <path d="M 50 155 Q 75 130, 100 100 Q 120 80, 130 85 Q 145 95, 160 130 Q 175 160, 190 165 Q 205 168, 215 155 Q 230 120, 250 80 Q 265 55, 275 65 Q 285 75, 295 95" fill="none" stroke="hsl(var(--accent))" strokeWidth="2.5" />
+            <path d="M 50 155 C 58.3 145.8, 86.7 111.7, 100 100 C 113.3 88.3, 120 80, 130 85 C 140 90, 150 116.7, 160 130 C 170 143.3, 180.8 160.8, 190 165 C 199.2 169.2, 205 169.2, 215 155 C 225 140.8, 240 95, 250 80 C 260 65, 267.5 62.5, 275 65 C 282.5 67.5, 291.7 90, 295 95" fill="none" stroke="hsl(var(--accent))" strokeWidth="2.5" />
             <text x="285" y="105" fontSize="10" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">Real GDP</text>
             {/* Labels for phases */}
             <text x="72" y="75" fontSize="9" fill="hsl(var(--foreground))" fontWeight="600" fontFamily="var(--font-body)">Expansion</text>
@@ -575,8 +575,8 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             {/* Panel 2: PPC shift */}
             <line x1="180" y1="180" x2="310" y2="180" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-lr1)" />
             <line x1="180" y1="180" x2="180" y2="20" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-lr1)" />
-            <path d="M 190 40 Q 220 55, 255 100 Q 275 130, 290 170" fill="none" stroke="hsl(var(--accent))" strokeWidth="2" />
-            <path d="M 200 30 Q 240 45, 275 90 Q 295 120, 305 165" fill="none" stroke="hsl(var(--accent))" strokeWidth="2" strokeDasharray="4 3" />
+            <path d="M 190 40 C 200.8 50, 238.3 78.3, 255 100 C 271.7 121.7, 284.2 158.3, 290 170" fill="none" stroke="hsl(var(--accent))" strokeWidth="2" />
+            <path d="M 200 30 C 212.5 40, 257.5 67.5, 275 90 C 292.5 112.5, 300 152.5, 305 165" fill="none" stroke="hsl(var(--accent))" strokeWidth="2" strokeDasharray="4 3" />
             <text x="280" y="165" fontSize="8" fill="hsl(var(--accent))" fontFamily="var(--font-body)">PPC₁</text>
             <text x="297" y="155" fontSize="8" fill="hsl(var(--accent))" fontFamily="var(--font-body)">PPC₂</text>
             <text x="195" y="198" fontSize="8" fill="hsl(var(--primary))" fontFamily="var(--font-body)">Consumer Goods</text>
@@ -686,7 +686,7 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <line x1="70" y1="185" x2="280" y2="40" stroke="hsl(var(--accent))" strokeWidth="2.5" />
             <text x="275" y="36" fontSize="11" fill="hsl(var(--accent))" fontWeight="600" fontFamily="var(--font-body)">SRAS</text>
             {/* AD — downward sloping curve, passes through (190,105) */}
-            <path d="M 75 40 Q 130 65, 190 105 Q 235 140, 270 195" fill="none" stroke="hsl(var(--destructive))" strokeWidth="2.5" />
+            <path d="M 75 40 C 94.2 50.8, 157.5 79.2, 190 105 C 222.5 130.8, 256.7 180, 270 195" fill="none" stroke="hsl(var(--destructive))" strokeWidth="2.5" />
             <text x="265" y="192" fontSize="11" fill="hsl(var(--destructive))" fontWeight="600" fontFamily="var(--font-body)">AD</text>
             {/* Equilibrium dot — all three intersect at (190,105) */}
             <circle cx="190" cy="105" r="5" fill="hsl(var(--primary))" />
@@ -792,11 +792,11 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <text x="168" y="228" fontSize="10" fill="hsl(220 75% 55%)" fontWeight="600" fontFamily="var(--font-body)">MR</text>
 
             {/* Long Run Average Cost — declining curve */}
-            <path d="M 68 35 Q 100 75, 130 115 Q 160 148, 195 168 Q 225 178, 260 183 Q 280 185, 300 186" fill="none" stroke="hsl(0 70% 55%)" strokeWidth="2.5" />
+            <path d="M 68 35 C 78.3 48.3, 108.8 92.8, 130 115 C 151.2 137.2, 173.3 156.7, 195 168 C 216.7 179.3, 242.5 180, 260 183 C 277.5 186, 293.3 185.5, 300 186" fill="none" stroke="hsl(0 70% 55%)" strokeWidth="2.5" />
             <text x="275" y="178" fontSize="10" fill="hsl(0 70% 55%)" fontWeight="600" fontFamily="var(--font-body)">LRAC</text>
 
             {/* Long Run Marginal Cost — below LRAC, declining */}
-            <path d="M 68 75 Q 100 120, 130 155 Q 160 180, 195 198 Q 225 208, 260 213 Q 280 216, 300 218" fill="none" stroke="hsl(160 60% 45%)" strokeWidth="2.5" />
+            <path d="M 68 75 C 78.3 88.3, 108.8 134.5, 130 155 C 151.2 175.5, 173.3 188.3, 195 198 C 216.7 207.7, 242.5 209.7, 260 213 C 277.5 216.3, 293.3 217.2, 300 218" fill="none" stroke="hsl(160 60% 45%)" strokeWidth="2.5" />
             <text x="275" y="212" fontSize="10" fill="hsl(160 60% 45%)" fontWeight="600" fontFamily="var(--font-body)">LRMC</text>
 
             {/* Monopoly: MC=MR at ~x=120 */}
@@ -983,7 +983,7 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             <line x1="50" y1="140" x2="390" y2="140" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
             <line x1="50" y1="140" x2="50" y2="10" stroke="hsl(var(--primary))" strokeWidth="1.5" markerEnd="url(#ah-tmp)" />
             {/* TP curve: rises at increasing rate, then decreasing rate, then declines */}
-            <path d="M 60 130 Q 90 125, 120 110 Q 160 80, 200 55 Q 240 35, 270 28 Q 300 25, 320 30 Q 345 38, 365 55" fill="none" stroke="hsl(50 80% 50%)" strokeWidth="3" />
+            <path d="M 60 130 C 120 125, 160 85, 200 55 C 230 32.5, 270 25, 300 25 C 330 25, 350 40, 365 55" fill="none" stroke="hsl(50 80% 50%)" strokeWidth="3" />
             <text x="368" y="50" fontSize="10" fill="hsl(50 80% 50%)" fontWeight="700" fontFamily="var(--font-body)">TP</text>
             {/* Dashed lines for inflection point and max */}
             <line x1="200" y1="55" x2="200" y2="140" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
@@ -997,14 +997,13 @@ const EconGraph = ({ type, caption }: EconGraphProps) => {
             {/* Zero line */}
             <line x1="50" y1="300" x2="390" y2="300" stroke="hsl(var(--muted-foreground))" strokeWidth="0.5" />
             {/* MP curve: rises to peak at inflection of TP, then falls through zero */}
-            <path d="M 60 270 Q 100 230, 140 210 Q 170 200, 200 195 Q 210 196, 200 195" fill="none" stroke="hsl(0 70% 60%)" strokeWidth="2.5" />
-            <path d="M 200 195 Q 230 215, 260 245 Q 285 275, 300 300 Q 320 320, 350 335" fill="none" stroke="hsl(0 70% 60%)" strokeWidth="2.5" />
+            <path d="M 60 270 C 110 220, 160 195, 200 195 C 235 195, 270 250, 300 300 C 315 322, 330 330, 350 335" fill="none" stroke="hsl(0 70% 60%)" strokeWidth="2.5" />
             <text x="352" y="333" fontSize="10" fill="hsl(0 70% 60%)" fontWeight="700" fontFamily="var(--font-body)">MP</text>
             {/* MP = 0 label where MP crosses Labor axis */}
             <circle cx="300" cy="300" r="3" fill="hsl(0 70% 60%)" />
             <text x="305" y="293" fontSize="10" fill="hsl(0 70% 60%)" fontWeight="700" fontFamily="var(--font-body)">MP = 0</text>
             {/* AP curve: rises slower, peaks after MP peak, then falls (MP crosses AP at AP max) */}
-            <path d="M 60 275 Q 120 240, 180 220 Q 220 212, 250 215 Q 280 220, 310 240 Q 340 260, 360 275" fill="none" stroke="hsl(180 60% 50%)" strokeWidth="2.5" />
+            <path d="M 60 275 C 80 265.8, 148.3 230, 180 220 C 211.7 210, 228.3 211.7, 250 215 C 271.7 218.3, 291.7 230, 310 240 C 328.3 250, 351.7 269.2, 360 275" fill="none" stroke="hsl(180 60% 50%)" strokeWidth="2.5" />
             <text x="362" y="273" fontSize="10" fill="hsl(180 60% 50%)" fontWeight="700" fontFamily="var(--font-body)">AP</text>
             {/* Dashed lines connecting to top graph */}
             <line x1="200" y1="195" x2="200" y2="300" stroke="hsl(var(--muted-foreground))" strokeWidth="1" strokeDasharray="4 3" />
